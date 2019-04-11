@@ -1,0 +1,23 @@
+.models-info
+  &__item
+    text-align: left
+    height: 100%
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      height: calc(100% - 8px)
+      top: 50%
+      right: 0
+      transform: translate(0, -50%)
+      width: 1px
+      background-color: $c-text
+  &__title
+    +bold
+    font-size: 32px
+    line-height: 1.15
+    span
+      font-size: 15px
+  &__subttl
+    font-size: 15px
+    color: #9b9b9b

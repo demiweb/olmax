@@ -1,0 +1,34 @@
+<!-- begin slider -->
+<div class="slider__wrap slider--full__wrap">
+  <div class="slider slider--full js-slider" data-slider="full">
+    {% for i in range(0, 3) %}
+    <div class="slide">
+      <div class="slide__inner" style="background-image: url('img/hero/hero-1.jpg')">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="hero__block">
+                <div class="hero__title">
+                  <h2 class="title title--white">Перетвори свій день на пригоду </h2>
+                </div>
+                <div class="hero__subttl">Tesla Model x</div>
+                <div class="hero__btn">
+                  <a href="#" class="btn">
+                    <span class="btn__title">замовити TEST-DRIVE</span>
+                    <span class="btn__icon">ic</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="slider__dots js-dots"></div>
+  <button class="slider__prev js-prev"></button>
+  <button class="slider__next js-next"></button>
+</div>
+<!-- end slider -->

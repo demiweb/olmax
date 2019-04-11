@@ -1,0 +1,139 @@
+.slider
+  &__wrap
+    position: relative
+  &__dots
+    position: absolute
+    bottom: 50px
+    left: 0
+    width: 100%
+    z-index: 1
+    text-align: center
+    button
+      +hidetext
+      height: 20px
+      width: 34px
+      display: inline-block
+      position: relative
+      background-color: transparent
+      &::before
+        content: ''
+        position: absolute
+        +vcenter
+        background-color: #aaaaaa
+        height: 1px
+        width: 100%
+    li
+      display: inline-block
+      margin-left: 3px
+      margin-right: 3px
+      &.slick-active
+        button
+          &::before
+            background-color: #fff
+            height: 4px
+  &__prev,
+  &__next
+    background-color: transparent
+    +icon-arrow(20, 20, 2, #fff, 45)
+
+  &--full
+    .slide
+      &__inner
+        display: flex
+        align-items: center
+    &__wrap
+      .slider__prev,
+      .slider__next
+        position: absolute
+        z-index: 1
+        top: 50%        
+      .slider__prev
+        left: 5%
+        transform: translate(0, -50%) rotate(45deg)
+      .slider__next
+        right: 5%
+        transform: translate(0, -50%) rotate(225deg)
+
+  &--brands        
+    &__wrap
+      margin-top: 90px
+      .slider__dots
+        top: -90px
+        bottom: auto
+        height: 90px
+        display: flex
+        justify-content: center
+        align-items: center
+        li
+          margin-left: 10px
+          margin-right: 10px
+          &.slick-active
+            button
+              color: $c-accent
+              +bold
+              font-size: 25px
+              &::before
+                content: ''
+                visibility: visible
+                opacity: 1
+                position: absolute
+                top: 0
+                left: 50%
+                transform: translate(-50%, 0)
+                background-color: $c-accent
+                height: 1px
+                width: 90%
+                max-width: 55px
+                transition: visibility .2s, opacity .2s
+        button
+          font-size: 15px
+          line-height: 1.4
+          text-transform: uppercase
+          color: $c-text
+          width: auto
+          height: auto
+          display: inline-block
+          +roman
+          transition: font-size .3s, color .3s
+          &::before
+            visibility: hidden
+            opacity: 0
+  
+  &--models
+    .slide
+      &__img
+        img
+          margin-left: auto
+          margin-right: auto
+      &__title
+        color: #fff
+        font-size: 15px
+        margin-bottom: 200px
+      &__info
+        background-color: #fff
+    &__wrap
+      padding-top: 45px
+      .slider__dots
+        position: static
+        height: auto
+        margin-bottom: 30px
+        button
+          color: #fff          
+        li
+          margin-left: 25px
+          margin-right: 25px
+          &.slick-active
+            button
+              font-size: 15px
+              &::before
+                top: -5px
+
+.slide
+  +cover
+  &__inner
+    height: 100%
+
+.models-slider
+  +cover
+  text-align: center
+    

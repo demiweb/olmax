@@ -1,3 +1,50 @@
 {% macro icon(i) %}
 <svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
 {% endmacro %}
+
+{% macro modelsInfo(time, distance, power, speed) %}
+<!-- begin models-info -->
+<div class="models-info">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="models-info__item">
+          <div class="models-info__title">{{ time | safe }}</div>
+          <div class="models-info__subttl">Розгін до 100 км</div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="models-info__item">
+          <div class="models-info__title">{{ distance | safe }}</div>
+          <div class="models-info__subttl">Запас ходу</div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="models-info__item">
+          <div class="models-info__icon"></div>
+          <div class="models-info__title">{{ power | safe }}</div>
+          <div class="models-info__subttl">Батарея</div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="models-info__item">
+          <div class="models-info__icon"></div>
+          <div class="models-info__title">{{ speed | safe }}</div>
+          <div class="models-info__subttl">Максимальна швидкість</div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <a href="#" class="link link--green">
+          <span class="link__title">Дізнатися більше</span>
+          <span class="link__arrow"></span>
+        </a>
+        <a href="#" class="btn">
+          <span class="btn__title">замовити TEST-DRIVE</span>
+          <span class="btn__icon"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end models-info -->
+{% endmacro %}

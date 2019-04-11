@@ -1,0 +1,22 @@
+.hero  
+  background-color: #ccc
+  &__slider    
+    .slide
+      height: calc(100vh - 90px) // header height
+  &__title
+    position: relative
+    padding-bottom: 15px
+    margin-bottom: 15px
+    &::before
+      content: ''
+      position: absolute
+      width: 53px
+      height: 1px
+      background-color: #fff
+      bottom: 0
+      left: 0
+  &__subttl
+    font-size: 15px
+    color: #fff
+    text-transform: uppercase
+    margin-bottom: 15px

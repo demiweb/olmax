@@ -1,0 +1,109 @@
+{%set
+slider = [
+  {
+    brand: 'bmw',
+    sliderModels: [
+      {
+        model: 'Model S 85 2014',
+        title: 'Tesla Model S 70D AWD в швидкісних якостях залишає позаду таких іменитих «жеребців» як Porshe 911 і BMW M',
+        img: 'bmw-1.png',
+        time: '4,2 <span>сек</span>',
+        distance: '415 <span>км</span>',
+        power: '75 <span>кВт/ч</span>',
+        speed: '224 <span>км/ч</span>'
+      },
+      {
+        model: 'Model 3 Long Range',
+        title: 'Tesla Model S 70D AWD в швидкісних якостях залишає позаду таких іменитих «жеребців» як Porshe 911 і BMW M',
+        img: 'bmw-1.png',
+        time: '4,2 <span>сек</span>',
+        distance: '415 <span>км</span>',
+        power: '75 <span>кВт/ч</span>',
+        speed: '224 <span>км/ч</span>'
+      },
+      {
+        model: 'Model 3 Long Range',
+        title: 'Tesla Model S 70D AWD в швидкісних якостях залишає позаду таких іменитих «жеребців» як Porshe 911 і BMW M',
+        img: 'bmw-1.png',
+        time: '4,2 <span>сек</span>',
+        distance: '415 <span>км</span>',
+        power: '75 <span>кВт/ч</span>',
+        speed: '224 <span>км/ч</span>'
+      }
+    ]
+  },
+  {
+    brand: 'tesla',
+    sliderModels: [
+      {
+        model: 'Model S 85 2014',
+        title: 'Tesla Model S 70D AWD в швидкісних якостях залишає позаду таких іменитих «жеребців» як Porshe 911 і BMW M',
+        img: 'bmw-1.png',
+        time: '4,2 <span>сек</span>',
+        distance: '415 <span>км</span>',
+        power: '75 <span>кВт/ч</span>',
+        speed: '224 <span>км/ч</span>'
+      },
+      {
+        model: 'Model 3 Long Range',
+        title: 'Tesla Model S 70D AWD в швидкісних якостях залишає позаду таких іменитих «жеребців» як Porshe 911 і BMW M',
+        img: 'bmw-1.png',
+        time: '4,2 <span>сек</span>',
+        distance: '415 <span>км</span>',
+        power: '75 <span>кВт/ч</span>',
+        speed: '224 <span>км/ч</span>'
+      }
+    ]
+  }
+]
+%}
+
+<!-- begin slider -->
+<div class="slider__wrap slider--brands__wrap">
+  <div class="slider__dots js-brands-dots">
+    
+  </div>
+
+  <div class="slider slider--brands js-slider" data-slider="brands">
+    {% for i in slider %}
+    <div class="slide" data-brand="{{ i.brand }}">
+      <div class="slide__inner">
+        <!-- begin slider -->
+        <div class="slider__wrap slider--models__wrap">
+          <div class="slider__dots js-models-dots"></div>
+
+          <div class="slider slider--models js-slider" data-slider="models">
+            {% for j in i.sliderModels  %}
+            <div class="slide" data-model="{{ j.model }}">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="slide__title">{{ j.title }}</div>
+                  </div>
+                </div>
+              </div>              
+
+              <div class="slide__img">
+                <img src="img/models/{{ j.img }}" alt="">
+              </div>
+
+              <div class="slide__info">
+                {{ mixins.modelsInfo(
+                  time = j.time,
+                  distance = j.distance,
+                  power = j.power,
+                  speed = j.speed
+                ) }}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+        </div>
+        <!-- end slider -->
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- end slider -->
