@@ -52,6 +52,10 @@ export default function setSliders() {
         slidesToShow: 4,
         prevArrow: $prev,
         nextArrow: $next
+      },
+      consultation: {
+        prevArrow: $prev,
+        nextArrow: $next
       }
     };
 

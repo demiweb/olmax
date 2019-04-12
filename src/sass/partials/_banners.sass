@@ -1,0 +1,27 @@
+.two-banners
+  display: flex
+
+.banner-half
+  width: 50%
+  +cover
+  padding-top: 35%
+  position: relative
+  &:hover
+    .banner-half__btn
+      max-height: 50px
+      overflow: visible
+  &__block
+    position: absolute
+    z-index: 1
+    bottom: 10px
+    left: percentage(75/960)
+    bottom: percentage(141/620)
+    max-width: 385px
+  &__title
+    margin-bottom: 15px
+    .title
+      margin-bottom: 10px
+  &__btn
+    max-height: 0
+    overflow: hidden
+    transition: max-height .3s

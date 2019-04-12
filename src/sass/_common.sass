@@ -16,7 +16,7 @@
 body
   background: #FFF
   line-height: 1.4
-  font-size: 16px
+  font-size: 15px
   +roman
   color: $c-text
   +no-scroll
@@ -27,9 +27,12 @@ body
 .btn
   color: #fff
   text-transform: uppercase
-  display: inline-flex
-  justify-content: space-between
-  align-items: center
+  background-color: transparent
+  // display: inline-flex
+  // justify-content: space-between
+  // align-items: center
+  display: inline-block
+  text-align: center
   +light
   text-align: center
   font-size: 0
@@ -37,12 +40,14 @@ body
   
   &__title
     font-size: 14px
-    display: inline-flex
-    align-items: center
-    justify-content: center
+    // display: inline-flex
+    // align-items: center
+    // justify-content: center
+    display: inline-block
+    vertical-align: top
     height: 100%
     background-color: $c-accent
-    padding: 13px 10px
+    padding: 17px 10px
     text-align: center
     min-width: 180px
     transition: color .3s, background-color .3s
@@ -65,6 +70,7 @@ body
     max-width: none
     .btn__title
       width: 100%
+      padding: 23px 10px
   &--white
     .btn__title
       background-color: #fff
@@ -82,8 +88,10 @@ body
   display: inline-block
   padding-right: 100px
   position: relative
+  transition: color .3s
   &__title
     text-decoration: underline
+    transition: color .3s
   &__arrow
     position: absolute
     right: 0
@@ -95,22 +103,52 @@ body
       content: ''
       position: absolute
       height: 1px
-      background-color: $c-text
+      background-color: #fff
       top: 50%
       right: -1px
       transform: translate(0, -50%)
     &::after
       display: inline-block
       position: absolute
-      +icon-arrow(8, 8, 1, $c-text, 225)
+      +icon-arrow(8, 8, 1, #fff, 225)
       content: ''
       top: 50%
       transform: translate(0, -50%) rotate(225deg)
       right: 0
   &--green
     color: $c-accent
+    &::before
+      background-color: $c-text
+    &::after
+      +icon-arrow(8, 8, 1, $c-text, 225)
   &--sm
     padding-right: 45px
     .link__arrow
       &::before
         width: 30px
+  &--simple
+    color: $c-text
+    +hover
+      .link__title
+        color: $c-accent
+    .link__title
+      text-decoration: none
+    .link__arrow
+      &::before
+        background-color: $c-text
+      &::after
+        border-color: $c-text
+
+.phone
+  display: inline-flex
+  align-items: center
+  &__phone
+    +bold
+    font-size: 32px
+    color: #202020
+    line-height: 1.15
+  &__icon
+    width: 44px
+    height: 38px
+    background-color: $c-accent
+    margin-right: 10px
