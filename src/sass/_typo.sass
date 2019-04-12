@@ -5,6 +5,21 @@
   text-transform: uppercase
   font-weight: normal
   line-height: 1.15
+  position: relative
+  .link
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    left: calc(100% + 30px)
+    white-space: nowrap
+    text-transform: none
+    font-size: 15px
+    +light
 
   &--white
     color: #fff
+
+.h4, h4
+  +bold
+  font-size: 18px
+  text-transform: uppercase

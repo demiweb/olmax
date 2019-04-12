@@ -1,0 +1,43 @@
+{%set
+slider = [
+  { img: 'partner-1.png' },
+  { img: 'partner-2.png' },
+  { img: 'partner-3.png' },
+  { img: 'partner-4.png' },
+  { img: 'partner-1.png' },
+  { img: 'partner-2.png' },
+  { img: 'partner-3.png' },
+  { img: 'partner-4.png' }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- begin partners-slider -->
+        <div class="partners-slider">
+          <!-- begin slider -->
+          <div class="slider__wrap slider--partners__wrap">
+            <div class="slider slider--partners js-slider" data-slider="partners">
+            {% for i in slider %}
+              <div class="slide">
+                <div class="slide__img">
+                  <img src="img/partners/{{ i.img }}" alt="">
+                </div>
+              </div>
+            {% endfor %}
+            </div>
+
+            <button class="slider__prev slider--partners__prev js-prev"></button>
+            <button class="slider__next slider--partners__next js-next"></button>
+          </div>
+          <!-- end slider -->
+        </div>
+        <!-- end partners-slider -->
+      </div>
+    </div>
+  </div>  
+</section>
+<!-- end section -->

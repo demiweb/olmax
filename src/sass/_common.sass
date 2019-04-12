@@ -34,7 +34,7 @@ body
   text-align: center
   font-size: 0
   height: 50px
-
+  
   &__title
     font-size: 14px
     display: inline-flex
@@ -45,6 +45,7 @@ body
     padding: 13px 10px
     text-align: center
     min-width: 180px
+    transition: color .3s, background-color .3s
   &__icon
     display: inline-block
     background-color: #2c2c2c
@@ -58,6 +59,22 @@ body
   &--lg
     .btn__title
       min-width: 220px
+  &--full
+    height: 100%
+    width: 100%
+    max-width: none
+    .btn__title
+      width: 100%
+  &--white
+    .btn__title
+      background-color: #fff
+      color: $c-text
+    +hover
+      .btn__title
+        background-color: $c-accent
+        color: #fff
+  &--ttn
+    text-transform: none
 
 .link
   font-size: 15px
@@ -92,3 +109,8 @@ body
       right: 0
   &--green
     color: $c-accent
+  &--sm
+    padding-right: 45px
+    .link__arrow
+      &::before
+        width: 30px

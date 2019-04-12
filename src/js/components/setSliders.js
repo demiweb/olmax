@@ -42,6 +42,16 @@ export default function setSliders() {
 
           return '<button>'+title+'</button>';
         },
+      },
+      new_items: {
+        slidesToShow: 3,
+        prevArrow: $prev,
+        nextArrow: $next
+      },
+      partners: {
+        slidesToShow: 4,
+        prevArrow: $prev,
+        nextArrow: $next
       }
     };
 

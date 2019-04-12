@@ -1,0 +1,63 @@
+{%set
+slider = [
+  {
+    title: '2017 BMW I3 Mega World 33KWh',
+    list: [
+      { title: 'Вартість:', text: '30,900$' },
+      { title: 'Пробіг:', text: '30300 км' },
+      { title: 'Рік:', text: '2017' }
+    ],
+    img: 'item-1.png'
+  },
+  {
+    title: '2017 BMW I3 Mega World 33KWh',
+    list: [
+      { title: 'Вартість:', text: '30,900$' },
+      { title: 'Пробіг:', text: '30300 км' },
+      { title: 'Рік:', text: '2017' }
+    ],
+    img: 'item-1.png'
+  },
+  {
+    title: '2017 BMW I3 Mega World 33KWh',
+    list: [
+      { title: 'Вартість:', text: '30,900$' },
+      { title: 'Пробіг:', text: '30300 км' },
+      { title: 'Рік:', text: '2017' }
+    ],
+    img: 'item-1.png'
+  },
+  {
+    title: '2017 BMW I3 Mega World 33KWh',
+    list: [
+      { title: 'Вартість:', text: '30,900$' },
+      { title: 'Пробіг:', text: '30300 км' },
+      { title: 'Рік:', text: '2017' }
+    ],
+    img: 'item-1.png'
+  },
+  {
+    title: '2017 BMW I3 Mega World 33KWh',
+    list: [
+      { title: 'Вартість:', text: '30,900$' },
+      { title: 'Пробіг:', text: '30300 км' },
+      { title: 'Рік:', text: '2017' }
+    ],
+    img: 'item-1.png'
+  }
+]
+%}
+
+<!-- begin slider -->
+<div class="slider__wrap slider--new-items__wrap">
+  <div class="slider slider--new-items js-slider" data-slider="new_items">
+    {% for i in slider %}
+    <div class="slide">
+      {% include "partials/_new-item.html" %}
+    </div>
+    {% endfor %}
+  </div>
+  <button class="slider__prev slider--new-items__prev js-prev"></button>
+  <button class="slider__next slider--new-items__next js-next"></button>
+</div>
+<!-- end slider -->
