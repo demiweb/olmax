@@ -4,9 +4,22 @@
   left: 0
   top: 0
   z-index: 10
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+
+  &__logo
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
   &__top
     background-color: #191919
     overflow: hidden
+    position: relative
   &__contacts
     height: 45px
   &__bottom
@@ -16,6 +29,16 @@
     display: flex
     justify-content: center
     align-items: center
+  &__right
+    position: absolute
+    right: 0
+    top: 0
+    height: 100%
+    display: flex
+    align-items: center
+    padding-right: 7px
+  &__social
+    margin-left: 50px
 
 .contacts
   display: flex
@@ -23,10 +46,33 @@
   align-items: center
   .btn
     &__title
-      padding: 15px 10px
+      padding: 13px 10px
+
 
 .contact
   color: #b6b6b6
   font-size: 14px
   margin-left: 25px
   margin-right: 25px
+  display: flex
+  align-items: center
+
+  &__icon
+    font-size: 0
+    margin-right: 10px
+    .icon
+      fill: #b6b6b6
+      font-size: 14px
+
+.logo
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  background-color: $c-accent
+  width: 152px
+  height: 114px
+  .icon
+    fill: #fff
+    stroke: #fff
+    font-size: 205px

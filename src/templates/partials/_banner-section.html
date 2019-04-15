@@ -5,7 +5,7 @@
     <div class="slider slider--full js-slider" data-slider="full">
       {% for i in range(0, 3) %}
       <div class="slide">
-        <div class="slide__inner" style="background-image: url('img/banner-slider/banner-1.jpg')">
+        <div class="slide__inner js-lazy" data-background-image="img/banner-slider/banner-1.jpg">
           <div class="container">
             <div class="row">
               <div class="col-lg-9">
@@ -31,8 +31,14 @@
     </div>
 
     <div class="slider__dots js-dots"></div>
-    <button class="slider__prev js-prev"></button>
-    <button class="slider__next js-next"></button>
+    <div class="slider__arrows slider--full__arrows">
+      <div class="container">
+        <div class="row col-lg-12">
+          <button class="slider__prev js-prev"></button>
+          <button class="slider__next js-next"></button>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- end slider -->
 </div>

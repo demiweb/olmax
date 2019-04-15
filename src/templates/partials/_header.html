@@ -1,5 +1,11 @@
 <!-- begin header -->
 <header class="header">
+  <div class="header__logo">
+    <a href="/" class="logo">
+      {{ mixins.iconLogo() }}
+    </a>
+  </div>
+
   <div class="header__top">
     <div class="container">
       <div class="row">
@@ -8,22 +14,40 @@
             <!-- begin contacts -->
             <div class="contacts">
               <div class="contact">
-                <div class="contact__icon"></div>
-                <div class="contact__text">+38 (068) 776-77-00</div>
+                <div class="contact__icon">{{ mixins.icon('telephone') }}</div>
+                <div class="contact__text"><a href="tel:+380687767700">+38 (068) 776-77-00</a></div>
               </div>
 
               <div class="contact">
-                <div class="contact__icon"></div>
+                <div class="contact__icon">{{ mixins.icon('location') }}</div>
                 <div class="contact__text">м. Київ, вул. Миколи Грінченко, 18</div>
               </div>
 
-              <a href="#" class="btn btn--lg">
+              <a href="#" class="btn btn--lg btn--full-height">
                 <span class="btn__title">Замовити TEST DRIVE</span>
               </a>
             </div>
             <!-- end contacts -->
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="header__right">
+      <a href="#" class="map-link">
+        <span class="map-link__icon">{{ mixins.icon('map') }}</span>
+        <span class="map-link__title">Обери свою місцеву заправку</span>
+      </a>
+
+      <div class="header__social">
+        <!-- begin social -->
+        <div class="social social--sm">
+          <ul class="social__list">
+            <li class="social__item"><a href="#" class="social__link">{{ mixins.icon('facebook') }}</a></li>
+            <li class="social__item"><a href="#" class="social__link">{{ mixins.icon('youtube') }}</a></li>
+          </ul>
+        </div>
+        <!-- end social -->
       </div>
     </div>
   </div>

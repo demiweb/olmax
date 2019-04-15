@@ -8,6 +8,11 @@
   +bold
   line-height: 1
 
+.h3, h3
+  +bold
+  font-size: 15px
+  text-transform: uppercase
+
 .title
   font-size: 32px
   color: $c-text
@@ -16,6 +21,7 @@
   font-weight: normal
   line-height: 1.15
   position: relative
+  +css-lock(28, 32, 567, 1199, font-size)
   .link
     position: absolute
     top: 50%

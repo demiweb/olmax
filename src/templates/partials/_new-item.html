@@ -2,7 +2,7 @@
 <div class="new-item">
   <div class="new-item__top">
     <div class="new-item__title">
-      <h4 class="h4">{{ i.title }}</h4>
+      <h4 class="h4"><a href="#">{{ i.title }}</a></h4>
     </div>
 
     <div class="new-item__list">
@@ -24,12 +24,14 @@
   </div>
 
   <div class="new-item__img">
-    <img src="img/new-items/{{ i.img }}" alt="">
+    <img class="js-lazy" src="" data-src="img/new-items/{{ i.img }}" alt="">
   </div>
 
   <div class="new-item__btns">
     <a href="#" class="btn btn--full btn--white">
-      <span class="btn__title">TEST DRIVE</span>
+      <span class="btn__title">
+        TEST DRIVE {{ mixins.iconCar() }}
+      </span>
     </a>
     <a href="#" class="btn btn--ttn btn--full btn--white">
       <span class="btn__title">Дізнатися більше</span>

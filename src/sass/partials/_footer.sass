@@ -1,0 +1,40 @@
+.footer
+  padding-top: 90px
+  padding-bottom: 90px
+  &__title
+    padding-bottom: 20px
+    position: relative
+    margin-bottom: 25px
+    &::before
+      content: ''
+      position: absolute
+      width: 53px
+      height: 1px
+      background-color: #bcbcbc
+      bottom: 0
+      left: 0
+
+.footer-contacts
+  &__phone
+    color: #191919
+    font-size: 15px
+    +bold
+    margin-bottom: 22px
+  &__text
+    font-size: 15px
+    color: #727171
+    margin-bottom: 22px
+    +light
+  &__link
+    font-size: 15px
+    text-decoration: underline
+    color: $c-accent
+    margin-bottom: 22px
+    display: inline-block
+    +light
+  &__copy
+    text-transform: uppercase
+    +light
+    font-size: 12px
+  &__social
+    margin-bottom: 22px

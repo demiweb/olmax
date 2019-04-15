@@ -4,7 +4,7 @@
 .banner-half
   width: 50%
   +cover
-  padding-top: 35%
+  padding-top: 32%
   position: relative
   &:hover
     .banner-half__btn
@@ -25,3 +25,15 @@
     max-height: 0
     overflow: hidden
     transition: max-height .3s
+  &__bg
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 0
+    top: 0
+    left: 0
+    overflow: hidden
+    video
+      width: 100%
+      height: 100%
+      object-fit: cover

@@ -12,7 +12,7 @@ slider = [
 %}
 
 <!-- begin section -->
-<section class="section">
+<section class="section section--pt-sm">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -24,7 +24,7 @@ slider = [
             {% for i in slider %}
               <div class="slide">
                 <div class="slide__img">
-                  <img src="img/partners/{{ i.img }}" alt="">
+                  <img class="js-lazy" src="" data-src="img/partners/{{ i.img }}" alt="">
                 </div>
               </div>
             {% endfor %}

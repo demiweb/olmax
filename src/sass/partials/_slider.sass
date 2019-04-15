@@ -34,26 +34,41 @@
   &__prev,
   &__next
     background-color: transparent
-    +icon-arrow(20, 20, 2, #fff, 45)
+    +icon-arrow(15, 15, 2, #fff, 45)
+    +lg
+      display: none !important
 
   &--full
     .slide
       &__inner
         display: flex
         align-items: center
+        position: relative
         +cover
+        .container
+          z-index: 1
     &__wrap
       .slider__prev,
       .slider__next
         position: absolute
         z-index: 1
-        top: 50%        
+        // top: 50%        
       .slider__prev
-        left: 5%
-        transform: translate(0, -50%) rotate(45deg)
+        left: -75px
+        transform: rotate(45deg)
+        +xl
+          left: -10px
       .slider__next
-        right: 5%
-        transform: translate(0, -50%) rotate(225deg)
+        right: -110px
+        transform: rotate(225deg)
+        +xl
+          right: -10px
+    &__arrows
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%)
+      z-index: 0
+      width: 100%
 
   &--brands        
     &__wrap
@@ -102,17 +117,24 @@
   
   &--models
     .slide
+      position: relative
       &__img
-        margin-bottom: 23px
+        margin-bottom: 55px
         img
           margin-left: auto
           margin-right: auto
+          max-width: 100%
       &__title
         color: #fff
         font-size: 15px
         margin-bottom: 200px
       &__info
         background-color: #fff
+        +md
+          position: absolute
+          left: 0
+          bottom: 0
+          width: 100%
     &__wrap
       padding-top: 45px
       .slider__dots
@@ -157,12 +179,12 @@
     &__prev
       left: -135px
       &::before
-        +icon-arrow(20, 20, 2, #fff, 45)
+        +icon-arrow(15, 15, 2, #fff, 45)
         left: 23px
     &__next
       right: -135px
       &::before
-        +icon-arrow(20, 20, 2, #fff, 225)
+        +icon-arrow(15, 15, 2, #fff, 225)
         left: 14px
 
   &--partners
@@ -180,11 +202,11 @@
       position: absolute
       top: 50%
     &__prev
-      left: -110px
-      +icon-arrow(20, 20, 2, $c-text, 45)
+      left: -90px
+      +icon-arrow(15, 15, 2, $c-text, 45)
     &__next
-      right: -110px
-      +icon-arrow(20, 20, 2, $c-text, 225)
+      right: -90px
+      +icon-arrow(15, 15, 2, $c-text, 225)
 
   &--consultation
     .slide
@@ -215,13 +237,13 @@
     &__prev
       left: 0
       &::before
-        +icon-arrow(20, 20, 2, #fff, 45)
+        +icon-arrow(15, 15, 2, #fff, 45)
         left: 23px
     &__next
       left: 0
       transform: translate(100%, 0) rotate(0)
       &::before
-        +icon-arrow(20, 20, 2, #fff, 225)        
+        +icon-arrow(15, 15, 2, #fff, 225)        
         left: 14px
 
 
@@ -229,10 +251,28 @@
   +cover
   &__inner
     height: 100%
+  &__bg
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 0
+    video
+      min-height: 100%
+      min-width: 100%
 
 .models-slider
   +cover
   text-align: center
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    z-index: 0
+    width: 100%
+    height: 145px
+    background-image: linear-gradient(to top, #fff 20%, #fff, rgba(#fff,.1))
+    left: 0
+    bottom: 0
 
 .new-items-slider
   padding-top: 40px

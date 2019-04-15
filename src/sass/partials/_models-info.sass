@@ -1,8 +1,20 @@
 .models-info
+  &__icon
+    position: absolute
+    top: 0
+    left: 0
+    .icon
+      font-size: 30px
+      fill: $c-text
+    .icon-speedometer
+      font-size: 45px
+      transform: translate(-13px, -7px)
   &__item
     text-align: left
     height: 100%
     position: relative
+    +md
+      margin-bottom: 10px
     &::before
       content: ''
       position: absolute
@@ -11,9 +23,13 @@
       right: 0
       width: 1px
       background-color: $c-text
+      +md
+        display: none
     &.has-no-line
       &::before
         display: none
+    &.has-icon
+      padding-left: 40px
   &__title
     +bold
     font-size: 32px
@@ -27,3 +43,7 @@
     position: absolute
     top: -15px
     transform: translate(0, -100%)
+    +md
+      position: static
+      transform: translate(0, 0)
+      margin-bottom: 5px

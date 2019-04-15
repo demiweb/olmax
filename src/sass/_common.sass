@@ -12,6 +12,22 @@
 =light
   font-family: 'helveticaneuecyr-light', Arial, sans-serif
 
+=xl
+  +r(1440)
+    @content
+=lg
+  +r(1199)
+    @content
+=md
+  +r(991)
+    @content
+=sm
+  +r(767)
+    @content
+=xs
+  +r(575)
+    @content
+
 
 body
   background: #FFF
@@ -51,6 +67,12 @@ body
     text-align: center
     min-width: 180px
     transition: color .3s, background-color .3s
+    .icon
+      display: inline-block
+      vertical-align: sub
+      font-size: 16px
+      margin-left: 5px
+      transition: fill .3s
   &__icon
     display: inline-block
     background-color: #2c2c2c
@@ -60,6 +82,18 @@ body
     align-items: center
     background-color: #2c2c2c
     width: 50px
+    .icon
+      font-size: 16px
+      fill: #fff
+    &.is-arrow
+      position: relative
+      &::before
+        content: ''
+        display: inline-block
+        +icon-arrow(12, 12, 2, #fff, 225)
+        position: absolute
+        top: 50%
+        transform: translate(-3px, -50%) rotate(225deg)
 
   &--lg
     .btn__title
@@ -71,6 +105,8 @@ body
     .btn__title
       width: 100%
       padding: 23px 10px
+  &--full-height
+    height: 100%
   &--white
     .btn__title
       background-color: #fff
@@ -79,8 +115,12 @@ body
       .btn__title
         background-color: $c-accent
         color: #fff
+        .icon
+          fill: #fff
   &--ttn
     text-transform: none
+    .btn__title
+      font-size: 15px
 
 .link
   font-size: 15px
@@ -91,7 +131,7 @@ body
   transition: color .3s
   &__title
     text-decoration: underline
-    transition: color .3s
+    transition: color .3s    
   &__arrow
     position: absolute
     right: 0
@@ -103,14 +143,14 @@ body
       content: ''
       position: absolute
       height: 1px
-      background-color: #fff
+      background-color: $c-text
       top: 50%
       right: -1px
       transform: translate(0, -50%)
     &::after
       display: inline-block
       position: absolute
-      +icon-arrow(8, 8, 1, #fff, 225)
+      +icon-arrow(8, 8, 1, $c-text, 225)
       content: ''
       top: 50%
       transform: translate(0, -50%) rotate(225deg)
@@ -152,3 +192,72 @@ body
     height: 38px
     background-color: $c-accent
     margin-right: 10px
+    display: flex
+    align-items: center
+    justify-content: center
+    .icon
+      fill: #fff
+      font-size: 16px
+      stroke: #fff
+
+.map-link
+  display: flex
+  align-items: center
+  &__icon
+    display: block
+    font-size: 0
+    margin-right: 10px
+    margin-top: 2px
+    .icon
+      font-size: 18px
+      fill: #b6b6b6
+  &__title
+    color: #b6b6b6
+    font-size: 14px
+    display: block
+    +light
+
+.side-btns
+  position: fixed
+  top: 50%
+  transform: translate(0, -50%)
+  right: 0
+  z-index: 10
+
+.side-btn
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: $c-accent
+  width: 50px
+  height: 45px
+  position: relative
+  overflow: hidden
+  +hover
+    overflow: visible
+    .side-btn__title
+      transform: translate(-100%, 0)
+  .icon
+    fill: #fff
+    font-size: 23px
+  &:not(:last-child)
+    margin-bottom: 10px
+  &__title
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    transform: translate(100%, 0)
+    background-color: #2c2c2c
+    color: #fff
+    +light
+    font-size: 14px
+    text-transform: uppercase
+    white-space: nowrap
+    min-width: 180px
+    transition: transform .3s
+    z-index: -1
+

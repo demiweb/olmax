@@ -16,15 +16,15 @@
      <div class="row">
        <div class="col-lg-4">
          <div class="phone">
-           <div class="phone__icon"></div>
-           <div class="phone__phone">(068) 776-77-00</div>
+           <div class="phone__icon">{{ mixins.icon('kyivstar') }}</div>
+           <div class="phone__phone"><a href="tel:+380687767700">(068) 776-77-00</a></div>
          </div>
        </div>
 
        <div class="col-lg-4">
          <div class="phone">
-           <div class="phone__icon"></div>
-           <div class="phone__phone">(050) 776-77-00</div>
+           <div class="phone__icon">{{ mixins.icon('vodafone') }}</div>
+           <div class="phone__phone"><a href="tel:+380507767700">(050) 776-77-00</a></div>
          </div>
        </div>
      </div>
@@ -56,7 +56,7 @@
                 </div>
               </div>
               <div class="form__btn">
-                <button class="btn">
+                <button class="btn btn--ttn">
                   <span class="btn__title">Замовити консультацію</span>
                   <span class="btn__icon is-arrow"></span>
                 </button>
@@ -79,7 +79,7 @@
       <div class="slider slider--consultation js-slider" data-slider="consultation">
         {% for i in range(0, 3) %}
         <div class="slide">
-          <div class="slide__img" style="background-image: url('img/managers/manager-1.jpg');"></div>
+          <div class="slide__img js-lazy" data-background-image="img/managers/manager-1.jpg"></div>
 
           <div class="slide__name">
             <h2 class="title title--white">Павло петрук</h2>

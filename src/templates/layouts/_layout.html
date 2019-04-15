@@ -8,14 +8,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="theme-color" content="#fff"/>
     <meta name="format-detection" content="telephone=no"/>
+    <style>
+      .preloader {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background-color: #000;
+      }
+      .preloader__spinner {
+        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        margin: auto;
+        box-sizing: border-box;
+        background-clip: padding-box;
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        border: 4px solid rgba(255, 255, 255, 0.1);
+        -webkit-mask: linear-gradient(rgba(0, 0, 0, 0.1), #000000 90%);
+        transform-origin: 50% 60%;
+        transform: perspective(200px) rotateX(66deg);
+        animation: spinner-wiggle 1.2s infinite;
+      }
+      .preloader__spinner:before,
+      .preloader__spinner:after {
+        content: "";
+        position: absolute;
+        margin: -4px;
+        box-sizing: inherit;
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        opacity: .05;
+        border: inherit;
+        border-color: transparent;
+        animation: spinner-spin 1.2s cubic-bezier(0.6, 0.2, 0, 0.8) infinite, spinner-fade 1.2s linear infinite;
+      }
+
+      .preloader__spinner:before {
+        border-top-color: #66e6ff;
+      }
+
+      .preloader__spinner:after {
+        border-top-color: #f0db75;
+        animation-delay: 0.3s;
+      }
+
+      .preloader__logo {
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-family: Helvetica, sans-serif, Arial;
+        animation: load 1.2s infinite 0s ease-in-out;
+        animation-direction: alternate;
+        text-shadow: 0 0 1px white;
+      }
+
+      @keyframes spinner-spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner-fade {
+        20% {
+          opacity: .1;
+        }
+        40% {
+          opacity: 1;
+        }
+        60% {
+          opacity: .1;
+        }
+      }
+      @keyframes load {
+        0%{
+            opacity: 0.08;
+            filter: blur(5px);
+            letter-spacing: 3px;
+            }
+        100%{
+            }
+    }
+    </style>
     <link rel="stylesheet" media="all" href="css/app.css"/>
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
   <body>
 
+    <div class="preloader">      
+      <div class="preloader__logo"><img src="https://olmaks.ua/logo-olmaks2.png.pagespeed.ce.fCvDMeqhG3.png"></div>
+      <div class="preloader__spinner"></div>
+    </div>
+
     <!-- BEGIN content -->
     <div class="out">
       {% block content %}{% endblock %}
+
+      <div class="side-btns">
+        <a href="#" class="side-btn">
+          {{ mixins.iconCar() }}
+          <span class="side-btn__title">замовити TEST-DRIVE</span>
+        </a>
+        <a href="#" class="side-btn">
+          {{ mixins.icon('telephone') }}
+          <span class="side-btn__title">Замовити дзвінок</span>
+        </a>
+      </div>
     </div>
     <!-- END content -->
 
