@@ -72,14 +72,22 @@
 
   &--brands        
     &__wrap
-      margin-top: 90px
+      margin-top: 73px
       .slider__dots
-        top: -90px
+        top: -55px
         bottom: auto
-        height: 90px
+        // height: 90px
         display: flex
         justify-content: center
         align-items: center
+        overflow: hidden
+        ul
+          width: 1140px
+          text-align: center
+          white-space: nowrap
+          overflow: auto
+          margin-bottom: -17px
+          padding-bottom: 17px
         li
           margin-left: 10px
           margin-right: 10px
@@ -128,24 +136,38 @@
         color: #fff
         font-size: 15px
         margin-bottom: 200px
+        +lg
+          margin-bottom: 50px
+          display: none
       &__info
         background-color: #fff
-        +md
+        position: relative
+        &::before
+          content: ''
           position: absolute
-          left: 0
-          bottom: 0
+          z-index: 0
           width: 100%
+          height: 75px
+          background-image: linear-gradient(to top, #fff 20%, #fff, rgba(#fff,0))
+          left: 0
+          bottom: 100%
     &__wrap
       padding-top: 45px
+
       .slider__dots
         position: static
         height: auto
         margin-bottom: 30px
+        ul
+          width: 1140px
+          white-space: nowrap
+          overflow: auto
         button
           color: #fff          
         li
           margin-left: 25px
           margin-right: 25px
+          display: inline-block
           &.slick-active
             button
               font-size: 15px
@@ -171,6 +193,8 @@
       transform: rotate(0deg) translate(0, -50%)
       position: absolute
       top: 50%
+      +lg
+        display: inline-block !important
       &::before
         content: ''
         display: inline-block
@@ -178,14 +202,18 @@
         top: 20px
     &__prev
       left: -135px
+      +xl
+        left: 0px
       &::before
         +icon-arrow(15, 15, 2, #fff, 45)
         left: 23px
     &__next
       right: -135px
+      +xl
+        right: 0px
       &::before
         +icon-arrow(15, 15, 2, #fff, 225)
-        left: 14px
+        left: 16px
 
   &--partners
     .slide
@@ -200,7 +228,7 @@
     &__next
       background-color: transparent      
       position: absolute
-      top: 50%
+      top: 50%      
     &__prev
       left: -90px
       +icon-arrow(15, 15, 2, $c-text, 45)
@@ -244,7 +272,7 @@
       transform: translate(100%, 0) rotate(0)
       &::before
         +icon-arrow(15, 15, 2, #fff, 225)        
-        left: 14px
+        left: 16px
 
 
 .slide
@@ -264,18 +292,23 @@
   +cover
   text-align: center
   position: relative
+  +lg
+    background-position: 50% -100px
   &::before
     content: ''
     position: absolute
+    height: 350px
     z-index: 0
-    width: 100%
-    height: 145px
-    background-image: linear-gradient(to top, #fff 20%, #fff, rgba(#fff,.1))
+    top: 0
     left: 0
-    bottom: 0
+    width: 100%
+    background-image: linear-gradient(to bottom, #000 20%, rgba(#000,.5), rgba(#000,0))
+
 
 .new-items-slider
   padding-top: 40px
+  +md
+    padding-top: 0
 
 
 .banner-slider
@@ -294,4 +327,6 @@
     background-position: 50% 0
   .slide
     height: calc(100vh - 90px) // header height
+    +lg
+      height: calc(100vh - 45px)
     

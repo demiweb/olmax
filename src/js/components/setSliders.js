@@ -3,7 +3,6 @@ import slick from 'slick-carousel';
 export default function setSliders() {
   const $sliders = $('.js-slider');
 
-
   $sliders.each((i, slider) => {
     const $wrap = $(slider).closest('.slider__wrap');
     const $prev = $wrap.find('.js-prev');
@@ -46,7 +45,23 @@ export default function setSliders() {
       new_items: {
         slidesToShow: 3,
         prevArrow: $prev,
-        nextArrow: $next
+        nextArrow: $next,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       },
       partners: {
         slidesToShow: 4,

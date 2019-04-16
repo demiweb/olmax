@@ -31,7 +31,15 @@
     padding-top: 15px
   &__btns
     display: flex
-    height: 64px    
+    height: 64px
+    +md
+      flex-direction: column
+      height: auto
+      .btn
+        width: auto
+        &:first-child
+          &::before
+            display: none
     .btn
       width: 50%
       position: relative

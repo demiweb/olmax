@@ -39,6 +39,8 @@ body
 
 .out
   padding-top: 90px
+  +lg
+    padding-top: 45px
 
 .btn
   color: #fff
@@ -129,6 +131,11 @@ body
   padding-right: 100px
   position: relative
   transition: color .3s
+  +hover
+    .link__arrow
+      transform: translate(15px, -50%)
+      &::before
+        width: 100px
   &__title
     text-decoration: underline
     transition: color .3s    
@@ -138,6 +145,7 @@ body
     top: 50%
     transform: translate(0, -50%)
     display: inline-block
+    transition: transform .3s
     &::before
       width: 85px
       content: ''
@@ -147,6 +155,7 @@ body
       top: 50%
       right: -1px
       transform: translate(0, -50%)
+      transition: width .3s
     &::after
       display: inline-block
       position: absolute
@@ -208,6 +217,8 @@ body
     font-size: 0
     margin-right: 10px
     margin-top: 2px
+    +xs
+      display: none
     .icon
       font-size: 18px
       fill: #b6b6b6
@@ -216,6 +227,10 @@ body
     font-size: 14px
     display: block
     +light
+    br
+      display: none
+      +xs
+        display: block
 
 .side-btns
   position: fixed

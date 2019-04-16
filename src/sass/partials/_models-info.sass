@@ -3,6 +3,15 @@
     position: absolute
     top: 0
     left: 0
+    +sm
+      .icon
+        font-size: 22px
+      .icon-speedometer
+        font-size: 32px
+    +xs
+      display: inline-block
+      position: static
+      vertical-align: middle
     .icon
       font-size: 30px
       fill: $c-text
@@ -15,6 +24,11 @@
     position: relative
     +md
       margin-bottom: 10px
+    +sm
+      text-align: center
+    +xs
+      &:not(.has-btn)
+        display: none
     &::before
       content: ''
       position: absolute
@@ -30,10 +44,21 @@
         display: none
     &.has-icon
       padding-left: 40px
+      +sm
+        padding-left: 20px
+      +xs
+        padding-left: 0
   &__title
     +bold
     font-size: 32px
     line-height: 1.15
+    +sm
+      // display: inline-block
+      // vertical-align: middle
+      font-size: 24px
+    +xs
+      display: inline-block
+      vertical-align: middle
     span
       font-size: 15px
   &__subttl
@@ -43,7 +68,7 @@
     position: absolute
     top: -15px
     transform: translate(0, -100%)
-    +md
+    +lg
       position: static
       transform: translate(0, 0)
       margin-bottom: 5px
