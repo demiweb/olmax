@@ -1,6 +1,6 @@
 {% import "partials/_mixins.html" as mixins %}
 <!doctype html>
-<html>
+<html class="has-preloader">
   <head>
     <meta charset="utf-8"/>
     <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
@@ -9,6 +9,10 @@
     <meta name="theme-color" content="#fff"/>
     <meta name="format-detection" content="telephone=no"/>
     <style>
+     html.has-preloader {
+        overflow: hidden;
+        position: fixed
+      }
       .preloader {
         position: fixed;
         width: 100%;
@@ -20,7 +24,7 @@
         position: relative;
         position: absolute;
         top: 50%;
-        left: 45%;
+        left: 50%;
         margin: auto;
         box-sizing: border-box;
         background-clip: padding-box;
@@ -30,7 +34,7 @@
         border: 4px solid rgba(255, 255, 255, 0.1);
         -webkit-mask: linear-gradient(rgba(0, 0, 0, 0.1), #000000 90%);
         transform-origin: 50% 60%;
-        transform: perspective(200px) rotateX(66deg);
+        transform: translate(-50%, 0) perspective(200px) rotateX(66deg);
         animation: spinner-wiggle 1.2s infinite;
       }
       .preloader__spinner:before,
@@ -91,7 +95,7 @@
       @keyframes load {
         0%{
             opacity: 0.08;
-            filter: blur(5px);
+            /*filter: blur(5px);*/
             letter-spacing: 3px;
             }
         100%{
@@ -104,7 +108,7 @@
   <body>
 
     <div class="preloader">      
-      <div class="preloader__logo"><img src="https://olmaks.ua/logo-olmaks2.png.pagespeed.ce.fCvDMeqhG3.png"></div>
+      <div class="preloader__logo"><img src="img/logo.svg" width="270"></div>
       <div class="preloader__spinner"></div>
     </div>
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="has-preloader">
   <head>
     <meta charset="utf-8" />
     <title>main</title>
@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
-    <style> .preloader {
+    <style> html.has-preloader {
+        overflow: hidden;
+        position: fixed
+      }
+      .preloader {
         position: fixed;
         width: 100%;
         height: 100%;
@@ -18,7 +22,7 @@
         position: relative;
         position: absolute;
         top: 50%;
-        left: 45%;
+        left: 50%;
         margin: auto;
         box-sizing: border-box;
         background-clip: padding-box;
@@ -28,7 +32,7 @@
         border: 4px solid rgba(255, 255, 255, 0.1);
         -webkit-mask: linear-gradient(rgba(0, 0, 0, 0.1), #000000 90%);
         transform-origin: 50% 60%;
-        transform: perspective(200px) rotateX(66deg);
+        transform: translate(-50%, 0) perspective(200px) rotateX(66deg);
         animation: spinner-wiggle 1.2s infinite;
       }
       .preloader__spinner:before,
@@ -89,7 +93,7 @@
       @keyframes load {
         0%{
             opacity: 0.08;
-            filter: blur(5px);
+            /*filter: blur(5px);*/
             letter-spacing: 3px;
             }
         100%{
@@ -100,7 +104,7 @@
   </head>
   <body>
     <div class="preloader">
-      <div class="preloader__logo"><img src="https://olmaks.ua/logo-olmaks2.png.pagespeed.ce.fCvDMeqhG3.png"></div>
+      <div class="preloader__logo"><img src="img/logo.svg" width="270"></div>
       <div class="preloader__spinner"></div>
     </div>
     <!-- BEGIN content -->
@@ -425,7 +429,7 @@
                           <div class="hero__title">
                             <h2 class="title title--white">Audi e-tron вже в Україні!</h2>
                           </div>
-                          <div class="hero__subttl">TВиглядає як Audi, звучить як опера</div>
+                          <div class="hero__subttl">Виглядає як Audi, звучить як опера</div>
                           <div class="hero__btn">
                             <a href="#" class="btn">
                               <span class="btn__title">замовити TEST-DRIVE</span>
@@ -510,7 +514,7 @@
                           </div>
                         </div>
                         <div class="slide__img">
-                          <img class="js-lazy" src="" data-src="img/models/bmw-1.png" alt="">
+                          <img src="img/models/bmw-1.png" alt="">
                         </div>
                         <div class="slide__info">
                           <!-- begin models-info -->
@@ -5249,8 +5253,8 @@
       <!-- begin banner-slider -->
       <div class="banner-slider">
         <!-- begin slider -->
-        <div class="slider__wrap slider--full__wrap">
-          <div class="slider slider--full js-slider" data-slider="full">
+        <div class="slider__wrap slider--full__wrap slider--banner__wrap">
+          <div class="slider slider--full slider--banner js-slider" data-slider="banner">
             <div class="slide">
               <div class="slide__inner js-lazy" data-background-image="img/banner-slider/banner-1.jpg">
                 <div class="container">
@@ -5274,7 +5278,7 @@
               </div>
             </div>
             <div class="slide">
-              <div class="slide__inner js-lazy" data-background-image="img/banner-slider/banner-1.jpg">
+              <div class="slide__inner js-lazy" data-background-image="img/banner-slider/banner-2.jpg">
                 <div class="container">
                   <div class="row">
                     <div class="col-lg-9">
@@ -5296,7 +5300,7 @@
               </div>
             </div>
             <div class="slide">
-              <div class="slide__inner js-lazy" data-background-image="img/banner-slider/banner-1.jpg">
+              <div class="slide__inner js-lazy" data-background-image="img/banner-slider/banner-3.jpg">
                 <div class="container">
                   <div class="row">
                     <div class="col-lg-9">
@@ -5337,7 +5341,7 @@
           <div class="consultation__top">
             <div class="container">
               <div class="row">
-                <div class="col-lg-8">
+                <div class="col-xl-8 col-lg-6 col-md-6">
                   <div class="consultation__title">
                     <h2 class="title title--black">консультація спеціаліста</h2>
                     <div class="text text--black">Якщо у вас з’явилися запитання або пропозиції, задайте їх нашому спеціалісту:</div>
@@ -5345,7 +5349,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-lg-4">
+                <div class="col-xl-4 col-lg-12">
                   <div class="phone">
                     <div class="phone__icon">
                       <svg class="icon icon-kyivstar">
@@ -5355,7 +5359,7 @@
                     <div class="phone__phone"><a href="tel:+380687767700">(068) 776-77-00</a></div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-xl-4 col-lg-12">
                   <div class="phone">
                     <div class="phone__icon">
                       <svg class="icon icon-vodafone">
@@ -5371,7 +5375,7 @@
           <div class="consultation__bottom">
             <div class="container">
               <div class="row">
-                <div class="col-lg-8">
+                <div class="col-xl-8 col-lg-6 col-md-6">
                   <div class="consultation__title">
                     <div class="text text--black">Або залиште ваші данні у формі нижче і ми зв’яжемося з вами у найближчий час:</div>
                   </div>
@@ -5489,7 +5493,7 @@
       <section class="section section--bg js-lazy" data-background-image="img/bg-assort-block.jpg">
         <div class="container">
           <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8 col-md-12">
               <div class="section__block">
                 <div class="section__title has-line is-left">
                   <h1 class="title">Асортимент моделей електромобілів у нашому автосалоні: (H1)</h1>
@@ -5544,12 +5548,11 @@
             <div class="col-lg-12">
               <div class="brand-nav__inner">
                 <div class="brand-nav__title">Обрати бренд</div>
-                <div class="brnad-nav__nav">
+                <div class="brand-nav__nav js-scrolled-el">
                   <!-- begin nav -->
                   <nav class="nav nav--brands">
                     <ul class="nav__list nav--brands__list">
                       <li class="li nav__item nav--brands__item"><a href="#" class="nav__link nav--brands__link">BMW</a></li>
-                      <li class="li nav__item nav--brands__item"><a href="#" class="nav__link nav--brands__link">tesla</a></li>
                       <li class="li nav__item nav--brands__item"><a href="#" class="nav__link nav--brands__link">tesla</a></li>
                       <li class="li nav__item nav--brands__item"><a href="#" class="nav__link nav--brands__link">tesla</a></li>
                       <li class="li nav__item nav--brands__item"><a href="#" class="nav__link nav--brands__link">tesla</a></li>
@@ -5582,12 +5585,12 @@
                 <!-- begin nav -->
                 <div class="nav nav--footer">
                   <ul class="nav__list nav--footer__list">
-                    <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Електромобілі в наявності</a></li>
-                    <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Trade in</a></li>
-                    <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Сервісне обслуговування</a></li>
-                    <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Моделі</a></li>
-                    <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Блог</a></li>
-                    <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Контакти</a></li>
+                    <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Електромобілі в наявності</a></li>
+                    <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Trade in</a></li>
+                    <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Сервісне обслуговування</a></li>
+                    <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Моделі</a></li>
+                    <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Блог</a></li>
+                    <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Контакти</a></li>
                   </ul>
                 </div>
                 <!-- end nav -->
@@ -5598,49 +5601,49 @@
                 <h3 class="h3">б/у електромобілі в наявності</h3>
               </div>
               <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-4">
                   <div class="footer__nav">
                     <!-- begin nav -->
                     <div class="nav nav--footer">
                       <ul class="nav__list nav--footer__list">
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Nissan</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Smart</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">BMW</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Toyota</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Fiat</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Mercedes</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Nissan</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Smart</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">BMW</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Toyota</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Fiat</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Mercedes</a></li>
                       </ul>
                     </div>
                     <!-- end nav -->
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-4">
                   <div class="footer__nav">
                     <!-- begin nav -->
                     <div class="nav nav--footer">
                       <ul class="nav__list nav--footer__list">
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Nissan</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Smart</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">BMW</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Toyota</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Fiat</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Mercedes</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Nissan</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Smart</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">BMW</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Toyota</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Fiat</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Mercedes</a></li>
                       </ul>
                     </div>
                     <!-- end nav -->
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-4">
                   <div class="footer__nav">
                     <!-- begin nav -->
                     <div class="nav nav--footer">
                       <ul class="nav__list nav--footer__list">
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Nissan</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Smart</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">BMW</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Toyota</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Fiat</a></li>
-                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--foorter__link">Mercedes</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Nissan</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Smart</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">BMW</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Toyota</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Fiat</a></li>
+                        <li class="nav__item nav--footer__item"><a href="#" class="nav__link nav--footer__link">Mercedes</a></li>
                       </ul>
                     </div>
                     <!-- end nav -->

@@ -17,11 +17,27 @@
       font-size: 18px
   
   &--brands
+    overflow: hidden
+    max-width: 100%
+    &__list
+      // width: 1040px
+      overflow: auto
+      white-space: nowrap
+      margin-bottom: -17px
+      padding-bottom: 17px
     &__link
       text-transform: uppercase
       +light
       font-size: 15px
       color: #fff
+      +lg
+        font-size: 15px
+    &__item
+      +lg
+        display: inline-block
+        margin-left: 10px
+        margin-right: 10px
+        margin-bottom: 0
   &--footer
     &__item
       display: block
@@ -29,3 +45,12 @@
       margin-right: 0
       &:not(:last-child)
         margin-bottom: 22px
+        +md
+          margin-bottom: 12px
+        +sm
+          margin-bottom: 5px
+    &__link
+      +lg
+        font-size: 15px
+      +xs
+        font-size: 14px

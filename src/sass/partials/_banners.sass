@@ -1,11 +1,23 @@
 .two-banners
   display: flex
+  +sm
+    display: block
 
 .banner-half
   width: 50%
   +cover
   padding-top: 32%
   position: relative
+  +sm
+    width: auto
+    padding-top: 60%
+  +xs
+    padding-top: 100%
+  &::before
+    content: ''
+    +coverdiv
+    z-index: 1
+    background-color: rgba(#000, .4)
   &:hover
     .banner-half__btn
       max-height: 50px
@@ -17,6 +29,8 @@
     left: percentage(75/960)
     bottom: percentage(141/620)
     max-width: 385px
+    +md
+      max-width: 280px
   &__title
     margin-bottom: 15px
     .title

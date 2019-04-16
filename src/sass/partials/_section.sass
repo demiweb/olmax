@@ -26,16 +26,22 @@
   &__links-list
     display: flex
     margin-bottom: 35px
+    +md
+      margin-bottom: 20px
     .links-list
       &:not(:last-child)
         margin-right: 50px
   &__block
     &:not(:last-child)
       margin-bottom: 50px
+      +md
+        margin-bottom: 30px
     p
       font-size: 15px
       margin-bottom: 35px
       +light
+      +md
+        margin-bottom: 20px
       strong
         +bold
       a
@@ -46,6 +52,8 @@
 
   &--bg
     +cover
+    +md
+      background-image: none !important
     .container
       position: relative
       z-index: 1

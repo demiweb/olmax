@@ -28,11 +28,15 @@
   +r(575)
     @content
 
-
+html
+  // overflow: visible
+  // position: static
 body
   background: #FFF
   line-height: 1.4
   font-size: 15px
+  overflow: visible
+  position: static
   +roman
   color: $c-text
   +no-scroll
@@ -55,6 +59,9 @@ body
   text-align: center
   font-size: 0
   height: 50px
+  +hover
+    .btn__title
+      background-color: #282822
   
   &__title
     font-size: 14px
@@ -127,31 +134,32 @@ body
 .link
   font-size: 15px
   color: #fff
-  display: inline-block
-  padding-right: 100px
+  display: flex
+  align-items: center
+  // padding-right: 100px
   position: relative
   transition: color .3s
   +hover
     .link__arrow
-      transform: translate(15px, -50%)
-      &::before
-        width: 100px
+      width: 100px
   &__title
     text-decoration: underline
-    transition: color .3s    
+    transition: color .3s
+    margin-right: 25px 
   &__arrow
-    position: absolute
+    position: relative
+    width: 85px
     right: 0
     top: 50%
     transform: translate(0, -50%)
     display: inline-block
-    transition: transform .3s
+    transition: transform .3s, width .3s
     &::before
-      width: 85px
+      width: 100%
       content: ''
       position: absolute
       height: 1px
-      background-color: $c-text
+      background-color: #fff
       top: 50%
       right: -1px
       transform: translate(0, -50%)
@@ -159,22 +167,36 @@ body
     &::after
       display: inline-block
       position: absolute
-      +icon-arrow(8, 8, 1, $c-text, 225)
+      +icon-arrow(8, 8, 1, #fff, 225)
       content: ''
       top: 50%
       transform: translate(0, -50%) rotate(225deg)
       right: 0
   &--green
     color: $c-accent
+    .link__arrow
+      &::before
+        background-color: $c-text
+      &::after
+        border-color: $c-text
     &::before
       background-color: $c-text
     &::after
       +icon-arrow(8, 8, 1, $c-text, 225)
   &--sm
-    padding-right: 45px
+    // padding-right: 45px
+    +hover
+      .link__arrow
+        width: 40px
+    .link__title
+      margin-right: 12px
     .link__arrow
+      width: 30px
       &::before
-        width: 30px
+        width: 100%
+        background-color: $c-text
+      &::after
+        border-color: $c-text
   &--simple
     color: $c-text
     +hover
@@ -196,6 +218,11 @@ body
     font-size: 32px
     color: #202020
     line-height: 1.15
+    a
+      transition: color .3s
+    +hover
+      a
+        color: $c-accent
   &__icon
     width: 44px
     height: 38px

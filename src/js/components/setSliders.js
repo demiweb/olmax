@@ -18,6 +18,15 @@ export default function setSliders() {
         nextArrow: $next,
         appendDots: $dots
       },
+      banner: {
+        dots: true,
+        prevArrow: $prev,
+        nextArrow: $next,
+        appendDots: $dots,
+        fade: true,
+        speed: 1000,
+        cssEase: 'linear'
+      },
       brands: {
         draggable: false,
         swipe: false,
@@ -32,7 +41,7 @@ export default function setSliders() {
       },
       models: {
         draggable: false,
-        swipe: false,
+        // swipe: false,
         arrows: false,
         dots: true,
         appendDots: $dotsModels,
@@ -66,11 +75,37 @@ export default function setSliders() {
       partners: {
         slidesToShow: 4,
         prevArrow: $prev,
-        nextArrow: $next
+        nextArrow: $next,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       },
       consultation: {
         prevArrow: $prev,
-        nextArrow: $next
+        nextArrow: $next,
+        fade: true,
+        speed: 1000,
+        cssEase: 'linear'
       }
     };
 
@@ -82,6 +117,8 @@ export default function setSliders() {
       }, 100);
     } else {
       $(slider).slick(options[name]);
-    };    
+    };
+
+    
   });
 }

@@ -1,7 +1,10 @@
 .consultation
   position: relative
+  &__left
+    .phone
+      +lg
+        margin-bottom: 10px
   &__right
-    width: 50%
     position: absolute
     z-index: 2
     top: 0
@@ -10,18 +13,31 @@
     // width: percentage(745/1920)
     width: 36.5%
     background-color: #000
+    +lg
+      width: 50%
+    +sm
+      position: static
+      width: auto
+      height: auto
     .slick-slide
       > div
         height: 100%
     .consultation-slider, .slider--consultation__wrap, .slider, .slick-list, .slick-track, .slide
       height: 100%
+      font-size: 0
   &__top
     background-color: #f7f7f7
     padding-top: 75px
     padding-bottom: 75px
     border-bottom: 1px solid  #e6e6e6
+    +md
+      padding-top: 40px
+      padding-bottom: 40px
   &__bottom
     padding-top: 75px
     padding-bottom: 85px
+    +md
+      padding-top: 40px
+      padding-bottom: 40px
   &__title
     margin-bottom: 20px

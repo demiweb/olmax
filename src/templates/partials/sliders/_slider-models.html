@@ -6,7 +6,6 @@ slider = [
       {
         model: 'Model S 85 2014',
         title: 'Tesla Model S 70D AWD в швидкісних якостях залишає позаду таких іменитих «жеребців» як Porshe 911 і BMW M',
-        img: 'bmw-1.png',
         time: '4,2 <span>сек</span>',
         distance: '415 <span>км</span>',
         power: '75 <span>кВт/ч</span>',
@@ -245,7 +244,11 @@ slider = [
               </div>              
 
               <div class="slide__img">
+                {% if j.img %}
                 <img class="js-lazy" src="" data-src="img/models/{{ j.img }}" alt="">
+                {% else %}
+                <img src="img/models/bmw-1.png" alt="">
+                {% endif %}
               </div>
 
               <div class="slide__info">

@@ -4,7 +4,12 @@
       &__row
         display: flex
         margin-bottom: 40px
+        +lg
+          display: block
       &__field
+        +lg
+          &:not(:last-child)
+            margin-bottom: 10px
         &:not(:last-child)
           margin-right: 60px
 .input

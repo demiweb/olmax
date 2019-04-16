@@ -1,5 +1,5 @@
 import 'intersection-observer';
-import { $WIN } from './constants';
+import { $WIN, $HTML } from './constants';
 
 import setTouchClassName from './setTouchClassName.js';
 import svgUseIt from 'svg-use-it';
@@ -10,20 +10,31 @@ import toggleMenu from './components/toggleMenu';
 import setModelsSliderHeight from './components/setModelsSliderHeight';
 import scrollHorisontal from './components/scrollHorisontal';
 
-$WIN.on('load', (e) => {
-  const $preloader = $('.preloader');
-  setTimeout(() => {
-    $preloader.remove();
-  }, 1500);  
-});
+// $WIN.on('load', (e) => {
+//   const $preloader = $('.preloader');
+//   setTimeout(() => {
+//     $preloader.remove();
+//     $HTML.removeClass('has-preloader');
+
+//   }, 1500);  
+// });
 
 $(function() {
+  const $preloader = $('.preloader');
+  
+  $HTML.removeClass('has-preloader');
+  
   svgUseIt();
   setTouchClassName();
   setSliders();
+  // $WIN.on('resize', (e) => {
+  //   setSliders();
+  // });
   setLazy();
   toggleVideoBg();
   toggleMenu();
   setModelsSliderHeight();
   scrollHorisontal();
+
+  $preloader.remove();
 });

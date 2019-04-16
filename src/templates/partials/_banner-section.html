@@ -1,11 +1,19 @@
+{%set
+slider = [
+  { img: 'banner-1.jpg' },
+  { img: 'banner-2.jpg' },
+  { img: 'banner-3.jpg' }
+]
+%}
+
 <!-- begin banner-slider -->
 <div class="banner-slider">
   <!-- begin slider -->
-  <div class="slider__wrap slider--full__wrap">
-    <div class="slider slider--full js-slider" data-slider="full">
-      {% for i in range(0, 3) %}
+  <div class="slider__wrap slider--full__wrap slider--banner__wrap">
+    <div class="slider slider--full slider--banner js-slider" data-slider="banner">
+      {% for i in slider %}
       <div class="slide">
-        <div class="slide__inner js-lazy" data-background-image="img/banner-slider/banner-1.jpg">
+        <div class="slide__inner js-lazy" data-background-image="img/banner-slider/{{ i.img }}">
           <div class="container">
             <div class="row">
               <div class="col-lg-9">
