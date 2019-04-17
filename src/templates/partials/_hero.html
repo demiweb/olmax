@@ -1,5 +1,5 @@
 <!-- begin hero -->
-<section class="hero">
+<section class="hero {% if hero.small %}js-lazy{% endif %}" {% if hero.small %}data-background-image="img/bg-hero-sm.jpg"{% endif %}>
   {% if hero.slider %}
   <div class="hero__slider">
     {% include "partials/sliders/_slider-hero.html" %}
