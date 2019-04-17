@@ -46,6 +46,7 @@ export default function setSliders() {
         // swipe: false,
         arrows: false,
         dots: true,
+        infinite: false,
         appendDots: $dotsModels,
         customPaging: function(slider, i) { 
           const title = $(slider.$slides[i]).find('.slide').data('model');
@@ -122,13 +123,13 @@ export default function setSliders() {
     };
 
     const reinitDebounced = debounce(300, (e) => {
-      console.log(name, slider, options);
       if (name === 'brands') {
-        setTimeout(() => {
-          $(slider).slick('unslick');
-          $(slider).slick(options[name]);
-        }, 100);
+        // setTimeout(() => {
+        $(slider).slick('unslick');
+        $(slider).slick(options[name]);
+        // }, 100);
       } else if (name === 'models') {
+        console.log(slider);
         $(slider).slick('unslick');
         $(slider).slick(options[name]);
       };

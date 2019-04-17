@@ -34,9 +34,12 @@ $(function() {
   setLazy();
   toggleVideoBg();
   toggleMenu();
-  setModelsSliderHeight();
+  // setModelsSliderHeight();
   scrollHorisontal();
   setScrollAnimations();
 
-  $preloader.remove();
+  setTimeout(() => {
+    $preloader.remove();
+  }, 500);
+  
 });

@@ -1,8 +1,10 @@
+import { debounce } from 'throttle-debounce';
+import { $WIN } from '../constants';
+
 export default function setModelsSliderHeight() {
   if (window.matchMedia('(min-width: 992px)').matches) return;
 
-
-  setTimeout(() => {
+  function setHeight() {
     const $slider = $('.js-height-slider');
     const $info = $slider.find('.slide__info');
     const $wrap = $slider.find('.slider__wrap');
@@ -15,5 +17,10 @@ export default function setModelsSliderHeight() {
       height: newHeight + 'px',
       marginBottom: infoHeight + 'px'
     });
-  }, 1500);
+  };
+
+  const setHeightebounced = debounce(300, setHeight);
+
+  // setTimeout(setHeight, 1500);
+  // $WIN.on('resize', setHeightebounced);
 };
