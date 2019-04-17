@@ -10,6 +10,7 @@ import toggleMenu from './components/toggleMenu';
 import setModelsSliderHeight from './components/setModelsSliderHeight';
 import scrollHorisontal from './components/scrollHorisontal';
 import setScrollAnimations from './components/setScrollAnimations';
+import setSelects from './components/setSelects';
 
 $(function() {
   const $preloader = $('.preloader');
@@ -25,6 +26,7 @@ $(function() {
   // setModelsSliderHeight();
   scrollHorisontal();
   setScrollAnimations();
+  setSelects();
 
   setTimeout(() => {
     $preloader.remove();

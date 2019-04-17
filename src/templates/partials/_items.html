@@ -1,0 +1,44 @@
+{%set
+items = [
+  {},
+  {},
+  {},
+  {}
+]
+%}
+
+<!-- begin items -->
+<div class="items__wrap">
+  <div class="items__top">
+    <!-- begin items-top -->
+    <div class="items-top">
+      <div class="items-top__btns">
+        <a href="#" class="items-top__btn"></a>
+        <a href="#" class="items-top__btn"></a>
+      </div>
+
+      <div class="items-top__title">Показ від 1 до 12 з 56</div>
+
+      <div class="items-top__selects">
+        <div class="items-top__select"></div>
+        <div class="items-top__select"></div>
+      </div>
+    </div>
+    <!-- end items-top -->
+  </div>
+
+  <div class="items__items">
+    <div class="row">
+      {% for i in items %}
+      <div class="col-lg-4">
+        {% include "partials/_item.html" %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="items__pagination">
+    {% include "partials/_pagination.html" %}
+  </div>
+</div>
+<!-- end items -->

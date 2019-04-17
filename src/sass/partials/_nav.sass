@@ -54,3 +54,34 @@
         font-size: 15px
       +xs
         font-size: 14px
+
+.nav-brands
+  padding-top: 20px
+  padding-bottom: 20px
+  &__item
+    display: inline-block
+    &:not(:last-child)
+      margin-right: 30px
+  &__link
+    font-size: 15px
+    text-transform: uppercase
+    position: relative
+    display: block
+    padding-top: 3px
+    padding-bottom: 3px
+    &::before
+      content: ''
+      height: 1px
+      position: absolute
+      top: 0
+      width: 53px
+      left: 50%
+      transform: translate(-50%, 0)
+      background-color: $c-accent
+      display: none
+    &.is-active
+      font-size: 25px
+      color: $c-accent
+      +bold
+      &::before
+        display: block
