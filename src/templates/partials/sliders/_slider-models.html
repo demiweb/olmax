@@ -219,7 +219,7 @@ slider = [
 %}
 
 <!-- begin slider -->
-<div class="slider__wrap slider--brands__wrap">
+<div class="slider__wrap slider--brands__wrap" >
   <div class="slider__dots js-scrolled-el js-brands-dots wow fadeInUp" data-wow-delay=".5s">
     
   </div>
@@ -227,7 +227,7 @@ slider = [
   <div class="slider slider--brands js-slider" data-slider="brands">
     {% for i in slider %}
     <div class="slide" data-brand="{{ i.brand }}">
-      <div class="slide__inner">
+      <div class="slide__inner js-lazy" data-background-image="img/models/bg-models.jpg">
         <!-- begin slider -->
         <div class="slider__wrap slider--models__wrap">
           <div class="slider__dots js-scrolled-el js-models-dots wow fadeInUp" data-wow-delay="1s"></div>

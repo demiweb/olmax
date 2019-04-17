@@ -105,7 +105,10 @@
             +icon-arrow(15, 15, 2, #fff, 225)
             left: 16px
 
-  &--brands        
+  &--brands
+    .slide     
+      &__inner
+        +cover
     &__wrap
       margin-top: 73px
       .slider__dots
@@ -299,11 +302,26 @@
         left: 0
         background-color: rgba(#000, .5)
         padding: 30px
+        .text
+          margin-bottom: 10px
+      &__top-title
+        height: 58px
+        background-color: rgba(#000, .5)
+        position: absolute
+        display: flex
+        align-items: center
+        padding-left: 30px
+        width: 100%
+        padding-right: 116px
+        top: 0
+        left: 0
+        z-index: 0
     &__prev,
     &__next
       width: 58px
       height: 58px
-      background-color: rgba(#000, .5)
+      // background-color: rgba(#000, .5)
+      background-color: transparent
       border: none
       transform: rotate(0deg) translate(0, 0)
       position: absolute
@@ -316,13 +334,13 @@
         position: absolute
         top: 20px
     &__prev
-      left: 0
+      right: 0
+      transform: translate(-100%, 0) rotate(0)
       &::before
         +icon-arrow(15, 15, 2, #fff, 45)
         left: 23px
     &__next
-      left: 0
-      transform: translate(100%, 0) rotate(0)
+      right: 0
       &::before
         +icon-arrow(15, 15, 2, #fff, 225)        
         left: 16px

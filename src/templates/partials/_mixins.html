@@ -357,3 +357,21 @@
   c24.14,0,45.398-15.405,52.899-38.333C398.934,251.101,397.196,247.673,394.009,246.63z"/>
 </svg>
 {% endmacro %}
+
+{% macro breadcrumbs(links) %}
+<!-- begin breadcrumbs -->
+<div class="breadcrumbs">
+  <ul class="breadcrumbs__list">
+    {% for i in links %}
+    <li class="breadcrumbs__item">
+      {% if i.active %}
+      <span class="breadcrumbs__link">{{ i.title }}</span>
+      {% else %}
+      <a href="#" class="breadcrumbs__link">{{ i.title }}</a>
+      {% endif %}      
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+<!-- end breadcrumbs -->
+{% endmacro %}

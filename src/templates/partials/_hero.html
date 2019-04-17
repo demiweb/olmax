@@ -1,7 +1,42 @@
 <!-- begin hero -->
 <section class="hero">
+  {% if hero.slider %}
   <div class="hero__slider">
     {% include "partials/sliders/_slider-hero.html" %}
-  </div>  
+  </div>
+  {% else %}
+  
+  <div class="hero__block">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="hero__title">
+            <h1 class="title title--white">Електромобілі в наявності</h1>
+          </div>
+
+          <div class="hero__subttl">Великий вибір б/у електромобілей з автосалону</div>
+
+          <div class="hero__breadcrumbs">
+            {{ mixins.breadcrumbs(
+              links = [
+              { title: 'Головна /'},
+              { title: 'Електромобілі в наявності', active: true }
+              ]
+              ) }}
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="hero__btn">
+              <a href="#" class="btn">
+                <span class="btn__title">Замовити консультацію</span>
+                <span class="btn__icon is-arrow"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {% endif %}
 </section>
 <!-- end hero -->

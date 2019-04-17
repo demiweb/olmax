@@ -27,7 +27,9 @@ export default function setSliders() {
         appendDots: $dots,
         fade: true,
         speed: 1000,
-        cssEase: 'linear'
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 2500
       },
       brands: {
         draggable: false,
@@ -58,6 +60,8 @@ export default function setSliders() {
         slidesToShow: 3,
         prevArrow: $prev,
         nextArrow: $next,
+        autoplay: true,
+        autoplaySpeed: 1800,
         responsive: [
           {
             breakpoint: 1200,
@@ -79,6 +83,8 @@ export default function setSliders() {
         slidesToShow: 4,
         prevArrow: $prev,
         nextArrow: $next,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
           {
             breakpoint: 1200,
@@ -129,7 +135,6 @@ export default function setSliders() {
         $(slider).slick(options[name]);
         // }, 100);
       } else if (name === 'models') {
-        console.log(slider);
         $(slider).slick('unslick');
         $(slider).slick(options[name]);
       };

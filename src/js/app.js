@@ -11,15 +11,6 @@ import setModelsSliderHeight from './components/setModelsSliderHeight';
 import scrollHorisontal from './components/scrollHorisontal';
 import setScrollAnimations from './components/setScrollAnimations';
 
-// $WIN.on('load', (e) => {
-//   const $preloader = $('.preloader');
-//   setTimeout(() => {
-//     $preloader.remove();
-//     $HTML.removeClass('has-preloader');
-
-//   }, 1500);  
-// });
-
 $(function() {
   const $preloader = $('.preloader');
   
@@ -28,9 +19,6 @@ $(function() {
   svgUseIt();
   setTouchClassName();
   setSliders();
-  // $WIN.on('resize', (e) => {
-  //   setSliders();
-  // });
   setLazy();
   toggleVideoBg();
   toggleMenu();
@@ -40,6 +28,5 @@ $(function() {
 
   setTimeout(() => {
     $preloader.remove();
-  }, 500);
-  
+  }, 500);  
 });
