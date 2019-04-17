@@ -70,6 +70,7 @@
     "vinyl-buffer": "^1.0.0",
     "webpack": "^4.6.0",
     "webpack-bundle-analyzer": "^2.11.1",
-    "webpack-glsl-loader": "^1.0.1"
+    "webpack-glsl-loader": "^1.0.1",
+    "wow.js": "^1.2.2"
   }
 }

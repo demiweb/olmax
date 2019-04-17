@@ -28,11 +28,17 @@
   +r(575)
     @content
 
+h1, h2, h3, h4, h5, h6
+  font-weight: 400
+
+strong
+  font-weight: 400
+
 html
   // overflow: visible
   // position: static
 body
-  background: #FFF
+  background: #202020
   line-height: 1.4
   font-size: 15px
   overflow: visible
@@ -43,8 +49,11 @@ body
 
 .out
   padding-top: 90px
+  overflow-x: hidden
   +lg
     padding-top: 45px
+  +xs
+    padding-bottom: 50px
 
 .btn
   color: #fff
@@ -116,6 +125,16 @@ body
       padding: 23px 10px
   &--full-height
     height: 100%
+  &--gray
+    .btn__title
+      background-color: #f7f7f7
+      color: $c-text
+    +hover
+      .btn__title
+        background-color: $c-accent
+        color: #fff
+        .icon
+          fill: #fff
   &--white
     .btn__title
       background-color: #fff
@@ -134,7 +153,7 @@ body
 .link
   font-size: 15px
   color: #fff
-  display: flex
+  display: inline-flex
   align-items: center
   // padding-right: 100px
   position: relative
@@ -265,6 +284,12 @@ body
   transform: translate(0, -50%)
   right: 0
   z-index: 10
+  +xs
+    bottom: 0
+    top: auto
+    transform: translate(0, 0)
+    width: 100%
+    display: flex
 
 .side-btn
   display: flex
@@ -275,13 +300,30 @@ body
   height: 45px
   position: relative
   overflow: hidden
+  transition: background-color .3s
   +hover
     overflow: visible
     .side-btn__title
       transform: translate(-100%, 0)
+  +xs
+    width: 50%
+    height: 50px
+    +hover
+        background-color: #282822
+    &:not(:last-child)
+      margin-bottom: 0
+    &:first-child
+      background-color: #f7f7f7
+      +hover
+        .icon
+          fill: #fff
+      .icon
+        fill: $c-text      
+      
   .icon
     fill: #fff
     font-size: 23px
+    transition: fill .3s
   &:not(:last-child)
     margin-bottom: 10px
   &__title
@@ -302,4 +344,6 @@ body
     min-width: 180px
     transition: transform .3s
     z-index: -1
+    +xs
+      display: none
 

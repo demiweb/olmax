@@ -23,12 +23,11 @@
     </div>
   </div>
 
-  <div class="new-item__img">
-    <img class="js-lazy" src="" data-src="img/new-items/{{ i.img }}" alt="">
+  <div class="new-item__img js-lazy" data-background-image="img/new-items/{{ i.img }}">
   </div>
 
   <div class="new-item__btns">
-    <a href="#" class="btn btn--full btn--white">
+    <a href="#" class="btn btn--full btn--gray">
       <span class="btn__title">
         TEST DRIVE {{ mixins.iconCar() }}
       </span>

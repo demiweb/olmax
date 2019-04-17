@@ -220,7 +220,7 @@ slider = [
 
 <!-- begin slider -->
 <div class="slider__wrap slider--brands__wrap">
-  <div class="slider__dots js-scrolled-el js-brands-dots">
+  <div class="slider__dots js-scrolled-el js-brands-dots wow fadeInUp" data-wow-delay=".5s">
     
   </div>
 
@@ -230,7 +230,7 @@ slider = [
       <div class="slide__inner">
         <!-- begin slider -->
         <div class="slider__wrap slider--models__wrap">
-          <div class="slider__dots js-scrolled-el js-models-dots"></div>
+          <div class="slider__dots js-scrolled-el js-models-dots wow fadeInUp" data-wow-delay="1s"></div>
 
           <div class="slider slider--models js-slider" data-slider="models">
             {% for j in i.sliderModels  %}
@@ -238,12 +238,12 @@ slider = [
               <div class="container">
                 <div class="row justify-content-center">
                   <div class="col-lg-6">
-                    <div class="slide__title">{{ j.title }}</div>
+                    <div class="slide__title wow fadeInUp" data-wow-delay="1.1s">{{ j.title }}</div>
                   </div>
                 </div>
               </div>              
 
-              <div class="slide__img">
+              <div class="slide__img wow fadeIn" data-wow-delay="1.2s">
                 {% if j.img %}
                 <img class="js-lazy" src="" data-src="img/models/{{ j.img }}" alt="">
                 {% else %}
@@ -251,7 +251,7 @@ slider = [
                 {% endif %}
               </div>
 
-              <div class="slide__info">
+              <div class="slide__info wow fadeIn" data-wow-delay="1.2s">
                 {{ mixins.modelsInfo(
                   time = j.time,
                   distance = j.distance,

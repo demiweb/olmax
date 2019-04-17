@@ -9,6 +9,7 @@ import toggleVideoBg from './components/toggleVideoBg';
 import toggleMenu from './components/toggleMenu';
 import setModelsSliderHeight from './components/setModelsSliderHeight';
 import scrollHorisontal from './components/scrollHorisontal';
+import setScrollAnimations from './components/setScrollAnimations';
 
 // $WIN.on('load', (e) => {
 //   const $preloader = $('.preloader');
@@ -35,6 +36,7 @@ $(function() {
   toggleMenu();
   setModelsSliderHeight();
   scrollHorisontal();
+  setScrollAnimations();
 
   $preloader.remove();
 });
