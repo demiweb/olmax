@@ -1,4 +1,6 @@
 import slick from 'slick-carousel';
+import { $WIN } from '../constants';
+import { debounce } from 'throttle-debounce';
 
 export default function setSliders() {
   const $sliders = $('.js-slider');
@@ -119,6 +121,19 @@ export default function setSliders() {
       $(slider).slick(options[name]);
     };
 
-    
-  });
+    const reinitDebounced = debounce(300, (e) => {
+      console.log(name, slider, options);
+      if (name === 'brands') {
+        setTimeout(() => {
+          $(slider).slick('unslick');
+          $(slider).slick(options[name]);
+        }, 100);
+      } else if (name === 'models') {
+        $(slider).slick('unslick');
+        $(slider).slick(options[name]);
+      };
+    });
+
+    $WIN.on('resize', reinitDebounced);
+  });  
 }
