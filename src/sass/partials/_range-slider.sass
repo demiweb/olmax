@@ -1,0 +1,49 @@
+.range-slider
+  .noUi-handle
+    border-radius: 50%
+    width: 12px
+    height: 12px
+    background-color: $c-accent
+    border: 0
+    box-shadow: none
+    top: -5px
+    cursor: pointer
+    &::before, &::after
+      display: none
+  .noUi-handle-lower
+    right: -8px !important 
+  .noUi-handle-upper
+    right: -8px !important
+  .noUi-horizontal
+    height: 3px
+    box-shadow: none
+    border: 0
+    border-radius: 0
+    background-color: $c-text
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      top: -5px
+      display: inline-block
+      border-radius: 50%
+      width: 12px
+      height: 12px
+      background-color: #636363
+      pointer-events: none
+    &::before
+      left: -4px
+    &::after
+      right: -8px
+  .noUi-connects
+    border-radius: 0
+  .noUi-connect
+    border-radius: 0
+    background-color: $c-accent
+    cursor: pointer
+
+.range-slider
+  &__title
+    +light
+    font-size: 15px
+    margin-bottom: 5px

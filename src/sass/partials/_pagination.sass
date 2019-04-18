@@ -1,0 +1,58 @@
+.pagination
+  font-size: 0
+  &__list
+    display: inline-block
+    vertical-align: top
+  &__item
+    display: inline-block
+    vertical-align: top
+    margin-right: 3px
+    margin-left: 3px
+  &__link
+    color: #828282
+    display: block
+    text-align: center
+    background-color: #fff
+    border: 1px solid  #ddd
+    padding: 5px
+    height: 30px
+    min-width: 30px
+    font-size: 14px
+    +hover
+      @extend .pagination__link.is-active
+    &.is-active
+      background-color: $c-text
+      border-color: $c-text
+      color: #fff
+    &.has-dots
+      border: 0
+      pointer-events: none
+      padding-left: 0
+      padding-right: 0
+      min-width: 0
+  &__prev,
+  &__next
+    display: inline-block
+    position: relative
+    vertical-align: top
+    width: 30px
+    height: 30px
+    border: 1px solid  #ddd
+    +hover
+      @extend .pagination__link.is-active
+    &::before
+      content: ''
+      display: inline-block
+      +icon-arrow(9, 9, 2, #ddd, 45)
+      position: absolute
+      top: 10px
+  &__prev
+    margin-right: 3px
+    &::before
+      +icon-arrow(9, 9, 2, #ddd, 45)
+      left: 11px
+  &__next
+    margin-left: 3px
+    &::before
+      +icon-arrow(9, 9, 2, #ddd, 225)
+      left: 8px

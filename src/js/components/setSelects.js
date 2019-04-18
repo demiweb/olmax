@@ -48,10 +48,32 @@ export default function setSelects() {
     const $customSelect = $(selectEl).closest('.custom-select');
     const $customSelectOptions = $customSelect.find('.custom-select__option');
     const $searchInput = $customSelect.find('.js-search');
+    const $customSelectPanel = $customSelect.find('.custom-select__panel');
 
+    // set panel scroll
 
+    function setMultiplyPanelScroll() {
+      const $options = $customSelectPanel.find('.custom-select__option');
+
+      $options.wrapAll('<div class="custom-select__panel-inner js-scrollbar"></div>');
+    };
+
+    function setDefaultPanelScroll() {
+      $customSelectPanel.addClass('js-scrollbar');
+    };
+
+    if ($searchInput.length > 0) {
+      setMultiplyPanelScroll();
+    } else {
+      setDefaultPanelScroll();
+    };
+
+    
+
+    // set option click
     $customSelectOptions.each((i, option) => {
       const label = $(option).find('label')[0];
+      if (!label) return;
 
       if ($(option).hasClass('is-selected')) {
         label.click();
@@ -62,6 +84,7 @@ export default function setSelects() {
       });      
     });
 
+    // filter search
     $searchInput.on('input', (e) => {
       const filter = e.currentTarget.value.toUpperCase();
       const $options = $(e.currentTarget).closest('.custom-select__panel').find('.custom-select__option');
@@ -75,7 +98,5 @@ export default function setSelects() {
         }
       });
     });
-
-
   });
 };

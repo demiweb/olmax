@@ -1,13 +1,19 @@
 .aside
-  background-color: #fff
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.15)
-  padding: 20px 25px 45px
+  background-color: #fff  
+  &__block
+    padding: 20px 25px 45px
+    margin-bottom: 30px
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.15)
 
 .aside-banner
   +cover
   display: flex
   justify-content: flex-end
   flex-direction: column
+  padding-left: 25px
+  padding-right: 25px
+  padding-bottom: 30px
+  padding-top: 120%
   &__subttl
     margin-bottom: 5px
   &__contact
@@ -15,4 +21,7 @@
     text-transform: uppercase
     color: #fff
     +bold
-    text-transform: uppercase
+    text-transform: uppercase    
+  &__btn
+    font-size: 0
+    padding-top: 12px

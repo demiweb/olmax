@@ -365,7 +365,7 @@
     {% for i in links %}
     <li class="breadcrumbs__item">
       {% if i.active %}
-      <span class="breadcrumbs__link">{{ i.title }}</span>
+      <a href="#" class="breadcrumbs__link is-active">{{ i.title }}</a>
       {% else %}
       <a href="#" class="breadcrumbs__link">{{ i.title }}</a>
       {% endif %}      

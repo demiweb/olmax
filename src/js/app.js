@@ -11,6 +11,8 @@ import setModelsSliderHeight from './components/setModelsSliderHeight';
 import scrollHorisontal from './components/scrollHorisontal';
 import setScrollAnimations from './components/setScrollAnimations';
 import setSelects from './components/setSelects';
+import setRangeSliders from './components/setRangeSliders';
+import setScrollBar from './components/setScrollBar';
 
 $(function() {
   const $preloader = $('.preloader');
@@ -27,6 +29,8 @@ $(function() {
   scrollHorisontal();
   setScrollAnimations();
   setSelects();
+  setRangeSliders();
+  setScrollBar();
 
   setTimeout(() => {
     $preloader.remove();

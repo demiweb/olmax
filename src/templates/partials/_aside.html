@@ -4,6 +4,18 @@ selects = [
     options: [
       { option: 'Всі марки', selected: true },
       { option: 'bmw' },
+      { option: 'tesla' },
+      { option: 'bmw' },
+      { option: 'tesla' },
+      { option: 'bmw' },
+      { option: 'tesla' },
+      { option: 'bmw' },
+      { option: 'tesla' },
+      { option: 'bmw' },
+      { option: 'tesla' },
+      { option: 'bmw' },
+      { option: 'tesla' },
+      { option: 'bmw' },
       { option: 'tesla' }
     ]
   },
@@ -75,19 +87,31 @@ selects = [
         <h3 class="h3 h3--green">Пошук електромобіля</h3>
       </div>
 
-      <div class="car-search__slider"></div>
+      <form action="">
+        <div class="car-search__slider">
+          <!-- begin range-slider -->
+          <div class="range-slider">
+            <div class="range-slider__title">
+              <span class="range-slider__title-fixed">Ціна:</span>
+              $<span class="js-range-slider-min"></span> - $<span type="text" class="js-range-slider-max"></span>
+            </div>
+            <div class="range-slider__slider js-range-slider" data-min="0" data-max="30000"></div>
+          </div>
+          <!-- end range-slider -->
+        </div>
 
-      <div class="car-search__selects">
-        <form action="">
+        <div class="car-search__selects">
           <!-- begin selects -->
           <div class="selects">
             {% for i in selects %}
             <div class="selects__select">
-              <select multiple="" class="js-select" data-type="multiple">
-                {% for j in i.options %}
-                <option value="{{ j.option }}" {% if j.selected %}selected=""{% endif %}>{{ j.option }}</option>
-                {% endfor %}
-              </select>
+              <div class="select select--multiple">
+                <select multiple="" class="js-select" data-type="multiple">
+                  {% for j in i.options %}
+                  <option value="{{ j.option }}" {% if j.selected %}selected=""{% endif %}>{{ j.option }}</option>
+                  {% endfor %}
+                </select>
+              </div>
             </div>
             {% endfor %}
 
@@ -96,28 +120,26 @@ selects = [
             </div>
           </div>
           <!-- end selects -->
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
     <!-- end car-search -->
   </div>
 
-  <div class="aside__block">
     <!-- begin aside-banner -->
     <div class="aside-banner js-lazy" data-background-image="img/aside-banner.jpg">
       <div class="aside-banner__block">
-        <div class="aside-banner__title"><h4 class="h4 h4--white">Бірко костянтин</h4></div>
+        <div class="aside-banner__title"><h4 class="h4 h4--white">Бірко<br> костянтин</h4></div>
         <div class="aside-banner__subttl text text--white">Менеджер з продажів</div>
         <div class="aside-banner__contact">+38-068-776-7700</div>
         <div class="aside-banner__contact">+38-063-129-0703</div>
         <div class="aside-banner__btn">
-          <a href="#" class="btn btn--ttn">
+          <a href="#" class="btn btn--ttn btn--full">
             <span class="btn__title">Замовити консультацію</span>
           </a>
         </div>
       </div>
     </div>
     <!-- end aside-banner -->
-  </div>
 </aside>
 <!-- end aside -->

@@ -1,5 +1,5 @@
 <!-- begin hero -->
-<section class="hero {% if hero.small %}js-lazy{% endif %}" {% if hero.small %}data-background-image="img/bg-hero-sm.jpg"{% endif %}>
+<section class="hero {% if hero.small %}hero--sm js-lazy{% endif %}" {% if hero.small %}data-background-image="img/bg-hero-sm.jpg"{% endif %}>
   {% if hero.slider %}
   <div class="hero__slider">
     {% include "partials/sliders/_slider-hero.html" %}
@@ -12,9 +12,8 @@
         <div class="col-lg-9">
           <div class="hero__title">
             <h1 class="title title--white">Електромобілі в наявності</h1>
-          </div>
-
-          <div class="hero__subttl">Великий вибір б/у електромобілей з автосалону</div>
+            <div class="hero__subttl">Великий вибір б/у електромобілей з автосалону</div>
+          </div>         
 
           <div class="hero__breadcrumbs">
             {{ mixins.breadcrumbs(
@@ -26,8 +25,8 @@
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="hero__btn">
-              <a href="#" class="btn">
+            <div class="hero__btn-right">
+              <a href="#" class="btn btn--ttn">
                 <span class="btn__title">Замовити консультацію</span>
                 <span class="btn__icon is-arrow"></span>
               </a>

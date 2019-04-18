@@ -1,0 +1,189 @@
+.items
+  &__top
+    margin-bottom: 30px
+
+
+.items-top
+  border: 1px solid  #e7e7e7
+  padding: 10px 20px 10px 15px
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  &__btns
+    font-size: 0
+    margin-right: 30px
+  &__btn
+    display: inline-block
+    vertical-align: middle
+    font-size: 0
+    &:not(:last-child)
+      margin-right: 15px
+    .icon
+      font-size: 16px
+      fill: #aeaeae
+      transition: fill .3s
+    .icon-list
+      font-size: 25px
+    &.is-active
+      .icon
+        fill: $c-accent
+    +hover
+      @extend .items-top__btn.is-active
+  &__title
+    color: #aeaeae
+    +light
+  &__selects
+    flex-grow: 1
+    display: flex
+    justify-content: flex-end
+  &__select
+    &:last-child
+      margin-left: 30px
+
+.item
+  box-shadow: 0px 0px 12.92px 4.08px rgba(0, 0, 1, 0.15)
+  margin-bottom: 30px
+  &__content
+    padding: 12px 15px 5px
+  &__img
+    +cover
+    padding-top: 70%
+  &__content-top
+    display: flex
+    justify-content: space-between
+    margin-bottom: 10px
+  &__video-link
+    font-size: 13px
+    color: #8d8d8d
+    transition: color .3s
+    .icon
+      fill: #8d8d8d
+      font-size: 14px
+      position: relative
+      top: 3px
+    +hover
+      text-decoration: underline
+      color: $c-accent
+  &__title
+    position: relative
+    padding-bottom: 10px
+    margin-bottom: 8px
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      height: 1px
+      background-color: #c1c1c1
+      width: 30px
+  &__info
+    position: relative
+    margin-left: -15px
+    margin-right: -15px
+    padding-left: 15px
+    padding-right: 15px
+    border-bottom: 1px solid #f9f9f9
+  &__price-lg
+    font-size: 21px
+    +bold
+    color: $c-accent
+  &__price-sm
+    +light
+    color: #a7a7a7
+    font-size: 13px
+  &__price
+    padding-top: 10px
+    padding-bottom: 10px
+  &__btn
+    background-color: #2c2c2c
+    font-size: 15px
+    +light
+    color: #fff
+    width: 100%
+    padding: 15px
+    display: flex
+    align-items: center
+    transition: background-color .3s
+    +hover
+      background-color: $c-accent
+      .item__btn-arrow
+        width: 70px
+  &__btn-title
+    margin-right: 10px
+  &__btn-arrow
+    position: relative
+    width: 28px
+    display: block
+    transition: width .3s
+    &::before
+      width: 100%
+      content: ''
+      position: absolute
+      height: 1px
+      background-color: #fff
+      top: 50%
+      right: -1px
+      transform: translate(0, -50%)
+      transition: width .3s
+    &::after
+      display: inline-block
+      position: absolute
+      +icon-arrow(8, 8, 1, #fff, 225)
+      content: ''
+      top: 50%
+      transform: translate(0, -50%) rotate(225deg)
+      right: 0
+
+
+.item-label
+  font-size: 11px
+  text-transform: uppercase
+  color: #fff
+  border-radius: 4px
+  padding: 4px 5px
+  display: flex
+  justify-content: center
+  min-width: 104px
+  align-items: center
+  &.is-available
+    background-color: $c-accent
+  &.is-intransit
+    background-color: #0073d5
+  &.is-reserve
+    background-color: #ecac01
+  &.is-sold
+    background-color: #dc002a
+  &.is-ordered
+    background-color: #0073d5
+  &__icon
+    font-size: 0
+    margin-right: 5px
+    .icon
+      font-size: 11px
+      fill: currentColor
+    .icon-truck
+      font-size: 15px
+
+.item-info
+  font-size: 0
+
+.item-info-item
+  font-size: 13px
+  color: #8d8d8d
+  display: inline-flex
+  width: 50%
+  margin-bottom: 7px
+  align-items: center
+  vertical-align: top
+  &__icon
+    font-size: 0
+    margin-right: 7px
+    .icon
+      fill: currentColor
+      font-size: 16px
+    .icon-hatchback
+      position: relative
+      top: 6px
+      font-size: 22px
+
+  

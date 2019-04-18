@@ -59,9 +59,6 @@ body
   color: #fff
   text-transform: uppercase
   background-color: transparent
-  // display: inline-flex
-  // justify-content: space-between
-  // align-items: center
   display: inline-block
   text-align: center
   +light
@@ -74,9 +71,6 @@ body
   
   &__title
     font-size: 14px
-    // display: inline-flex
-    // align-items: center
-    // justify-content: center
     display: inline-block
     vertical-align: top
     height: 100%
@@ -116,15 +110,7 @@ body
   &--lg
     .btn__title
       min-width: 220px
-  &--full
-    height: 100%
-    width: 100%
-    max-width: none
-    .btn__title
-      width: 100%
-      padding: 23px 10px
-  &--full-height
-    height: 100%
+
   &--gray
     .btn__title
       background-color: #f7f7f7
@@ -152,8 +138,22 @@ body
       padding-top: 14px
       padding-bottom: 14px
       font-size: 15px
-
       line-height: 1.1
+  &--full
+    width: 100%
+    max-width: none
+    overflow: hidden
+    .btn__title
+      width: 100%
+  &--full-both
+    height: 100%
+    width: 100%
+    max-width: none
+    .btn__title
+      width: 100%
+      padding: 23px 10px
+  &--full-height
+    height: 100%
 
 .link
   font-size: 15px
@@ -211,7 +211,7 @@ body
     // padding-right: 45px
     +hover
       .link__arrow
-        width: 40px
+        width: 50px
     .link__title
       margin-right: 12px
     .link__arrow
@@ -352,3 +352,5 @@ body
     +xs
       display: none
 
+.items-page
+  padding-bottom: 30px
