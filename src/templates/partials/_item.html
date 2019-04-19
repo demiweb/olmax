@@ -14,7 +14,11 @@
     </div>
 
     <div class="item__title">
+      {% if i.title %}
+      <h4 class="h4">{{ i.title }}</h4>
+      {% else %}      
       <h4 class="h4">Chevrolet<br> Bolt EV Premier</h4>
+      {% endif %}
     </div>
 
     <div class="item__info item-info">

@@ -71,6 +71,9 @@
   transition: box-shadow .2s
   border: 1px solid  $c-border
   margin-bottom: 30px
+  height: calc(100% - 30px)
+  padding-bottom: 51px
+  position: relative
   +hover
     box-shadow: 0px 0px 12.92px 4.08px rgba(0, 0, 1, 0.15)
   &__content
@@ -140,6 +143,10 @@
     display: flex
     align-items: center
     transition: background-color .3s
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
     +hover
       background-color: $c-accent
       .item__btn-arrow

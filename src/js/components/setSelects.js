@@ -24,13 +24,11 @@ export default function setSelects() {
     const inner = customOption.innerHTML;
     const color = option.getAttribute('data-color');
 
-    console.log(color);
     if (color) {
       customOption.innerHTML = `<label><input type="checkbox"><span class="color-square" style="background-color: ${color}"></span>${inner}</label>`;
     } else {
       customOption.innerHTML = '<label><input type="checkbox">' + inner+'</label>';
-    };
-    
+    };    
   };
 
   const options = {
@@ -143,21 +141,5 @@ export default function setSelects() {
         }
       });
     });
-
-    // set select with colors
-    // function addColorInOption() {
-    //   const $options = $(selectEl).find('option');
-
-    //   $options.each((i, option) => {
-    //     const color = option.getAttribute('data-color');
-
-    //     // if (color) {
-    //     //   console.log(color);
-    //     // }
-        
-    //   });
-    // };
-
-    // addColorInOption();
   });
 };

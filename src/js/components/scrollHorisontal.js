@@ -3,7 +3,6 @@ export default function scrollHorisontal() {
     const $scrolledEl = $('.js-scrolled-el').find('ul');
 
     $scrolledEl.on('wheel', (e) => {
-      console.log(e.currentTarget);
       e = e.originalEvent;
       e.currentTarget.scrollLeft -= ((-e.deltaY/10) * 4);
       e.preventDefault();
