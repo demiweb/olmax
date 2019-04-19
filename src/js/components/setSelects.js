@@ -7,6 +7,8 @@ export default function setSelects() {
   const panelInputWrap = document.createElement('div');
   panelInput.type = 'text';
   panelInput.className = 'js-search';
+
+  panelInputWrap.innerHTML = '<svg class="icon icon-search"><use xlink:href="img/sprite.svg#icon-search"></use></svg>';
   panelInputWrap.appendChild(panelInput);
 
   function addOptionCheckbox(option, customOption) {

@@ -81,9 +81,11 @@
   &__panel-inner
     max-height: 300px
   &__panel-item
+    position: relative
     input
       height: 32px      
       padding: 5px
+      padding-left: 25px
       width: 100%
       background-color: #fff
       font-family: inherit
@@ -92,6 +94,13 @@
         font-size: 15px
         font-family: inherit
         +light
+    .icon
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%)
+      left: 20px
+      fill: currentColor
+      pointer-events: none
 
 .select
   &--multiple
@@ -129,3 +138,7 @@
   label
     margin-right: 12px
     font-size: 15px
+    +lg
+      display: none
+  .select
+    width: 100%

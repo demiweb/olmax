@@ -1,15 +1,20 @@
 .aside
   background-color: #fff
+  .aside-banner
+    +sm
+      display: none
   +mdmin
     display: block !important
   +md
     display: none
   +sm
-    margin-bottom: 30px
+    // margin-bottom: 30px
   &__block
     padding: 20px 25px 45px
     margin-bottom: 30px
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.15)
+    border: 1px solid  $c-border
+    +hover
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.15)
 
 .aside-banner
   +cover
