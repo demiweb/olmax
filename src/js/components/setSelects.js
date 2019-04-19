@@ -16,6 +16,21 @@ export default function setSelects() {
     customOption.innerHTML = '<label><input type="checkbox">' + inner+'</label>';
   };
 
+  function addOptionColorCheckbox(option, customOption) {
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    const inner = customOption.innerHTML;
+    const color = option.getAttribute('data-color');
+
+    console.log(color);
+    if (color) {
+      customOption.innerHTML = `<label><input type="checkbox"><span class="color-square" style="background-color: ${color}"></span>${inner}</label>`;
+    } else {
+      customOption.innerHTML = '<label><input type="checkbox">' + inner+'</label>';
+    };
+    
+  };
+
   const options = {
     multiple: {
       multipleSelectionOnSingleClick: true,
@@ -25,6 +40,15 @@ export default function setSelects() {
         position: 'top'
       },
       optionBuilder: addOptionCheckbox
+    },
+    multiple_color: {
+      multipleSelectionOnSingleClick: true,
+      multipleSelectOpenerText: 'array',
+      panelItem: {
+        item: panelInputWrap,
+        position: 'top'
+      },
+      optionBuilder: addOptionColorCheckbox
     }
   };
 
@@ -47,7 +71,12 @@ export default function setSelects() {
         $customSelect.addClass('has-placeholder');
         const placeholder = $placeholderOption.data('placeholder');
         $customSelectOpener.text(placeholder);
-        console.log(placeholder, $placeholderOption[0]);
+
+        $(selectEl).on('change', (e) => {          
+          if ($(e.currentTarget).val().length === 0) {
+            $customSelectOpener.text(placeholder);
+          };
+        });
       };
       
     };
@@ -69,22 +98,33 @@ export default function setSelects() {
       setMultiplyPanelScroll();
     } else {
       setDefaultPanelScroll();
-    };
-
-    
+    };    
 
     // set option click
     $customSelectOptions.each((i, option) => {
       const label = $(option).find('label')[0];
+      
+
       if (!label) return;
 
       if ($(option).hasClass('is-selected')) {
         label.click();
       };
-      
-      $(option).on('click', (e) => {        
-        label.click();
-      });      
+    });
+
+    $(selectEl).on('change', (e) => {
+      const options = [].slice.call(e.currentTarget.options);
+      const $customOptions = $(e.currentTarget).closest('.custom-select').find('.custom-select__option');
+
+      $customOptions.each((i, option) => {
+        const checkbox = $(option).find('input[type="checkbox"]')[0];
+
+        if ($(option).hasClass('is-selected')) {
+          checkbox.checked = true;
+        } else {
+          checkbox.checked = false;
+        }
+      });
     });
 
     // filter search
@@ -101,5 +141,21 @@ export default function setSelects() {
         }
       });
     });
+
+    // set select with colors
+    // function addColorInOption() {
+    //   const $options = $(selectEl).find('option');
+
+    //   $options.each((i, option) => {
+    //     const color = option.getAttribute('data-color');
+
+    //     // if (color) {
+    //     //   console.log(color);
+    //     // }
+        
+    //   });
+    // };
+
+    // addColorInOption();
   });
 };
