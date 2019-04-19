@@ -28,6 +28,10 @@
   +r(575)
     @content
 
+=mdmin
+  +rmin(992)
+    @content
+
 h1, h2, h3, h4, h5, h6
   font-weight: 400
 
@@ -68,6 +72,13 @@ body
   +hover
     .btn__title
       background-color: #282822
+  &.is-active
+    .btn
+      &__icon
+        &.is-arrow
+          &::before
+            transform: translate(0, 0) rotate(135deg)
+            top: 20px
   
   &__title
     font-size: 14px
@@ -106,7 +117,12 @@ body
         position: absolute
         top: 50%
         transform: translate(-3px, -50%) rotate(225deg)
-
+        transition: transform .3s
+    &.is-arrow-down
+      &::before
+        transform: translate(0, 0) rotate(-45deg)
+        left: 18px
+        top: 14px
   &--lg
     .btn__title
       min-width: 220px

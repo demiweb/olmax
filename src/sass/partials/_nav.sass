@@ -55,9 +55,15 @@
       +xs
         font-size: 14px
 
-.nav-brands
-  padding-top: 20px
-  padding-bottom: 20px
+.nav-brands    
+  overflow: hidden
+  &__list
+    white-space: nowrap
+    overflow: auto
+    margin-bottom: -17px
+    padding-top: 20px
+    padding-bottom: 37px
+    
   &__item
     display: inline-block
     &:not(:last-child)
@@ -69,6 +75,9 @@
     display: block
     padding-top: 3px
     padding-bottom: 3px
+    transition: color .3s
+    +hover
+      color: $c-accent
     &::before
       content: ''
       height: 1px

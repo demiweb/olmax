@@ -15,6 +15,10 @@
       &__panel
         visibility: visible
         opacity: 1
+  &.has-placeholder
+    .custom-select__option
+      &:first-child
+        display: none
   &__opener
     height: 33px
     border: 1px solid  #e8e8e8
@@ -115,3 +119,4 @@
   align-items: center
   label
     margin-right: 12px
+    font-size: 15px

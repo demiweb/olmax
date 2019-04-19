@@ -13,6 +13,7 @@ import setScrollAnimations from './components/setScrollAnimations';
 import setSelects from './components/setSelects';
 import setRangeSliders from './components/setRangeSliders';
 import setScrollBar from './components/setScrollBar';
+import toggleAside from './components/toggleAside';
 
 $(function() {
   const $preloader = $('.preloader');
@@ -31,6 +32,7 @@ $(function() {
   setSelects();
   setRangeSliders();
   setScrollBar();
+  toggleAside();
 
   setTimeout(() => {
     $preloader.remove();

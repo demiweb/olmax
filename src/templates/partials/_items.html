@@ -7,6 +7,7 @@ items = [
   { status: 'is-ordered', label: 'замовлений', labelIcon: 'clock' },
   { status: 'is-available', label: 'В наявності', labelIcon: 'check' },
   { status: 'is-available', label: 'В наявності', labelIcon: 'check' },
+  { status: 'is-available', label: 'В наявності', labelIcon: 'check' },
   { status: 'is-available', label: 'В наявності', labelIcon: 'check' }
 ]
 %}
@@ -57,7 +58,7 @@ items = [
   <div class="items__items">
     <div class="row">
       {% for i in items %}
-      <div class="col-lg-4">
+      <div class="col-xl-4 col-md-6">
         {% include "partials/_item.html" %}
       </div>
       {% endfor %}

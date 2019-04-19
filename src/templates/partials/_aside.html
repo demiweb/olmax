@@ -1,145 +1,160 @@
 {%set
-selects = [
+  selects = [
   {
     options: [
-      { option: 'Всі марки', selected: true },
-      { option: 'bmw' },
-      { option: 'tesla' },
-      { option: 'bmw' },
-      { option: 'tesla' },
-      { option: 'bmw' },
-      { option: 'tesla' },
-      { option: 'bmw' },
-      { option: 'tesla' },
-      { option: 'bmw' },
-      { option: 'tesla' },
-      { option: 'bmw' },
-      { option: 'tesla' },
-      { option: 'bmw' },
-      { option: 'tesla' }
+    { option: '', placeholder: 'Всі марки'  },
+    { option: 'Всі марки' },
+    { option: 'bmw' },
+    { option: 'tesla' },
+    { option: 'bmw' },
+    { option: 'tesla' },
+    { option: 'bmw' },
+    { option: 'tesla' },
+    { option: 'bmw' },
+    { option: 'tesla' },
+    { option: 'bmw' },
+    { option: 'tesla' },
+    { option: 'bmw' },
+    { option: 'tesla' },
+    { option: 'bmw' },
+    { option: 'tesla' }
     ]
   },
   {
     options: [
-      { option: 'Будь-який рік', selected: true },
-      { option: 'Будь-який рік' },
-      { option: 'Будь-який рік' }
+    { option: 'Будь-який рік' },
+    { option: 'Будь-який рік' },
+    { option: 'Будь-який рік' }
     ]
   },
   {
     options: [
-      { option: 'Всі моделі', selected: true },
-      { option: 'Всі моделі' },
-      { option: 'Всі моделі' }
+    { option: 'Всі моделі' },
+    { option: 'Всі моделі' },
+    { option: 'Всі моделі' }
     ]
   },
   {
     options: [
-      { option: 'Всі типи кузова', selected: true },
-      { option: 'Всі типи кузова' },
-      { option: 'Всі типи кузова' }
+    { option: 'Всі типи кузова' },
+    { option: 'Всі типи кузова' },
+    { option: 'Всі типи кузова' }
     ]
   },
   {
     options: [
-      { option: 'Будь-який пробіг', selected: true },
-      { option: 'Будь-який пробіг' },
-      { option: 'Будь-який пробіг' }
+    { option: 'Будь-який пробіг' },
+    { option: 'Будь-який пробіг' },
+    { option: 'Будь-який пробіг' }
     ]
   },
   {
     options: [
-      { option: 'Будь-яка трансмісія', selected: true },
-      { option: 'Будь-яка трансмісія' },
-      { option: 'Будь-яка трансмісія' }
+    { option: 'Будь-яка трансмісія' },
+    { option: 'Будь-яка трансмісія' },
+    { option: 'Будь-яка трансмісія' }
     ]
   },
   {
     options: [
-      { option: 'Будь-який стан', selected: true },
-      { option: 'Будь-який стан' },
-      { option: 'Будь-який стан' }
+    { option: 'Будь-який стан' },
+    { option: 'Будь-який стан' },
+    { option: 'Будь-який стан' }
     ]
   },
   {
     options: [
-      { option: 'Будь-який статус', selected: true },
-      { option: 'Будь-який статус' },
-      { option: 'Будь-який статус' }
+    { option: 'Будь-який статус' },
+    { option: 'Будь-який статус' },
+    { option: 'Будь-який статус' }
     ]
   },
   {
     options: [
-      { option: 'Будь-який колір', selected: true },
-      { option: 'Будь-який колір' },
-      { option: 'Будь-який колір' }
+    { option: 'Будь-який колір' },
+    { option: 'Будь-який колір' },
+    { option: 'Будь-який колір' }
     ]
   }
-]
-%}
+  ]
+  %}
 
-<!-- begin aside -->
-<aside class="aside">
-  <div class="aside__block">
-    <!-- begin car-search -->
-    <div class="car-search">
-      <div class="car-search__title">
-        <h3 class="h3 h3--green">Пошук електромобіля</h3>
-      </div>
-
-      <form action="">
-        <div class="car-search__slider">
-          <!-- begin range-slider -->
-          <div class="range-slider">
-            <div class="range-slider__title">
-              <span class="range-slider__title-fixed">Ціна:</span>
-              $<span class="js-range-slider-min"></span> - $<span type="text" class="js-range-slider-max"></span>
-            </div>
-            <div class="range-slider__slider js-range-slider" data-min="0" data-max="30000"></div>
-          </div>
-          <!-- end range-slider -->
-        </div>
-
-        <div class="car-search__selects">
-          <!-- begin selects -->
-          <div class="selects">
-            {% for i in selects %}
-            <div class="selects__select">
-              <div class="select select--multiple">
-                <select multiple="" class="js-select" data-type="multiple">
-                  {% for j in i.options %}
-                  <option value="{{ j.option }}" {% if j.selected %}selected=""{% endif %}>{{ j.option }}</option>
-                  {% endfor %}
-                </select>
-              </div>
-            </div>
-            {% endfor %}
-
-            <div class="selects__btn">
-              <button class="btn btn--ttn btn--full"><span class="btn__title">Скинути параметри</span></button>
-            </div>
-          </div>
-          <!-- end selects -->
-        </div>
-      </form>
-    </div>
-    <!-- end car-search -->
+  <div class="aside-show-btn">
+    <a href="#" class="btn btn--ttn js-aside-toggle">
+      <span class="btn__title">Пошук електромобіля</span>
+      <span class="btn__icon is-arrow is-arrow-down"></span>
+    </a>
   </div>
 
-    <!-- begin aside-banner -->
-    <div class="aside-banner js-lazy" data-background-image="img/aside-banner.jpg">
-      <div class="aside-banner__block">
-        <div class="aside-banner__title"><h4 class="h4 h4--white">Бірко<br> костянтин</h4></div>
-        <div class="aside-banner__subttl text text--white">Менеджер з продажів</div>
-        <div class="aside-banner__contact">+38-068-776-7700</div>
-        <div class="aside-banner__contact">+38-063-129-0703</div>
-        <div class="aside-banner__btn">
-          <a href="#" class="btn btn--ttn btn--full">
-            <span class="btn__title">Замовити консультацію</span>
-          </a>
+  <!-- begin aside -->
+  <aside class="aside js-aside">
+    <div class="row">
+      <div class="col-lg-12 col-md-6">
+        <div class="aside__block">
+          <!-- begin car-search -->
+          <div class="car-search">
+            <div class="car-search__title">
+              <h3 class="h3 h3--green">Пошук електромобіля</h3>
+            </div>
+
+            <form action="">
+              <div class="car-search__slider">
+                <!-- begin range-slider -->
+                <div class="range-slider">
+                  <div class="range-slider__title">
+                    <span class="range-slider__title-fixed">Ціна:</span>
+                    $<span class="js-range-slider-min"></span> - $<span type="text" class="js-range-slider-max"></span>
+                  </div>
+                  <div class="range-slider__slider js-range-slider" data-min="0" data-max="30000"></div>
+                </div>
+                <!-- end range-slider -->
+              </div>
+
+              <div class="car-search__selects">
+                <!-- begin selects -->
+                <div class="selects">
+                  {% for i in selects %}
+                  <div class="selects__select">
+                    <div class="select select--multiple">
+                      <select multiple="" class="js-select has-placeholder" data-type="multiple">
+                        {% for j in i.options %}
+                        <option value="{{ j.option }}" {% if j.selected %}selected=""{% endif %} {% if j.placeholder %}data-placeholder="{{ j.placeholder }}"{% endif %}>{{ j.option }}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                  </div>
+                  {% endfor %}
+
+                  <div class="selects__btn">
+                    <button class="btn btn--ttn btn--full"><span class="btn__title">Скинути параметри</span></button>
+                  </div>
+                </div>
+                <!-- end selects -->
+              </div>
+            </form>
+          </div>
+          <!-- end car-search -->
         </div>
       </div>
+
+      <div class="col-lg-12 col-md-6">
+        <!-- begin aside-banner -->
+        <div class="aside-banner js-lazy" data-background-image="img/aside-banner.jpg">
+          <div class="aside-banner__block">
+            <div class="aside-banner__title"><h4 class="h4 h4--white">Бірко<br> костянтин</h4></div>
+            <div class="aside-banner__subttl text text--white">Менеджер з продажів</div>
+            <div class="aside-banner__contact">+38-068-776-7700</div>
+            <div class="aside-banner__contact">+38-063-129-0703</div>
+            <div class="aside-banner__btn">
+              <a href="#" class="btn btn--ttn btn--full">
+                <span class="btn__title">Замовити консультацію</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- end aside-banner -->
+      </div>
+
     </div>
-    <!-- end aside-banner -->
-</aside>
+  </aside>
 <!-- end aside -->

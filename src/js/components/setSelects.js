@@ -1,15 +1,3 @@
-// import '../lib/bootstrap.min.js';
-// import '../lib/bootstrap-multiselect.js';
-
-// export default function setSelects() {
-//   const $selects = $('.js-selct');
-//   $selects.multiselect({
-//     nonSelectedText: 'Select expertise!',
-//     buttonWidth: 250,
-//     enableFiltering: true
-//   });
-// };
-
 import Select from '../lib/customSelect';
 
 export default function setSelects() {
@@ -49,9 +37,24 @@ export default function setSelects() {
     const $customSelectOptions = $customSelect.find('.custom-select__option');
     const $searchInput = $customSelect.find('.js-search');
     const $customSelectPanel = $customSelect.find('.custom-select__panel');
+    const $customSelectOpener = $customSelect.find('.custom-select__opener');
+
+    // set multiple placeholder
+    function setMultiplePlaceholder() {
+      const $placeholderOption = $(selectEl).find('[data-placeholder]');
+
+      if ($placeholderOption.length > 0) {
+        $customSelect.addClass('has-placeholder');
+        const placeholder = $placeholderOption.data('placeholder');
+        $customSelectOpener.text(placeholder);
+        console.log(placeholder, $placeholderOption[0]);
+      };
+      
+    };
+
+    setMultiplePlaceholder();
 
     // set panel scroll
-
     function setMultiplyPanelScroll() {
       const $options = $customSelectPanel.find('.custom-select__option');
 

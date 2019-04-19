@@ -9,9 +9,16 @@
   display: flex
   justify-content: flex-start
   align-items: center
+  +lg
+    display: block
+    font-size: 0
   &__btns
     font-size: 0
     margin-right: 30px
+    +lg
+      display: inline-block
+      vertical-align: middle
+      // margin-right: 0
   &__btn
     display: inline-block
     vertical-align: middle
@@ -32,13 +39,27 @@
   &__title
     color: #aeaeae
     +light
+    font-size: 15px
+    +lg
+      display: inline-block
+      vertical-align: middle
   &__selects
     flex-grow: 1
     display: flex
     justify-content: flex-end
+    +lg
+      justify-content: flex-start
+      padding-top: 10px
+    +xs
+      display: block
   &__select
     &:last-child
       margin-left: 30px
+      +xs
+        margin-left: 0
+    &:not(:last-child)
+      +xs
+        margin-bottom: 10px
 
 .item
   box-shadow: 0px 0px 12.92px 4.08px rgba(0, 0, 1, 0.15)
@@ -67,7 +88,7 @@
   &__title
     position: relative
     padding-bottom: 10px
-    margin-bottom: 8px
+    margin-bottom: 8px    
     &::before
       content: ''
       position: absolute
@@ -175,15 +196,22 @@
   margin-bottom: 7px
   align-items: center
   vertical-align: top
+  position: relative
+  padding-left: 30px
   &__icon
     font-size: 0
     margin-right: 7px
+    position: absolute
+    top: 0
+    left: 0
+    width: 25px
+    text-align: center
     .icon
       fill: currentColor
       font-size: 16px
     .icon-hatchback
       position: relative
-      top: 6px
+      top: 4px
       font-size: 22px
 
   
