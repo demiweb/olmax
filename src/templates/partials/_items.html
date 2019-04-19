@@ -17,51 +17,73 @@ items = [
   <div class="items__top">
     <!-- begin items-top -->
     <div class="items-top">
-      <div class="items-top__btns">
-        <a href="#" class="items-top__btn">{{ mixins.icon('list') }}</a>
-        <a href="#" class="items-top__btn is-active">{{ mixins.icon('squared-menu') }}</a>
-      </div>
+      <div class="row align-items-center">
+        <div class="col-xl-5">
+          <div class="items-top__btns">
+            <a href="#" class="items-top__btn">{{ mixins.icon('list') }}</a>
+            <a href="#" class="items-top__btn is-active">{{ mixins.icon('squared-menu') }}</a>
+          </div>
 
-      <div class="items-top__title">Показ від 1 до 12 з 56</div>
+          <div class="items-top__title">Показ від 1 до 12 з 56</div>
+        </div>
 
-      <div class="items-top__selects">
-        <div class="items-top__select">
-          <div class="items-top-select">
-            <label for="">Показати:</label>
-            <div class="select">
-              <select data-type="default" class="js-select">
-                <option value="12 авто" selected="">12 авто</option>
-                <option value="12 авто1">12 авто1</option>
-                <option value="12 авто2">12 авто2</option>
-              </select>
+        <div class="col-xl-7">
+          <div class="items-top__selects">
+            <div class="items-top__select">
+              <div class="items-top-select">
+                <label for="">Показати:</label>
+                <div class="select">
+                  <select data-type="default" class="js-select">
+                    <option value="12 авто" selected="">12 авто</option>
+                    <option value="12 авто1">12 авто1</option>
+                    <option value="12 авто2">12 авто2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="items-top__select">
+              <div class="items-top-select">
+                <label for="">Сортувати:</label>
+                <div class="select">
+                  <select data-type="default" class="js-select">
+                    <option value="Ціна за зростанням" selected="">Ціна за зростанням</option>
+                    <option value="Ціна за зростанням1">Ціна за зростанням1</option>
+                    <option value="Ціна за зростанням2">Ціна за зростанням2</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="items-top__select">
-          <div class="items-top-select">
-            <label for="">Сортувати:</label>
-            <div class="select">
-              <select data-type="default" class="js-select">
-                <option value="Ціна за зростанням" selected="">Ціна за зростанням</option>
-                <option value="Ціна за зростанням1">Ціна за зростанням1</option>
-                <option value="Ціна за зростанням2">Ціна за зростанням2</option>
-              </select>
-            </div>
-          </div>
-        </div>
       </div>
+      
+
+      
     </div>
     <!-- end items-top -->
   </div>
 
+  
+
   <div class="items__items">
     <div class="row">
+      {% if availables.cols %}
       {% for i in items %}
       <div class="col-xl-4 col-md-6">
         {% include "partials/_item.html" %}
       </div>
       {% endfor %}
+
+      {% else %}
+
+      {% for i in items %}
+      <div class="col-lg-12">
+        {% include "partials/_item.html" %}
+      </div>
+      {% endfor %}
+
+      {% endif %}
     </div>
   </div>
 
@@ -70,3 +92,11 @@ items = [
   </div>
 </div>
 <!-- end items -->
+
+
+<!-- begin items -->
+<div class="items__wrap">
+  
+</div>
+<!-- end items -->
+

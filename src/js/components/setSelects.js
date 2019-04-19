@@ -95,7 +95,7 @@ export default function setSelects() {
       $options.each((i, option) => {
         const textValue = option.innerText;
         if (textValue.toUpperCase().indexOf(filter) > -1) {
-          option.style.display = null;
+          option.style.display = '';
         } else {
           option.style.display = 'none';
         }

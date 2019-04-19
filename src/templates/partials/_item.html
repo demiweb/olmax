@@ -1,3 +1,4 @@
+{% if availables.cols %}
 <!-- begin item -->
 <div class="item">
   <div class="item__img js-lazy" data-background-image="img/cars-items/car-1.jpg"></div>
@@ -50,3 +51,89 @@
   </a>
 </div>
 <!-- end item -->
+
+{% else %}
+
+<!-- begin item -->
+<div class="item item--row">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="item__img js-lazy" data-background-image="img/cars-items/car-1.jpg">
+        <a href="#" class="item__btn">
+          <span class="item__btn-title">Детальніше про авто</span>
+          <span class="item__btn-arrow"></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-7">
+      <div class="item__content">
+        <div class="item__title">
+          <h4 class="h4">Chevrolet<br> Bolt EV Premier</h4>
+          <div class="item__content-top">
+            <div class="item-label {{ i.status }}">
+              <div class="item-label__icon">{{ mixins.icon(i.labelIcon) }}</div>
+              <div class="item-label__title">{{ i.label }}</div>
+            </div>
+
+            <a href="#" class="item__video-link">{{ mixins.icon('video-camera') }}Дивитися відео</a>
+          </div>
+        </div>
+
+        <div class="item__text text">Электромобиль Chevrolet Bolt EV — пятидверный городской хэтчбек концерна General Motors. Впервые, концепт был показан в начале 2015-го года...</div>
+
+        <div class="item__info item-info">
+          <div class="item-info-item">
+            <div class="item-info-item__icon">{{ mixins.iconSpeed() }}</div>
+            <div class="item-info__title">224 км/ч</div>
+          </div>
+
+          <div class="item-info-item">
+            <div class="item-info-item__icon">{{ mixins.icon('hatchback') }}</div>
+            <div class="item-info__title">Хетчбек</div>
+          </div>
+
+          <div class="item-info-item">
+            <div class="item-info-item__icon">{{ mixins.icon('shifter') }}</div>
+            <div class="item-info__title">Автомат</div>
+          </div>
+
+          <div class="item-info-item">
+            <div class="item-info-item__icon">{{ mixins.icon('calendar') }}</div>
+            <div class="item-info__title">до 500 км</div>
+          </div>
+
+          <div class="item-info-item">
+            <div class="item-info-item__icon">{{ mixins.icon('road') }}</div>
+            <div class="item-info__title">13500 км</div>
+          </div>
+
+          <div class="item-info-item">
+            <div class="item-info-item__icon">{{ mixins.icon('settings') }}</div>
+            <div class="item-info__title">Б/У</div>
+          </div>
+
+          <div class="item-info-item">
+            <div class="item-info-item__icon">{{ mixins.icon('plug') }}</div>
+            <div class="item-info__title">2017</div>
+          </div>
+
+          <div class="item-info-item">
+            <div class="item-info-item__icon">{{ mixins.icon('location') }}</div>
+            <div class="item-info__title">Киів</div>
+          </div>
+        </div>
+
+        <div class="item__price">
+          <div class="item__price-lg">105 500 $</div>
+          <div class="item__price-sm">1,802,932 грн. (Без НДС)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</div>
+<!-- end item -->
+
+{% endif %}
