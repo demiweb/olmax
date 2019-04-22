@@ -1,0 +1,45 @@
+.model-gallery
+  padding-top: 40px
+  padding-bottom: 40px
+  &__img
+    +cover
+    // padding-top: 50%
+    height: 100%
+    font-size: 0
+  &__title
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 20px
+    border-bottom: 1px solid  $c-border
+
+.model-gallery-meta
+  padding-top: 15px
+  &__list
+    +clr
+  &__title
+    +bold
+    font-size: 15px
+    padding-bottom: 10px
+    position: relative
+    float: left
+    width: 45%
+    margin-bottom: 10px
+    &::before
+      content: ''
+      position: absolute
+      height: 1px
+      width: 30px
+      background-color: $c-border
+      left: 0
+      bottom: 0
+    &.has-no-bdbotttom
+      &::before
+        display: none
+  &__text
+    +light
+    font-size: 15px
+    padding-bottom: 10px
+    width: 55%
+    float: left
+    margin-bottom: 10px

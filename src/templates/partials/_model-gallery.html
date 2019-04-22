@@ -1,0 +1,93 @@
+{%set
+thumbnails = [
+  { img: 'thumbnail-1.jpg' },
+  { img: 'thumbnail-1.jpg' },
+  { img: 'thumbnail-2.jpg' },
+  { img: 'thumbnail-1.jpg' },
+  { img: 'thumbnail-2.jpg' },
+  { img: 'thumbnail-1.jpg' },
+  { img: 'thumbnail-2.jpg' },
+  { img: 'thumbnail-1.jpg' },
+  { img: 'thumbnail-2.jpg' }
+]
+%}
+
+{%set
+metaList = [
+  { title: 'Марка:', text: 'BMW' },
+  { title: 'Модель:', text: 'I3 electric' },
+  { title: 'Запас ходу:', text: 'до 200 км ' },
+  { title: 'Кузов:', text: 'Купе' },
+  { title: 'Рік:', text: '2017' },
+  { title: 'Пробіг:', text: '30300 км' },
+  { title: 'Батарея:', text: '120 кв' },
+  { title: 'Трансмісія:', text: 'Автомат' },
+  { title: 'Стан:', text: 'Б/у', titleMod: 'has-no-bdbotttom' }
+]
+%}
+
+<!-- begin model-gallery -->
+<section class="model-gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-2">
+        <div class="model-gallery__dots">
+          <!-- begin thumbnail-slider -->
+          <div class="thumbnail-slider__wrap slider__wrap">
+            
+            <div class="thumbnail-slider slider js-slider" data-slider="model_thumbnails">
+              {% for i in thumbnails %}
+              <a href="#" class="thumbnail-slide">
+                <span class="thumbnail-slide__img js-lazy" data-background-image="img/model-gallery/{{ i.img }}"></span>
+              </a>
+              {% endfor %}
+            </div>
+            
+
+            <button class="thumbnail-slider__prev js-prev"></button>
+            <button class="thumbnail-slider__next js-next"></button>
+          </div> 
+          <!-- end thumbnail-slider -->
+        </div>
+      </div>
+
+      <div class="col-xl-6">
+        <div class="model-gallery__img js-lazy" data-background-image="img/model-gallery/car-1.jpg">
+          <div class="model-gallery__img-label">
+            <div class="item-label is-available">
+              <div class="item-label__icon">{{ mixins.icon('check') }}</div>
+              <div class="item-label__title">В наявності</div>
+            </div>
+          </div>
+
+          <div class="model-gallery__img-counter model-gallery__img-info"></div>
+
+          <a href="#" class="model-gallery__img-info">360o</a>
+          <a href="#" class="model-gallery__img-info">Відео</a>
+        </div>
+      </div>
+
+      <div class="col-xl-4">
+        <div class="model-gallery__meta">
+          <div class="model-gallery__title">
+            <div class="model-gallery__price price">
+              <div class="model-gallery__price-lg price__title">29,300 $</div>
+              <div class="model-gallery__price-sm price__subttl">790,807 грн. (Без НДС)</div>
+            </div>
+
+            <a href="#" class="btn btn--sm">
+              <span class="btn__title">TEST DRIVE</span>
+              <span class="btn__icon">{{ mixins.icon('hatchback') }}</span>
+            </a>
+          </div>
+
+          {% include "partials/_model-gallery-meta.html" %}
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="model-gallery__prev">Попереднє авто</a>
+    <a href="#" class="model-gallery__prev">Наступне авто</a>
+  </div>
+</section>
+<!-- end model-gallery -->

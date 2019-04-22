@@ -1,6 +1,7 @@
 .hero  
-  background-color: #202020
+  background-color: #353535
   font-size: 0
+  +cover
   &__slider    
     .slide
       height: calc(100vh - 90px) // header height
@@ -36,9 +37,28 @@
       display: block
 
   &--sm
-    +cover
     padding-top: 40px
     padding-bottom: 40px
     +lg
       padding-top: 80px
       padding-bottom: 80px
+  &--lg
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    min-height: calc(100vh - 90px) // header heigth
+    padding-bottom: 85px
+    padding-top: 120px
+    +lg
+       height: calc(100vh - 45px)
+  &--xs
+    padding-bottom: 25px
+    padding-top: 25px
+    text-align: center
+    .hero
+      &__title
+        padding-bottom: 0
+        &::before
+          display: none
+      &__breadcrumbs
+        margin-bottom: 15px

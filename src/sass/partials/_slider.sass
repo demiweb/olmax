@@ -414,4 +414,28 @@
       left: 0
       z-index: 0
       background-color: rgba(#000, .3)
-    
+
+.thumbnail-slider
+  &__wrap
+    padding-top: 10px
+    padding-bottom: 10px
+  &__prev,
+  &__next
+    position: absolute
+    left: 50%
+    display: inline-block
+    background-color: transparent
+  &__prev
+    +icon-arrow(8, 8, 1, #000, 135)
+    top: 0
+  &__next
+    +icon-arrow(8, 8, 1, #000, -45)
+    bottom: 0
+
+.thumbnail-slide
+  display: none
+  &__img
+    padding-top: 50%
+    display: block
+    +cover
+    font-size: 0

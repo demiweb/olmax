@@ -1,10 +1,14 @@
 <!-- begin hero -->
-<section class="hero {% if hero.small %}hero--sm js-lazy{% endif %}" {% if hero.small %}data-background-image="img/bg-hero-sm.jpg"{% endif %}>
+<section
+ class="hero {% if hero.sm %}hero--sm js-lazy{% endif %} {% if hero.lg %}hero--lg js-lazy{% endif %} {% if hero.xs %}hero--xs{% endif %}"
+ {% if hero.sm %}data-background-image="img/hero/hero-sm.jpg"{% endif %}
+ {% if hero.lg %}data-background-image="img/hero/hero-2.jpg"{% endif %}>
+
   {% if hero.slider %}
   <div class="hero__slider">
     {% include "partials/sliders/_slider-hero.html" %}
   </div>
-  {% else %}
+  {% elseif hero.sm %}
   
   <div class="hero__block">
     <div class="container">
@@ -18,7 +22,7 @@
           <div class="hero__breadcrumbs">
             {{ mixins.breadcrumbs(
               links = [
-              { title: 'Головна /'},
+              { title: 'Головна'},
               { title: 'Електромобілі в наявності', active: true }
               ]
               ) }}
@@ -35,6 +39,71 @@
         </div>
       </div>
     </div>
+
+    {% elseif hero.lg %}
+    
+    <div class="hero__block">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 col-lg-8">
+            <div class="hero__breadcrumbs">
+              {{ mixins.breadcrumbs(
+                links = [
+                { title: 'Головна'},
+                { title: 'Моделі' },
+                { title: 'BMW i3', active: true }
+                ]
+              ) }}
+              </div>
+
+              <div class="hero__title">
+                <h1 class="title title--white">Електризуйте натхнення</h1>
+                <div class="hero__subttl is-ttn">BMW i3 та i3s формують майбутнє електричної мобільності.</div>
+              </div>
+
+              <div class="hero__btn">
+                <a href="#" class="btn btn--ttn">
+                  <span class="btn__title">Замовити консультацію</span>
+                  <span class="btn__icon is-arrow"></span>
+                </a>
+              </div> 
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% include "partials/_tech-info.html" %}
+
+      {% elseif hero.xs %}
+
+      <div class="hero__block">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="hero__title">
+                <h1 class="title title--white">2017 BMW I3 Mega World 33KWh</h1>
+              </div>
+              
+              <div class="hero__breadcrumbs">
+                {{ mixins.breadcrumbs(
+                  links = [
+                  { title: 'Головна'},
+                  { title: 'Електромобілі в наявності' },
+                  { title: '2017 BMW I3 Mega World 33KWh', active: true }
+                  ]
+                ) }}
+              </div>
+
+              <div class="hero__btns">
+                {% include "partials/_hero-btns.html" %}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    
 
   {% endif %}
 </section>

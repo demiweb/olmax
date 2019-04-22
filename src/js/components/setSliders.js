@@ -115,6 +115,12 @@ export default function setSliders() {
         fade: true,
         speed: 1000,
         cssEase: 'linear'
+      },
+      model_thumbnails: {
+        prevArrow: $prev,
+        nextArrow: $next,
+        slidesToShow: 5,
+        vertical: true
       }
     };
 

@@ -108,6 +108,10 @@ body
     .icon
       font-size: 16px
       fill: #fff
+    .icon-hatchback
+      font-size: 30px
+      position: relative
+      top: 9px
     &.is-arrow
       position: relative
       &::before
@@ -126,6 +130,9 @@ body
   &--lg
     .btn__title
       min-width: 220px
+  &--sm
+    .btn__title
+      min-width: 145px
 
   &--gray
     .btn__title
@@ -374,3 +381,12 @@ body
 
 .items-page
   padding-bottom: 30px
+
+.price
+  &__title
+    font-size: 30px
+    +bold
+    color: $c-accent
+  &__subttl
+    color: #a7a7a7
+    font-size: 13px

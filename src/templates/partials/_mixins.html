@@ -56,6 +56,7 @@
 {% endmacro %}
 
 {% macro iconCar() %}
+<!-- begin icon-car -->
 <svg version="1.1" class="icon icon-car" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    width="48.997px" height="48.998px" viewBox="0 0 48.997 48.998" style="enable-background:new 0 0 48.997 48.998;"
    xml:space="preserve">
@@ -80,9 +81,11 @@
 </g>
 
 </svg>
+<!-- end icon-car -->
 {% endmacro %}
 
 {% macro iconSpeed() %}
+<!-- begin icon-speedometer -->
 <svg version="1.1" class="icon icon-speedometer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    width="950.002px" height="950.002px" viewBox="0 0 950.002 950.002" style="enable-background:new 0 0 950.002 950.002;"
    xml:space="preserve">
@@ -217,11 +220,12 @@
       c0,20.758-16.829,37.588-37.588,37.588s-37.588-16.83-37.588-37.588C386.201,682.662,403.03,665.836,423.789,665.836z"/>
   </g>
 </g>
-
 </svg>
+<!-- end icon-speedometer -->
 {% endmacro %}
 
 {% macro iconLogo() %}
+<!-- begin icon-logo -->
 <svg version="1.1" class="icon icon-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    width="595.275px" height="595.275px" viewBox="0 0 595.275 595.275" enable-background="new 0 0 595.275 595.275"
    xml:space="preserve">
@@ -356,6 +360,7 @@
   c0-23.989,19.517-43.506,43.506-43.506c23.989,0,43.506,19.517,43.506,43.506c0,30.685,24.964,55.647,55.647,55.647
   c24.14,0,45.398-15.405,52.899-38.333C398.934,251.101,397.196,247.673,394.009,246.63z"/>
 </svg>
+<!-- end icon-logo -->
 {% endmacro %}
 
 {% macro breadcrumbs(links) %}
@@ -367,7 +372,7 @@
       {% if i.active %}
       <a href="#" class="breadcrumbs__link is-active">{{ i.title }}</a>
       {% else %}
-      <a href="#" class="breadcrumbs__link">{{ i.title }}</a>
+      <a href="#" class="breadcrumbs__link">{{ i.title }}</a> /
       {% endif %}      
     </li>
     {% endfor %}

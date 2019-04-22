@@ -15,6 +15,7 @@ import setRangeSliders from './components/setRangeSliders';
 import setScrollBar from './components/setScrollBar';
 import toggleAside from './components/toggleAside';
 import setStickyColumn from './components/setStickyColumn';
+import setGallery from './components/setGallery';
 
 $(function() {
   const $preloader = $('.preloader');
@@ -35,6 +36,7 @@ $(function() {
   setScrollBar();
   toggleAside();
   setStickyColumn();
+  setGallery();
 
   setTimeout(() => {
     $preloader.remove();

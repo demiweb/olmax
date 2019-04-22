@@ -4,3 +4,5 @@ PageList:
 - file: main.html
 - file: availables-1.html
 - file: availables-2.html
+- file: model.html
+- file: automobile.html

@@ -1,0 +1,27 @@
+.hero-btns
+  &__list
+    font-size: 0
+  &__item
+    display: inline-block
+    vertical-align: top
+    width: 25%
+    &:not(:last-child)
+      .hero-btns__link
+        border-right: 1px solid  #191919
+  &__link
+    font-size: 15px
+    color: #828282
+    text-align: center
+    display: block
+    background-color: #fbfbfb
+    padding: 10px
+    border-bottom: 2px solid transparent
+    transition: background-color .3s, border-color .3s, color .3s
+    +hover
+      @extend .hero-btns__link.is-active      
+    &.is-active
+      color: #fff      
+      background-color: #191919
+      border: 0
+      border-bottom: 2px solid $c-accent
+

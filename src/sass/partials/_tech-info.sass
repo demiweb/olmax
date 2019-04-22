@@ -1,0 +1,34 @@
+.tech-info
+  color: #fff
+  &__item
+    position: relative
+    padding-left: 40px
+    color: inherit
+    &::before
+      content: ''
+      background-color: currentColor
+      width: 1px
+      height: 48px
+      position: absolute
+      top: 5px
+      right: -20px
+    &.has-no-bdright
+      &::before
+        display: none
+  &__icon
+    position: absolute
+    top: 5px
+    left: 0
+    .icon
+      fill: currentColor
+      font-size: 32px
+    .icon-engine
+      font-size: 36px
+    .icon-speedometer
+      position: relative
+      top: -2px
+  &__subttl
+    font-size: 15px
+    color: #bfbfbf
+  &__title
+    white-space: nowrap
