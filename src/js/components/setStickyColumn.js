@@ -4,9 +4,9 @@ import { throttle, debounce } from 'throttle-debounce';
 
 export default function setStickyColumn() {
   function setColumn() {
-
-
     const $column = $('.js-sticky-column');
+    if (!$column.length) return;
+
     const $columnWrap = $column.closest('.js-sticky-column-wrap');  
 
     const columnStickyHeight = $column.outerHeight();
@@ -19,7 +19,7 @@ export default function setStickyColumn() {
 
     const columnWrapTop = $columnWrap.offset().top - OFFSET;
 
-    const setColumnThrottled = throttle(66, (e) => {
+    const setColumnNotThrottled = (e) => {
       if (window.pageYOffset >= columnStickyTop) {
         $column.css({
           position: 'fixed',
@@ -48,9 +48,9 @@ export default function setStickyColumn() {
           width: ''
         });
       };
-    });
+    };
 
-    $WIN.on('scroll', setColumnThrottled);
+    $WIN.on('scroll', setColumnNotThrottled);
   };
 
   setColumn();
