@@ -398,7 +398,7 @@
                   <div class="hero-btns">
                     <ul class="hero-btns__list">
                       <li class="hero-btns__item"><a href="#" class="hero-btns__link">Запропонувати свою ціну</a></li>
-                      <li class="hero-btns__item"><a href="#" class="hero-btns__link">Trade-in</a></li>
+                      <li class="hero-btns__item"><a href="#" class="hero-btns__link is-active">Trade-in</a></li>
                       <li class="hero-btns__item"><a href="#" class="hero-btns__link">PDF- брошура</a></li>
                       <li class="hero-btns__item"><a href="#" class="hero-btns__link">Замовити консультацию</a></li>
                     </ul>
@@ -420,31 +420,31 @@
                 <!-- begin thumbnail-slider -->
                 <div class="thumbnail-slider__wrap slider__wrap">
                   <div class="thumbnail-slider slider js-slider" data-slider="model_thumbnails">
-                    <a href="#" class="thumbnail-slide">
+                    <a href="#" class="thumbnail-slide js-gallery-thumb is-active" data-index="0">
                       <span class="thumbnail-slide__img js-lazy" data-background-image="img/model-gallery/thumbnail-1.jpg"></span>
                     </a>
-                    <a href="#" class="thumbnail-slide">
+                    <a href="#" class="thumbnail-slide js-gallery-thumb " data-index="1">
                       <span class="thumbnail-slide__img js-lazy" data-background-image="img/model-gallery/thumbnail-1.jpg"></span>
                     </a>
-                    <a href="#" class="thumbnail-slide">
+                    <a href="#" class="thumbnail-slide js-gallery-thumb " data-index="2">
                       <span class="thumbnail-slide__img js-lazy" data-background-image="img/model-gallery/thumbnail-2.jpg"></span>
                     </a>
-                    <a href="#" class="thumbnail-slide">
+                    <a href="#" class="thumbnail-slide js-gallery-thumb " data-index="3">
                       <span class="thumbnail-slide__img js-lazy" data-background-image="img/model-gallery/thumbnail-1.jpg"></span>
                     </a>
-                    <a href="#" class="thumbnail-slide">
+                    <a href="#" class="thumbnail-slide js-gallery-thumb " data-index="4">
                       <span class="thumbnail-slide__img js-lazy" data-background-image="img/model-gallery/thumbnail-2.jpg"></span>
                     </a>
-                    <a href="#" class="thumbnail-slide">
+                    <a href="#" class="thumbnail-slide js-gallery-thumb " data-index="5">
                       <span class="thumbnail-slide__img js-lazy" data-background-image="img/model-gallery/thumbnail-1.jpg"></span>
                     </a>
-                    <a href="#" class="thumbnail-slide">
+                    <a href="#" class="thumbnail-slide js-gallery-thumb " data-index="6">
                       <span class="thumbnail-slide__img js-lazy" data-background-image="img/model-gallery/thumbnail-2.jpg"></span>
                     </a>
-                    <a href="#" class="thumbnail-slide">
+                    <a href="#" class="thumbnail-slide js-gallery-thumb " data-index="7">
                       <span class="thumbnail-slide__img js-lazy" data-background-image="img/model-gallery/thumbnail-1.jpg"></span>
                     </a>
-                    <a href="#" class="thumbnail-slide">
+                    <a href="#" class="thumbnail-slide js-gallery-thumb " data-index="8">
                       <span class="thumbnail-slide__img js-lazy" data-background-image="img/model-gallery/thumbnail-2.jpg"></span>
                     </a>
                   </div>
@@ -455,7 +455,18 @@
               </div>
             </div>
             <div class="col-xl-6">
-              <div class="model-gallery__img js-lazy" data-background-image="img/model-gallery/car-1.jpg">
+              <div class="model-gallery__preview-wrap">
+                <div class="model-gallery__preview js-gallery">
+                  <a href="img/model-gallery/car-1.jpg" class="model-gallery__img js-gallery-preview js-lazy is-active" data-background-image="img/model-gallery/car-1.jpg" data-index="0"></a>
+                  <a href="img/model-gallery/thumbnail-1.jpg" class="model-gallery__img js-gallery-preview js-lazy " data-background-image="img/model-gallery/thumbnail-1.jpg" data-index="1"></a>
+                  <a href="img/model-gallery/car-1.jpg" class="model-gallery__img js-gallery-preview js-lazy " data-background-image="img/model-gallery/car-1.jpg" data-index="2"></a>
+                  <a href="img/model-gallery/thumbnail-1.jpg" class="model-gallery__img js-gallery-preview js-lazy " data-background-image="img/model-gallery/thumbnail-1.jpg" data-index="3"></a>
+                  <a href="img/model-gallery/car-1.jpg" class="model-gallery__img js-gallery-preview js-lazy " data-background-image="img/model-gallery/car-1.jpg" data-index="4"></a>
+                  <a href="img/model-gallery/thumbnail-1.jpg" class="model-gallery__img js-gallery-preview js-lazy " data-background-image="img/model-gallery/thumbnail-1.jpg" data-index="5"></a>
+                  <a href="img/model-gallery/car-1.jpg" class="model-gallery__img js-gallery-preview js-lazy " data-background-image="img/model-gallery/car-1.jpg" data-index="6"></a>
+                  <a href="img/model-gallery/thumbnail-1.jpg" class="model-gallery__img js-gallery-preview js-lazy " data-background-image="img/model-gallery/thumbnail-1.jpg" data-index="7"></a>
+                  <a href="img/model-gallery/car-1.jpg" class="model-gallery__img js-gallery-preview js-lazy " data-background-image="img/model-gallery/car-1.jpg" data-index="8"></a>
+                </div>
                 <div class="model-gallery__img-label">
                   <div class="item-label is-available">
                     <div class="item-label__icon">
@@ -466,9 +477,9 @@
                     <div class="item-label__title">В наявності</div>
                   </div>
                 </div>
-                <div class="model-gallery__img-counter model-gallery__img-info"></div>
-                <a href="#" class="model-gallery__img-info">360o</a>
-                <a href="#" class="model-gallery__img-info">Відео</a>
+                <div class="model-gallery__img-counter model-gallery__img-info js-gallery-counter"></div>
+                <a href="#" class="model-gallery__img-info model-gallery__img-angle js-tabs-unic-tab" data-target-tab="angle">360<sup>o</sup></a>
+                <a href="#" class="model-gallery__img-info model-gallery__img-video js-tabs-unic-tab" data-target-tab="video">Відео</a>
               </div>
             </div>
             <div class="col-xl-4">
@@ -514,14 +525,213 @@
               </div>
             </div>
           </div>
-          <a href="#" class="model-gallery__prev">Попереднє авто</a>
-          <a href="#" class="model-gallery__prev">Наступне авто</a>
+          <a href="#" class="model-gallery__prev"> Попереднє авто <img src="img/model-gallery/next-thumb-1.jpg" width="169" height="101"></img>
+          </a>
+          <a href="#" class="model-gallery__next"> Наступне авто <img src="img/model-gallery/next-thumb-1.jpg" width="169" height="101"></img>
+          </a>
         </div>
       </section>
       <!-- end model-gallery -->
+      <!-- begin model-tabs -->
+      <section class="model-tabs js-tabs">
+        <div class="model-tabs__tabs">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <!-- begin model-tabs-list -->
+                <div class="model-tabs-list">
+                  <ul class="model-tabs-list__list">
+                    <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab is-active" data-target-tab="description">Опис та комплектація <span class="model-tabs-list__icon"></span></a></li>
+                    <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab" data-target-tab="video">Відео огляд <span class="model-tabs-list__icon"></span></a></li>
+                    <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab" data-target-tab="angle">дивитися у 360<sup>о</sup> <span class="model-tabs-list__icon"></span></a></li>
+                    <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab" data-target-tab="characteristics">Технічні характеристики <span class="model-tabs-list__icon"></span></a></li>
+                  </ul>
+                </div>
+                <!-- end model-tabs-list -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="model-tabs__content">
+          <!-- begin model-tab-item -->
+          <div class="model-tab-item js-tabs-item is-active" data-tab="description">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="model-tab-item__title">
+                    <h2 class="h2">Комплектація та опції:</h2>
+                  </div>
+                </div>
+              </div>
+              <!-- begin complectation-list -->
+              <div class="complectation-list">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <ul class="complectation-list__list">
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>ABD</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>ABS</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Bi-xenon</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>ESP</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Кабель зарядки в комплекте (220В)</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Климат контроль</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Кондиционер</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Круиз контроль</li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-4">
+                    <ul class="complectation-list__list">
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Мультимедиа: usb, aux, radio, CD</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Мультируль</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Подогрев сидений</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Преднатяжители ремней безопасности</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Безопасность: 8 подушек</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Бортовой компьютер</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Датчик давления шин</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Датчик дождя</li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-4">
+                    <ul class="complectation-list__list">
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Датчик света</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Запуск кнопкой</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Иммобилайзер</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Салон: кожа, белый</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Салон: кожа, черный</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Центральный замок</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Электропривод боковых зеркал</li>
+                      <li class="complectation-list__item"><span class="complectation-list__icon"></span>Электро усилитель руля</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- end complectation-list -->
+            </div>
+          </div>
+          <!-- end model-tab-item -->
+          <!-- begin model-tab-item -->
+          <div class="model-tab-item js-tabs-item" data-tab="video">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="model-tab-item__img">
+                    <iframe class="js-lazy" data-src="https://www.youtube.com/embed/KRatBnKn6v0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end model-tab-item -->
+          <!-- begin model-tab-item -->
+          <div class="model-tab-item js-tabs-item" data-tab="angle">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="model-tab-item__img">
+                    <img src="img/360rotate/rc.jpg" width="200" height="100" class="reel" data-images="img/360rotate/rc-reel.jpg">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end model-tab-item -->
+          <!-- begin model-tab-item -->
+          <div class="model-tab-item js-tabs-item" data-tab="characteristics">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6">
+                  <!-- begin tech-table -->
+                  <table class="tech-table tech-table--left">
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Потужність:</th>
+                      <td class="tech-table__td">115kW (154 л/с)</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Пікова потужність:</th>
+                      <td class="tech-table__td">129kW</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Батарея:</th>
+                      <td class="tech-table__td">129kW</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Напруження:</th>
+                      <td class="tech-table__td">386V</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Обертаючий момент:</th>
+                      <td class="tech-table__td">218 Hм (273Нм спорт-режим)</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Пробіг:</th>
+                      <td class="tech-table__td">30300 км</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Батарея:</th>
+                      <td class="tech-table__td">120 квт</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Трансмісія:</th>
+                      <td class="tech-table__td">Автомат</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Стан: </th>
+                      <td class="tech-table__td">Б/у</td>
+                    </tr>
+                  </table>
+                  <!-- end tech-table -->
+                </div>
+                <div class="col-lg-6">
+                  <!-- begin tech-table -->
+                  <table class="tech-table tech-table--right">
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Потужність:</th>
+                      <td class="tech-table__td">115kW (154 л/с)</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Пікова потужність:</th>
+                      <td class="tech-table__td">129kW</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Батарея:</th>
+                      <td class="tech-table__td">129kW</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Напруження:</th>
+                      <td class="tech-table__td">386V</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Обертаючий момент:</th>
+                      <td class="tech-table__td">218 Hм (273Нм спорт-режим)</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Пробіг:</th>
+                      <td class="tech-table__td">30300 км</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Батарея:</th>
+                      <td class="tech-table__td">120 квт</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Трансмісія:</th>
+                      <td class="tech-table__td">Автомат</td>
+                    </tr>
+                    <tr class="tech-table__tr">
+                      <th class="tech-table__th">Стан: </th>
+                      <td class="tech-table__td">Б/у</td>
+                    </tr>
+                  </table>
+                  <!-- end tech-table -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end model-tab-item -->
+        </div>
+      </section>
+      <!-- end model-tabs -->
       <!-- begin consultation -->
-      <section class="consultation">
-        <div class="consultation__left wow fadeIn">
+      <section class="consultation consultation--reverse">
+        <div class="consultation__left ">
           <div class="consultation__top">
             <div class="container">
               <div class="row">
@@ -556,7 +766,7 @@
               </div>
             </div>
           </div>
-          <div class="consultation__bottom wow fadeIn" data-delay=".5s">
+          <div class="consultation__bottom ">
             <div class="container">
               <div class="row">
                 <div class="col-xl-8 col-lg-6 col-md-6">
@@ -594,7 +804,7 @@
             </div>
           </div>
         </div>
-        <div class="consultation__right wow fadeIn" data-delay="1s">
+        <div class="consultation__right ">
           <!-- begin consultation-slider -->
           <div class="consultation-slider">
             <!-- begin slider -->
