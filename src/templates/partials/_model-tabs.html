@@ -1,0 +1,176 @@
+{%set
+complList = [
+  {
+    list: [
+      { text: 'ABD' },
+      { text: 'ABS' },
+      { text: 'Bi-xenon' },
+      { text: 'ESP' },
+      { text: 'Кабель зарядки в комплекте (220В)' },
+      { text: 'Климат контроль' },
+      { text: 'Кондиционер' },
+      { text: 'Круиз контроль' }
+    ]
+  },
+  {
+    list: [
+      { text: 'Мультимедиа: usb, aux, radio, CD' },
+      { text: 'Мультируль' },
+      { text: 'Подогрев сидений' },
+      { text: 'Преднатяжители ремней безопасности' },
+      { text: 'Безопасность: 8 подушек' },
+      { text: 'Бортовой компьютер' },
+      { text: 'Датчик давления шин' },
+      { text: 'Датчик дождя' }
+    ]
+  },
+  {
+    list: [
+      { text: 'Датчик света' },
+      { text: 'Запуск кнопкой' },
+      { text: 'Иммобилайзер' },
+      { text: 'Салон: кожа, белый' },
+      { text: 'Салон: кожа, черный' },
+      { text: 'Центральный замок' },
+      { text: 'Электропривод боковых зеркал' },
+      { text: 'Электро усилитель руля' }
+    ]
+  }
+]
+%}
+{%set
+techTable = [
+  { title: 'Потужність:', text: '115kW (154 л/с)' },
+  { title: 'Пікова потужність:', text: '129kW' },
+  { title: 'Батарея:', text: '129kW' },
+  { title: 'Напруження:', text: '386V' },
+  { title: 'Обертаючий момент:', text: '218 Hм (273Нм спорт-режим)' },
+  { title: 'Пробіг:', text: '30300 км' },
+  { title: 'Батарея:', text: '120 квт' },
+  { title: 'Трансмісія:', text: 'Автомат' },
+  { title: 'Стан: ', text: 'Б/у' }
+]
+%}
+
+<!-- begin model-tabs -->
+<section class="model-tabs js-tabs">
+  <div class="model-tabs__tabs">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- begin model-tabs-list -->
+          <div class="model-tabs-list">
+            <ul class="model-tabs-list__list">
+              <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab is-active" data-target-tab="description">Опис та комплектація <span class="model-tabs-list__icon"></span></a></li>
+              <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab" data-target-tab="video">Відео огляд <span class="model-tabs-list__icon"></span></a></li>
+              <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab" data-target-tab="angle">дивитися у 360<sup>о</sup> <span class="model-tabs-list__icon"></span></a></li>
+              <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab" data-target-tab="characteristics">Технічні характеристики <span class="model-tabs-list__icon"></span></a></li>
+            </ul>
+          </div>
+          <!-- end model-tabs-list -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="model-tabs__content">
+    <!-- begin model-tab-item -->
+    <div class="model-tab-item js-tabs-item is-active" data-tab="description">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="model-tab-item__title">
+              <h2 class="h2">Комплектація та опції:</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- begin complectation-list -->
+        <div class="complectation-list">
+          <div class="row">
+           {% for i in complList %}
+           <div class="col-lg-4">
+             <ul class="complectation-list__list">
+               {% for j in i.list %}
+               <li class="complectation-list__item"><span class="complectation-list__icon"></span>{{ j.text }}</li>
+               {% endfor %}
+             </ul>
+           </div>
+           {% endfor %}
+          </div>
+        </div>
+        <!-- end complectation-list -->
+      </div>
+      
+    </div>
+    <!-- end model-tab-item -->
+
+    <!-- begin model-tab-item -->
+    <div class="model-tab-item js-tabs-item" data-tab="video">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="model-tab-item__img">
+              <iframe class="js-lazy" data-src="https://www.youtube.com/embed/KRatBnKn6v0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- end model-tab-item -->
+
+    <!-- begin model-tab-item -->
+    <div class="model-tab-item js-tabs-item" data-tab="angle">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="model-tab-item__img">
+              <img src="img/360rotate/rc.jpg" width="200" height="100"
+                class="reel"
+                data-images="img/360rotate/rc-reel.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- end model-tab-item -->
+
+    <!-- begin model-tab-item -->
+    <div class="model-tab-item js-tabs-item" data-tab="characteristics">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- begin tech-table -->
+            <table class="tech-table tech-table--left">
+              {% for i in techTable %}
+              <tr class="tech-table__tr">
+                <th class="tech-table__th">{{ i.title }}</th>
+                <td class="tech-table__td">{{ i.text }}</td>
+              </tr>
+              {% endfor %}
+            </table>
+            <!-- end tech-table -->
+          </div>
+
+          <div class="col-lg-6">
+            <!-- begin tech-table -->
+            <table class="tech-table tech-table--right">
+              {% for i in techTable %}
+              <tr class="tech-table__tr">
+                <th class="tech-table__th">{{ i.title }}</th>
+                <td class="tech-table__td">{{ i.text }}</td>
+              </tr>
+              {% endfor %}
+            </table>
+            <!-- end tech-table -->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- end model-tab-item -->
+  </div>
+</section>
+<!-- end model-tabs -->

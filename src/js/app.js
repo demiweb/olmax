@@ -16,6 +16,10 @@ import setScrollBar from './components/setScrollBar';
 import toggleAside from './components/toggleAside';
 import setStickyColumn from './components/setStickyColumn';
 import setGallery from './components/setGallery';
+import setTabs from './components/setTabs';
+import rotateImage from './components/rotateImage';
+
+import './lib/jquery.reel.js';
 
 $(function() {
   const $preloader = $('.preloader');
@@ -37,6 +41,8 @@ $(function() {
   toggleAside();
   setStickyColumn();
   setGallery();
+  setTabs();
+  rotateImage();
 
   setTimeout(() => {
     $preloader.remove();

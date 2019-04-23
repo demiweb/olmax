@@ -1,7 +1,7 @@
 <!-- begin consultation -->
-<section class="consultation">
+<section class="consultation {% if consultation.reverse %}consultation--reverse{% endif %}">
 
-  <div class="consultation__left wow fadeIn">
+  <div class="consultation__left {% if animations %}wow fadeIn{% endif %}">
     <div class="consultation__top">
       <div class="container">
        <div class="row">
@@ -31,7 +31,7 @@
    </div>
  </div>
 
- <div class="consultation__bottom wow fadeIn" data-delay=".5s">
+ <div class="consultation__bottom {% if animations %}wow fadeIn{% endif %}">
   <div class="container">
     <div class="row">
       <div class="col-xl-8 col-lg-6 col-md-6">
@@ -71,7 +71,7 @@
 </div>
 </div>
 
-<div class="consultation__right wow fadeIn" data-delay="1s">
+<div class="consultation__right {% if animations %}wow fadeIn{% endif %}">
   <!-- begin consultation-slider -->
   <div class="consultation-slider">
     <!-- begin slider -->

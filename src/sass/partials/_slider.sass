@@ -427,15 +427,26 @@
     background-color: transparent
   &__prev
     +icon-arrow(8, 8, 1, #000, 135)
-    top: 0
+    top: -5px
   &__next
     +icon-arrow(8, 8, 1, #000, -45)
-    bottom: 0
+    bottom: -5px
 
 .thumbnail-slide
   display: none
+  position: relative
+  &::before
+    content: ''
+    +coverdiv
+    border: 1px solid  $c-accent
+    background-color: rgba($c-accent, .45)
+    pointer-events: none
+    display: none
+  &.is-active
+    &::before
+     display: block
   &__img
-    padding-top: 50%
+    padding-top: 60%
     display: block
     +cover
     font-size: 0

@@ -1,17 +1,16 @@
 {%set
-thumbnails = [
-  { img: 'thumbnail-1.jpg' },
-  { img: 'thumbnail-1.jpg' },
-  { img: 'thumbnail-2.jpg' },
-  { img: 'thumbnail-1.jpg' },
-  { img: 'thumbnail-2.jpg' },
-  { img: 'thumbnail-1.jpg' },
-  { img: 'thumbnail-2.jpg' },
-  { img: 'thumbnail-1.jpg' },
-  { img: 'thumbnail-2.jpg' }
+images = [
+  { index: 0, thumb: 'thumbnail-1.jpg', img: 'car-1.jpg', active: true },
+  { index: 1, thumb: 'thumbnail-1.jpg', img: 'thumbnail-1.jpg' },
+  { index: 2, thumb: 'thumbnail-2.jpg', img: 'car-1.jpg' },
+  { index: 3, thumb: 'thumbnail-1.jpg', img: 'thumbnail-1.jpg' },
+  { index: 4, thumb: 'thumbnail-2.jpg', img: 'car-1.jpg' },
+  { index: 5, thumb: 'thumbnail-1.jpg', img: 'thumbnail-1.jpg' },
+  { index: 6, thumb: 'thumbnail-2.jpg', img: 'car-1.jpg' },
+  { index: 7, thumb: 'thumbnail-1.jpg', img: 'thumbnail-1.jpg' },
+  { index: 8, thumb: 'thumbnail-2.jpg', img: 'car-1.jpg' }
 ]
 %}
-
 {%set
 metaList = [
   { title: 'Марка:', text: 'BMW' },
@@ -36,13 +35,12 @@ metaList = [
           <div class="thumbnail-slider__wrap slider__wrap">
             
             <div class="thumbnail-slider slider js-slider" data-slider="model_thumbnails">
-              {% for i in thumbnails %}
-              <a href="#" class="thumbnail-slide">
-                <span class="thumbnail-slide__img js-lazy" data-background-image="img/model-gallery/{{ i.img }}"></span>
+              {% for i in images %}
+              <a href="#" class="thumbnail-slide js-gallery-thumb {% if i.active %}is-active{% endif %}" data-index="{{ i.index }}">
+                <span class="thumbnail-slide__img js-lazy" data-background-image="img/model-gallery/{{ i.thumb }}"></span>
               </a>
               {% endfor %}
-            </div>
-            
+            </div>            
 
             <button class="thumbnail-slider__prev js-prev"></button>
             <button class="thumbnail-slider__next js-next"></button>
@@ -52,7 +50,15 @@ metaList = [
       </div>
 
       <div class="col-xl-6">
-        <div class="model-gallery__img js-lazy" data-background-image="img/model-gallery/car-1.jpg">
+        <div class="model-gallery__preview-wrap">
+          
+          <div class="model-gallery__preview js-gallery">
+            {% for i in images %}
+            <a href="img/model-gallery/{{ i.img }}" class="model-gallery__img js-gallery-preview js-lazy {% if i.active %}is-active{% endif %}" data-background-image="img/model-gallery/{{ i.img }}" data-index="{{ i.index }}"></a>
+            {% endfor %}
+          </div>         
+          
+
           <div class="model-gallery__img-label">
             <div class="item-label is-available">
               <div class="item-label__icon">{{ mixins.icon('check') }}</div>
@@ -60,11 +66,12 @@ metaList = [
             </div>
           </div>
 
-          <div class="model-gallery__img-counter model-gallery__img-info"></div>
+          <div class="model-gallery__img-counter model-gallery__img-info js-gallery-counter"></div>
 
-          <a href="#" class="model-gallery__img-info">360o</a>
-          <a href="#" class="model-gallery__img-info">Відео</a>
+          <a href="#" class="model-gallery__img-info model-gallery__img-angle js-tabs-unic-tab" data-target-tab="angle">360<sup>o</sup></a>
+          <a href="#" class="model-gallery__img-info model-gallery__img-video js-tabs-unic-tab" data-target-tab="video">Відео</a>
         </div>
+        
       </div>
 
       <div class="col-xl-4">
@@ -86,8 +93,14 @@ metaList = [
       </div>
     </div>
 
-    <a href="#" class="model-gallery__prev">Попереднє авто</a>
-    <a href="#" class="model-gallery__prev">Наступне авто</a>
+    <a href="#" class="model-gallery__prev">
+      Попереднє авто
+      <img src="img/model-gallery/next-thumb-1.jpg" width="169" height="101"></img>
+    </a>
+    <a href="#" class="model-gallery__next">
+      Наступне авто
+      <img src="img/model-gallery/next-thumb-1.jpg" width="169" height="101"></img>
+    </a>
   </div>
 </section>
 <!-- end model-gallery -->

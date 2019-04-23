@@ -1,0 +1,113 @@
+.model-tabs
+  &__tabs
+    background-color: #2c2c2c
+
+.model-tabs-list
+  $this: &
+  &__list
+    display: flex
+  &__item
+    display: inline-block
+    flex-grow: 1
+  &__link
+    display: block
+    height: 100%
+    text-align: center
+    text-transform: uppercase
+    color: #fff
+    +bold
+    font-size: 15px
+    border-bottom: 2px solid transparent
+    transition: border-color .3s, background-color .3s
+    padding: 20px 10px
+    sup
+      vertical-align: super
+      font-size: 10px
+    +hover
+      @extend .model-tabs-list__link.is-active
+    &.is-active
+      border-bottom-color: $c-accent
+      background-color: #353535
+      #{$this}__icon
+        +icon-arrow(8, 8, 1, currentColor, 135)
+        top: 1px
+  &__icon
+    display: inline-block
+    +icon-arrow(8, 8, 1, currentColor, -45)
+    position: relative
+    margin-left: 8px
+    top: -3px
+    transition: transform .3s
+
+.complectation-list
+  &__item
+    +thin
+    font-size: 15px
+    display: flex
+    align-items: center
+    &:not(:last-child)
+      margin-bottom: 25px
+  &__icon
+    display: inline-block
+    position: relative
+    text-align: center
+    width: 17px
+    height: 17px
+    line-height: 17px
+    color: #adadad
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    background-color: #2c2c2c
+    margin-right: 12px
+    +icon-close(17, 1, #adadad)
+    &::before,
+    &::after
+      height: 8px
+      +vcenter
+    &::after
+      transform: translate(-50%, -50%) rotate(90deg)
+
+.model-tab-item
+  padding-top: 35px
+  padding-bottom: 35px
+  background-color: #f7f7f7
+  display: none
+  &.is-active
+    display: block
+  &__title
+    margin-bottom: 30px
+  &__img
+    position: relative
+    padding-top: 55%
+    iframe
+      +coverdiv
+
+.tech-table
+  width: calc(100% + 15px)
+  &__tr
+    border-top: 1px solid  $c-border
+    border-bottom: 1px solid  $c-border
+    background-color: #efefef
+    &:nth-child(even)
+      background-color: transparent
+  &__th
+    font-weight: 400
+    text-align: left
+    +bold
+    font-size: 15px
+    padding: 10px
+    padding-left: 35px
+    width: 40%
+  &__td
+    +thin
+    font-size: 15px
+    padding: 10px
+    width: 60%
+
+  &--left
+    border-left: 1px solid  $c-border
+    margin-right: -15px
+  &--right
+    border-right: 1px solid  $c-border
+    margin-left: -15px

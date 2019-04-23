@@ -1,17 +1,97 @@
 .model-gallery
   padding-top: 40px
   padding-bottom: 40px
+  .container
+    position: relative
+  &__preview-wrap
+    position: relative
+    height: 100%
+  &__preview
+    height: 100%
   &__img
     +cover
     // padding-top: 50%
-    height: 100%
+    // padding-top: 100%
     font-size: 0
+    +coverdiv
+    visibility: hidden
+    opacity: 0
+    display: block
+    &.is-active
+      visibility: visible
+      opacity: 1
   &__title
     display: flex
     justify-content: space-between
     align-items: center
     padding-bottom: 20px
     border-bottom: 1px solid  $c-border
+  &__img-label
+    position: absolute
+    top: 10px
+    right: 10px
+    pointer-events: none
+  &__img-info
+    display: inline-block
+    text-align: center
+    color: #fff
+    +roman
+    padding: 13px 20px
+    height: 48px
+    background-color: rgba(#000, .45)
+    font-size: 15px
+    position: absolute
+    bottom: 10px
+    white-space: nowrap
+    sup
+      vertical-align: super
+  &__img-counter
+    left: 10px
+  &__img-angle
+    right: 135px
+  &__img-video
+    right: 10px
+  &__prev,
+  &__next
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    color: #828282
+    font-size: 15px
+    +light
+    +hover
+      img
+        display: block
+    img
+      position: absolute
+      top: 50%
+      display: none
+    &::before
+      content: ''
+      position: absolute
+      display: inline-block      
+      top: 3px
+  &__prev
+    left: -25px
+    padding-left: 20px
+    transform: translate(-100%, 0)
+    img
+      left: -25px
+      transform: translate(-100%, -50%)
+    &::before
+      left: 0
+      +icon-arrow(15, 15, 1, currentColor, 45)
+  &__next
+    right: -25px
+    padding-right: 20px
+    transform: translate(100%, 0)
+    img
+      right: -25px
+      transform: translate(100%, -50%)
+    &::before
+      right: 0
+      +icon-arrow(15, 15, 1, currentColor, -135)
+
 
 .model-gallery-meta
   padding-top: 15px

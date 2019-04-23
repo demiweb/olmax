@@ -1,4 +1,5 @@
 .consultation
+  $this: &
   position: relative
   &__left
     .phone
@@ -42,3 +43,9 @@
       padding-bottom: 40px
   &__title
     margin-bottom: 20px
+
+  &--reverse
+    #{$this}__top
+      background-color: #fff
+    #{$this}__bottom
+      background-color: #f7f7f7
