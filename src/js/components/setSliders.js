@@ -120,7 +120,16 @@ export default function setSliders() {
         prevArrow: $prev,
         nextArrow: $next,
         slidesToShow: 5,
-        vertical: true
+        vertical: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              vertical: false,
+              slidesToShow: 3
+            }
+          }
+        ]
       }
     };
 

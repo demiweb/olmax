@@ -19,7 +19,7 @@ import setGallery from './components/setGallery';
 import setTabs from './components/setTabs';
 import rotateImage from './components/rotateImage';
 
-import './lib/jquery.reel.js';
+// import './lib/jquery.reel.js';
 
 $(function() {
   const $preloader = $('.preloader');

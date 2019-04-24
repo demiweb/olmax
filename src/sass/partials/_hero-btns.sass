@@ -5,6 +5,11 @@
     display: inline-block
     vertical-align: top
     width: 25%
+    +md
+      width: 50%
+    +xs
+      width: 100%
+
     &:not(:last-child)
       .hero-btns__link
         border-right: 1px solid  #191919
@@ -12,11 +17,20 @@
     font-size: 15px
     color: #828282
     text-align: center
-    display: block
+    display: flex
+    align-items: center
+    justify-content: center
     background-color: #fbfbfb
     padding: 10px
     border-bottom: 2px solid transparent
     transition: background-color .3s, border-color .3s, color .3s
+    +md
+      border-bottom: 1px solid  #191919
+      border-right: 1px solid  #191919
+    .icon
+      fill: currentColor
+      font-size: 15px
+      margin-left: 10px
     +hover
       @extend .hero-btns__link.is-active      
     &.is-active

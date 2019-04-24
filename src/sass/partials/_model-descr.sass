@@ -1,0 +1,60 @@
+.model-descr
+  padding-top: 40px
+  +sm
+    padding-top: 20px
+  .row
+    margin-bottom: 5px
+    +md
+      margin-bottom: 0
+    &.is-accent
+      background-color: #fbfbfb 
+  &__img
+    padding-top: 50%
+    // margin-bottom: 5px
+    +cover
+    +md
+      margin-bottom: 5px
+    &.is-full
+      height: 100%
+      padding-top: 0
+      +md
+        height: calc(100% - 5px)
+      +sm
+        height: auto
+        padding-top: 50%
+    &.is-full-width-left
+      margin-right: -25px
+      +md
+        margin-right: 0
+  &__title
+    position: relative
+    padding-bottom: 15px
+    margin-bottom: 12px
+    &::before
+      content: ''
+      position: absolute
+      width: 53px
+      height: 1px
+      background-color: $c-text
+      bottom: 0
+      left: 0
+  &__text
+    padding-top: 20px
+    // padding-bottom: 50px
+    text-align: justify
+    p
+      margin-bottom: 50px
+    +md
+      padding-top: 20px
+      p
+        margin-bottom: 20px
+      // padding-bottom: 20px
+      // padding-bottom: 0
+    &.has-pt
+      padding-top: 55px
+      +md
+        padding-top: 20px
+    &.is-accent
+      padding-left: 38px
+      +md
+        padding-left: 0

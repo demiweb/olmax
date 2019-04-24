@@ -1,13 +1,21 @@
 .model-gallery
   padding-top: 40px
   padding-bottom: 40px
+  +sm
+    padding-bottom: 20px
+    padding-top: 20px
   .container
     position: relative
   &__preview-wrap
     position: relative
     height: 100%
+    +sm
+      height: auto
   &__preview
     height: 100%
+    +sm
+      height: auto
+      padding-top: 60%
   &__img
     +cover
     // padding-top: 50%
@@ -17,6 +25,9 @@
     visibility: hidden
     opacity: 0
     display: block
+    +sm
+      // padding-top: 50%
+      // position: static
     &.is-active
       visibility: visible
       opacity: 1
@@ -26,14 +37,28 @@
     align-items: center
     padding-bottom: 20px
     border-bottom: 1px solid  $c-border
+    +lg
+      display: block
+      .model-gallery__price
+        margin-bottom: 10px
+    +md
+      display: flex
+      .model-gallery__price
+        margin-bottom: 0
+    +xs
+      display: block
+      .model-gallery__price
+        margin-bottom: 10px
   &__img-label
     position: absolute
     top: 10px
     right: 10px
     pointer-events: none
   &__img-info
-    display: inline-block
+    display: inline-flex
     text-align: center
+    align-items: center
+    justify-content: center
     color: #fff
     +roman
     padding: 13px 20px
@@ -45,6 +70,14 @@
     white-space: nowrap
     sup
       vertical-align: super
+    .icon
+      fill: currentColor
+      font-size: 16px
+      margin-right: 10px
+    .icon-reload
+      font-size: 20px
+    .icon-play-button
+      font-size: 14px
   &__img-counter
     left: 10px
   &__img-angle
@@ -62,10 +95,19 @@
     +hover
       img
         display: block
+        +xl
+          display: none
+    +xl
+      font-size: 0
     img
       position: absolute
       top: 50%
       display: none
+      +r(1850)
+        top: auto
+        transform: translate(0, 0)
+        margin-bottom: 15px
+        bottom: 100%      
     &::before
       content: ''
       position: absolute
@@ -75,9 +117,17 @@
     left: -25px
     padding-left: 20px
     transform: translate(-100%, 0)
+    +xl
+      left: 0
+    +md
+      left: 7px
     img
       left: -25px
       transform: translate(-100%, -50%)
+      +r(1850)
+        left: auto
+        right: 0
+
     &::before
       left: 0
       +icon-arrow(15, 15, 1, currentColor, 45)
@@ -85,12 +135,22 @@
     right: -25px
     padding-right: 20px
     transform: translate(100%, 0)
+    +xl
+      right: 0
+    +md
+      right: 7px
     img
       right: -25px
       transform: translate(100%, -50%)
+      +r(1850)
+        right: auto
+        left: 0
     &::before
       right: 0
       +icon-arrow(15, 15, 1, currentColor, -135)
+  &__meta
+    +md
+      padding-top: 30px
 
 
 .model-gallery-meta
@@ -105,6 +165,13 @@
     float: left
     width: 45%
     margin-bottom: 10px
+    +md
+      width: 16.6666666667%
+      // width: auto
+    +sm
+      width: 25%
+    +xs
+      width: 30%
     &::before
       content: ''
       position: absolute
@@ -123,3 +190,12 @@
     width: 55%
     float: left
     margin-bottom: 10px
+    +md
+      // width: 85%
+      width: 16.6666666667%
+      // width: auto
+      float: left
+    +sm
+      width: 25%
+    +xs
+      width: 70%

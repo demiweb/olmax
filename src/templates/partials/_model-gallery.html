@@ -29,7 +29,7 @@ metaList = [
 <section class="model-gallery">
   <div class="container">
     <div class="row">
-      <div class="col-xl-2">
+      <div class="col-xl-2 col-lg-2 col-md-2">
         <div class="model-gallery__dots">
           <!-- begin thumbnail-slider -->
           <div class="thumbnail-slider__wrap slider__wrap">
@@ -49,7 +49,7 @@ metaList = [
         </div>
       </div>
 
-      <div class="col-xl-6">
+      <div class="col-xl-6 col-lg-6 col-md-10">
         <div class="model-gallery__preview-wrap">
           
           <div class="model-gallery__preview js-gallery">
@@ -66,15 +66,18 @@ metaList = [
             </div>
           </div>
 
-          <div class="model-gallery__img-counter model-gallery__img-info js-gallery-counter"></div>
+          <div class="model-gallery__img-counter model-gallery__img-info">
+            {{ mixins.icon('frame-landscape') }}
+            <span class="js-gallery-counter"></span>
+          </div>
 
-          <a href="#" class="model-gallery__img-info model-gallery__img-angle js-tabs-unic-tab" data-target-tab="angle">360<sup>o</sup></a>
-          <a href="#" class="model-gallery__img-info model-gallery__img-video js-tabs-unic-tab" data-target-tab="video">Відео</a>
+          <a href="#" class="model-gallery__img-info model-gallery__img-angle js-tabs-unic-tab" data-target-tab="angle">{{ mixins.icon('reload') }} <span>360<sup>o</sup></span></a>
+          <a href="#" class="model-gallery__img-info model-gallery__img-video js-tabs-unic-tab" data-target-tab="video">{{ mixins.icon('play-button') }}Відео</a>
         </div>
         
       </div>
 
-      <div class="col-xl-4">
+      <div class="col-xl-4 col-lg-4">
         <div class="model-gallery__meta">
           <div class="model-gallery__title">
             <div class="model-gallery__price price">

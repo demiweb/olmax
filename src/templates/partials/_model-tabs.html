@@ -65,6 +65,7 @@ techTable = [
               <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab" data-target-tab="video">Відео огляд <span class="model-tabs-list__icon"></span></a></li>
               <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab" data-target-tab="angle">дивитися у 360<sup>о</sup> <span class="model-tabs-list__icon"></span></a></li>
               <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab" data-target-tab="characteristics">Технічні характеристики <span class="model-tabs-list__icon"></span></a></li>
+              <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab" data-target-tab="carfax">Carfax <span class="model-tabs-list__icon"></span></a></li>
             </ul>
           </div>
           <!-- end model-tabs-list -->
@@ -89,7 +90,7 @@ techTable = [
         <div class="complectation-list">
           <div class="row">
            {% for i in complList %}
-           <div class="col-lg-4">
+           <div class="col-lg-4 col-md-6">
              <ul class="complectation-list__list">
                {% for j in i.list %}
                <li class="complectation-list__item"><span class="complectation-list__icon"></span>{{ j.text }}</li>
@@ -126,9 +127,7 @@ techTable = [
         <div class="row">
           <div class="col-lg-12">
             <div class="model-tab-item__img">
-              <img src="img/360rotate/rc.jpg" width="200" height="100"
-                class="reel"
-                data-images="img/360rotate/rc-reel.jpg">
+              <div class="js-spinner" data-source="img/360rotate/rad_zoom_{frame}.jpg" data-frame="[1, 34]"></div>
             </div>
           </div>
         </div>
@@ -141,7 +140,7 @@ techTable = [
     <div class="model-tab-item js-tabs-item" data-tab="characteristics">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-md-6">
             <!-- begin tech-table -->
             <table class="tech-table tech-table--left">
               {% for i in techTable %}
@@ -154,7 +153,7 @@ techTable = [
             <!-- end tech-table -->
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-md-6">
             <!-- begin tech-table -->
             <table class="tech-table tech-table--right">
               {% for i in techTable %}
@@ -165,6 +164,19 @@ techTable = [
               {% endfor %}
             </table>
             <!-- end tech-table -->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- end model-tab-item -->
+
+    <!-- begin model-tab-item -->
+    <div class="model-tab-item js-tabs-item" data-tab="carfax">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            carfax
           </div>
         </div>
       </div>
