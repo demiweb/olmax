@@ -3,11 +3,11 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-7 order-1 order-lg-0">
-        <div class="model-descr__img js-lazy" data-background-image="img/model-descr/car-1.jpg"></div>
+        <div class="model-descr__img js-lazy {% if animations %}wow fadeInUp{% endif %}" data-background-image="img/model-descr/car-1.jpg"></div>
       </div>
 
       <div class="col-lg-5 order-0 order-lg-1">
-        <div class="model-descr__text has-pt">
+        <div class="model-descr__text has-pt {% if animations %}wow fadeInUp{% endif %}">
           <div class="model-descr__title">
             <h2 class="h2">BMW I3</h2>
           </div>
@@ -19,7 +19,7 @@
 
     <div class="row">
       <div class="col-lg-6 col-md-6">
-        <div class="model-descr__text">
+        <div class="model-descr__text {% if animations %}wow fadeInUp{% endif %}">
           <div class="model-descr__title">
             <h2 class="h2">Дизайн</h2>
           </div>
@@ -28,26 +28,26 @@
 
         </div>
         
-        <div class="model-descr__img js-lazy is-full-width-left" data-background-image="img/model-descr/bmw_i3s_14.jpg"></div>
+        <div class="model-descr__img js-lazy is-full-width-left {% if animations %}wow fadeInUp{% endif %}" data-background-image="img/model-descr/bmw_i3s_14.jpg"></div>
       </div>
 
       <div class="col-lg-6 col-md-6">
-        <div class="model-descr__img is-full js-lazy" data-background-image="img/model-descr/BMW-MY19-XSeries-X4-DP-Highlight-05-v2.jpg"></div>
+        <div class="model-descr__img is-full js-lazy {% if animations %}wow fadeInUp{% endif %}" data-background-image="img/model-descr/BMW-MY19-XSeries-X4-DP-Highlight-05-v2.jpg"></div>
       </div>
     </div>
 
     <div class="row">
       <div class="col-lg-6 col-md-6">
-        <div class="model-descr__img is-full-width-left js-lazy" data-background-image="img/model-descr/car-2.jpg"></div>
+        <div class="model-descr__img is-full-width-left js-lazy {% if animations %}wow fadeInUp{% endif %}" data-background-image="img/model-descr/car-2.jpg"></div>
       </div>
       <div class="col-lg-6 col-md-6">
-        <div class="model-descr__img js-lazy" data-background-image="img/model-descr/car-3.jpg"></div>
+        <div class="model-descr__img js-lazy {% if animations %}wow fadeInUp{% endif %}" data-background-image="img/model-descr/car-3.jpg"></div>
       </div>
     </div>
 
     <div class="row">
       <div class="col-lg-6">
-        <div class="model-descr__text is-accent">
+        <div class="model-descr__text is-accent is-left {% if animations %}wow fadeInUp{% endif %}">
           <div class="model-descr__title">
             <h2 class="h2">Технічні показники</h2>
           </div>
@@ -56,7 +56,7 @@
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="model-descr__text is-accent">
+        <div class="model-descr__text is-accent is-right {% if animations %}wow fadeInUp{% endif %}">
           <div class="model-descr__title">
             <h2 class="h2">Салон</h2>
           </div>

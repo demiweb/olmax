@@ -130,6 +130,31 @@ export default function setSliders() {
             }
           }
         ]
+      },
+      reccomend: {
+        prevArrow: $prev,
+        nextArrow: $next,
+        slidesToShow: 4,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
       }
     };
 

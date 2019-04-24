@@ -54,6 +54,18 @@ body
   color: $c-text
   +no-scroll
 
+// .js-lazy
+//   &[data-loaded="true"]
+//     animation: fadeIn 3s
+
+// @keyframes fadeIn 
+//   from 
+//     opacity: 0
+
+//   to 
+//     opacity: 1
+
+
 .out
   padding-top: 90px
   overflow-x: hidden
@@ -184,6 +196,13 @@ body
     width: 100%
     .btn__title
       width: calc(100% - 50px)
+  &--hauto
+    height: auto
+    .btn__title
+      padding-top: 13px
+      padding-bottom: 13px
+    .btn__icon
+      height: 45px
 
 .link
   font-size: 15px

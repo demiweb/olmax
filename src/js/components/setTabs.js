@@ -2,7 +2,12 @@ import { ACTIVE } from '../constants';
 
 class Tabs {
   constructor() {
-    
+    const $activeItems = $('.'+Tabs.classNames.item);
+    $activeItems.each((i, item) => {
+      if ($(item).hasClass(ACTIVE)) {
+        $(item).show();
+      }
+    });    
   };
   init() {
     this._initTabs();
@@ -24,8 +29,12 @@ class Tabs {
     $tabs.removeClass(Tabs.classNames.active);
     $items.removeClass(Tabs.classNames.active);
 
+    $items.fadeOut();
+
     $clickTarget.addClass(Tabs.classNames.active);
     $tabTargetItem.addClass(Tabs.classNames.active);
+
+    $tabTargetItem.fadeIn();
   };
 
   _initTabs() {

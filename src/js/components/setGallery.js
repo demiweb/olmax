@@ -4,10 +4,13 @@ import 'lg-zoom';
 import 'lg-fullscreen';
 import 'lg-autoplay';
 import 'lg-share';
+import 'lg-thumbnail';
 
 export default function setGallery() {
   const $gallery = $('.js-gallery');
-  $gallery.lightGallery();
+  $gallery.lightGallery({
+    exThumbImage: 'data-exthumbimage'
+  });
 
   function togglePreviewImg() {
     const $thumbs = $('.js-gallery-thumb');

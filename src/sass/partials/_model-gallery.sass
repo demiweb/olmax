@@ -18,6 +18,7 @@
       padding-top: 60%
   &__img
     +cover
+    // background-size: contain
     // padding-top: 50%
     // padding-top: 100%
     font-size: 0
@@ -25,6 +26,10 @@
     visibility: hidden
     opacity: 0
     display: block
+    transition: opacity .5s, visibility .5s
+    img
+      width: 100%
+      max-width: 100%
     +sm
       // padding-top: 50%
       // position: static
@@ -68,6 +73,9 @@
     position: absolute
     bottom: 10px
     white-space: nowrap
+    transition: background-color .3s
+    +hover
+      background-color: rgba($c-accent, .9)
     sup
       vertical-align: super
     .icon
@@ -80,6 +88,8 @@
       font-size: 14px
   &__img-counter
     left: 10px
+    +hover
+      background-color: rgba(#000, .45)
   &__img-angle
     right: 135px
   &__img-video
@@ -99,6 +109,8 @@
           display: none
     +xl
       font-size: 0
+    +lg
+      display: none
     img
       position: absolute
       top: 50%

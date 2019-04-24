@@ -18,6 +18,7 @@ import setStickyColumn from './components/setStickyColumn';
 import setGallery from './components/setGallery';
 import setTabs from './components/setTabs';
 import rotateImage from './components/rotateImage';
+import scrollTo from './components/scrollTo';
 
 // import './lib/jquery.reel.js';
 
@@ -43,6 +44,7 @@ $(function() {
   setGallery();
   setTabs();
   rotateImage();
+  scrollTo();
 
   setTimeout(() => {
     $preloader.remove();

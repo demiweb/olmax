@@ -61,11 +61,11 @@ techTable = [
           <!-- begin model-tabs-list -->
           <div class="model-tabs-list">
             <ul class="model-tabs-list__list">
-              <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab is-active" data-target-tab="description">Опис та комплектація <span class="model-tabs-list__icon"></span></a></li>
-              <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab" data-target-tab="video">Відео огляд <span class="model-tabs-list__icon"></span></a></li>
-              <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab" data-target-tab="angle">дивитися у 360<sup>о</sup> <span class="model-tabs-list__icon"></span></a></li>
-              <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab" data-target-tab="characteristics">Технічні характеристики <span class="model-tabs-list__icon"></span></a></li>
-              <li class="model-tabs-list__item"><a href="#" class="model-tabs-list__link js-tab" data-target-tab="carfax">Carfax <span class="model-tabs-list__icon"></span></a></li>
+              <li class="model-tabs-list__item"><a href="model_tabs" class="model-tabs-list__link js-tab js-scroll-to-btn is-active" data-target-tab="description">Опис та комплектація <span class="model-tabs-list__icon"></span></a></li>
+              <li class="model-tabs-list__item"><a href="model_tabs" class="model-tabs-list__link js-tab js-scroll-to-btn" data-target-tab="video">Відео огляд <span class="model-tabs-list__icon"></span></a></li>
+              <li class="model-tabs-list__item"><a href="model_tabs" class="model-tabs-list__link js-tab js-scroll-to-btn" data-target-tab="angle">дивитися у 360<sup>о</sup> <span class="model-tabs-list__icon"></span></a></li>
+              <li class="model-tabs-list__item"><a href="model_tabs" class="model-tabs-list__link js-tab js-scroll-to-btn" data-target-tab="characteristics">Технічні характеристики <span class="model-tabs-list__icon"></span></a></li>
+              <li class="model-tabs-list__item"><a href="model_tabs" class="model-tabs-list__link js-tab js-scroll-to-btn" data-target-tab="carfax">Carfax <span class="model-tabs-list__icon"></span></a></li>
             </ul>
           </div>
           <!-- end model-tabs-list -->
@@ -74,7 +74,7 @@ techTable = [
     </div>
   </div>
 
-  <div class="model-tabs__content">
+  <div class="model-tabs__content" data-scroll-target="model_tabs">
     <!-- begin model-tab-item -->
     <div class="model-tab-item js-tabs-item is-active" data-tab="description">
       <div class="container">
@@ -112,7 +112,7 @@ techTable = [
         <div class="row">
           <div class="col-lg-12">
             <div class="model-tab-item__img">
-              <iframe class="js-lazy" data-src="https://www.youtube.com/embed/KRatBnKn6v0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="js-lazy" data-src="https://www.youtube.com/embed/GxqttEVZV7U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -176,7 +176,7 @@ techTable = [
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            carfax
+            {% include "partials/_carfax.html" %}
           </div>
         </div>
       </div>
