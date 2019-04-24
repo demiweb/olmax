@@ -1,0 +1,29 @@
+<!-- begin car-info-item -->
+<div class="car-info-item">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="car-info-item__img">
+          <img src="img/car-info-list/{{ j.img }}" alt="" class="js-lazy">
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="car-info-item__title">
+          <h2 class="h2">{{ j.title }}</h2>
+          <div class="item-label {{ j.status }}">
+            <div class="item-label__icon">{{ mixins.icon(j.labelIcon) }}</div>
+            <div class="item-label__title">{{ j.label }}</div>
+          </div>
+        </div>
+
+        <div class="car-info-item__text text text--gray">{{ j.text }}</div>
+
+        <div class="car-info-item__tech-info">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end car-info-item -->

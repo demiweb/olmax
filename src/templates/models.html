@@ -1,0 +1,22 @@
+---
+title: models
+page: main
+hero: {
+  sm: true,
+  title: 'моделі',
+  subttl: 'доступні моделі електромобілей',
+  breadcrumbs: [
+    { title: 'Головна'},
+    { title: 'Моделі', active: true }
+  ],
+  bgimage: 'img/hero/hero-models.jpg'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/_models-list.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}

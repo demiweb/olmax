@@ -1,7 +1,7 @@
 <!-- begin hero -->
 <section
  class="hero {% if hero.sm %}hero--sm js-lazy{% endif %} {% if hero.lg %}hero--lg js-lazy{% endif %} {% if hero.xs %}hero--xs{% endif %}"
- {% if hero.sm %}data-background-image="img/hero/hero-sm.jpg"{% endif %}
+ {% if hero.sm %}data-background-image="{{ hero.bgimage }}"{% endif %}
  {% if hero.lg %}data-background-image="img/hero/hero-2.jpg"{% endif %}>
 
   {% if hero.slider %}
@@ -15,16 +15,13 @@
       <div class="row">
         <div class="col-xl-9 col-lg-8">
           <div class="hero__title">
-            <h1 class="title title--white">Електромобілі в наявності</h1>
-            <div class="hero__subttl">Великий вибір б/у електромобілей з автосалону</div>
+            <h1 class="title title--white">{{ hero.title }}</h1>
+            <div class="hero__subttl">{{ hero.subttl }}</div>
           </div>         
 
           <div class="hero__breadcrumbs">
             {{ mixins.breadcrumbs(
-              links = [
-              { title: 'Головна'},
-              { title: 'Електромобілі в наявності', active: true }
-              ]
+              links = hero.breadcrumbs
               ) }}
             </div>
           </div>
