@@ -8,12 +8,22 @@
       margin-bottom: 0
     &.is-accent
       background-color: #fbfbfb 
+  &.has-no-pt
+    padding-top: 0
+  &__row
+    padding-top: 20px
+    &.is-gray
+      background-color: #f7f7f7
+    &.has-mb
+      margin-bottom: 40px
   &__img
     padding-top: 50%
     // margin-bottom: 5px
     +cover
     +md
       margin-bottom: 5px
+    img
+      max-width: 100%
     &.is-full
       height: 100%
       padding-top: 0
@@ -26,10 +36,21 @@
       margin-right: -25px
       +md
         margin-right: 0
+    &.has-img
+      padding-top: 0
+      +md
+        text-align: right
+    &.has-mb-neg
+      margin-bottom: -40px
+    &.has-pt
+      padding-top: 20px
   &__title
     position: relative
     padding-bottom: 15px
     margin-bottom: 12px
+    +xs
+      .h2, h2
+        font-size: 21px
     &::before
       content: ''
       position: absolute
@@ -50,10 +71,16 @@
         margin-bottom: 20px
       // padding-bottom: 20px
       // padding-bottom: 0
+    +xs
+      .text
+        font-size: 13px
     &.has-pt
       padding-top: 55px
       +md
         padding-top: 20px
+    &.has-btn
+      p
+        margin-bottom: 10px
     &.is-accent
       padding-left: 38px
       background-color: #fbfbfb
@@ -74,4 +101,8 @@
         padding-right: 40px
         +md
           padding-right: 0
+  &__col-lg-85
+    width: percentage(6/7)
+  &__btn
+    margin-bottom: 15px
       

@@ -29,12 +29,12 @@ class Tabs {
     $tabs.removeClass(Tabs.classNames.active);
     $items.removeClass(Tabs.classNames.active);
 
-    $items.fadeOut();
+    $items.slideUp();
 
     $clickTarget.addClass(Tabs.classNames.active);
     $tabTargetItem.addClass(Tabs.classNames.active);
 
-    $tabTargetItem.fadeIn();
+    $tabTargetItem.slideDown();
   };
 
   _initTabs() {

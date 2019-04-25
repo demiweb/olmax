@@ -82,12 +82,39 @@
   &--white
     color: #fff
   &--row
+    #{$this}__icon
+      left: 15px !important
     #{$this}__item
       width: 16.666667%
+      padding-left: 60px
+      +lg
+        width: 33.33333%
+        display: -webkit-inline-flex
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        padding-left: 0
+
+        &:nth-child(3)
+          &::before
+            display: none
+        &:nth-child(4n-4)
+          padding-left: 0
+          
+      +xs
+        width: 50%
       &:nth-child(3n -3)
         &::before
           display: block
       &:nth-child(4n-4)
-        padding-left: 70px
-        #{$this}__icon
-          left: 30px
+        padding-left: 60px
+      &:last-child
+        &::before
+          display: none
+    #{$this}__item-inner
+      +lg
+        position: relative
+        padding-left: 60px
+        width: 190px
+      +sm
+        padding-left: 50px

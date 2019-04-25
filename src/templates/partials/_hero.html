@@ -1,8 +1,7 @@
 <!-- begin hero -->
 <section
  class="hero {% if hero.sm %}hero--sm js-lazy{% endif %} {% if hero.lg %}hero--lg js-lazy{% endif %} {% if hero.xs %}hero--xs{% endif %}"
- {% if hero.sm %}data-background-image="{{ hero.bgimage }}"{% endif %}
- {% if hero.lg %}data-background-image="img/hero/hero-2.jpg"{% endif %}>
+ {% if hero.sm %}data-background-image="{{ hero.bgimage }}"{% endif %}>
 
   {% if hero.slider %}
   <div class="hero__slider">
@@ -68,6 +67,10 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="hero__bg">
+        <video class="js-lazy" src="" data-src="video/FIND-OUT-TESLA_720.mp4" muted="" autoplay="" playsinline="" loop="" poster="img/hero-video-poster.jpg"></video>
       </div>
       
       {%set techInfo = hero.techInfo %}

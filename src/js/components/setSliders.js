@@ -31,6 +31,15 @@ export default function setSliders() {
         autoplay: true,
         autoplaySpeed: 2500
       },
+      banner_simple: {
+        prevArrow: $prev,
+        nextArrow: $next,
+        fade: true,
+        speed: 1000,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 2500
+      },
       brands: {
         draggable: false,
         swipe: false,

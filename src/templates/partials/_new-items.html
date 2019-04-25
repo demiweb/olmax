@@ -3,21 +3,26 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="section__title wow fadeInUp">
+        <div class="section__title wow fadeInUp {% if not newItems.link %}has-no-mb{% endif %}">
+          {% if newItems.link %}
           <h2 class="title">
-            <span>нові надходження</span>
+            <span>{{ newItems.title }}</span>
             <a href="#" class="link link--green link--sm">
-              <span class="link__title">Всі моделі в наявності</span>
+              <span class="link__title">{{ newItems.link }}</span>
               <span class="link__arrow"></span>
             </a>
-          </h2>         
+          </h2> 
+          {% else %}
+          <h2 class="title">{{ newItems.title }}</h2>
+          {% endif %}
+                  
         </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col-lg-12">
-        <div class="new-items-slider wow fadeIn" data-wow-delay=".5s">
+        <div class="new-items-slider {% if newItems.sliderPtSm %}has-pt-sm{% endif %} wow fadeIn" data-wow-delay=".5s">
           {% include "partials/sliders/_new-item-slider.html" %}
         </div>
       </div>

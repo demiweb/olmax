@@ -1,0 +1,32 @@
+{%set
+slider = [
+  { img: 'banner-1.jpg' },
+  { img: 'banner-2.jpg' },
+  { img: 'banner-3.jpg' }
+]
+%}
+
+<!-- begin banner-slider -->
+<div class="banner-slider banner-slider--simple wow fadeIn margin-bottom-5">
+  <!-- begin slider -->
+  <div class="slider__wrap slider--full__wrap slider--banner__wrap slider--banner-simple__wrap">
+    <div class="slider slider--full slider--banner slider--banner-simple js-slider" data-slider="banner_simple">
+      {% for i in slider %}
+      <div class="slide">
+        <div class="slide__inner js-lazy wow fadeIn" data-wow-delay=".5s" data-background-image="img/banner-slider/{{ i.img }}"></div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="slider__arrows slider--full__arrows">
+      <div class="container">
+        <div class="row col-lg-12">
+          <button class="slider__prev js-prev"></button>
+          <button class="slider__next js-next"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end slider -->
+</div>
+<!-- end banner-slider -->

@@ -74,3 +74,120 @@
   right: 0
   width: 36.5%
   z-index: 0
+
+.section-full
+  position: relative
+  height: calc(100vh - 90px)
+  display: flex
+  align-items: center
+  overflow: hidden
+  +cover
+  +lg
+    height: calc(100vh - 45px)
+  &__block
+    z-index: 1
+    background-color: #fff
+    max-width: 565px
+    padding: 35px
+    +sm
+      padding: 25px
+      padding-top: 20px
+    +xs
+      padding: 15px
+      padding-top: 10px
+    .model-descr__text
+      p
+        margin-bottom: 25px
+        &:last-child
+          margin-bottom: 0
+    &.is-bottom-right
+      position: absolute
+      bottom: -1px
+      left: 50%
+    &.is-bottom-left
+      position: absolute
+      bottom: -1px
+      right: 50%
+  &__bg
+    +coverdiv
+    z-index: 0
+    video
+      min-width: 100%
+      min-height: 100%
+    &::before
+      content: ''
+      +coverdiv
+      background-color: rgba(#000, .5)
+  &__left,
+  &__right
+    +cover
+    padding-top: 45%
+    display: inline-block
+    vertical-align: top
+    width: 50%
+
+  &--lg
+    height: 110vh
+  &--sm
+    height: auto
+    display: block
+    font-size: 0
+
+.section-comb
+  position: relative
+  &__left
+    height: calc(100vh - 90px)
+    padding-top: 85px
+    +lg
+      height: calc(100vh - 45px)
+  &__right
+    position: absolute
+    +cover
+    z-index: 2
+    top: 0
+    right: 0
+    height: 100%
+    // width: percentage(745/1920)
+    width: 50%
+    background-color: #000
+    +lg
+      width: 50%
+    +sm
+      position: static
+      width: auto
+      height: auto
+
+.section-spinner
+  height: calc(100vh - 90px)
+  padding-bottom: 10%
+  position: relative
+  +vertical
+  +cover
+  +lg
+    height: calc(100vh - 45px)
+  &__icon-wrap
+    position: absolute
+    bottom: 0
+    width: 100%
+    left: 0
+    text-align: left
+  &__spinner
+    display: inline-block
+    vertical-align: bottom
+    padding-top: 35%
+    width: 50%
+    position: relative
+    .spritespin-instance
+      +coverdiv
+      height: 100% !important
+      width: 100% !important
+      position: absolute !important
+      cursor: grab
+  &__icon
+    background-color: rgba($c-text, .8)
+    text-align: center
+    padding: 20px 30px
+    display: inline-block
+    .icon
+      fill: #fff
+      font-size: 38px

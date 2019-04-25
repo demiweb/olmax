@@ -133,6 +133,18 @@
             +icon-arrow(15, 15, 2, #fff, 225)
             left: 16px
 
+  &--banner-simple
+    &__wrap
+      .slider
+        &__prev,
+        &__next
+          +lg
+            display: block !important
+        &__prev
+          left: 0 !important
+        &__next
+          right: 0 !important
+
   &--brands
     .slide     
       &__inner
@@ -415,6 +427,8 @@
 
 .new-items-slider
   padding-top: 40px
+  &.has-pt-sm
+    padding-top: 20px
   +md
     padding-top: 0
 
@@ -446,6 +460,9 @@
       left: 0
       z-index: 0
       background-color: rgba(#000, .3)
+  &--simple
+    &::before
+      display: none
 
 .thumbnail-slider
   +sm
