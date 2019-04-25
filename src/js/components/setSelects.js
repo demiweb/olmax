@@ -65,11 +65,11 @@ export default function setSelects() {
 
     // set multiple placeholder
     function setMultiplePlaceholder() {
-      const $placeholderOption = $(selectEl).find('[data-placeholder]');
+      const $placeholderOption = $(selectEl).find('[value="placeholder"]');
 
       if ($placeholderOption.length > 0) {
         $customSelect.addClass('has-placeholder');
-        const placeholder = $placeholderOption.data('placeholder');
+        const placeholder = $placeholderOption.text();
         $customSelectOpener.text(placeholder);
 
         $(selectEl).on('change', (e) => {          

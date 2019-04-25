@@ -9,6 +9,10 @@
   font-size: 26px
   +bold
   line-height: 1
+  &--light
+    +light
+  &--ttu
+    text-transform: uppercase
 
 .h3, h3
   +bold
@@ -18,6 +22,7 @@
     color: $c-accent
   &--white
     color: #fff
+
 
 .title
   font-size: 32px
@@ -48,6 +53,18 @@
     color: #fff
   &--black
     color: #202020
+
+.title-underlined
+  position: relative
+  padding-bottom: 14px
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 53px
+    height: 1px
+    background-color: $c-text
 
 .text
   font-size: 15px

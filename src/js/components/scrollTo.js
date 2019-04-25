@@ -6,8 +6,7 @@ export default function scrollTo() {
   const headerHeight = $header.outerHeight();
   const $tabs = $('.model-tabs__tabs');
   
-  const OFFSET = $tabs.length > 0 ? headerHeight + $tabs.outerHeight() : headerHeight;
-  
+  const OFFSET = headerHeight;  
 
   $scrollToBtn.on('click', (e) => {
     e.preventDefault();

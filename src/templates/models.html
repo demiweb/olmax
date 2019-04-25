@@ -11,8 +11,11 @@ hero: {
   ],
   bgimage: 'img/hero/hero-models.jpg'
 }
+
 ---
 {% extends "layouts/_layout.html" %}
+{% import "data/all-models-list.html" as allBrandsList %}
+{% set brands = allBrandsList.brands %}
 
 {% block content %}
   {% include "partials/_header.html" %}

@@ -1,8 +1,44 @@
 ---
 title: 1 модель
-page: main
+page: model
 hero: {
-  lg: true
+  lg: true,
+  techInfo: [
+    {
+      icon: 'work-tools',
+      title: '<small>до</small> 315 <small>км</small>',
+      subttl: 'Запас ходу'
+    },
+    {
+      icon: 'speed',
+      title: '150 <small>км/ч</small>',
+      subttl: 'MAX швидкість'
+    },
+    {
+      icon: 'battery',
+      title: '33 <small>кВт/ч</small>',
+      subttl: 'Батарея'
+    },
+    {
+      icon: 'race-track',
+      title: '7,3 <small>сек</small>',
+      subttl: 'Розгін до 100 км'
+    },
+    {
+      icon: 'engine',
+      title: '170 <small>к.с</small>',
+      subttl: 'Потужність'
+    },
+    {
+      icon: 'turbo',
+      title: '125 <small>кВт</small>',
+      subttl: 'Електродвигун'
+    }
+  ]
+}
+techInfoBlock: {
+  white: true,
+  row: true
 }
 ---
 {% extends "layouts/_layout.html" %}

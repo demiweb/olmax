@@ -2,7 +2,7 @@
   selects = [
   {
     options: [
-    { option: '', placeholder: 'Всі марки' },
+    { value: 'placeholder', option: 'Всі марки' },
     { option: 'bmw' },
     { option: 'tesla' },
     { option: 'bmw' },
@@ -21,7 +21,7 @@
   },
   {
     options: [
-    { option: '', placeholder: 'Будь-який рік' },
+    { value: 'placeholder', option: 'Будь-який рік' },
     { option: '2019' },
     { option: '2019' },
     { option: '2019' }
@@ -29,7 +29,7 @@
   },
   {
     options: [
-    { option: '', placeholder: 'Всі моделі' },
+    { value: 'placeholder', option: 'Всі моделі' },
     { option: 'моделі' },
     { option: 'моделі' },
     { option: 'моделі' }
@@ -37,7 +37,7 @@
   },
   {
     options: [
-    { option: '', placeholder: 'Всі типи кузова' },
+    { value: 'placeholder', option: 'Всі типи кузова' },
     { option: 'кузова' },
     { option: 'кузова' },
     { option: 'кузова' }
@@ -45,7 +45,7 @@
   },
   {
     options: [
-    { option: '', placeholder: 'Будь-який пробіг' },
+    { value: 'placeholder', option: 'Будь-який пробіг' },
     { option: 'пробіг' },
     { option: 'пробіг' },
     { option: 'пробіг' }
@@ -53,7 +53,7 @@
   },
   {
     options: [
-    { option: '', placeholder: 'Будь-яка трансмісія' },
+    { value: 'placeholder', option: 'Будь-яка трансмісія' },
     { option: 'трансмісія' },
     { option: 'трансмісія' },
     { option: 'трансмісія' }
@@ -61,7 +61,7 @@
   },
   {
     options: [
-    { option: '', placeholder: 'Будь-який стан' },
+    { value: 'placeholder', option: 'Будь-який стан' },
     { option: 'стан' },
     { option: 'стан' },
     { option: 'стан' }
@@ -69,7 +69,7 @@
   },
   {
     options: [
-    { option: '', placeholder: 'Будь-який статус' },
+    { value: 'placeholder', option: 'Будь-який статус' },
     { option: 'статус' },
     { option: 'статус' },
     { option: 'статус' }
@@ -78,7 +78,7 @@
   {
     color: true,
     options: [
-    { option: '', placeholder: 'Будь-який колір' },
+    { value: 'placeholder', option: 'Будь-який колір' },
     { option: 'колір', color: '#10ad44' },
     { option: 'колір', color: '#0073d5' },
     { option: 'колір', color: '#f00' }
@@ -126,7 +126,7 @@
                     <div class="select select--multiple">
                       <select multiple="" class="js-select has-placeholder" {% if i.color %}data-type="multiple_color"{% else%}data-type="multiple"{% endif %}>
                         {% for j in i.options %}
-                        <option value="{{ j.option }}" {% if j.selected %}selected=""{% endif %} {% if j.color %}data-color="{{ j.color }}"{% endif %} {% if j.placeholder %}data-placeholder="{{ j.placeholder }}"{% endif %}>{{ j.option }}</option>
+                        <option value="{% if j.value %}{{ j.value }}{% else %}{{ j.option }}{% endif %}" {% if j.selected %}selected=""{% endif %} {% if j.color %}data-color="{{ j.color }}"{% endif %}>{{ j.option }}</option>
                         {% endfor %}
                       </select>
                     </div>

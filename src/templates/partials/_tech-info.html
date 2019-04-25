@@ -1,45 +1,8 @@
-{%set
-info = [
-  {
-    icon: 'work-tools',
-    title: '<small>до</small> 315 <small>км</small>',
-    subttl: 'Запас ходу'
-  },
-  {
-    icon: 'speed',
-    title: '150 <small>км/ч</small>',
-    subttl: 'MAX швидкість'
-  },
-  {
-    icon: 'battery',
-    title: '33 <small>кВт/ч</small>',
-    subttl: 'Батарея'
-  },
-  {
-    icon: 'race-track',
-    title: '7,3 <small>сек</small>',
-    subttl: 'Розгін до 100 км'
-  },
-  {
-    icon: 'engine',
-    title: '170 <small>к.с</small>',
-    subttl: 'Потужність'
-  },
-  {
-    icon: 'turbo',
-    title: '125 <small>кВт</small>',
-    subttl: 'Електродвигун',
-    mod: 'has-no-bdright'
-  }
-]
-%}
-
 <!-- begin tech-info -->
-<div class="tech-info">
+<div class="tech-info {% if techInfoBlock.row %}tech-info--row{% endif %} {% if techInfoBlock.white %}tech-info--white{% endif %}">
   <div class="container">
-    <div class="row">
-      {% for i in info %}
-      <div class="col-lg-2">
+    <div class="tech-info__inner">
+      {% for i in techInfo %}
         <div class="tech-info__item {{ i.mod }}">
           <div class="tech-info__icon">
             {% if i.icon === 'speed' %}
@@ -49,11 +12,10 @@ info = [
             {% endif %}            
           </div>
 
-          <div class="tech-info__title title title--white">{{ i.title | safe }}</div>
+          <div class="tech-info__title title {% if techInfoBlock.white %}title--white{% endif %}">{{ i.title | safe }}</div>
 
           <div class="tech-info__subttl">{{ i.subttl }}</div>
         </div>
-      </div>
       {% endfor %}
     </div>
   </div>

@@ -1,26 +1,43 @@
 <!-- begin car-info-item -->
 <div class="car-info-item">
   <div class="container">
-    <div class="row">
+    <div class="row align-items-center">
       <div class="col-lg-5">
         <div class="car-info-item__img">
-          <img src="img/car-info-list/{{ j.img }}" alt="" class="js-lazy">
+          <img src="img/brands-cars/{{ j.img }}" alt="" class="js-lazy">
         </div>
       </div>
 
       <div class="col-lg-7">
-        <div class="car-info-item__title">
+        <div class="car-info-item__title title-underlined">
           <h2 class="h2">{{ j.title }}</h2>
           <div class="item-label {{ j.status }}">
             <div class="item-label__icon">{{ mixins.icon(j.labelIcon) }}</div>
             <div class="item-label__title">{{ j.label }}</div>
           </div>
         </div>
-
-        <div class="car-info-item__text text text--gray">{{ j.text }}</div>
+        
+        <div class="row">
+          <div class="col-lg-10">
+            <div class="car-info-item__text text text--gray">{{ j.text }}</div>
+          </div>
+        </div>        
 
         <div class="car-info-item__tech-info">
-          
+          {%set techInfo = j.techInfo %}
+          {% include "partials/_tech-info.html" %}
+        </div>
+
+        <div class="car-info-item__btns">
+          <a href="#" class="btn">
+            <span class="btn__title">замовити TEST-DRIVE</span>
+            <span class="btn__icon">{{ mixins.iconCar() }}</span>
+          </a>
+
+          <a href="#" class="link link--green">
+            <span class="link__title">Дізнатися більше</span>
+            <span class="link__arrow"></span>
+          </a>
         </div>
       </div>
     </div>
