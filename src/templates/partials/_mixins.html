@@ -434,3 +434,79 @@
 </div>
 <!-- end charge-info-block -->
 {% endmacro %}
+
+{% macro checkCircle() %}
+<!-- begin icon-check-circle -->
+<svg class="icon icon-check-circle" version="1.1" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g  fill-rule="evenodd" stroke="none" stroke-width="1"><g transform="translate(-128.000000, -86.000000)"><g transform="translate(128.000000, 86.000000)"><path d="M5.9,8.1 L4.5,9.5 L9,14 L19,4 L17.6,2.6 L9,11.2 L5.9,8.1 L5.9,8.1 Z M18,10 C18,14.4 14.4,18 10,18 C5.6,18 2,14.4 2,10 C2,5.6 5.6,2 10,2 C10.8,2 11.5,2.1 12.2,2.3 L13.8,0.7 C12.6,0.3 11.3,0 10,0 C4.5,0 0,4.5 0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 L18,10 L18,10 Z" /></g></g></g></svg>
+<!-- end icon-check-circle -->
+{% endmacro %}
+
+
+{% macro modal(name, title, fields, mod) %}
+<!-- begin popup -->
+<div class="popup {{ mod }} js-popup" data-popup="{{ name }}">
+  <div class="popup__inner">
+    <a href="#" class="popup__close js-popup-close"></a>
+
+    {% if icon %}
+    <div class="popup__icon">
+      {{ checkCircle() }}
+    </div>
+    {% endif %}
+
+    <div class="popup__title">
+      <h2 class="h2 h2--green">{{ title }}</h2>
+    </div>
+
+    <div class="popup__text">Залиште ваші контактні дані, та наш менеджер зв’яжеться з вами в найближчий час</div>
+
+    {% if fields %}
+
+    <div class="popup__form">
+
+      <!-- begin form -->
+      <div class="form form--popup">
+
+        {% for i in fields %}
+        <div class="form__field">
+          {% if i.date %}
+          <!-- begin input -->
+          <div class="input input--gray input--full input--dynamic">
+            <div class="input__icon">{{ icon('calendar') }}</div>
+            <!-- data-lang="Ukraine" or data-lang="Russian" -->
+            <input type="text" class="js-time-input" data-type="date" data-lang="Ukraine" placeholder="Обрати дату">
+          </div>
+          <!-- end input -->
+          {% elseif i.time %}
+          <!-- begin input -->
+          <div class="input input--gray input--full input--dynamic">
+            <div class="input__icon">{{ icon('clock') }}</div>
+            <input type="text" class="js-time-input" data-type="time" placeholder="Обрати час">
+          </div>
+          <!-- end input -->
+          {% else %}
+          <!-- begin input -->
+          <div class="input input--gray input--full">
+            <input type="{{ i.type }}" placeholder="{{ i.placeholder }}">
+          </div>
+          <!-- end input -->
+          {% endif %}
+          
+        </div>
+        {% endfor %}
+
+        <div class="form__btn">
+          <button class="btn btn--full-width btn--ttn">
+            <span class="btn__title">Замовити персональний дзвінок</span>
+            <span class="btn__icon is-arrow"></span>
+          </button>
+        </div>
+      </div>
+      <!-- end form -->
+    </div>
+
+    {% endif %}
+  </div>
+</div>
+<!-- end popup -->
+{% endmacro %}

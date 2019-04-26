@@ -202,6 +202,18 @@ body
     .btn__title
       width: 100%
       padding: 23px 10px
+  &--full-width
+    width: 100%
+    +xs
+      height: auto
+    .btn__title
+      max-width: none
+      width: calc(100% - 50px)
+      +xs
+        width: 100%
+    .btn__icon
+       +xs
+          display: none
   &--full-height
     height: 100%
   &--icon-full

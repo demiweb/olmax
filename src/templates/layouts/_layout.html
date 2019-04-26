@@ -117,16 +117,20 @@
       {% block content %}{% endblock %}
 
       <div class="side-btns">
-        <a href="#" class="side-btn">
+        <a href="#" class="side-btn js-popup-open" data-popup-target="test_drive">
           {{ mixins.iconCar() }}
           <span class="side-btn__title">замовити TEST-DRIVE</span>
         </a>
-        <a href="#" class="side-btn">
+        <a href="#" class="side-btn js-popup-open" data-popup-target="call">
           {{ mixins.icon('telephone') }}
           <span class="side-btn__title">Замовити дзвінок</span>
         </a>
       </div>
     </div>
+
+    <!-- begin popups -->
+    {% include "partials/popups/_popups.html" %}
+    <!-- end popups -->
     <!-- END content -->
 
     <!-- BEGIN scripts -->

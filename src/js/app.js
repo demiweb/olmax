@@ -20,6 +20,8 @@ import setTabs from './components/setTabs';
 import rotateImage from './components/rotateImage';
 import scrollTo from './components/scrollTo';
 import setStickyPanels from './components/setStickyPanels';
+import setDatepicker from './components/setDatepicker';
+import setPopupus from './components/setPopupus';
 
 // import './lib/jquery.reel.js';
 
@@ -47,6 +49,8 @@ $(function() {
   rotateImage();
   scrollTo();
   setStickyPanels();
+  setDatepicker();
+  setPopupus();
 
   setTimeout(() => {
     $preloader.remove();

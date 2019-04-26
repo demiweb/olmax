@@ -1,4 +1,7 @@
 .form
+  $this: &
+  &__btn
+    font-size: 0
   &--consultation
     .form
       &__row
@@ -12,6 +15,13 @@
             margin-bottom: 10px
         &:not(:last-child)
           margin-right: 60px
+  &--popup
+    #{$this}__field
+      &:not(:last-child)
+        margin-bottom: 20px
+      &:last-child
+        margin-bottom: 40px
+
 .input
   +light
   input
@@ -27,4 +37,32 @@
       font-size: 15px
       font-family: inherit
       +light
+
+  &--full
+    input
+      width: 100%
+      min-width: 0
+  &--gray
+    input
+      border-bottom-color: $c-border
+  &--dynamic
+    position: relative
+    input
+      padding-left: 20px
+    .input__icon
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%)
+      left: 0
+      .icon
+        fill: #979797
+        font-size: 14px
+    &::before
+      content: ''
+      display: inline-block
+      +icon-arrow(10, 10, 1, #979797, -45)
+      transform: translate(0, -50%) rotate(-45deg)
+      position: absolute
+      top: 50%
+      right: 0
       
