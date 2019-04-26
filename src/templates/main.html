@@ -5,6 +5,57 @@ hero: {
   slider: true
 }
 animations: true
+newItems: {
+  title: 'нові надходження',
+  link: 'Всі моделі в наявності',
+  slider: [
+    {
+      title: '2017 BMW I3 Mega World 33KWh',
+      list: [
+        { title: 'Вартість:', text: '30,900$' },
+        { title: 'Пробіг:', text: '30300 км' },
+        { title: 'Рік:', text: '2017' }
+      ],
+      img: 'item-5.jpg'
+    },
+    {
+      title: '2017 BMW I3 Mega World 33KWh',
+      list: [
+        { title: 'Вартість:', text: '30,900$' },
+        { title: 'Пробіг:', text: '30300 км' },
+        { title: 'Рік:', text: '2017' }
+      ],
+      img: 'item-5.jpg'
+    },
+    {
+      title: '2017 BMW I3 Mega World 33KWh',
+      list: [
+        { title: 'Вартість:', text: '30,900$' },
+        { title: 'Пробіг:', text: '30300 км' },
+        { title: 'Рік:', text: '2017' }
+      ],
+      img: 'item-5.jpg'
+    },
+    {
+      title: '2017 BMW I3 Mega World 33KWh',
+      list: [
+        { title: 'Вартість:', text: '30,900$' },
+        { title: 'Пробіг:', text: '30300 км' },
+        { title: 'Рік:', text: '2017' }
+      ],
+      img: 'item-5.jpg'
+    },
+    {
+      title: '2017 BMW I3 Mega World 33KWh',
+      list: [
+        { title: 'Вартість:', text: '30,900$' },
+        { title: 'Пробіг:', text: '30300 км' },
+        { title: 'Рік:', text: '2017' }
+      ],
+      img: 'item-5.jpg'
+    }
+  ]
+}
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -12,7 +63,10 @@ animations: true
   {% include "partials/_header.html" %}
   {% include "partials/_hero.html" %}
   {% include "partials/_models.html" %}
+
+  {% set newItemsSlider = newItems.slider %}
   {% include "partials/_new-items.html" %}
+
   {% include "partials/_partners.html" %}
   {% include "partials/_banner-section.html" %}
   {% include "partials/_consultation.html" %}

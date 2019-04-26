@@ -1,0 +1,40 @@
+{%set
+items = [
+  { status: 'is-available', label: 'В наявності', labelIcon: 'check' },
+  { status: 'is-intransit', label: 'В дорозі', labelIcon: 'truck' },
+  { status: 'is-reserve', label: 'Резерв', labelIcon: 'shield' },
+  { status: 'is-available', label: 'В наявності', labelIcon: 'check' },
+  { status: 'is-available', label: 'В наявності', labelIcon: 'check' },
+  { status: 'is-available', label: 'В наявності', labelIcon: 'check' },
+  { status: 'is-available', label: 'В наявності', labelIcon: 'check' }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--pt-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section__title">
+          <h2 class="title">Не пропустіть також:</h2>
+        </div>
+      </div>
+    </div>
+    <!-- begin slider -->
+    <div class="slider__wrap slider--reccomend__wrap {% if animations %}wow fadeInUp{% endif %}">
+      <div class="slider slider--reccomend js-slider" data-slider="reccomend">
+        {% for i in items %}
+        <div class="slide">
+          {% set itemBlock = { cols: true } %}
+          {% include "partials/_item.html" %}
+        </div>
+        {% endfor %}        
+      </div>
+
+      <button class="slider__prev slider slider__prev-bg js-prev"></button>
+      <button class="slider__prev slider slider__next-bg js-next"></button>
+    </div>
+    <!-- end slider -->
+  </div>
+</section>
+<!-- end section -->

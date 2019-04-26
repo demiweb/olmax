@@ -2,6 +2,7 @@
 +font('helveticaneuecyr-roman', 'helveticaneuecyr-roman-webfont')
 +font('helveticaneuecyr-light', 'helveticaneuecyr-light-webfont')
 +font('helveticaneuecyr-medium', 'helveticaneuecyr-medium-webfont')
++font('helveticaneuecyr-thin', 'helveticaneuecyr-thin-webfont')
 
 =roman
   font-family: 'helveticaneuecyr-roman', Arial, sans-serif
@@ -11,6 +12,8 @@
   font-family: 'helveticaneuecyr-medium', Arial, sans-serif
 =light
   font-family: 'helveticaneuecyr-light', Arial, sans-serif
+=thin
+  font-family: 'helveticaneuecyr-thin', Arial, sans-serif
 
 =xl
   +r(1440)
@@ -50,6 +53,30 @@ body
   +roman
   color: $c-text
   +no-scroll
+
+// .js-lazy
+//   &[data-loaded="true"]
+//     animation: fadeIn 3s
+
+// @keyframes fadeIn 
+//   from 
+//     opacity: 0
+
+//   to 
+//     opacity: 1
+
+.ic
+  display: inline-block
+
+.ic-map-green
+  +sprite(map-green)
+
+.ic-map-orange
+  +sprite(map-orange)
+
+.margin-bottom-5
+  margin-bottom: 5px
+
 
 .out
   padding-top: 90px
@@ -108,6 +135,10 @@ body
     .icon
       font-size: 16px
       fill: #fff
+    .icon-hatchback
+      font-size: 30px
+      position: relative
+      top: 9px
     &.is-arrow
       position: relative
       &::before
@@ -126,6 +157,9 @@ body
   &--lg
     .btn__title
       min-width: 220px
+  &--sm
+    .btn__title
+      min-width: 145px
 
   &--gray
     .btn__title
@@ -168,12 +202,31 @@ body
     .btn__title
       width: 100%
       padding: 23px 10px
+  &--full-width
+    width: 100%
+    +xs
+      height: auto
+    .btn__title
+      max-width: none
+      width: calc(100% - 50px)
+      +xs
+        width: 100%
+    .btn__icon
+       +xs
+          display: none
   &--full-height
     height: 100%
   &--icon-full
     width: 100%
     .btn__title
       width: calc(100% - 50px)
+  &--hauto
+    height: auto
+    .btn__title
+      padding-top: 13px
+      padding-bottom: 13px
+    .btn__icon
+      height: 45px
 
 .link
   font-size: 15px
@@ -374,3 +427,12 @@ body
 
 .items-page
   padding-bottom: 30px
+
+.price
+  &__title
+    font-size: 30px
+    +bold
+    color: $c-accent
+  &__subttl
+    color: #a7a7a7
+    font-size: 13px

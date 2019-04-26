@@ -4,9 +4,9 @@ import { throttle, debounce } from 'throttle-debounce';
 
 export default function setStickyColumn() {
   function setColumn() {
-
-
     const $column = $('.js-sticky-column');
+    if (!$column.length) return;    
+
     const $columnWrap = $column.closest('.js-sticky-column-wrap');  
 
     const columnStickyHeight = $column.outerHeight();
@@ -19,8 +19,8 @@ export default function setStickyColumn() {
 
     const columnWrapTop = $columnWrap.offset().top - OFFSET;
 
-    const setColumnThrottled = throttle(66, (e) => {
-      if (window.pageYOffset >= columnStickyTop) {
+    const setColumnNotThrottled = (e) => {
+      if (window.pageYOffset >= columnStickyTop && window.matchMedia('(min-width: 992px)').matches) {
         $column.css({
           position: 'fixed',
           zIndex: '10',
@@ -39,7 +39,17 @@ export default function setStickyColumn() {
         });
       };
 
-      if (window.pageYOffset > columnHeight+columnWrapTop-columnStickyHeight-BOTTOM_OFFSET) {
+      if (window.matchMedia('(max-width: 991px)').matches) {
+        $column.css({
+          position: '',
+          zIndex: '',
+          top: '',
+          bottom: '',
+          width: ''
+        });
+      };
+
+      if (window.pageYOffset > columnHeight+columnWrapTop-columnStickyHeight-BOTTOM_OFFSET && window.matchMedia('(min-width: 992px)').matches) {
         $column.css({
           position: 'absolute',
           bottom: BOTTOM_OFFSET + 'px',
@@ -48,9 +58,9 @@ export default function setStickyColumn() {
           width: ''
         });
       };
-    });
+    };
 
-    $WIN.on('scroll', setColumnThrottled);
+    $WIN.on('scroll', setColumnNotThrottled);
   };
 
   setColumn();

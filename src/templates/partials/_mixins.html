@@ -56,6 +56,7 @@
 {% endmacro %}
 
 {% macro iconCar() %}
+<!-- begin icon-car -->
 <svg version="1.1" class="icon icon-car" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    width="48.997px" height="48.998px" viewBox="0 0 48.997 48.998" style="enable-background:new 0 0 48.997 48.998;"
    xml:space="preserve">
@@ -80,9 +81,11 @@
 </g>
 
 </svg>
+<!-- end icon-car -->
 {% endmacro %}
 
 {% macro iconSpeed() %}
+<!-- begin icon-speedometer -->
 <svg version="1.1" class="icon icon-speedometer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    width="950.002px" height="950.002px" viewBox="0 0 950.002 950.002" style="enable-background:new 0 0 950.002 950.002;"
    xml:space="preserve">
@@ -217,11 +220,12 @@
       c0,20.758-16.829,37.588-37.588,37.588s-37.588-16.83-37.588-37.588C386.201,682.662,403.03,665.836,423.789,665.836z"/>
   </g>
 </g>
-
 </svg>
+<!-- end icon-speedometer -->
 {% endmacro %}
 
 {% macro iconLogo() %}
+<!-- begin icon-logo -->
 <svg version="1.1" class="icon icon-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    width="595.275px" height="595.275px" viewBox="0 0 595.275 595.275" enable-background="new 0 0 595.275 595.275"
    xml:space="preserve">
@@ -356,6 +360,7 @@
   c0-23.989,19.517-43.506,43.506-43.506c23.989,0,43.506,19.517,43.506,43.506c0,30.685,24.964,55.647,55.647,55.647
   c24.14,0,45.398-15.405,52.899-38.333C398.934,251.101,397.196,247.673,394.009,246.63z"/>
 </svg>
+<!-- end icon-logo -->
 {% endmacro %}
 
 {% macro breadcrumbs(links) %}
@@ -367,11 +372,141 @@
       {% if i.active %}
       <a href="#" class="breadcrumbs__link is-active">{{ i.title }}</a>
       {% else %}
-      <a href="#" class="breadcrumbs__link">{{ i.title }}</a>
+      <a href="#" class="breadcrumbs__link">{{ i.title }}</a> /
       {% endif %}      
     </li>
     {% endfor %}
   </ul>
 </div>
 <!-- end breadcrumbs -->
+{% endmacro %}
+
+{% macro blogItem(mod, img, label, lg, sm, title, subttl) %}
+<!-- begin blog-item -->
+<a href="#" class="blog-item {{ mod }} js-lazy" data-background-image="img/blog/{{ img }}">
+  <div class="blog-item-label">{{ label }}</div>
+
+  <div class="blog-item__block">
+    <div class="blog-item__title title-underlined title-underlined--sm title-underlined--white">
+      {% if lg %}
+      <h2 class="h2 h2--white">{{ title }}</h2>
+      {% elseif sm %}
+      <h3 class="h3 h3--white h3--ttn">{{ title }}</h3>
+      {% endif %}
+    </div>
+
+    <div class="blog-item__subttl text text--white">{{ subttl }}</div>
+  </div>
+</a>
+<!-- end blog-item -->
+{% endmacro %}
+
+{% macro chargeInfoBlock(title, subttl, text, btn, img) %}
+<!-- begin charge-info-block -->
+<div class="charge-info-block">
+  <div class="charge-info-block__left">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="charge-info-block__title {% if title.underlined %}title-underlined{% endif %}">
+            <h2 class="h2">{% if title.title %}{{ title.title }}{% else %}{{ title }}{% endif %}</h2>
+            {% if subttl %}<div class="text text--medium">{{ subttl }}</div>{% endif %}
+          </div>
+
+          <div class="charge-info-block__text text text--gray">
+            {{ text| safe }}            
+          </div>
+
+          {% if btn %}
+          <div class="charge-info-block__btn">
+            <a href="#" class="btn">
+             <span class="btn__title">замовити TEST-DRIVE</span>
+             <span class="btn__icon">{{ iconCar() }}</span>
+           </a>
+         </div>
+         {% endif %}
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <div class="charge-info-block__right js-lazy" data-background-image="img/charge-info/{{ img }}"></div>
+</div>
+<!-- end charge-info-block -->
+{% endmacro %}
+
+{% macro checkCircle() %}
+<!-- begin icon-check-circle -->
+<svg class="icon icon-check-circle" version="1.1" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g  fill-rule="evenodd" stroke="none" stroke-width="1"><g transform="translate(-128.000000, -86.000000)"><g transform="translate(128.000000, 86.000000)"><path d="M5.9,8.1 L4.5,9.5 L9,14 L19,4 L17.6,2.6 L9,11.2 L5.9,8.1 L5.9,8.1 Z M18,10 C18,14.4 14.4,18 10,18 C5.6,18 2,14.4 2,10 C2,5.6 5.6,2 10,2 C10.8,2 11.5,2.1 12.2,2.3 L13.8,0.7 C12.6,0.3 11.3,0 10,0 C4.5,0 0,4.5 0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 L18,10 L18,10 Z" /></g></g></g></svg>
+<!-- end icon-check-circle -->
+{% endmacro %}
+
+
+{% macro modal(name, title, fields, mod) %}
+<!-- begin popup -->
+<div class="popup {{ mod }} js-popup" data-popup="{{ name }}">
+  <div class="popup__inner">
+    <a href="#" class="popup__close js-popup-close"></a>
+
+    {% if icon %}
+    <div class="popup__icon">
+      {{ checkCircle() }}
+    </div>
+    {% endif %}
+
+    <div class="popup__title">
+      <h2 class="h2 h2--green">{{ title }}</h2>
+    </div>
+
+    <div class="popup__text">Залиште ваші контактні дані, та наш менеджер зв’яжеться з вами в найближчий час</div>
+
+    {% if fields %}
+
+    <div class="popup__form">
+
+      <!-- begin form -->
+      <div class="form form--popup">
+
+        {% for i in fields %}
+        <div class="form__field">
+          {% if i.date %}
+          <!-- begin input -->
+          <div class="input input--gray input--full input--dynamic">
+            <div class="input__icon">{{ icon('calendar') }}</div>
+            <!-- data-lang="Ukraine" or data-lang="Russian" -->
+            <input type="text" class="js-time-input" data-type="date" data-lang="Ukraine" placeholder="Обрати дату">
+          </div>
+          <!-- end input -->
+          {% elseif i.time %}
+          <!-- begin input -->
+          <div class="input input--gray input--full input--dynamic">
+            <div class="input__icon">{{ icon('clock') }}</div>
+            <input type="text" class="js-time-input" data-type="time" placeholder="Обрати час">
+          </div>
+          <!-- end input -->
+          {% else %}
+          <!-- begin input -->
+          <div class="input input--gray input--full">
+            <input type="{{ i.type }}" placeholder="{{ i.placeholder }}">
+          </div>
+          <!-- end input -->
+          {% endif %}
+          
+        </div>
+        {% endfor %}
+
+        <div class="form__btn">
+          <button class="btn btn--full-width btn--ttn">
+            <span class="btn__title">Замовити персональний дзвінок</span>
+            <span class="btn__icon is-arrow"></span>
+          </button>
+        </div>
+      </div>
+      <!-- end form -->
+    </div>
+
+    {% endif %}
+  </div>
+</div>
+<!-- end popup -->
 {% endmacro %}

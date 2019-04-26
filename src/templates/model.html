@@ -1,0 +1,115 @@
+---
+title: 1 модель
+page: model
+hero: {
+  lg: true,
+  techInfo: [
+    {
+      icon: 'work-tools',
+      title: '<small>до</small> 315 <small>км</small>',
+      subttl: 'Запас ходу'
+    },
+    {
+      icon: 'speed',
+      title: '150 <small>км/ч</small>',
+      subttl: 'MAX швидкість'
+    },
+    {
+      icon: 'battery',
+      title: '33 <small>кВт/ч</small>',
+      subttl: 'Батарея'
+    },
+    {
+      icon: 'race-track',
+      title: '7,3 <small>сек</small>',
+      subttl: 'Розгін до 100 км'
+    },
+    {
+      icon: 'engine',
+      title: '170 <small>к.с</small>',
+      subttl: 'Потужність'
+    },
+    {
+      icon: 'turbo',
+      title: '125 <small>кВт</small>',
+      subttl: 'Електродвигун'
+    }
+  ]
+}
+techInfoBlock: {
+  white: true,
+  row: true
+}
+newItems: {
+  title: 'BMW I3 у нашому салоні:',
+  sliderPtSm: true,
+  slider: [
+    {
+      title: '2017 BMW I3 Mega World 33KWh',
+      list: [
+        { title: 'Вартість:', text: '30,900$' },
+        { title: 'Пробіг:', text: '30300 км' },
+        { title: 'Рік:', text: '2017' }
+      ],
+      img: 'item-5.jpg'
+    },
+    {
+      title: '2017 BMW I3 Mega World 33KWh',
+      list: [
+        { title: 'Вартість:', text: '30,900$' },
+        { title: 'Пробіг:', text: '30300 км' },
+        { title: 'Рік:', text: '2017' }
+      ],
+      img: 'item-5.jpg'
+    },
+    {
+      title: '2017 BMW I3 Mega World 33KWh',
+      list: [
+        { title: 'Вартість:', text: '30,900$' },
+        { title: 'Пробіг:', text: '30300 км' },
+        { title: 'Рік:', text: '2017' }
+      ],
+      img: 'item-5.jpg'
+    },
+    {
+      title: '2017 BMW I3 Mega World 33KWh',
+      list: [
+        { title: 'Вартість:', text: '30,900$' },
+        { title: 'Пробіг:', text: '30300 км' },
+        { title: 'Рік:', text: '2017' }
+      ],
+      img: 'item-5.jpg'
+    },
+    {
+      title: '2017 BMW I3 Mega World 33KWh',
+      list: [
+        { title: 'Вартість:', text: '30,900$' },
+        { title: 'Пробіг:', text: '30300 км' },
+        { title: 'Рік:', text: '2017' }
+      ],
+      img: 'item-5.jpg'
+    }
+  ]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/single-model/_descr-1.html" %}
+  {% include "partials/single-model/_characteristics.html" %}
+  {% include "partials/single-model/_section-slider.html" %}
+  {% include "partials/single-model/_descr-2.html" %}
+  {% include "partials/single-model/_section-spinner.html" %}
+
+  {% set newItemsSlider = newItems.slider %}
+  {% include "partials/_new-items.html" %}
+
+  {% include "partials/single-model/_section-salon.html" %}
+  {% include "partials/single-model/_section-two-img.html" %}
+  {% include "partials/_consultation.html" %}
+  {% include "partials/_brand-nav.html" %}
+
+  {% include "partials/_footer.html" %}
+{% endblock %}

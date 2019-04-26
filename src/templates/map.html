@@ -1,0 +1,26 @@
+---
+title: map
+page: map
+hero: {
+  sm: true,
+  title: 'карта заправок',
+  subttl: 'Обирайте найзручнішу для вас електрозаправку',
+  breadcrumbs: [
+    { title: 'Головна'},
+    { title: 'Карта заправок', active: true }
+  ],
+  bgimage: 'img/hero/hero-map.jpg'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+
+  {% include "partials/_s-map.html" %}
+  {% include "partials/_charge-info.html" %}
+
+  {% include "partials/_brand-nav.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}

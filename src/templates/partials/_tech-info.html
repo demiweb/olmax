@@ -1,0 +1,41 @@
+<!-- begin tech-info -->
+<div class="tech-info {% if techInfoBlock.row %}tech-info--row{% endif %} {% if techInfoBlock.white %}tech-info--white{% endif %}">
+  <div class="container">
+    <div class="tech-info__inner">
+      {% for i in techInfo %}
+        <div class="tech-info__item {{ i.mod }}">
+          {% if techInfoBlock.row %}
+          
+          <div class="tech-info__item-inner">
+            <div class="tech-info__icon">
+              {% if i.icon === 'speed' %}
+              {{ mixins.iconSpeed() }}
+              {% else %}
+              {{ mixins.icon(i.icon) }}
+              {% endif %}            
+            </div>
+
+            <div class="tech-info__title title {% if techInfoBlock.white %}title--white{% endif %}">{{ i.title | safe }}</div>
+
+            <div class="tech-info__subttl">{{ i.subttl }}</div>
+          </div>
+
+          {% else %}
+          <div class="tech-info__icon">
+            {% if i.icon === 'speed' %}
+            {{ mixins.iconSpeed() }}
+            {% else %}
+            {{ mixins.icon(i.icon) }}
+            {% endif %}            
+          </div>
+
+          <div class="tech-info__title title {% if techInfoBlock.white %}title--white{% endif %}">{{ i.title | safe }}</div>
+
+          <div class="tech-info__subttl">{{ i.subttl }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- end tech-info -->

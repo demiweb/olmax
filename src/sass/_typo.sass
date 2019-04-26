@@ -9,15 +9,34 @@
   font-size: 26px
   +bold
   line-height: 1
+  a
+    transition: color .3s
+    +hover
+      text-decoration: underline
+  &--light
+    +light
+  &--ttu
+    text-transform: uppercase
+  &--white
+    color: #fff
+  &--green
+    color: $c-accent
 
 .h3, h3
   +bold
   font-size: 15px
   text-transform: uppercase
+  a
+    transition: color .3s
+    +hover
+      text-decoration: underline
   &--green
     color: $c-accent
   &--white
     color: #fff
+  &--ttn
+    text-transform: none
+
 
 .title
   font-size: 32px
@@ -28,6 +47,8 @@
   line-height: 1.15
   position: relative
   +css-lock(28, 32, 567, 1199, font-size)
+  small
+    font-size: 15px
   .link
     position: absolute
     top: 50%
@@ -47,10 +68,41 @@
   &--black
     color: #202020
 
+.title-underlined
+  position: relative
+  padding-bottom: 14px
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 53px
+    height: 1px
+    background-color: $c-text
+  &--white
+    &::before
+      background-color: #fff
+  &--sm
+     padding-bottom: 10px
+  &--green
+    &::before
+      background-color: $c-accent
+  &--center
+    &::before
+      left: 50%
+      transform: translate(-50%, 0)
+
+
+
 .text
   font-size: 15px
+  text-align: justify
   +light
   &--black
     color: #202020
   &--white
     color: #fff
+  &--gray
+    color: #828282
+  &--medium
+    +medium

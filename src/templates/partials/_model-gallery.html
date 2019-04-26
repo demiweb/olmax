@@ -1,0 +1,116 @@
+{%set
+images = [
+  { index: 0, thumb: 'thumb-1.jpg', img: 'car-1.jpg', active: true },
+  { index: 1, thumb: 'thumb-2.jpg', img: 'car-2.jpg' },
+  { index: 2, thumb: 'thumb-3.jpg', img: 'car-3.jpg' },
+  { index: 3, thumb: 'thumb-4.jpg', img: 'car-4.jpg' },
+  { index: 4, thumb: 'thumb-5.jpg', img: 'car-5.jpg' },
+  { index: 5, thumb: 'thumb-6.jpg', img: 'car-6.jpg' },
+  { index: 6, thumb: 'thumb-7.jpg', img: 'car-7.jpg' },
+  { index: 7, thumb: 'thumb-8.jpg', img: 'car-8.jpg' },
+  { index: 8, thumb: 'thumb-9.jpg', img: 'car-9.jpg' }
+]
+%}
+{%set
+metaList = [
+  { title: 'Марка:', text: 'BMW' },
+  { title: 'Модель:', text: 'I3 electric' },
+  { title: 'Запас ходу:', text: 'до 200 км ' },
+  { title: 'Кузов:', text: 'Купе' },
+  { title: 'Рік:', text: '2017' },
+  { title: 'Пробіг:', text: '30300 км' },
+  { title: 'Батарея:', text: '120 кв' },
+  { title: 'Трансмісія:', text: 'Автомат' },
+  { title: 'Стан:', text: 'Б/у', titleMod: 'has-no-bdbotttom' }
+]
+%}
+
+<!-- begin model-gallery -->
+<section class="model-gallery {% if animations %}wow fadeIn{% endif %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-2 col-lg-2 col-md-2">
+        <div class="model-gallery__dots">
+          <!-- begin thumbnail-slider -->
+          <div class="thumbnail-slider__wrap slider__wrap">
+            
+            <div class="thumbnail-slider slider js-slider" data-slider="model_thumbnails">
+              {% for i in images %}
+              <a href="#" class="thumbnail-slide js-gallery-thumb {% if i.active %}is-active{% endif %}" data-index="{{ i.index }}">
+                <span class="thumbnail-slide__img js-lazy" data-background-image="img/model-gallery/{{ i.thumb }}"></span>
+              </a>
+              {% endfor %}
+            </div>            
+
+            <button class="thumbnail-slider__prev js-prev"></button>
+            <button class="thumbnail-slider__next js-next"></button>
+          </div> 
+          <!-- end thumbnail-slider -->
+        </div>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-10">
+        <div class="model-gallery__preview-wrap">
+          
+          <div class="model-gallery__preview js-gallery">
+            {% for i in images %}
+            <a
+              href="img/model-gallery/{{ i.img }}"
+              class="model-gallery__img js-gallery-preview js-lazy {% if i.active %}is-active{% endif %}"
+              data-background-image="img/model-gallery/{{ i.img }}"
+              data-index="{{ i.index }}"
+              data-exthumbimage="img/model-gallery/{{ i.thumb }}"></a>
+            {% endfor %}
+          </div>         
+          
+
+          <div class="model-gallery__img-label">
+            <div class="item-label {{ carModel.status }}">
+              <div class="item-label__icon">{{ mixins.icon(carModel.labelIcon) }}</div>
+              <div class="item-label__title">{{ carModel.label }}</div>
+            </div>
+          </div>
+
+          <div class="model-gallery__img-counter model-gallery__img-info">
+            {{ mixins.icon('frame-landscape') }}
+            <span class="js-gallery-counter"></span>
+          </div>
+
+          <a href="#" class="model-gallery__img-info model-gallery__img-angle js-tabs-unic-tab" data-target-tab="angle">{{ mixins.icon('reload') }} <span>360<sup>o</sup></span></a>
+          <a href="#" class="model-gallery__img-info model-gallery__img-video js-tabs-unic-tab" data-target-tab="video">{{ mixins.icon('play-button') }}Відео</a>
+        </div>
+        
+      </div>
+
+      <div class="col-xl-4 col-lg-4">
+        <div class="model-gallery__meta">
+          <div class="model-gallery__title">
+            <div class="model-gallery__price price">
+              <div class="model-gallery__price-lg price__title">29,300 $</div>
+              <div class="model-gallery__price-sm price__subttl">790,807 грн. (Без НДС)</div>
+            </div>
+
+            <a href="#" class="btn btn--sm btn--hauto">
+              <span class="btn__title">{{ carModel.btn.title }}</span>
+              {% if carModel.btn.icon %}
+              <span class="btn__icon">{{ mixins.icon('hatchback') }}</span>
+              {% endif %}
+            </a>
+          </div>
+
+          {% include "partials/_model-gallery-meta.html" %}
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="model-gallery__prev">
+      Попереднє авто
+      <img src="img/model-gallery/next-thumb-1.jpg" width="169" height="101"></img>
+    </a>
+    <a href="#" class="model-gallery__next">
+      Наступне авто
+      <img src="img/model-gallery/next-thumb-1.jpg" width="169" height="101"></img>
+    </a>
+  </div>
+</section>
+<!-- end model-gallery -->

@@ -1,0 +1,25 @@
+---
+title: blog-page
+page: blog-page
+hero: {
+  sm: true,
+  title: 'Jaguar представив новий серійний кросовер I-PACE',
+  subttl: 'останні новини в галузі електромобілей',
+  breadcrumbs: [
+    { title: 'Головна'},
+    { title: 'Блог' },
+    { title: 'Jaguar представив новий серійний кросовер I-PACE', active: true }
+  ],
+  bgimage: 'img/hero/hero-blog.jpg'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+
+  {% include "partials/blog/_blog-page.html" %}
+  {% include "partials/_brand-nav.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}

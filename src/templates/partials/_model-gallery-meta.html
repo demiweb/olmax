@@ -1,0 +1,10 @@
+<!-- begin model-gallery-meta -->
+<div class="model-gallery-meta">
+  <dl class="model-gallery-meta__list">
+    {% for i in metaList %}
+    <dt class="model-gallery-meta__title {{ i.titleMod }}">{{ i.title }}</dt>
+    <dd class="model-gallery-meta__text">{{ i.text }}</dd>
+    {% endfor %}
+  </dl>
+</div>
+<!-- end model-gallery-meta -->

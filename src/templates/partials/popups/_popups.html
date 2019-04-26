@@ -1,0 +1,48 @@
+{{ mixins.modal(
+  name = 'service',
+  title = 'Записатися на сервіс',
+  fields = [
+    { type: 'text', placeholder: 'Введіть ім’я' },
+    { type: 'tel', placeholder: 'Введіть телефон' },
+    { type: 'email', placeholder: 'Введіть E-mail' },
+    { date: true },
+    { time: true }
+  ]
+) }}
+
+{{ mixins.modal(
+  name = 'test_drive',
+  title = 'Замовити TEST-DRIVE',
+  fields = [
+    { type: 'text', placeholder: 'Введіть ім’я' },
+    { type: 'tel', placeholder: 'Введіть телефон' },
+    { date: true },
+    { time: true }
+  ]
+) }}
+
+{{ mixins.modal(
+  name = 'consultation',
+  title = 'Замовити консультацію',
+  fields = [
+    { type: 'text', placeholder: 'Введіть ім’я' },
+    { type: 'tel', placeholder: 'Введіть телефон' },
+    { type: 'email', placeholder: 'Введіть E-mail' }
+  ]
+) }}
+
+{{ mixins.modal(
+  name = 'call',
+  title = 'Замовити дзвінок',
+  fields = [
+    { type: 'text', placeholder: 'Введіть ім’я' },
+    { type: 'tel', placeholder: 'Введіть телефон' }
+  ]
+) }}
+
+{{ mixins.modal(
+  name = 'thank_you',
+  mod = 'popup--sm',
+  icon = true,
+  title = 'Дякую за заявку!'
+) }}

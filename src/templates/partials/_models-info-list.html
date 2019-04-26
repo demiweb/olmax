@@ -1,0 +1,36 @@
+<!-- begin models-info-list -->
+<div class="models-info-list">
+  <div class="models-info-list__top js-sticky-panel">
+    <div class="container">
+      <div class="models-info-list__top-inner">
+        <div class="models-info-list__logo">
+          <img data-src="img/brands-logos/{{ i.brandLogo }}" alt="" class="js-lazy">
+          <h2 class="title">{{ i.brand }}</h2>
+        </div>
+
+        <div class="models-info-list__title">
+          <h2 class="h2 h2--light h2--ttu">{{ i.title }}</h2>
+          <div class="text text--gray">{{ i.subttl }}</div>
+        </div>
+
+        <div class="models-info-list__link">
+          <a href="#" class="link link--green link--sm">
+           <span class="link__title">Дивитися авто в наявності</span>
+           <span class="link__arrow"></span>
+         </a>
+       </div>
+     </div>
+   </div>
+ </div>
+
+  <div class="models-info-list__content">
+    <!-- begin car-info -->
+    <div class="car-info">
+      {% for j in i.carList %}
+      {% include "partials/_car-info-item.html" %}
+      {% endfor %}
+    </div>
+    <!-- end car-info -->
+  </div>
+</div>
+<!-- end models-info-list -->

@@ -31,6 +31,15 @@ export default function setSliders() {
         autoplay: true,
         autoplaySpeed: 2500
       },
+      banner_simple: {
+        prevArrow: $prev,
+        nextArrow: $next,
+        fade: true,
+        speed: 1000,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 2500
+      },
       brands: {
         draggable: false,
         swipe: false,
@@ -115,6 +124,46 @@ export default function setSliders() {
         fade: true,
         speed: 1000,
         cssEase: 'linear'
+      },
+      model_thumbnails: {
+        prevArrow: $prev,
+        nextArrow: $next,
+        slidesToShow: 5,
+        vertical: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              vertical: false,
+              slidesToShow: 3
+            }
+          }
+        ]
+      },
+      reccomend: {
+        prevArrow: $prev,
+        nextArrow: $next,
+        slidesToShow: 4,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
       }
     };
 

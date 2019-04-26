@@ -1,0 +1,98 @@
+.models-info-list
+  &__top
+    background-color: #f4f4f4
+    padding-top: 15px
+    padding-bottom: 15px
+    +xs
+      padding-top: 10px
+      padding-bottom: 10px
+    &.is-fixed
+      position: fixed
+      top: 90px
+      z-index: 10
+      left: 0
+      width: 100%
+      +lg
+        top: 45px
+  &__top-inner
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    +md
+      // display: block
+      justify-content: space-between
+
+  &__logo
+    display: flex
+    align-items: center
+    border-right: 1px solid $c-border
+    padding-right: 30px
+    +md
+      display: inline-flex
+      align-items: center
+      vertical-align: top
+      margin-bottom: 0
+      .h2, h2
+        // display: inline-block
+        // vertical-align: middle
+    +sm
+      border-right: 0
+      display: flex
+    +xs
+      margin-bottom: 0
+
+
+    img
+      margin-right: 25px
+  &__title
+    padding-left: 30px
+    flex-grow: 1
+    +md
+      // display: inline-block
+      // vertical-align: top
+      display: none
+      margin-bottom: 10px
+      margin-top: 10px
+      padding-left: 0
+    +md
+      // display: none
+    // +sm
+    //   padding-left: 0
+    // +xs
+    //   display: none
+  &__link
+    +sm
+      display: none
+
+.car-info-item
+  padding-top: 30px
+  padding-bottom: 40px
+  &:not(:last-child)
+    border-bottom: 1px solid  $c-border
+  &__title
+    margin-bottom: 10px
+    .h2, h2
+      margin-bottom: 5px
+    .item-label 
+      display: inline-flex
+  &__tech-info
+    margin-bottom: -15px
+    +sm
+      margin-bottom: 15px
+  &__btns
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +xs
+      display: block
+      text-align: center
+      .btn
+        margin-bottom: 15px
+  &__img
+    +md
+      margin-bottom: 15px
+      text-align: center
+    img
+      max-width: 100%
+  &__text
+    margin-bottom: 12px

@@ -37,8 +37,36 @@
     +icon-arrow(15, 15, 2, #fff, 45)
     +lg
       display: none !important
-
-  
+  &__prev-bg,
+  &__next-bg
+    width: 58px
+    height: 58px
+    background-color: rgba(#000, .5)
+    border: none
+    transform: rotate(0deg) translate(0, -50%)
+    position: absolute
+    top: 50%
+    +lg
+      display: inline-block !important
+    &::before
+      content: ''
+      display: inline-block
+      position: absolute
+      top: 20px
+  &__prev-bg
+    left: -135px
+    +xl
+      left: 0px
+    &::before
+      +icon-arrow(15, 15, 2, #fff, 45)
+      left: 23px
+  &__next-bg
+    right: -135px
+    +xl
+      right: 0px
+    &::before
+      +icon-arrow(15, 15, 2, #fff, 225)
+      left: 16px
 
   &--full
     .slide
@@ -104,6 +132,18 @@
           &::before
             +icon-arrow(15, 15, 2, #fff, 225)
             left: 16px
+
+  &--banner-simple
+    &__wrap
+      .slider
+        &__prev,
+        &__next
+          +lg
+            display: block !important
+        &__prev
+          left: 0 !important
+        &__next
+          right: 0 !important
 
   &--brands
     .slide     
@@ -218,7 +258,11 @@
               &::before
                 top: 0
 
-  &--new-items
+  &--reccomend
+
+
+  &--new-items,
+  &--reccomend
     .slick-slide
       margin-left: 15px
       margin-right: 15px
@@ -383,6 +427,8 @@
 
 .new-items-slider
   padding-top: 40px
+  &.has-pt-sm
+    padding-top: 20px
   +md
     padding-top: 0
 
@@ -414,4 +460,66 @@
       left: 0
       z-index: 0
       background-color: rgba(#000, .3)
-    
+  &--simple
+    &::before
+      display: none
+
+.thumbnail-slider
+  +sm
+    .slick-slide
+      margin-left: 5px
+      margin-right: 5px
+    .slick-list
+      margin-left: -5px
+      margin-right: -5px
+      padding-bottom: 5px
+      padding-top: 5px
+  &__wrap
+    padding-top: 10px
+    padding-bottom: 10px
+  &__prev,
+  &__next
+    position: absolute
+    left: 50%
+    display: inline-block
+    background-color: transparent
+    +sm
+      left: auto
+      top: 50%
+  &__prev
+    +icon-arrow(8, 8, 1, #000, 135)
+    top: -5px
+    +sm
+      +icon-arrow(8, 8, 1, #000, 45)
+      transform: translate(0, -50%) rotate(45deg)
+      left: -10px
+  &__next
+    +icon-arrow(8, 8, 1, #000, -45)
+    bottom: -5px
+    +sm
+      right: -10px
+      +icon-arrow(8, 8, 1, #000, 225)
+      transform: translate(0, -50%) rotate(225deg)
+
+.thumbnail-slide
+  display: none
+  position: relative
+  &::before
+    content: ''
+    +coverdiv
+    border: 1px solid  $c-accent
+    background-color: rgba($c-accent, .45)
+    pointer-events: none
+    display: none
+  &.is-active
+    &::before
+     display: block
+  &__img
+    padding-top: 60%
+    display: block
+    +cover
+    font-size: 0
+    +lg
+      padding-top: 75%
+    +sm
+      padding-top: 50%

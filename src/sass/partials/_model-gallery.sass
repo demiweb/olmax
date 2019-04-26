@@ -1,0 +1,213 @@
+.model-gallery
+  padding-top: 40px
+  padding-bottom: 40px
+  +sm
+    padding-bottom: 20px
+    padding-top: 20px
+  .container
+    position: relative
+  &__preview-wrap
+    position: relative
+    height: 100%
+    +sm
+      height: auto
+  &__preview
+    height: 100%
+    +sm
+      height: auto
+      padding-top: 60%
+  &__img
+    +cover
+    // background-size: contain
+    // padding-top: 50%
+    // padding-top: 100%
+    font-size: 0
+    +coverdiv
+    visibility: hidden
+    opacity: 0
+    display: block
+    transition: opacity .5s, visibility .5s
+    img
+      width: 100%
+      max-width: 100%
+    +sm
+      // padding-top: 50%
+      // position: static
+    &.is-active
+      visibility: visible
+      opacity: 1
+  &__title
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 20px
+    border-bottom: 1px solid  $c-border
+    +lg
+      display: block
+      .model-gallery__price
+        margin-bottom: 10px
+    +md
+      display: flex
+      .model-gallery__price
+        margin-bottom: 0
+    +xs
+      display: block
+      .model-gallery__price
+        margin-bottom: 10px
+  &__img-label
+    position: absolute
+    top: 10px
+    right: 10px
+    pointer-events: none
+  &__img-info
+    display: inline-flex
+    text-align: center
+    align-items: center
+    justify-content: center
+    color: #fff
+    +roman
+    padding: 13px 20px
+    height: 48px
+    background-color: rgba(#000, .45)
+    font-size: 15px
+    position: absolute
+    bottom: 10px
+    white-space: nowrap
+    transition: background-color .3s
+    +hover
+      background-color: rgba($c-accent, .9)
+    sup
+      vertical-align: super
+    .icon
+      fill: currentColor
+      font-size: 16px
+      margin-right: 10px
+    .icon-reload
+      font-size: 20px
+    .icon-play-button
+      font-size: 14px
+  &__img-counter
+    left: 10px
+    +hover
+      background-color: rgba(#000, .45)
+  &__img-angle
+    right: 135px
+  &__img-video
+    right: 10px
+  &__prev,
+  &__next
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    color: #828282
+    font-size: 15px
+    +light
+    +hover
+      img
+        display: block
+        +xl
+          display: none
+    +xl
+      font-size: 0
+    +lg
+      display: none
+    img
+      position: absolute
+      top: 50%
+      display: none
+      +r(1850)
+        top: auto
+        transform: translate(0, 0)
+        margin-bottom: 15px
+        bottom: 100%      
+    &::before
+      content: ''
+      position: absolute
+      display: inline-block      
+      top: 3px
+  &__prev
+    left: -25px
+    padding-left: 20px
+    transform: translate(-100%, 0)
+    +xl
+      left: 0
+    +md
+      left: 7px
+    img
+      left: -25px
+      transform: translate(-100%, -50%)
+      +r(1850)
+        left: auto
+        right: 0
+
+    &::before
+      left: 0
+      +icon-arrow(15, 15, 1, currentColor, 45)
+  &__next
+    right: -25px
+    padding-right: 20px
+    transform: translate(100%, 0)
+    +xl
+      right: 0
+    +md
+      right: 7px
+    img
+      right: -25px
+      transform: translate(100%, -50%)
+      +r(1850)
+        right: auto
+        left: 0
+    &::before
+      right: 0
+      +icon-arrow(15, 15, 1, currentColor, -135)
+  &__meta
+    +md
+      padding-top: 30px
+
+
+.model-gallery-meta
+  padding-top: 15px
+  &__list
+    +clr
+  &__title
+    +bold
+    font-size: 15px
+    padding-bottom: 10px
+    position: relative
+    float: left
+    width: 45%
+    margin-bottom: 10px
+    +md
+      width: 16.6666666667%
+      // width: auto
+    +sm
+      width: 25%
+    +xs
+      width: 30%
+    &::before
+      content: ''
+      position: absolute
+      height: 1px
+      width: 30px
+      background-color: $c-border
+      left: 0
+      bottom: 0
+    &.has-no-bdbotttom
+      &::before
+        display: none
+  &__text
+    +light
+    font-size: 15px
+    padding-bottom: 10px
+    width: 55%
+    float: left
+    margin-bottom: 10px
+    +md
+      // width: 85%
+      width: 16.6666666667%
+      // width: auto
+      float: left
+    +sm
+      width: 25%
+    +xs
+      width: 70%

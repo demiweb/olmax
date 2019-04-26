@@ -1,0 +1,21 @@
+<!-- begin blog-content -->
+<div class="blog-content">
+  {% for i in blogRows %}
+  <!-- begin blog-row -->
+  <div class="blog-row">
+    {% for j in i.items %}
+    {{ mixins.blogItem(
+      mod = j.mod,
+      img = j.img,
+      label = j.label,
+      lg = j.lg,
+      sm = j.sm,
+      title = j.title,
+      subttl = j.subttl
+    ) }}
+    {% endfor %}
+  </div>
+  <!-- end blog-row -->
+  {% endfor %}  
+</div>
+<!-- end blog-content -->

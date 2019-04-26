@@ -1,0 +1,58 @@
+.carfax
+  h1
+    margin-bottom: 10px
+  > div
+    margin-bottom: 10px
+    // padding: 10px
+    &:nth-child(2)
+      background-color: #ebeff7
+      +clr
+      img
+        float: right
+      p
+        font-size: 14px
+  div
+    margin-bottom: 10px
+    font-size: 11px
+  strong
+    +bold
+  table
+    margin-bottom: 10px
+    max-width: 400px
+    border: 1px solid  #ccc
+    tr
+      &:nth-child(odd)
+        background-color: #F9F9FE
+    td
+      border: 1px solid #ccc
+      font-size: 12px
+      padding: 3px
+      img
+        display: block
+        margin-left: auto
+        margin-right: auto
+  p
+    margin-bottom: 10px
+    font-size: 11px
+  h2
+    font-size: 16px
+  > table
+    &:nth-child(3)
+      border: 1px solid  #ebe7cb
+      background-color: #fffbe5
+      max-width: 400px
+      td
+        height: 40px
+        padding: 3px
+        border: 1px solid #ccc
+        text-align: center
+        img
+          vertical-align: middle
+          display: inline-block
+      tr
+        &:nth-child(odd)
+          background-color: #fffbe5
+  dl
+    font-size: 12px
+    dt
+      +bold

@@ -1,0 +1,33 @@
+---
+title: Страница автомобиля
+page: atomobile
+hero: {
+  xs: true
+}
+consultation: {
+  reverse: true
+}
+carModel: {
+  status: 'is-available',
+  label: 'В наявності',
+  labelIcon: 'check',
+  btn: {
+    title: 'TEST DRIVE',
+    icon: 'hatchback'
+  }
+}
+animations: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/_model-gallery.html" %}
+  {% include "partials/_model-tabs.html" %}
+  {% include "partials/_consultation.html" %}
+  {% include "partials/_model-descr.html" %}
+  {% include "partials/_reccomend.html" %}
+  {% include "partials/_brand-nav.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}

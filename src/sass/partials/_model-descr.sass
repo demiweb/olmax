@@ -1,0 +1,108 @@
+.model-descr
+  padding-top: 40px
+  +sm
+    padding-top: 20px
+  .row
+    margin-bottom: 5px
+    +md
+      margin-bottom: 0
+    &.is-accent
+      background-color: #fbfbfb 
+  &.has-no-pt
+    padding-top: 0
+  &__row
+    padding-top: 20px
+    &.is-gray
+      background-color: #f7f7f7
+    &.has-mb
+      margin-bottom: 40px
+  &__img
+    padding-top: 50%
+    // margin-bottom: 5px
+    +cover
+    +md
+      margin-bottom: 5px
+    img
+      max-width: 100%
+    &.is-full
+      height: 100%
+      padding-top: 0
+      +md
+        height: calc(100% - 5px)
+      +sm
+        height: auto
+        padding-top: 50%
+    &.is-full-width-left
+      margin-right: -25px
+      +md
+        margin-right: 0
+    &.has-img
+      padding-top: 0
+      +md
+        text-align: right
+    &.has-mb-neg
+      margin-bottom: -40px
+    &.has-pt
+      padding-top: 20px
+  &__title
+    position: relative
+    padding-bottom: 15px
+    margin-bottom: 12px
+    +xs
+      .h2, h2
+        font-size: 21px
+    &::before
+      content: ''
+      position: absolute
+      width: 53px
+      height: 1px
+      background-color: $c-text
+      bottom: 0
+      left: 0
+  &__text
+    padding-top: 20px
+    // padding-bottom: 50px
+    text-align: justify
+    p
+      margin-bottom: 50px
+    +md
+      padding-top: 20px
+      p
+        margin-bottom: 20px
+      // padding-bottom: 20px
+      // padding-bottom: 0
+    +xs
+      .text
+        font-size: 13px
+    &.has-pt
+      padding-top: 55px
+      +md
+        padding-top: 20px
+    &.has-btn
+      p
+        margin-bottom: 10px
+    &.is-accent
+      padding-left: 38px
+      background-color: #fbfbfb
+      height: 100%
+      margin-top: -5px
+      +md
+        padding-left: 0
+        background-color: #fff
+      p
+        margin-bottom: 15px
+      &.is-left
+        margin-right: -25px
+        padding-right: 25px
+        +md
+          margin-right: 0
+          padding-right: 0
+      &.is-right
+        padding-right: 40px
+        +md
+          padding-right: 0
+  &__col-lg-85
+    width: percentage(6/7)
+  &__btn
+    margin-bottom: 15px
+      

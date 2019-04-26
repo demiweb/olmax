@@ -1,0 +1,32 @@
+.map-block
+  padding-bottom: 60px
+  border-bottom: 1px solid  $c-border
+  +md
+    padding-bottom: 40px
+  +sm
+    padding-bottom: 20px
+  &__map
+    position: relative
+    margin-top: 20px
+    padding-top: 54%
+    iframe
+      +coverdiv
+
+.map-block-list
+  &__item
+    position: relative
+    font-size: 15px
+    padding-left: 50px
+    padding-top: 15px
+    padding-bottom: 15px
+    +sm
+      padding-top: 10px
+      padding-bottom: 10px
+    strong
+      +medium
+  &__icon
+    margin-right: 15px
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    left: 0
