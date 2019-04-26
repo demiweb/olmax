@@ -442,13 +442,13 @@
 {% endmacro %}
 
 
-{% macro modal(name, title, fields, mod) %}
+{% macro modal(name, title, fields, mod, popupIcon) %}
 <!-- begin popup -->
 <div class="popup {{ mod }} js-popup" data-popup="{{ name }}">
   <div class="popup__inner">
     <a href="#" class="popup__close js-popup-close"></a>
 
-    {% if icon %}
+    {% if popupIcon %}
     <div class="popup__icon">
       {{ checkCircle() }}
     </div>
