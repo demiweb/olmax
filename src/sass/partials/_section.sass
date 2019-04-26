@@ -84,6 +84,8 @@
   +cover
   +lg
     height: calc(100vh - 45px)
+  &.has-bottom-block
+    align-items: flex-end
   &__block
     z-index: 1
     background-color: #fff
@@ -101,13 +103,23 @@
         &:last-child
           margin-bottom: 0
     &.is-bottom-right
-      position: absolute
-      bottom: -1px
+      position: relative
+      // bottom: -1px
       left: 50%
+      +sm
+        position: static
+        width: auto
+        max-width: none
     &.is-bottom-left
       position: absolute
       bottom: -1px
       right: 50%
+      +lg
+        position: relative
+        right: auto
+        bottom: auto
+      +sm
+        max-width: none
   &__bg
     +coverdiv
     z-index: 0
@@ -125,6 +137,16 @@
     display: inline-block
     vertical-align: top
     width: 50%
+    +lg
+      position: absolute
+      top: 0
+      height: 100%
+  &__left
+    +lg
+      left: 0
+  &__right
+    +lg
+      right: 0
 
   &--lg
     height: 110vh
@@ -132,6 +154,11 @@
     height: auto
     display: block
     font-size: 0
+    +lg
+      height: auto
+      padding-top: 40%
+    +sm
+      padding-top: 50%
 
 .section-comb
   position: relative
@@ -140,6 +167,9 @@
     padding-top: 85px
     +lg
       height: calc(100vh - 45px)
+    +md
+      height: auto
+      padding-top: 0px
   &__right
     position: absolute
     +cover
@@ -152,10 +182,11 @@
     background-color: #000
     +lg
       width: 50%
-    +sm
+    +md
       position: static
       width: auto
       height: auto
+      padding-top: 70%
 
 .section-spinner
   height: calc(100vh - 90px)
@@ -165,6 +196,9 @@
   +cover
   +lg
     height: calc(100vh - 45px)
+  +sm
+    height: auto
+    padding-top: 0%
   &__icon-wrap
     position: absolute
     bottom: 0
@@ -177,6 +211,12 @@
     padding-top: 35%
     width: 50%
     position: relative
+    +md
+      width: 60%
+      padding-top: 40%
+    +sm
+      width: 70%
+      padding-top: 50%
     .spritespin-instance
       +coverdiv
       height: 100% !important

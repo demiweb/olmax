@@ -9,19 +9,31 @@
   font-size: 26px
   +bold
   line-height: 1
+  a
+    transition: color .3s
+    +hover
+      text-decoration: underline
   &--light
     +light
   &--ttu
     text-transform: uppercase
+  &--white
+    color: #fff
 
 .h3, h3
   +bold
   font-size: 15px
   text-transform: uppercase
+  a
+    transition: color .3s
+    +hover
+      text-decoration: underline
   &--green
     color: $c-accent
   &--white
     color: #fff
+  &--ttn
+    text-transform: none
 
 
 .title
@@ -65,9 +77,16 @@
     width: 53px
     height: 1px
     background-color: $c-text
+  &--white
+    &::before
+      background-color: #fff
+  &--sm
+     padding-bottom: 10px
+
 
 .text
   font-size: 15px
+  text-align: justify
   +light
   &--black
     color: #202020

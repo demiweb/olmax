@@ -380,3 +380,23 @@
 </div>
 <!-- end breadcrumbs -->
 {% endmacro %}
+
+{% macro blogItem(mod, img, label, lg, sm, title, subttl) %}
+<!-- begin blog-item -->
+<div class="blog-item {{ mod }} js-lazy" data-background-image="img/blog/{{ img }}">
+  <div class="blog-item-label">{{ label }}</div>
+
+  <div class="blog-item__block">
+    <div class="blog-item__title title-underlined title-underlined--sm title-underlined--white">
+      {% if lg %}
+      <h2 class="h2 h2--white"><a href="#">{{ title }}</a></h2>
+      {% elseif sm %}
+      <h3 class="h3 h3--white h3--ttn"><a href="#">{{ title }}</a></h3>
+      {% endif %}
+    </div>
+
+    <div class="blog-item__subttl text text--white">{{ subttl }}</div>
+  </div>
+</div>
+<!-- end blog-item -->
+{% endmacro %}
