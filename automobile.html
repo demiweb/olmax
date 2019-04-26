@@ -2667,7 +2667,7 @@
       </footer>
       <!-- end footer -->
       <div class="side-btns">
-        <a href="#" class="side-btn">
+        <a href="#" class="side-btn js-popup-open" data-popup-target="test_drive">
           <!-- begin icon-car -->
           <svg version="1.1" class="icon icon-car" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48.997px" height="48.998px" viewBox="0 0 48.997 48.998" style="enable-background:new 0 0 48.997 48.998;" xml:space="preserve">
             <g>
@@ -2693,7 +2693,7 @@
           <!-- end icon-car -->
           <span class="side-btn__title">замовити TEST-DRIVE</span>
         </a>
-        <a href="#" class="side-btn">
+        <a href="#" class="side-btn js-popup-open" data-popup-target="call">
           <svg class="icon icon-telephone">
             <use xlink:href="img/sprite.svg#icon-telephone"></use>
           </svg>
@@ -2701,6 +2701,311 @@
         </a>
       </div>
     </div>
+    <!-- begin popups -->
+    <!-- begin popup -->
+    <div class="popup  js-popup" data-popup="service">
+      <div class="popup__inner">
+        <a href="#" class="popup__close js-popup-close"></a>
+        <div class="popup__icon">
+          <!-- begin icon-check-circle -->
+          <svg class="icon icon-check-circle" version="1.1" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title />
+            <desc />
+            <defs />
+            <g fill-rule="evenodd" stroke="none" stroke-width="1">
+              <g transform="translate(-128.000000, -86.000000)">
+                <g transform="translate(128.000000, 86.000000)">
+                  <path d="M5.9,8.1 L4.5,9.5 L9,14 L19,4 L17.6,2.6 L9,11.2 L5.9,8.1 L5.9,8.1 Z M18,10 C18,14.4 14.4,18 10,18 C5.6,18 2,14.4 2,10 C2,5.6 5.6,2 10,2 C10.8,2 11.5,2.1 12.2,2.3 L13.8,0.7 C12.6,0.3 11.3,0 10,0 C4.5,0 0,4.5 0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 L18,10 L18,10 Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+          <!-- end icon-check-circle -->
+        </div>
+        <div class="popup__title">
+          <h2 class="h2 h2--green">Записатися на сервіс</h2>
+        </div>
+        <div class="popup__text">Залиште ваші контактні дані, та наш менеджер зв’яжеться з вами в найближчий час</div>
+        <div class="popup__form">
+          <!-- begin form -->
+          <div class="form form--popup">
+            <div class="form__field">
+              <!-- begin input -->
+              <div class="input input--gray input--full">
+                <input type="text" placeholder="Введіть ім’я">
+              </div>
+              <!-- end input -->
+            </div>
+            <div class="form__field">
+              <!-- begin input -->
+              <div class="input input--gray input--full">
+                <input type="tel" placeholder="Введіть телефон">
+              </div>
+              <!-- end input -->
+            </div>
+            <div class="form__field">
+              <!-- begin input -->
+              <div class="input input--gray input--full">
+                <input type="email" placeholder="Введіть E-mail">
+              </div>
+              <!-- end input -->
+            </div>
+            <div class="form__field">
+              <!-- begin input -->
+              <div class="input input--gray input--full input--dynamic">
+                <div class="input__icon">
+                  <svg class="icon icon-calendar">
+                    <use xlink:href="img/sprite.svg#icon-calendar"></use>
+                  </svg>
+                </div>
+                <!-- data-lang="Ukraine" or data-lang="Russian" -->
+                <input type="text" class="js-time-input" data-type="date" data-lang="Ukraine" placeholder="Обрати дату">
+              </div>
+              <!-- end input -->
+            </div>
+            <div class="form__field">
+              <!-- begin input -->
+              <div class="input input--gray input--full input--dynamic">
+                <div class="input__icon">
+                  <svg class="icon icon-clock">
+                    <use xlink:href="img/sprite.svg#icon-clock"></use>
+                  </svg>
+                </div>
+                <input type="text" class="js-time-input" data-type="time" placeholder="Обрати час">
+              </div>
+              <!-- end input -->
+            </div>
+            <div class="form__btn">
+              <button class="btn btn--full-width btn--ttn">
+                <span class="btn__title">Замовити персональний дзвінок</span>
+                <span class="btn__icon is-arrow"></span>
+              </button>
+            </div>
+          </div>
+          <!-- end form -->
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup -->
+    <div class="popup  js-popup" data-popup="test_drive">
+      <div class="popup__inner">
+        <a href="#" class="popup__close js-popup-close"></a>
+        <div class="popup__icon">
+          <!-- begin icon-check-circle -->
+          <svg class="icon icon-check-circle" version="1.1" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title />
+            <desc />
+            <defs />
+            <g fill-rule="evenodd" stroke="none" stroke-width="1">
+              <g transform="translate(-128.000000, -86.000000)">
+                <g transform="translate(128.000000, 86.000000)">
+                  <path d="M5.9,8.1 L4.5,9.5 L9,14 L19,4 L17.6,2.6 L9,11.2 L5.9,8.1 L5.9,8.1 Z M18,10 C18,14.4 14.4,18 10,18 C5.6,18 2,14.4 2,10 C2,5.6 5.6,2 10,2 C10.8,2 11.5,2.1 12.2,2.3 L13.8,0.7 C12.6,0.3 11.3,0 10,0 C4.5,0 0,4.5 0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 L18,10 L18,10 Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+          <!-- end icon-check-circle -->
+        </div>
+        <div class="popup__title">
+          <h2 class="h2 h2--green">Замовити TEST-DRIVE</h2>
+        </div>
+        <div class="popup__text">Залиште ваші контактні дані, та наш менеджер зв’яжеться з вами в найближчий час</div>
+        <div class="popup__form">
+          <!-- begin form -->
+          <div class="form form--popup">
+            <div class="form__field">
+              <!-- begin input -->
+              <div class="input input--gray input--full">
+                <input type="text" placeholder="Введіть ім’я">
+              </div>
+              <!-- end input -->
+            </div>
+            <div class="form__field">
+              <!-- begin input -->
+              <div class="input input--gray input--full">
+                <input type="tel" placeholder="Введіть телефон">
+              </div>
+              <!-- end input -->
+            </div>
+            <div class="form__field">
+              <!-- begin input -->
+              <div class="input input--gray input--full input--dynamic">
+                <div class="input__icon">
+                  <svg class="icon icon-calendar">
+                    <use xlink:href="img/sprite.svg#icon-calendar"></use>
+                  </svg>
+                </div>
+                <!-- data-lang="Ukraine" or data-lang="Russian" -->
+                <input type="text" class="js-time-input" data-type="date" data-lang="Ukraine" placeholder="Обрати дату">
+              </div>
+              <!-- end input -->
+            </div>
+            <div class="form__field">
+              <!-- begin input -->
+              <div class="input input--gray input--full input--dynamic">
+                <div class="input__icon">
+                  <svg class="icon icon-clock">
+                    <use xlink:href="img/sprite.svg#icon-clock"></use>
+                  </svg>
+                </div>
+                <input type="text" class="js-time-input" data-type="time" placeholder="Обрати час">
+              </div>
+              <!-- end input -->
+            </div>
+            <div class="form__btn">
+              <button class="btn btn--full-width btn--ttn">
+                <span class="btn__title">Замовити персональний дзвінок</span>
+                <span class="btn__icon is-arrow"></span>
+              </button>
+            </div>
+          </div>
+          <!-- end form -->
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup -->
+    <div class="popup  js-popup" data-popup="consultation">
+      <div class="popup__inner">
+        <a href="#" class="popup__close js-popup-close"></a>
+        <div class="popup__icon">
+          <!-- begin icon-check-circle -->
+          <svg class="icon icon-check-circle" version="1.1" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title />
+            <desc />
+            <defs />
+            <g fill-rule="evenodd" stroke="none" stroke-width="1">
+              <g transform="translate(-128.000000, -86.000000)">
+                <g transform="translate(128.000000, 86.000000)">
+                  <path d="M5.9,8.1 L4.5,9.5 L9,14 L19,4 L17.6,2.6 L9,11.2 L5.9,8.1 L5.9,8.1 Z M18,10 C18,14.4 14.4,18 10,18 C5.6,18 2,14.4 2,10 C2,5.6 5.6,2 10,2 C10.8,2 11.5,2.1 12.2,2.3 L13.8,0.7 C12.6,0.3 11.3,0 10,0 C4.5,0 0,4.5 0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 L18,10 L18,10 Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+          <!-- end icon-check-circle -->
+        </div>
+        <div class="popup__title">
+          <h2 class="h2 h2--green">Замовити консультацію</h2>
+        </div>
+        <div class="popup__text">Залиште ваші контактні дані, та наш менеджер зв’яжеться з вами в найближчий час</div>
+        <div class="popup__form">
+          <!-- begin form -->
+          <div class="form form--popup">
+            <div class="form__field">
+              <!-- begin input -->
+              <div class="input input--gray input--full">
+                <input type="text" placeholder="Введіть ім’я">
+              </div>
+              <!-- end input -->
+            </div>
+            <div class="form__field">
+              <!-- begin input -->
+              <div class="input input--gray input--full">
+                <input type="tel" placeholder="Введіть телефон">
+              </div>
+              <!-- end input -->
+            </div>
+            <div class="form__field">
+              <!-- begin input -->
+              <div class="input input--gray input--full">
+                <input type="email" placeholder="Введіть E-mail">
+              </div>
+              <!-- end input -->
+            </div>
+            <div class="form__btn">
+              <button class="btn btn--full-width btn--ttn">
+                <span class="btn__title">Замовити персональний дзвінок</span>
+                <span class="btn__icon is-arrow"></span>
+              </button>
+            </div>
+          </div>
+          <!-- end form -->
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup -->
+    <div class="popup  js-popup" data-popup="call">
+      <div class="popup__inner">
+        <a href="#" class="popup__close js-popup-close"></a>
+        <div class="popup__icon">
+          <!-- begin icon-check-circle -->
+          <svg class="icon icon-check-circle" version="1.1" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title />
+            <desc />
+            <defs />
+            <g fill-rule="evenodd" stroke="none" stroke-width="1">
+              <g transform="translate(-128.000000, -86.000000)">
+                <g transform="translate(128.000000, 86.000000)">
+                  <path d="M5.9,8.1 L4.5,9.5 L9,14 L19,4 L17.6,2.6 L9,11.2 L5.9,8.1 L5.9,8.1 Z M18,10 C18,14.4 14.4,18 10,18 C5.6,18 2,14.4 2,10 C2,5.6 5.6,2 10,2 C10.8,2 11.5,2.1 12.2,2.3 L13.8,0.7 C12.6,0.3 11.3,0 10,0 C4.5,0 0,4.5 0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 L18,10 L18,10 Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+          <!-- end icon-check-circle -->
+        </div>
+        <div class="popup__title">
+          <h2 class="h2 h2--green">Замовити дзвінок</h2>
+        </div>
+        <div class="popup__text">Залиште ваші контактні дані, та наш менеджер зв’яжеться з вами в найближчий час</div>
+        <div class="popup__form">
+          <!-- begin form -->
+          <div class="form form--popup">
+            <div class="form__field">
+              <!-- begin input -->
+              <div class="input input--gray input--full">
+                <input type="text" placeholder="Введіть ім’я">
+              </div>
+              <!-- end input -->
+            </div>
+            <div class="form__field">
+              <!-- begin input -->
+              <div class="input input--gray input--full">
+                <input type="tel" placeholder="Введіть телефон">
+              </div>
+              <!-- end input -->
+            </div>
+            <div class="form__btn">
+              <button class="btn btn--full-width btn--ttn">
+                <span class="btn__title">Замовити персональний дзвінок</span>
+                <span class="btn__icon is-arrow"></span>
+              </button>
+            </div>
+          </div>
+          <!-- end form -->
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup -->
+    <div class="popup popup--sm js-popup" data-popup="thank_you">
+      <div class="popup__inner">
+        <a href="#" class="popup__close js-popup-close"></a>
+        <div class="popup__icon">
+          <!-- begin icon-check-circle -->
+          <svg class="icon icon-check-circle" version="1.1" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title />
+            <desc />
+            <defs />
+            <g fill-rule="evenodd" stroke="none" stroke-width="1">
+              <g transform="translate(-128.000000, -86.000000)">
+                <g transform="translate(128.000000, 86.000000)">
+                  <path d="M5.9,8.1 L4.5,9.5 L9,14 L19,4 L17.6,2.6 L9,11.2 L5.9,8.1 L5.9,8.1 Z M18,10 C18,14.4 14.4,18 10,18 C5.6,18 2,14.4 2,10 C2,5.6 5.6,2 10,2 C10.8,2 11.5,2.1 12.2,2.3 L13.8,0.7 C12.6,0.3 11.3,0 10,0 C4.5,0 0,4.5 0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 L18,10 L18,10 Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+          <!-- end icon-check-circle -->
+        </div>
+        <div class="popup__title">
+          <h2 class="h2 h2--green">Дякую за заявку!</h2>
+        </div>
+        <div class="popup__text">Залиште ваші контактні дані, та наш менеджер зв’яжеться з вами в найближчий час</div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- end popups -->
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
