@@ -383,20 +383,54 @@
 
 {% macro blogItem(mod, img, label, lg, sm, title, subttl) %}
 <!-- begin blog-item -->
-<div class="blog-item {{ mod }} js-lazy" data-background-image="img/blog/{{ img }}">
+<a href="#" class="blog-item {{ mod }} js-lazy" data-background-image="img/blog/{{ img }}">
   <div class="blog-item-label">{{ label }}</div>
 
   <div class="blog-item__block">
     <div class="blog-item__title title-underlined title-underlined--sm title-underlined--white">
       {% if lg %}
-      <h2 class="h2 h2--white"><a href="#">{{ title }}</a></h2>
+      <h2 class="h2 h2--white">{{ title }}</h2>
       {% elseif sm %}
-      <h3 class="h3 h3--white h3--ttn"><a href="#">{{ title }}</a></h3>
+      <h3 class="h3 h3--white h3--ttn">{{ title }}</h3>
       {% endif %}
     </div>
 
     <div class="blog-item__subttl text text--white">{{ subttl }}</div>
   </div>
-</div>
+</a>
 <!-- end blog-item -->
+{% endmacro %}
+
+{% macro chargeInfoBlock(title, subttl, text, btn, img) %}
+<!-- begin charge-info-block -->
+<div class="charge-info-block">
+  <div class="charge-info-block__left">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="charge-info-block__title {% if title.underlined %}title-underlined{% endif %}">
+            <h2 class="h2">{% if title.title %}{{ title.title }}{% else %}{{ title }}{% endif %}</h2>
+            {% if subttl %}<div class="text text--medium">{{ subttl }}</div>{% endif %}
+          </div>
+
+          <div class="charge-info-block__text text text--gray">
+            {{ text| safe }}            
+          </div>
+
+          {% if btn %}
+          <div class="charge-info-block__btn">
+            <a href="#" class="btn">
+             <span class="btn__title">замовити TEST-DRIVE</span>
+             <span class="btn__icon">{{ iconCar() }}</span>
+           </a>
+         </div>
+         {% endif %}
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <div class="charge-info-block__right js-lazy" data-background-image="img/charge-info/{{ img }}"></div>
+</div>
+<!-- end charge-info-block -->
 {% endmacro %}

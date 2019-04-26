@@ -1,0 +1,227 @@
+.blog
+  padding-top: 40px
+  padding-bottom: 40px
+  +sm
+    padding-bottom: 20px
+    padding-top: 20px
+  &__content
+    &:not(:last-child)
+      margin-bottom: 40px
+
+.blog-row
+  font-size: 0
+  display: flex
+  flex-wrap: wrap
+  +sm
+    display: block
+
+.blog-item-label
+  position: absolute
+  left: 0
+  top: 30px
+  +light
+  font-size: 15px
+  background-color: #fff
+  min-width: 155px
+  text-align: center
+  padding: 5px 10px
+
+.blog-item
+  $this: &
+  position: relative
+  +cover
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  padding: 20px 30px
+  padding-top: 45%
+  margin-bottom: 3px
+  +hover
+    #{$this}__block
+      transform: translate(0, -20px)
+    &::before
+      visibility: visible
+      opacity: 1
+  +sm
+    padding: 15px
+    padding-top: 35%
+  &::before
+    content: ''
+    +coverdiv
+    background-color: rgba(#000, .5)
+    visibility: hidden
+    opacity: 0
+    z-index: 0
+    transition: visibility .3s, opacity .3s
+  &__block
+    transition: transform .3s, background-color .3s
+    z-index: 1
+  &__img
+    +cover
+    padding-top: 100%
+    position: relative
+    &::before
+      @extend .blog-item::before
+  &__date
+    font-size: 14px
+    +light
+    color: #8c8c8c
+    margin-bottom: 10px
+    span
+      display: block
+  &__label
+    
+  &__title
+    margin-bottom: 10px    
+
+  &--lg
+    #{$this}__subttl
+      width: 75%
+      +sm
+        width: auto
+  &--sm
+    // display: inline-flex
+    // vertical-align: top
+    padding-top: 19%
+    +sm
+      padding-top: 25%
+      &:nth-child(odd),
+      &:nth-child(even)
+        width: auto
+        margin-left: 0
+    &:nth-child(odd)
+      width: 46%
+    &:nth-child(even)
+      width: calc(54% - 3px)
+      margin-left: 3px
+  &--md
+    padding-top: 40%
+    +sm
+      margin-bottom: 10px
+  &--xs
+    padding: 0
+    +hover
+      &::before
+        display: none
+      #{$this}__block
+        transform: translate(0, 0)
+      #{$this}__img
+        &::before
+          opacity: 1
+          visibility: visible
+      #{$this}__block
+        background-color: #fff
+    #{$this}__block
+      background-color: #f7f7f7
+      padding: 15px
+  &--full
+    width: auto !important
+    height: 100%
+    +sm
+      height: auto
+
+.blog-aside
+  .blog-item
+    margin-bottom: 30px
+  &__title
+    margin-bottom: 14px
+  &__block
+    margin-bottom: 20px
+    &.is-lg
+      +md
+        display: none
+
+.blog-nav
+  &__list
+    font-size: 0
+    margin-left: -4px
+    margin-right: -4px
+  &__item
+    display: inline-block
+    vertical-align: top
+    padding-left: 2px
+    padding-right: 2px
+    margin-bottom: 3px
+    &.is-full
+      width: 100%
+    &.is-short
+      width: 39%
+    &.is-long
+      width: 61%
+
+  &__link
+    display: block
+    text-align: center
+    padding: 5px 10px
+    color: #fff
+    background-color: #2c2c2c
+    font-size: 15px
+    transition: background-color .3s
+    +hover
+      background-color: $c-accent
+
+.blog-article  
+  figure
+    position: relative
+    margin-bottom: 30px
+    font-size: 0
+    img
+      max-width: 100%
+    figcaption
+      font-size: 14px
+      color: #fff
+      position: absolute
+      bottom: 28px
+      right: 28px
+      +sm
+        right: 15px
+        bottom: 15px
+  p
+    margin-bottom: 30px
+    font-size: 15px
+    text-align: justify
+    +light
+    strong
+      +bold
+  h2
+    position: relative
+    padding-bottom: 14px
+    margin-bottom: 15px
+    &::before
+      content: ''
+      position: absolute
+      width: 53px
+      height: 1px
+      background-color: $c-text
+      bottom: 0
+      left: 0
+  &__article
+    > img
+      margin-bottom: 3px
+      max-width: 100%
+  &__video
+    padding-top: 50%
+    position: relative
+    iframe
+      +coverdiv
+  &__ad
+    position: relative
+    padding-top: 20px
+    margin-bottom: 30px
+    
+    .text
+      margin-bottom: 15px
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 53px
+      height: 1px
+      background-color: $c-text
+  &__next
+    .h2, h2
+      margin-bottom: 15px
+      &::before
+        display: none
+        padding-bottom: 0

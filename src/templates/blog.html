@@ -1,0 +1,102 @@
+---
+title: blog
+page: blog
+hero: {
+  sm: true,
+  title: 'блог',
+  subttl: 'останні новини в галузі електромобілей',
+  breadcrumbs: [
+    { title: 'Головна'},
+    { title: 'Блог', active: true }
+  ],
+  bgimage: 'img/hero/hero-blog.jpg'
+}
+blogRows: [
+  {
+    items: [
+      {
+        lg: true,
+        mod: 'blog-item--lg',
+        img: 'car-lg.jpg',
+        label: 'Автоогляд',
+        title: 'Nissan Leaf 2018 року: Майбутнє поза конкуренцією',
+        subttl: 'Те, що в другому поколінні Nissan Leaf отримає новий дизайн і начинку, - вже не новина: шанувальники цієї моделі бачо він того, щоб його купити?'
+      }
+    ]
+  },
+  {
+    items: [
+      {
+        sm: true,
+        mod: 'blog-item--sm',
+        img: 'car-md.jpg',
+        label: 'Автоогляд',
+        title: 'Nissan Leaf 2018 року: Майбутнє поза конкуренцією',
+        subttl: 'Те, що в другому поколінні Nissan Leaf отримає новий дизайн і начинку, - вже не новина: шанувальники цієї моделі бачо він того, щоб його купити?'
+      },
+      {
+        sm: true,
+        mod: 'blog-item--sm',
+        img: 'car-md-2.jpg',
+        label: 'Статті',
+        title: 'Nissan Leaf 2018 року: Майбутнє поза конкуренцією',
+        subttl: 'Те, що в другому поколінні Nissan Leaf отримає новий дизайн і начинку, - вже не новина: шанувальники цієї моделі бачо він того, щоб його купити?'
+      },
+      {
+        sm: true,
+        mod: 'blog-item--sm',
+        img: 'car-md.jpg',
+        label: 'Автоогляд',
+        title: 'Nissan Leaf 2018 року: Майбутнє поза конкуренцією',
+        subttl: 'Те, що в другому поколінні Nissan Leaf отримає новий дизайн і начинку, - вже не новина: шанувальники цієї моделі бачо він того, щоб його купити?'
+      },
+      {
+        sm: true,
+        mod: 'blog-item--sm',
+        img: 'car-md-2.jpg',
+        label: 'Статті',
+        title: 'Nissan Leaf 2018 року: Майбутнє поза конкуренцією',
+        subttl: 'Те, що в другому поколінні Nissan Leaf отримає новий дизайн і начинку, - вже не новина: шанувальники цієї моделі бачо він того, щоб його купити?'
+      },
+      {
+        sm: true,
+        mod: 'blog-item--sm',
+        img: 'car-md.jpg',
+        label: 'Автоогляд',
+        title: 'Nissan Leaf 2018 року: Майбутнє поза конкуренцією',
+        subttl: 'Те, що в другому поколінні Nissan Leaf отримає новий дизайн і начинку, - вже не новина: шанувальники цієї моделі бачо він того, щоб його купити?'
+      },
+      {
+        sm: true,
+        mod: 'blog-item--sm',
+        img: 'car-md-2.jpg',
+        label: 'Статті',
+        title: 'Nissan Leaf 2018 року: Майбутнє поза конкуренцією',
+        subttl: 'Те, що в другому поколінні Nissan Leaf отримає новий дизайн і начинку, - вже не новина: шанувальники цієї моделі бачо він того, щоб його купити?'
+      }
+    ]
+  },
+  {
+    items: [
+      {
+        lg: true,
+        mod: 'blog-item--lg',
+        img: 'car-lg.jpg',
+        label: 'Автоогляд',
+        title: 'Nissan Leaf 2018 року: Майбутнє поза конкуренцією',
+        subttl: 'Те, що в другому поколінні Nissan Leaf отримає новий дизайн і начинку, - вже не новина: шанувальники цієї моделі бачо він того, щоб його купити?'
+      }
+    ]
+  }
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+
+  {% include "partials/blog/_blog.html" %}
+  {% include "partials/_brand-nav.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}

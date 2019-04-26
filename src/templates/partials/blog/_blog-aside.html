@@ -1,0 +1,48 @@
+<!-- begin blog-aside -->
+<aside class="blog-aside js-aside">
+  <div class="blog-aside__block">
+    <div class="blog-aside__title">
+      <h3 class="h3">Рубрики:</h3>
+    </div>
+
+    <!-- begin blog-nav -->
+    <nav class="blog-nav">
+      <ul class="blog-nav__list">
+        <li class="blog-nav__item is-full"><a href="#" class="blog-nav__link">Автоогляди</a></li>
+        <li class="blog-nav__item is-short"><a href="#" class="blog-nav__link">Статті</a></li>
+        <li class="blog-nav__item is-long"><a href="#" class="blog-nav__link">Відеоогляди</a></li>
+        <li class="blog-nav__item is-short"><a href="#" class="blog-nav__link">Новини</a></li>
+        <li class="blog-nav__item is-long"><a href="#" class="blog-nav__link">Інші</a></li>
+      </ul>
+    </nav>
+    <!-- end blog-nav -->
+  </div>
+
+  <div class="blog-aside__block is-lg">
+    <div class="blog-aside__title">
+      <h3 class="h3">Популярне:</h3>
+    </div>
+
+    {% for i in range(0, 3) %}
+    <!-- begin blog-item -->
+    <a href="#" class="blog-item blog-item--xs">
+      <div class="blog-item__img js-lazy" data-background-image="img/blog/car-sm.jpg"></div>
+
+      <div class="blog-item-label">Статті</div>
+
+      <div class="blog-item__block">
+        <div class="blog-item__date"><span>Olmaks Group</span> <span>25 Березня, 2019</span></div>
+
+        <div class="blog-item__title title-underlined">
+          <h3 class="h3 h3--ttn">Nissan Leaf 2018 року: Майбутнє поза конкуренцією</h3>
+        </div>
+
+        <div class="blog-item__subttl text">Те, що в другому поколінні Nissan Leaf отримає новий ї вигляді...</div>
+      </div>
+    </a>
+    <!-- end blog-item -->
+    {% endfor %}
+    
+  </div>
+</aside>
+<!-- end blog-aside -->
