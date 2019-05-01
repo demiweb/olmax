@@ -1,27 +1,27 @@
 {%set
 items = [
-  { status: 'is-available', label: 'В наявності', labelIcon: 'check', title: 'Chevrolet Bolt EV Premier Chevrolet Bolt EV Premier' },
-  { status: 'is-intransit', label: 'В дорозі', labelIcon: 'truck' },
-  { status: 'is-reserve', label: 'Резерв', labelIcon: 'shield' },
-  { status: 'is-sold', label: 'проданий', labelIcon: 'sold' },
-  { status: 'is-ordered', label: 'замовлений', labelIcon: 'clock' },
-  { status: 'is-available', label: 'В наявності', labelIcon: 'check' },
-  { status: 'is-available', label: 'В наявності', labelIcon: 'check' },
-  { status: 'is-available', label: 'В наявності', labelIcon: 'check' },
-  { status: 'is-available', label: 'В наявності', labelIcon: 'check' }
+  { mod: 'js-list-item', status: 'is-available', label: 'В наявності', labelIcon: 'check', title: 'Chevrolet Bolt EV Premier Chevrolet Bolt EV Premier' },
+  { mod: 'js-list-item', status: 'is-intransit', label: 'В дорозі', labelIcon: 'truck' },
+  { mod: 'js-list-item', status: 'is-reserve', label: 'Резерв', labelIcon: 'shield' },
+  { mod: 'js-list-item', status: 'is-sold', label: 'проданий', labelIcon: 'sold' },
+  { mod: 'js-list-item', status: 'is-ordered', label: 'замовлений', labelIcon: 'clock' },
+  { mod: 'js-list-item', status: 'is-available', label: 'В наявності', labelIcon: 'check' },
+  { mod: 'js-list-item', status: 'is-available', label: 'В наявності', labelIcon: 'check' },
+  { mod: 'js-list-item', status: 'is-available', label: 'В наявності', labelIcon: 'check' },
+  { mod: 'js-list-item', status: 'is-available', label: 'В наявності', labelIcon: 'check' }
 ]
 %}
 
 <!-- begin items -->
-<div class="items__wrap">
+<div class="items__wrap js-items-list">
   <div class="items__top">
     <!-- begin items-top -->
     <div class="items-top">
       <div class="row align-items-center">
         <div class="col-xl-5 col-lg-6">
           <div class="items-top__btns">
-            <a href="#" class="items-top__btn">{{ mixins.icon('list') }}</a>
-            <a href="#" class="items-top__btn is-active">{{ mixins.icon('squared-menu') }}</a>
+            <a href="#" class="items-top__btn js-items-list-btn {% if itemBlock.rows %}is-active{% endif %}" data-state="list">{{ mixins.icon('list') }}</a>
+            <a href="#" class="items-top__btn js-items-list-btn {% if itemBlock.cols %}is-active{% endif %}" data-state="cols">{{ mixins.icon('squared-menu') }}</a>
           </div>
 
           <div class="items-top__title">Показ від 1 до 12 з 56</div>
@@ -68,22 +68,22 @@ items = [
 
   <div class="items__items">
     <div class="row">
-      {% if itemBlock.cols %}
+      {# {% if itemBlock.cols %} #}
       {% for i in items %}
-      <div class="col-xl-4 col-md-6">
+      <div class="items__item {% if not itemBlock.cols %}is-full{% endif %}">
         {% include "partials/_item.html" %}
       </div>
       {% endfor %}
-
+{# 
       {% else %}
 
       {% for i in items %}
       <div class="col-lg-12">
         {% include "partials/_item.html" %}
       </div>
-      {% endfor %}
+      {% endfor %} #}
 
-      {% endif %}
+      {# {% endif %} #}
     </div>
   </div>
 

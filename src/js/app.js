@@ -22,6 +22,7 @@ import scrollTo from './components/scrollTo';
 import setStickyPanels from './components/setStickyPanels';
 import setDatepicker from './components/setDatepicker';
 import setPopupus from './components/setPopupus';
+import toggleItemsLayout from './components/toggleItemsLayout';
 
 // import './lib/jquery.reel.js';
 
@@ -51,6 +52,7 @@ $(function() {
   setStickyPanels();
   setDatepicker();
   setPopupus();
+  toggleItemsLayout();
 
   setTimeout(() => {
     $preloader.remove();
