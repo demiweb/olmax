@@ -1,0 +1,185 @@
+{%set
+tableTimePercents = [
+  { time: '12', percents: '7%' },
+  { time: '24', percents: '13.0%' },
+  { time: '36', percents: '15.0%' },
+  { time: '48', percents: '15.5%' },
+  { time: '60', percents: '16.0%' },
+  { time: '60', percents: '16.5%' }
+]
+%}
+
+{%set
+calcSliders = [
+  { title: 'Вартість авто', min: '9300', max: '115000', minText: '9,300$', maxText: '115 000$', sighn: '$' },
+  { title: 'Ваш аванс', min: '9300', max: '115000', minText: '9,300$', maxText: '115 000$', sighn: '$' },
+  { title: 'Строк', min: '12', max: '84', minText: '12 міс.', maxText: '84 міс.', sighn: 'міс.' }
+]
+%}
+
+<!-- begin bank-item-info -->
+<div class="bank-item-info {{ j.mod }}">
+ <div class="bank-item-info__text text text--gray">Кредит надається на купівлю нового легкового автомобіля. Кредит надається в національній валюті. Термін кредиту до 72 місяців. Сума кредиту до 1 250 000 грн. Мінімальний авансовий платіж: від 20% для клієнтів ФОП - від 30%. Обов'язкове страхування - повне КАСКО.</div>
+
+ <div class="bank-item-info__table">
+   <!-- begin table -->
+   <table class="table table--credit">
+     <tr class="table__tr">
+       <th class="table__th">
+        <table class="table__table-in">
+           <tr class="table__tr-in">
+             <th class="table__th-in table--credit__th-fst">Початковий внесок (%)</th>
+             <th class="table__th-in table--credit__th-scnd">Строк кредиту (міс)</th>
+             <th class="table__th-in table--credit__th-thrd">Відсоткова ставка (фіксована)</th>
+           </tr>
+         </table>
+       </th>
+       <th class="table__th table--credit__th-forth">Одноразова комісія за видачу кредиту *,%</th>
+       <th class="table__th table--credit__th-fifth">КАСКО</th>
+     </tr>     
+
+     <tr class="table__tr">
+       <td class="table__td">
+         <table class="table__table-in">
+          {% for i in range(0, 4) %}
+           <tr class="table__tr-in">
+             <td class="table__td-in">20.00%</td>
+             <td class="table__td-in">
+               <table class="table__table-gray">
+                 {% for i in tableTimePercents %}
+                 <tr class="table__tr-in is-gray">
+                  <td class="table__td-in">{{ i.time }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+             </td>
+             <td class="table__td-in">
+               <table class="table__table-gray">
+                 {% for i in tableTimePercents %}
+                 <tr class="table__tr-in is-gray">
+                  <td class="table__td-in">{{ i.percents }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+             </td>
+           </tr>
+           {% endfor %}
+         </table>
+       </td>
+       <td class="table__td">3.5%</td>
+       <td class="table__td">6.5 - 7.0%</td>
+     </tr>
+   </table>
+   <!-- end table -->
+ </div>
+
+ <div class="bank-item-info__calc">
+
+   <!-- begin calculator -->
+   <div class="calculator">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="calculator__title title-underlined">
+         <h2 class="h2">Калькулятор розстрочки на ваш новий електромобіль</h2>
+       </div>
+
+       <div class="calculator__text text">Кредитний калькулятор автокредитів онлайн дозволяє: розрахувати ефективну ставку по кредиту на покупку нового або вживаного (б / у) автомобіля з урахуванням одноразових і щомісячних комісій</div>
+
+     </div>
+   </div>
+
+   <div class="row">
+     <div class="col-lg-9">
+       <div class="calculator__sliders">
+         {% for i in calcSliders %}
+         <!-- begin calculator-slider -->
+         <div class="range-slider range-slider--one-value">
+          <div class="range-slider__title">
+            <span>{{ i.title }}</span>
+            <input class="range-slider__input js-range-slider-value" type="text">
+          </div>
+           <div class="range-slider__slider js-range-slider" data-min="{{ i.min }}" data-max="{{ i.max }}" data-sighn="{{ i.sighn }}" data-type="one_value"></div>
+           <div class="range-slider__bottom">
+             <span>{{ i.minText }}</span>
+             <span>{{ i.maxText }}</span>
+           </div>
+         </div>
+         <!-- end calculator-slider -->
+         {% endfor %}
+       </div>
+     </div>
+
+     <div class="col-lg-3">
+       <div class="calculator__info">
+         <div class="calculator__info-item">
+           <!-- begin calculator-info -->
+           <div class="calculator-info">
+             <div class="calculator-info__title">Платіж за розстрочкою:</div>
+             <div class="price">
+               <div class="price__title">1,300 $ / міс.</div>
+               <div class="price__subttl">90,807 грн. (Без НДС)</div>
+             </div>
+
+             <div class="calculator-info__bottom">
+               <strong>В т.ч. <i>110 $ / міс.</i> страхування</strong>
+             </div>
+           </div>
+           <!-- end calculator-info -->
+         </div>
+
+         <div class="calculator__info-item">
+           <!-- begin calculator-info -->
+           <div class="calculator-info">
+             <div class="calculator-info__title">Ставка за розстрочкою:</div>
+
+             <div class="calculator-info__bottom">
+               <strong><i>3.5%</i></strong>
+             </div>
+           </div>
+           <!-- end calculator-info -->
+         </div>
+
+         <div class="calculator__info-item">
+           <!-- begin calculator-info -->
+           <div class="calculator-info">
+             <div class="calculator-info__title">Витрати на держ. реєстрацію автомобіля:</div>
+
+             <div class="calculator-info__bottom">
+               <strong>455 грн</strong>
+             </div>
+           </div>
+           <!-- end calculator-info -->
+         </div>
+
+         <div class="calculator__info-item">
+           <!-- begin calculator-info -->
+           <div class="calculator-info">
+             <div class="calculator-info__title">Пенсійний фонд:</div>
+
+             <div class="calculator-info__bottom">
+               <strong>855 грн</strong>
+             </div>
+           </div>
+           <!-- end calculator-info -->
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <div class="row">
+     <div class="col-lg-7">
+       <div class="calculator__btn">
+         <div class="text">Для отримання більш детальної інформації по вашому кредиту або розстрочці замовте консультацію нашого спеціаліста:</div>
+
+         <a href="#" class="btn btn--ttn">
+           <span class="btn__title">Замовити консультацію</span>
+           <span class="btn__icon is-arrow"></span>
+         </a>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- end calculator -->
+ </div>
+</div>
+<!-- end bank-item-info -->

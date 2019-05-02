@@ -1,0 +1,70 @@
+{%set
+features = [
+  {
+    icon: 'money',
+    title: 'вигідно',
+    text: 'Дострокове погашення автокредиту, без комісій'
+  },
+  {
+    icon: 'file',
+    title: 'легко',
+    text: 'Мінімальний набір документів для клієнтів «Olmaks Group»'
+  },
+  {
+    icon: 'payment-terminal',
+    title: 'зручно',
+    text: 'Погашення кредиту зручними способами - через термінал, Приват24, додаток Privat24 або касу'
+  },
+  {
+    icon: 'car-insurance',
+    title: 'спокійно',
+    text: 'Безкоштовний моніторинг за власним автомобілем'
+  }
+]  
+%}
+
+<!-- begin banks-features -->
+<section class="banks-features">
+  <div class="banks-features__top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <div class="section__title is-left has-mb-sm title-underlined">
+            <h2 class="h2 h2--ttu">оцініть переваги розстрочки або кредиту з «Olmaks Group» </h2>
+          </div>
+
+          <div class="banks-features__text text">це можливість користуватися автомобілем вже сьогодні, при цьому сплачуючи вартість автомобіля частинами (щомісячний платіж). Угода оформляється у формі фінансового лізингу.</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banks-features__bottom">
+    <div class="container">
+      <div class="banks-features__inner">
+        {% for i in features %}
+        <!-- begin banks-feature -->
+        <div class="banks-feature">
+          <div class="banks-feature__icon">
+            {% if i.icon === 'car-insurance' %}
+            {{ mixins.iconCarInshurance() }}
+            {% else %}
+            {{ mixins.icon(i.icon) }}
+            {% endif %}
+          </div>
+
+          <div class="banks-feature__title title-underlined title-underlined--sm title-underlined--gray">
+            <h2 class="h2 h2--white h2--ttu">{{ i.title }}</h2>
+          </div>
+
+          <div class="banks-feature__text text text--gray-white text--thin">{{ i.text }}</div>
+        </div>
+        <!-- end banks-feature -->
+        {% endfor %}
+      </div>
+    </div>
+    
+  </div>
+</section>
+<!-- end banks-features -->

@@ -42,8 +42,63 @@
     background-color: $c-accent
     cursor: pointer
 
+.range-slider--one-value
+  .noUi-horizontal
+    +before
+      display: none
+    +after
+      display: none
+  .noUi-connects
+    // height: 10px
+  .noUi-base
+    // height: 10px
+  .noUi-horizontal
+    height: 10px
+    box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 1, 0.18)
+    background-color: rgb(242, 242, 242)
+  .noUi-handle
+    height: 30px
+    width: 30px
+    right: -22px !important
+    top: -10px
+    background-color: #fff
+    box-shadow: 0px 6px 7.44px 0.56px rgba(0, 0, 1, 0.13)
+    &::before
+      content: ''
+      +vcenter
+      width: 7px
+      height: 7px
+      border-radius: 50%
+      display: inline-block
+      background-color: $c-accent
+
 .range-slider
+  $this: &
   &__title
     +light
     font-size: 15px
     margin-bottom: 5px
+
+  &--one-value
+    #{$this}__title
+      display: flex
+      align-items: center
+      justify-content: space-between
+      +medium
+      color: #878787
+      input
+        width: 170px
+        height: 50px
+        border: 1px solid  $c-border
+        font-size: 26px
+        +bold
+        text-align: center
+        padding: 5px
+    #{$this}__bottom
+      display: flex
+      align-items: center
+      justify-content: space-between
+      font-size: 15px
+      +light
+      color: #a1a1a1
+      padding-top: 5px

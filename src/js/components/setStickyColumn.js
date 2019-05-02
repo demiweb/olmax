@@ -1,4 +1,4 @@
-import StickySidebar from 'sticky-sidebar';
+// import StickySidebar from 'sticky-sidebar';
 import { $WIN } from '../constants';
 import { throttle, debounce } from 'throttle-debounce';
 

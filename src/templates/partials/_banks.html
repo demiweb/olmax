@@ -1,0 +1,33 @@
+<!-- begin section -->
+<section class="banks">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="section__title is-left ">
+          <h2 class="title title-underlined has-mb">оберіть ваш власний банк</h2>
+          <div class="text">Бажаєте придбати електромобіль, але немає необхідної суми на покупку, в повному обсязі?
+Наші фінансові партнери допоможуть Вам, придбати електромобіль в кредит або лізинг:</div>
+        </div>        
+      </div>
+    </div>
+    
+    {% for i in banks %}
+    <div class="row">
+      
+        {% for j in i.row %}
+        <div class="col-sm-4 {{ j.order }}">
+          {% include "partials/_bank-item.html" %}
+        </div>
+        {% endfor %}      
+      
+        {% for j in i.info %}
+        <div class="col-12 bank-info-wrap js-bank-info {{ j.order }}" data-bank="{{ j.dataBank }}">
+          {% include "partials/_bank-item-info.html" %}
+        </div>
+        {% endfor %}        
+      
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<!-- end section -->

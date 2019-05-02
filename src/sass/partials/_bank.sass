@@ -1,0 +1,162 @@
+.banks
+  padding-top: 40px
+
+.bank-info-wrap
+  display: none  
+
+
+.bank-item
+  display: block
+  padding-top: 100%
+  border: 1px solid  $c-border
+  position: relative
+  transition: border-color .3s
+  margin-bottom: 30px
+  +hover      
+    border-color: $c-accent
+
+  img
+    +vcenter
+    max-width: 70%
+  &__toggle    
+    bottom: 0
+    right: 0
+    display: inline-block
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 1, 0.11)
+    +icon-close(36, 2, #adadad)
+    position: absolute
+    
+    &.is-active
+      &::after
+        display: none
+    &::before,
+    &::after
+      height: 12px
+      content: ''
+      position: absolute
+      +vcenter
+    &::after
+      transform: rotate(90deg)
+      top: 11px
+      left: 16px
+    &::before
+      transform: rotate(0deg)
+      top: 11px
+      left: 16px
+
+.bank-item-info
+  border: 1px solid  $c-border
+  position: relative
+  padding-bottom: 40px
+  margin-bottom: 30px
+  &::before,
+  &::after
+  +before
+    +arr(35,20, $c-border, t)
+    position: absolute    
+    bottom: 100%
+    +xs
+      left: 50% !important
+      transform: translate(-50%, 0)
+  +after
+    +arr(33,18, #fff, t)
+    position: absolute    
+    bottom: 100%
+    +xs
+      left: 50% !important
+      transform: translate(-50%, 0)
+  &.is-left
+    +before
+      left: 14%
+    +after
+      left: calc(14% + 1px)
+  &.is-right
+    +before
+      left: 83%
+    +after
+      left: calc(83% + 1px)
+  &.is-center
+    +before
+      left: 48%
+    +after
+      left: calc(48% + 1px)
+  &__text
+    padding: 30px
+    +md
+      padding: 15px
+  &__table
+    margin-bottom: 30px
+    +sm
+      overflow: auto
+  &__calc
+    padding-left: 40px
+    padding-right: 40px
+    +md
+      padding-left: 30px
+      padding-right: 30px
+    +sm
+      padding-left: 15px
+      padding-right: 15px
+
+.banks-features
+
+  &__top
+    background-color: #f7f7f7
+    padding-top: 40px
+  &__bottom
+    background-color: #242424
+  &__inner
+    display: flex
+    flex-wrap: wrap
+  &__text
+    margin-bottom: 30px
+
+.banks-feature
+  font-size: 15px
+  padding-top: 50px
+  padding-bottom: 50px
+  display: flex
+  flex-direction: column
+  width: 25%
+  +md
+    width: 50%
+    &:nth-child(1)
+      background-color: #2a2a2a
+    &:nth-child(2)
+      background-color: #242424
+    &:nth-child(3)
+      background-color: #242424
+    &:nth-child(4)
+      background-color: #2a2a2a
+  +xs
+    width: calc(100% + 30px)
+    margin-left: -15px
+    margin-right: -15px
+    background-color: #242424 !important
+  &:nth-child(odd)
+    background-color: #2a2a2a
+    +xs
+      background-color: #2a2a2a !important
+  &__icon    
+    border: 1px solid  $c-accent
+    border-left: 0
+    padding-top: 20px
+    padding-bottom: 20px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 62px
+    margin-bottom: 30px
+    .icon
+      fill: $c-accent
+      font-size: 40px
+  &__title
+    margin-left: 35px
+    margin-right: 35px
+    margin-bottom: 10px
+  &__text
+    padding-left: 35px
+    padding-right: 35px
+
+
+

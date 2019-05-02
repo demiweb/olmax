@@ -24,6 +24,7 @@ import setDatepicker from './components/setDatepicker';
 import setPopupus from './components/setPopupus';
 import toggleItemsLayout from './components/toggleItemsLayout';
 import setTextareaAutoheight from './components/setTextareaAutoheight';
+import toggleBankItems from './components/toggleBankItems';
 
 // import './lib/jquery.reel.js';
 
@@ -55,6 +56,7 @@ $(function() {
   setPopupus();
   toggleItemsLayout();
   setTextareaAutoheight();
+  toggleBankItems();
 
   setTimeout(() => {
     $preloader.remove();

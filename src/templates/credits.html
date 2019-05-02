@@ -1,0 +1,54 @@
+---
+title: trade-in
+page: trade-in
+hero: {
+  sm: true,
+  title: 'кредит та розстрочка',
+  subttl: 'Електромобілі в Києві в наявності і під замовлення з США: з гарантією та обслуговуванням',
+  breadcrumbs: [
+    { title: 'Головна'},
+    { title: 'Кредит та розстрочка', active: true }
+  ],
+  bgimage: 'img/hero/hero-credits.jpg'
+}
+banks: [
+  {
+    row: [
+      { img: 'kredobank-logo.png', databankTarget: 'kredo', order: 'order-0 order-sm-0' },
+      { img: 'Otp_bank_Logo.png', databankTarget: 'otp', order: 'order-2 order-sm-1' },
+      { img: 'logotip-oshchadbank.png', databankTarget: 'oshad', order: 'order-4 order-sm-2' }
+    ],
+    info: [
+      { dataBank: 'kredo', mod: 'is-left', order: 'order-1 order-sm-3' },
+      { dataBank: 'otp', mod: 'is-center', order: 'order-3 order-sm-4' },
+      { dataBank: 'oshad', mod: 'is-right', order: 'order-5 order-sm-5' }
+    ]
+  },
+  {
+    row: [
+      { img: 'kredobank-logo.png', databankTarget: 'kredo', order: 'order-0 order-sm-0' },
+      { img: 'Otp_bank_Logo.png', databankTarget: 'otp', order: 'order-2 order-sm-1' },
+      { img: 'logotip-oshchadbank.png', databankTarget: 'oshad', order: 'order-4 order-sm-2' }
+    ],
+    info: [
+      { dataBank: 'kredo', mod: 'is-left', order: 'order-1 order-sm-3' },
+      { dataBank: 'otp', mod: 'is-center', order: 'order-3 order-sm-4' },
+      { dataBank: 'oshad', mod: 'is-right', order: 'order-5 order-sm-5' }
+    ]
+  }
+  
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+
+  {% include "partials/_banks.html" %}
+  {% include "partials/_banks-features.html" %}
+  {% include "partials/_consultation.html" %}
+
+  {% include "partials/_brand-nav.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}

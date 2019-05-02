@@ -197,3 +197,13 @@
   @return url('../img/#{$image}')
 =image($image)
   background-image: img-url($image)
+
+=before
+  &::before
+    content: ''
+    @content
+
+=after
+  &::after
+    content: ''
+    @content

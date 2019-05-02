@@ -1,0 +1,41 @@
+.calculator
+  &__title
+    margin-bottom: 15px
+  &__sliders
+    margin-bottom: 40px
+    .range-slider
+      margin-bottom: 35px
+  &__text
+    margin-bottom: 30px
+  &__btn
+    font-size: 0
+    .text
+      margin-bottom: 15px
+  &__info-item
+    position: relative
+    padding-bottom: 14px
+    margin-bottom: 14px
+    &:not(:last-child)
+      +before
+        position: absolute
+        width: 53px
+        height: 1px
+        background-color: #878787
+        bottom: 0
+        left: 0
+      
+
+
+.calculator-info
+  .price
+    margin-bottom: 10px
+  &__title
+    color: #878787
+    +light
+  &__bottom
+    strong
+      +bold
+      color: #878787
+      i
+        font-style: normal
+        color: $c-accent
