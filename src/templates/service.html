@@ -1,0 +1,31 @@
+---
+title: service
+page: service
+hero: {
+  sm: true,
+  title: 'Сервіс електромобілей',
+  subttl: 'Електромобілі в Києві в наявності і під замовлення з США: з гарантією та обслуговуванням',
+  btn: {
+    title: 'Записатись на сервіс',
+    icon: 'repair-service'
+  },
+  breadcrumbs: [
+    { title: 'Головна'},
+    { title: ' Сервіс електромобілей', active: true }
+  ],
+  bgimage: 'img/hero/hero-service.jpg'
+}
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+
+  {% include "partials/_scedule.html" %}
+  {% include "partials/_banks-features.html" %}
+
+  {% include "partials/_brand-nav.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}

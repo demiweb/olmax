@@ -26,10 +26,17 @@
           </div>
           <div class="col-xl-3 col-lg-4">
             <div class="hero__btn-right">
+              {% if hero.btn %}
+              <a href="#" class="btn btn--ttn">
+                <span class="btn__title">{{ hero.btn.title }}</span>
+                <span class="btn__icon">{{ mixins.icon(hero.btn.icon) }}</span>
+              </a>
+              {% else %}
               <a href="#" class="btn btn--ttn">
                 <span class="btn__title">Замовити консультацію</span>
                 <span class="btn__icon is-arrow"></span>
               </a>
+              {% endif %}
             </div>
           </div>
         </div>

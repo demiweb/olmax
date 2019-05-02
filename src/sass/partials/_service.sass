@@ -1,0 +1,50 @@
+.s-scedule
+  padding-bottom: 40px
+  &__right
+    height: 100%
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    padding-top: 40px
+    img
+      max-width: 100%
+
+.scedule  
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 100%
+  &__top
+    background-color: #f4f4f4
+    padding: 30px 20px 25px
+    text-align: center
+    margin-bottom: 20px
+  &__scedule
+    border: 1px solid  $c-border
+    padding: 30px 20px 10px
+  &__title
+    margin-bottom: 15px
+  &__phone
+    font-size: 30px
+    margin-bottom: 25px
+    display: inline-block
+    +medium
+    .icon
+      fill: $c-accent
+      font-size: 21px
+
+.scedule-list
+  &__list
+    +clr
+    +light
+    font-size: 15px
+    color: #2c2c2c
+  &__title
+    float: left
+    margin-bottom: 15px
+    width: 50%
+  &__text
+    float: right
+    margin-bottom: 15px
+    width: 50%
+    text-align: right

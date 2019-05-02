@@ -1,0 +1,65 @@
+{%set
+  scedule = [
+    { title: 'Понеділок:', text: '09 - 18:00' },
+    { title: 'Вівторок:', text: '09 - 18:00' },
+    { title: 'Середа:', text: '09 - 18:00' },
+    { title: 'Четвер:', text: '09 - 18:00' },
+    { title: 'Пятниця:', text: '09 - 18:00' },
+    { title: 'Суббота, Неділя:', text: 'Вихідний' }
+  ]
+%}
+
+<!-- begin s-scedule -->
+<section class="s-scedule">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <!-- begin scedule -->
+        <div class="scedule">
+          <div class="scedule__top">
+            <a href="tel:+380687767700" class="scedule__phone">{{ mixins.icon('telephone') }} +38 (068) 776-77-00</a>
+
+            <div class="scedule__btn">
+              <a href="#" class="btn btn--ttn">
+                <span class="btn__title">Записатись на сервіс</span>
+                <span class="btn__icon">{{ mixins.icon('repair-service') }}</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="scedule__scedule">
+            <div class="scedule__title">
+              <h4 class="h4 h4--medium">Графік роботи СТО:</h4>
+            </div>
+
+            <!-- begin scedule-list -->
+            <div class="scedule-list">
+              <dl class="scedule-list__list">
+                {% for i in scedule %}
+                <dt class="scedule-list__title">{{ i.title }}</dt>
+                <dd class="scedule-list__text">{{ i.text }}</dd>
+                {% endfor %}                
+              </dl>
+            </div>
+            <!-- end scedule-list -->
+          </div>
+
+
+        </div>
+        <!-- end scedule -->
+      </div>
+
+      <div class="col-lg-8">
+        <div class="s-scedule__right">
+          <div class="text text--p-mb">
+            <p>Якщо ваш автомобіль ламається, однією з перших ваших думок, скільки мені обійдеться ремонт автомобіля?</p>
+            <p>Коли це відбувається, останнє, що ви повинні робити, це відкладати ремонт автомобіля. Ми пропонуємо для вас конкурентно здатні ціни, щоб ви могли відновити свій автомобіль в найкоротші терміни.</p>
+          </div>
+
+          <img class="js-lazy" data-src="img/service/Tesla-Model-S-X-1.jpg" alt="">
+        </div>        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end s-scedule -->
