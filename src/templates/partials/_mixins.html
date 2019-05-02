@@ -484,6 +484,12 @@
             <input type="text" class="js-time-input" data-type="time" placeholder="Обрати час">
           </div>
           <!-- end input -->
+          {% elseif i.question %}
+          <!-- begin textarea -->
+          <div class="textarea textarea--full textarea--gray">
+            <textarea class="js-textarea" placeholder="{{ i.placeholder }}"></textarea>
+          </div>
+          <!-- end textarea -->
           {% else %}
           <!-- begin input -->
           <div class="input input--gray input--full">

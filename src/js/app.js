@@ -23,6 +23,7 @@ import setStickyPanels from './components/setStickyPanels';
 import setDatepicker from './components/setDatepicker';
 import setPopupus from './components/setPopupus';
 import toggleItemsLayout from './components/toggleItemsLayout';
+import setTextareaAutoheight from './components/setTextareaAutoheight';
 
 // import './lib/jquery.reel.js';
 
@@ -53,6 +54,7 @@ $(function() {
   setDatepicker();
   setPopupus();
   toggleItemsLayout();
+  setTextareaAutoheight();
 
   setTimeout(() => {
     $preloader.remove();
