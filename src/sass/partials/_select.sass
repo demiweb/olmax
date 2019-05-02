@@ -50,6 +50,11 @@
     background-color: #303030
     z-index: 1
     padding: 10px
+    border: 1px solid #e7e7e7
+    background-color: #fafafa
+    z-index: 1
+    padding: 10px
+    box-shadow: 0px 4px 5px #0003
   &__option
     +light
     font-size: 13px
@@ -59,6 +64,7 @@
     cursor: pointer
     +text-overflow
     vertical-align: middle
+    color: #2c2c2c
     +hover
       color: $c-accent
     label
@@ -89,6 +95,8 @@
       width: 100%
       background-color: #fff
       font-family: inherit
+
+      border: 1px solid #e8e8e8
       +placeholder
         color: #979797
         font-size: 15px
@@ -136,7 +144,9 @@
       &__opener
         border-width: 0
         border-bottom-width: 1px
+        border-bottom-color: #202020
         padding-left: 20px
+        padding-left: 0
 
 
 .items-top-select

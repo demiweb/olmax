@@ -1,0 +1,154 @@
+{%set
+infoForm = [
+  { placeholder: 'Введіть рік' },
+  { placeholder: 'Введіть модель і марку' },
+  {
+    select: true,
+    options: [
+      { value: 'placeholder', option: 'Оберіть привід' },
+      { value: 'привід1', option: 'привід1' },
+      { value: 'привід2', option: 'привід2' },
+      { value: 'привід3', option: 'привід3' }
+    ]
+  },
+  { placeholder: 'Введіть колір кузова' },
+  { placeholder: 'Введіть пробіг' },
+  {
+    select: true,
+    options: [
+      { value: 'placeholder', option: 'Оберіть кількість дверей' },
+      { value: 'кількість дверей1', option: 'кількість дверей1' },
+      { value: 'кількість дверей2', option: 'кількість дверей2' },
+      { value: 'кількість дверей3', option: 'кількість дверей3' }
+    ]
+  },
+  { placeholder: 'Введіть потужність двигуна' },
+  { placeholder: 'Введіть VIN' },
+  {
+    select: true,
+    options: [
+      { value: 'placeholder', option: 'Оберіть коробку передач' },
+      { value: 'коробку передач1', option: 'коробку передач1' },
+      { value: 'коробку передач2', option: 'коробку передач2' },
+      { value: 'коробку передач3', option: 'коробку передач3' }
+    ]
+  }
+]
+%}
+
+<!-- begin form -->
+<div class="form">
+  <form>
+    <div class="form__gray-block form__block">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section__title is-left">
+              <h2 class="title">Залиште информацію про ваше старе авто</h2>
+              <div class="text">Ця інформація потрібна, аби ми змогли оцінити вигоду обміну вашо старого авто на нове</div>
+            </div>        
+          </div>
+        </div>
+
+        <div class="row">
+          {% for i in infoForm %}
+          <div class="col-lg-3 col-md-6">
+            <div class="form__field">
+              {% if i.select %}
+              <!-- begin select -->
+              <div class="select select--input">
+                <select class="js-select" data-type="default">
+                  {% for j in i.options %}
+                  <option value="{{ j.value }}">{{ j.option }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <!-- end select -->
+
+              {% else %}
+              <!-- begin input -->
+              <div class="input input--full">
+                <input type="text" placeholder="{{ i.placeholder }}">
+              </div>
+              <!-- end input -->
+              {% endif %}
+            </div>
+          </div>
+          <div class="col-lg-1 d-none d-lg-block"></div>
+          {% endfor %}
+
+          <div class="col-lg-11 ">
+            <!-- begin textarea -->
+            <div class="textarea textarea--full">
+              <textarea class="js-textarea" placeholder="Додаткове повідомлення (необов’язково)"></textarea>
+            </div>
+            <!-- end textarea -->
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="form__white-block form__block">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section__title is-left">
+              <h2 class="title">Залиште ваші контакти</h2>
+              <div class="text">Введіть ваші контактні дані та наші спеціалісти св’яжуться з вами у найближчий час</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="form__field has-mb-lg">
+              <!-- begin input -->
+              <div class="input input--full">
+                <input type="text" placeholder="Введіть ПІБ">
+              </div>
+              <!-- end input -->
+            </div>
+          </div>
+          <div class="col-lg-1 d-none d-lg-block"></div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="form__field has-mb-lg">
+              <!-- begin input -->
+              <div class="input input--full">
+                <input type="tel" placeholder="Введіть телефон">
+              </div>
+              <!-- end input -->
+            </div>
+          </div>
+          <div class="col-lg-1 d-none d-lg-block"></div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="form__field has-mb-lg">
+              <!-- begin input -->
+              <div class="input input--full">
+                <input type="email" placeholder="Введіть E-mail">
+              </div>
+              <!-- end input -->
+            </div>
+          </div>
+          <div class="col-lg-1 d-none d-lg-block"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="form__btn">
+              <button class="btn btn--ttn">
+                <span class="btn__title">Залишити заявку</span>
+                <span class="btn__icon is-arrow"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>
+<!-- end form -->

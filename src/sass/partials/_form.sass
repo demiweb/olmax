@@ -2,6 +2,21 @@
   $this: &
   &__btn
     font-size: 0
+  &__field
+    margin-bottom: 25px
+    &.has-mb-lg
+      margin-bottom: 40px
+  &__gray-block
+    background-color: #f8f8f8
+    padding-bottom: 40px
+    padding-top: 40px
+  &__block
+    padding-top: 40px
+    padding-bottom: 40px
+    +lg
+      padding-bottom: 20px
+      padding-bottom: 20px
+
   &--consultation
     .form
       &__row
@@ -10,6 +25,7 @@
         +lg
           display: block
       &__field
+        margin-bottom: 0
         +lg
           &:not(:last-child)
             margin-bottom: 10px
