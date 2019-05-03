@@ -1,0 +1,58 @@
+---
+title: contacts
+page: contacts
+map: true
+hero: {
+  sm: true,
+  title: 'контакти',
+  subttl: 'Електромобілі в Києві в наявності і під замовлення з США: з гарантією та обслуговуванням',
+  breadcrumbs: [
+    { title: 'Головна'},
+    { title: 'Контакти', active: true }
+  ],
+  bgimage: 'img/hero/hero-contacts.jpg'
+}
+contacts1: {
+  img: 'contacts-1.jpg',
+  title: 'Представництво в Києві:',
+  contacts: [
+    { title: 'Адреса:', text: 'ТОВ Олмакс Груп,  м.Київ, вул. Миколи Грінченко 18' },
+    { title: 'Телефон:', text: '+38-068-776-77-00, +38-050-776-77-00' },
+    { title: 'E-mail: ', text: '<a href="mail:toinfo@olmaks.ua">info@olmaks.ua</a>' },
+    { title: 'Сайт:', text: '<a href="#">olmaks.ua</a>' },
+    {
+      last: true,
+      title: 'Години роботи:',
+      text: '<span>Пн:  10:00 - 19:00</span><span>Вт:  10:00 - 19:00</span><span>Ср:  10:00 - 19:00</span><span>Чт:  10:00 - 19:00</span><span>Пт:  10:00 - 19:00</span><span>Сб:  10:00 - 19:00</span>'
+    }
+  ]
+}
+contacts2: {
+  title: 'Представництво в Вінниці:',
+  img: 'contacts-2.jpg',
+  contacts: [
+    { title: 'Адреса:', text: 'ТОВ Олмакс Груп, м Вінниця, вул. Київська 175' },
+    { title: 'Телефон:', text: '+38(098)-776-7700' },
+    { title: 'E-mail: ', text: '<a href="mailto:vn@olmaks.ua">vn@olmaks.ua</a>' },
+    { title: 'Сайт:', text: '<a href="#">olmaks.ua</a>' },
+    {
+      last: true,
+      title: 'Години роботи:',
+      text: '<span>Пн:  10:00 - 19:00</span><span>Вт:  10:00 - 19:00</span><span>Ср:  10:00 - 19:00</span><span>Чт:  10:00 - 19:00</span><span>Пт:  10:00 - 19:00</span><span>Сб:  10:00 - 19:00</span>'
+    }
+  ]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+
+  {% include "partials/_contacts.html" %}
+  {% include "partials/_consultation.html" %}
+  {% include "partials/_map.html" %}
+
+  {% include "partials/_brand-nav.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}
