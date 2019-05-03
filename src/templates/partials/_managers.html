@@ -1,0 +1,114 @@
+{%set
+managers = [
+  {
+    img: 'man-1.jpg',
+    title: 'Володимир Іванов',
+    subttl: 'Адміністратор салону',
+    contacts: [
+      { icon: 'telephone', href: 'tel:+380687767700', contact: '+38068-776-7700' },
+      { icon: 'telephone', href: 'tel:+380503308082', contact: '+38-050-330-8082' },
+      { email: true, icon: 'envelope', href: 'mailto:info@olmaks.ua', contact: 'info@olmaks.ua' }
+    ]
+  },
+  {
+    img: 'man-2.jpg',
+    title: 'Констянтин Бірко',
+    subttl: 'Менеджер з продажів',
+    contacts: [
+      { icon: 'telephone', href: 'tel:+380687767700', contact: '+38068-776-7700' },
+      { icon: 'telephone', href: 'tel:+380631290703', contact: '+38-063-129-0703' },
+      { email: true, icon: 'envelope', href: 'mailto:k_birko@olmaks.ua', contact: 'k_birko@olmaks.ua' }
+    ]
+  },
+  {
+    img: 'man-3.jpg',
+    title: 'Микола Поліщук',
+    subttl: 'Менеджер з продажів',
+    contacts: [
+      { icon: 'telephone', href: 'tel:+380687767700', contact: '+38068-776-7700' },
+      { icon: 'telephone', href: 'tel:+380970165357', contact: '+38-097-016-5357' },
+      { email: true, icon: 'envelope', href: 'mailto:m_polischuk@olmaks.ua', contact: 'm_polischuk@olmaks.ua' }
+    ]
+  },
+  {
+    img: 'man-4.jpg',
+    title: 'Павло Петрук',
+    subttl: 'Менеджер з продажів',
+    contacts: [
+      { icon: 'telephone', href: 'tel:+380687767700', contact: '+38068-776-7700' },
+      { icon: 'telephone', href: 'tel:+380980090027', contact: '+38-098-009-0027' },
+      { email: true, icon: 'envelope', href: 'mailto:p_petruk@olmaks.ua', contact: 'p_petruk@olmaks.ua' }
+    ]
+  },
+  {
+    img: 'man-5.jpg',
+    title: 'Влад Пугач',
+    subttl: 'Менеджер з продажів',
+    contacts: [
+      { icon: 'telephone', href: 'tel:+380687767700', contact: '+38068-776-7700' },
+      { icon: 'telephone', href: 'tel:+380935932243', contact: '+38-093-593-2243' },
+      { email: true, icon: 'envelope', href: 'mailto:v_puhach@olmaks.ua', contact: 'v_puhach@olmaks.ua' }
+    ]
+  },
+  {
+    img: 'man-6.jpg',
+    title: 'Мунгалов Олександр',
+    subttl: 'Менеджер з продажів',
+    contacts: [
+      { icon: 'telephone', href: 'tel:+380687767700', contact: '+38068-776-7700' },
+      { icon: 'telephone', href: 'tel:+380679235005', contact: '+38-067-923-5005' },
+      { email: true, icon: 'envelope', href: 'mailto:o_mungalov@olmaks.ua', contact: 'o_mungalov@olmaks.ua' }
+    ]
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section__title">
+          <h2 class="title">наша команда менеджерів</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- begin managers -->
+    <div class="managers">
+      <div class="row">
+        {% for i in managers %}
+        <div class="col-lg-6">
+          <!-- begin manager -->
+          <div class="manager">
+            <div class="manager__img js-lazy" data-background-image="img/managers/{{ i.img }}"></div>
+            <div class="manager__content">
+              <div class="manager__title title-underlined">
+                <h4 class="h4 h4--ttn h4--lg">{{ i.title }}</h4>
+                <div class="text text--gray">{{ i.subttl }}</div>
+              </div>
+
+              <div class="manager__contacts">
+                {% for j in i.contacts %}
+                <!-- begin contact -->
+                <div class="contact contact--content">
+                  <div class="contact__icon">{{ mixins.icon(j.icon) }}</div>
+                  <div class="contact__text">
+                    <a class="{% if j.email %}is-green{% endif %}" href="{{ j.href }}">{{ j.contact }}</a>
+                  </div>
+                </div>
+                <!-- end contact -->
+                {% endfor %}
+                
+              </div>
+            </div>
+          </div>
+          <!-- end manager -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end managers -->
+  </div>
+</section>
+<!-- end section -->

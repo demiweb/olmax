@@ -1,0 +1,35 @@
+.managers
+  .col-lg-6
+    margin-bottom: 30px
+
+.manager
+  display: flex
+  border: 1px solid  $c-border
+  height: 100%
+  +xs
+    display: block
+  &__img
+    width: 50%
+    // height: 100%
+    display: flex
+    +cover
+    +xs
+      padding-top: 80%
+      width: auto
+  &__content
+    width: 50%
+    padding-top: 40px
+    padding-bottom: 40px
+    display: flex
+    flex-direction: column
+    padding-left: 25px
+    padding-right: 25px
+    +xs
+      width: auto
+      padding-top: 25px
+      padding-bottom: 25px
+    .contact
+      &:not(:last-child)
+        margin-bottom: 6px
+  &__title
+    margin-bottom: 14px

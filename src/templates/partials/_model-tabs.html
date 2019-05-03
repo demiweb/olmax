@@ -93,7 +93,7 @@ techTable = [
            <div class="col-lg-4 col-md-6">
              <ul class="complectation-list__list">
                {% for j in i.list %}
-               <li class="complectation-list__item"><span class="complectation-list__icon"></span>{{ j.text }}</li>
+               <li class="complectation-list__item">{{ mixins.icon('plus-filled') }} {{ j.text }}</li>
                {% endfor %}
              </ul>
            </div>

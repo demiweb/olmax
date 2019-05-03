@@ -68,26 +68,18 @@ items = [
 
   <div class="items__items">
     <div class="row">
-      {# {% if itemBlock.cols %} #}
       {% for i in items %}
       <div class="items__item {% if not itemBlock.cols %}is-full{% endif %}">
         {% include "partials/_item.html" %}
       </div>
       {% endfor %}
-{# 
-      {% else %}
 
-      {% for i in items %}
-      <div class="col-lg-12">
-        {% include "partials/_item.html" %}
-      </div>
-      {% endfor %} #}
-
-      {# {% endif %} #}
     </div>
   </div>
 
   <div class="items__pagination">
+    <a href="#" class="show-more">Показати ще {{ mixins.icon('plus-circle') }}</a>
+
     {% include "partials/_pagination.html" %}
   </div>
 </div>

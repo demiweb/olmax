@@ -444,3 +444,44 @@ body
 .s-contacts
   &__top
     background-color: #f8f8f8
+
+.show-more
+  font-size: 24px
+  color: $c-accent
+  display: inline-flex
+  align-items: center
+  .icon
+    fill: currentColor
+    margin-left: 10px
+
+.statistics
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  &__title
+    +css-lock(23, 32, 574, 1199, font-size)
+  &__subttl
+    +xs
+      font-size: 13px
+  &__item
+    position: relative
+    flex-grow: 1
+    padding-left: 60px
+    padding-right: 15px
+    border-right: 1px solid  $c-text
+    +md
+      padding-left: 15px
+    +sm
+      width: 50%
+      margin-bottom: 15px
+      padding-left: 0
+      &:nth-child(2n-2)
+        padding-left: 15px
+        border-right: 0
+    &:first-child
+      padding-left: 0
+    &:last-child
+      border-right: 0
+    
+      

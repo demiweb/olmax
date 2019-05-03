@@ -1,15 +1,46 @@
 ---
-title: trade-in
-page: trade-in
+title: about
+page: about
 hero: {
   sm: true,
-  title: 'trade-in',
-  subttl: 'Обміняйте ваше старе авто на новий електромобіль',
+  title: 'про нас',
+  subttl: 'Ваш електромобіль в надійних руках ',
   breadcrumbs: [
     { title: 'Головна'},
-    { title: 'rade-in', active: true }
+    { title: 'Про нас', active: true }
   ],
-  bgimage: 'img/hero/hero-trade-in.jpg'
+  bgimage: 'img/hero/hero-about.jpg'
+}
+features: {
+  top: {
+    title: 'електромобілі - це:',
+    simple: true
+  },
+  features: [
+    {
+      icon: 'electric-car',
+      title: 'технології',
+      text: 'Запас ходу електромобіля на сьогоднішній день складає від 130 до 600 км, використовуючи чисту електрику.'
+    },
+    {
+      icon: 'eco',
+      title: 'екологія',
+      text: '0% шкідливих вихлопів, не використовуються нафтові палива, антифризи, моторні та трансмісійні масла.'
+    },
+    {
+      icon: 'idea',
+      title: 'економія',
+      text: 'Економія експлуатації досягає 25 разів, тому що на 100 км для електромобіля необхідно всього лише 10-13 кВт енергії.'
+    },
+    {
+      icon: 'lightbulb',
+      title: 'майбутнє',
+      text: 'Однозначно, за електромобілями наше з вами здорове майбутнє і чисте повітря навколо нас і наших дітей.'
+    }
+  ]
+}
+partners: {
+  gray: true
 }
 ---
 {% extends "layouts/_layout.html" %}
@@ -18,7 +49,13 @@ hero: {
   {% include "partials/_header.html" %}
   {% include "partials/_hero.html" %}
 
-  {% include "partials/_s-contacts.html" %}
+  {% include "partials/_s-about.html" %}
+  {% include "partials/_features.html" %}
+  {% include "partials/_managers.html" %}
+  {% include "partials/_how-to-buy.html" %}
+  {% include "partials/_statistics.html" %}
+
+  {% include "partials/_partners.html" %}
 
   {% include "partials/_brand-nav.html" %}
   {% include "partials/_footer.html" %}

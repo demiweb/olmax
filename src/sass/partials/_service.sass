@@ -122,7 +122,11 @@
     cursor: default
     display: none
   &__item
-    +light
+    +light    
+    &:not(:last-child)
+      border-bottom: 1px solid  $c-border
+  &__inner-title
+    display: block
     padding-top: 10px
     padding-bottom: 10px
     padding-left: 25px
@@ -133,7 +137,28 @@
     +xs
       padding-left: 10px
       padding-right: 10px
-    &:not(:last-child)
-      border-bottom: 1px solid  $c-border
+    span
+      display: inline-block
+      position: relative
+      padding-right: 20px
+      +before
+        transition: transform .3s
+        display: inline-block
+        +icon-arrow(8, 8, 2, $c-text, -135)
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translate(0, -50%) rotate(-135deg)
+    &.is-active
+      span
+        +before
+          +icon-arrow(8, 8, 2, $c-text, -45)
+          transform: translate(0, -50%) rotate(-45deg)
+  &__inner-content
+    padding-left: 35px
+    display: none
+  &__inner-item
+    padding-top: 5px
+    padding-bottom: 5px
 
 

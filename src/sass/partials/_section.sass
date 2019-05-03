@@ -1,6 +1,6 @@
 .section
   background-color: #fff
-  padding-top: 4%
+  padding-top: 3%
   padding-bottom: 3%
   position: relative
   font-size: 0
@@ -78,6 +78,8 @@
     +lg
       padding-top: 20px
       padding-bottom: 20px
+  &--gray
+    background-color: #f7f7f7
 
 .car-bg
   +cover
@@ -245,3 +247,37 @@
     .icon
       fill: #fff
       font-size: 38px
+
+.section-comb-block
+  position: relative
+  margin-bottom: 80px
+  +md
+    margin-bottom: 40px
+  +sm
+    margin-bottom: 20px
+  &__img
+    +cover
+    // height: 100%
+    position: absolute
+    width: 40%
+    top: 0
+    bottom: 0
+    left: 0
+    background-position: 100% 50%
+    +md
+      position: static
+      padding-top: 70%
+      width: auto
+      // display: none
+    &.is-right
+      right: 0
+      left: auto
+      background-position: 0 50%
+      width: 35%
+      +md
+        width: auto
+  &__block
+    .h2, h2
+      margin-bottom: 14px
+    .complectation-list
+      margin-bottom: 25px

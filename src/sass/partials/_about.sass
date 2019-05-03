@@ -1,0 +1,59 @@
+.about
+
+.about-block
+  position: relative
+  // height: calc(100vh - 90px)
+  height: 545px
+  // +lg
+  //   height: calc(100vh - 45px)
+  margin-bottom: 3px
+  +md
+    margin-bottom: 0
+  +md
+    height: auto
+  &__title
+    margin-bottom: 14px
+  &__text
+    margin-bottom: 14px
+    &.has-top-line
+      position: relative
+      padding-top: 14px
+      +before
+        position: absolute
+        width: 53px
+        height: 1px
+        background-color: $c-text
+        top: 0
+        left: 0
+  &__content
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    +md
+      padding-top: 40px
+      padding-bottom: 40px    
+  &__img
+    +cover
+    position: absolute
+    top: 0
+    right: 0
+    width: 55%
+    height: 100%
+    +md
+      position: static
+      padding-top: 47%
+      width: auto
+      margin-bottom: 3px
+    &.is-left
+      right: auto
+      left: 0
+    &.is-short
+      width: calc(45% - 3px)
+      +md
+        width: auto
+
+  &--lg
+    height: 640px
+  &--sm
+    height: 480px

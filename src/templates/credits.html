@@ -37,7 +37,34 @@ banks: [
     ]
   }  
 ]
-bankFeaturesTop: true
+features: {
+  top: {
+    title: 'оцініть переваги розстрочки або кредиту з «Olmaks Group»',
+    text: 'це можливість користуватися автомобілем вже сьогодні, при цьому сплачуючи вартість автомобіля частинами (щомісячний платіж). Угода оформляється у формі фінансового лізингу.'
+  },
+  features: [
+    {
+      icon: 'money',
+      title: 'вигідно',
+      text: 'Дострокове погашення автокредиту, без комісій'
+    },
+    {
+      icon: 'file',
+      title: 'легко',
+      text: 'Мінімальний набір документів для клієнтів «Olmaks Group»'
+    },
+    {
+      icon: 'payment-terminal',
+      title: 'зручно',
+      text: 'Погашення кредиту зручними способами - через термінал, Приват24, додаток Privat24 або касу'
+    },
+    {
+      icon: 'car-insurance',
+      title: 'спокійно',
+      text: 'Безкоштовний моніторинг за власним автомобілем'
+    }
+  ]  
+}
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -46,7 +73,7 @@ bankFeaturesTop: true
   {% include "partials/_hero.html" %}
 
   {% include "partials/_banks.html" %}
-  {% include "partials/_banks-features.html" %}
+  {% include "partials/_features.html" %}
   {% include "partials/_consultation.html" %}
 
   {% include "partials/_brand-nav.html" %}

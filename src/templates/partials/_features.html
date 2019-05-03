@@ -1,0 +1,47 @@
+<!-- begin features -->
+<section class="features">
+  {% if features.top %}
+  <div class="features__top {% if features.top.simple %}is-simple{% endif %}">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <div class="section__title is-left has-mb-sm {% if not features.top.simple %}title-underlined{% endif %}">
+            <h2 class="h2 h2--ttu">{{ features.top.title}}</h2>
+          </div>
+
+          <div class="features__text text">{{ features.top.text }}</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="features__bottom">
+    <div class="container">
+      <div class="features__inner">
+        {% for i in features.features %}
+        <!-- begin feature -->
+        <div class="feature">
+          <div class="feature__icon">
+            {% if i.icon === 'car-insurance' %}
+            {{ mixins.iconCarInshurance() }}
+            {% else %}
+            {{ mixins.icon(i.icon) }}
+            {% endif %}
+          </div>
+
+          <div class="feature__title title-underlined title-underlined--sm title-underlined--gray">
+            <h2 class="h2 h2--white h2--ttu">{{ i.title }}</h2>
+          </div>
+
+          <div class="feature__text text text--gray-white text--thin">{{ i.text }}</div>
+        </div>
+        <!-- end feature -->
+        {% endfor %}
+      </div>
+    </div>
+    
+  </div>
+</section>
+<!-- end features -->

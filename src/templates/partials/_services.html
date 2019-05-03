@@ -29,7 +29,14 @@
 
           <div class="services-item__content js-accordion-content" data-accordion-item="{{ i.dataItem }}">
             {% for j in i.contentList %}
-            <div class="services-item__item">{{ j.title }}</div>
+            <div class="services-item__item js-accordion-title">
+              <a href="#" class="services-item__inner-title js-accordion-title" data-accordion-title="{{ j.dataItem }}"><span>{{ j.title }}</span></a>
+              <div class="services-item__inner-content js-accordion-content" data-accordion-item="{{ j.dataItem }}">
+                {% for k in j.contentList %}
+                <div class="services-item__inner-item">{{ k.title }}</div>
+                {% endfor %}
+              </div>
+            </div>
             {% endfor %}
           </div>
         </div>

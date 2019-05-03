@@ -131,6 +131,7 @@
 
 
 .contact
+  $this: &
   color: #b6b6b6
   font-size: 14px
   margin-left: 25px
@@ -139,11 +140,15 @@
   align-items: center
   a
     transition: color .3s
+    &.is-green
+      color: $c-accent
   +hover
     a
       color: $c-accent
       .icon
         fill: $c-accent
+      &.is-green
+        text-decoration: underline
   +lg
     // justify-content: center
     font-size: 18px
@@ -163,6 +168,33 @@
         font-size: 18px
       +xs
         font-size: 14px
+    .icon-envelope
+      font-size: 18px
+
+  &--content
+    font-size: 15px
+    margin-left: 0
+    margin-right: 0
+    +lg
+      font-size: 15px
+    +xs
+      font-size: 15px
+    #{$this}__icon
+      .icon
+        font-size: 15px
+        +lg
+          font-size: 15px
+        +xs
+          font-size: 15px
+      .icon-telephone
+        position: relative
+        top: -1px
+      .icon-envelope
+        font-size: 18px
+        +lg
+          font-size: 18px
+        +xs
+          font-size: 18px
 
 .logo
   display: flex
