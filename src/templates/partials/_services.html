@@ -1,0 +1,43 @@
+<!-- begin services -->
+<section class="services">
+  <div class="services__title">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="h2 h2--sm h2--white h2--ttu">Перелік послуг, які ми можемо надати для вашого електромобіля:</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="services__items">
+    <div class="container">
+      <!-- begin services-items -->
+      <div class="services-items js-accordion">
+        {% for i in services %}
+        <!-- begin services-item -->
+        <div class="services-item">
+          <div class="services-item__title js-accordion-title" data-accordion-title="{{ i.dataItem }}">
+            <h4 class="h4 h4--light">{{ i.title }}</h4>
+            <a href="#" class="btn btn--ttn">
+              <span class="btn__title">Записатись на сервіс</span>
+              <span class="btn__icon">{{ mixins.icon('repair-service') }}</span>
+            </a>
+
+            <div class="services-item__icon"></div>
+          </div>
+
+          <div class="services-item__content js-accordion-content" data-accordion-item="{{ i.dataItem }}">
+            {% for j in i.contentList %}
+            <div class="services-item__item">{{ j.title }}</div>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- end services-item -->
+        {% endfor %}
+      </div>
+      <!-- end services-items -->
+    </div>
+  </div>
+</section>
+<!-- end services -->

@@ -1,0 +1,25 @@
+---
+title: trade-in
+page: trade-in
+hero: {
+  sm: true,
+  title: 'trade-in',
+  subttl: 'Обміняйте ваше старе авто на новий електромобіль',
+  breadcrumbs: [
+    { title: 'Головна'},
+    { title: 'rade-in', active: true }
+  ],
+  bgimage: 'img/hero/hero-trade-in.jpg'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+
+  {% include "partials/_s-contacts.html" %}
+
+  {% include "partials/_brand-nav.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}

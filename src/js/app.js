@@ -25,6 +25,7 @@ import setPopupus from './components/setPopupus';
 import toggleItemsLayout from './components/toggleItemsLayout';
 import setTextareaAutoheight from './components/setTextareaAutoheight';
 import toggleBankItems from './components/toggleBankItems';
+import setAccordion from './components/setAccordion';
 
 // import './lib/jquery.reel.js';
 
@@ -57,6 +58,7 @@ $(function() {
   toggleItemsLayout();
   setTextareaAutoheight();
   toggleBankItems();
+  setAccordion();
 
   setTimeout(() => {
     $preloader.remove();
