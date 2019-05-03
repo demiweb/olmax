@@ -488,5 +488,61 @@ body
   padding-top: 40%
   +xs
     padding-top: 60%
+
+.error-page
+  &__title-lg
+    +medium
+    font-size: 80px
+    text-transform: capitalize
+  &__title
+    margin-bottom: 30px
+  &__content
+    height: 100%
+  &__list
+    margin-bottom: 15px
+  &__btn
+    &:not(:last-child)
+      margin-bottom: 20px
+  &__img
+    // display: flex
+    // justify-content: center
+    // align-items: center
+    // height: 100%
+    padding-top: 20%
+    +sm
+      padding-bottom: 65%
+    img
+      position: absolute
+      top: 55%
+      left: 12%
+      z-index: 1
+      max-width: 100%
+  &__img-in
+    position: relative
+  &__404
+    font-size: 248px
+    line-height: 0.7
+    +medium
+    position: relative
+    &::before
+      content: '404'
+      position: absolute
+      top: 100%
+      transform: scaleY(-1)
+      left: 0
+      // font-size: 248px
+      opacity: 0.1
+    
+
+.error-page-list
+  &__title
+    margin-bottom: 15px
+  &__link
+    font-size: 15px
+    text-decoration: underline
+    color: #025db9
+  &__item
+    &:not(:last-child)
+      margin-bottom: 8px
     
       

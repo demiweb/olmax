@@ -17,3 +17,4 @@ PageList:
 - file: service.html
 - file: about.html
 - file: contacts.html
+- file: 404.html
