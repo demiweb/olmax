@@ -1,25 +1,30 @@
 <!-- begin contact-info -->
 <div class="contact-info">
-  <div class="contact-info__img js-lazy" data-background-image="img/contacts/{{ contacts.img }}"></div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="contact-info__img js-lazy" data-background-image="img/contacts/{{ contacts.img }}"></div>
+    </div>
 
-  <div class="contact-info__title title-underlined title-underlined--sm">
-    <h2 class="h2">{{ contacts.title }}</h2>
-  </div>
+    <div class="col-md-6">
+      <div class="contact-info__title title-underlined title-underlined--sm">
+        <h2 class="h2">{{ contacts.title }}</h2>
+      </div>
 
-  <div class="contacts-info__meta">
+      <div class="contact-info__meta">
 
-    <!-- begin contact-meta -->
-    <table class="contact-meta">
-      {% for i in contacts.contacts %}
-      <tr class="contact-meta__tr">
-        <th class="contact-meta__th">{{ i.title }}</th>
-        <td class="contact-meta__td">{{ i.text | safe }}</td>
-      </tr>
-      {% endfor %} 
-    </table>
-    <!-- end contact-meta -->
+        <!-- begin contact-meta -->
+        <table class="contact-meta">
+          {% for i in contacts.contacts %}
+          <tr class="contact-meta__tr">
+            <th class="contact-meta__th">{{ i.title }}</th>
+            <td class="contact-meta__td">{{ i.text | safe }}</td>
+          </tr>
+          {% endfor %} 
+        </table>
+        <!-- end contact-meta -->
 
-
+      </div>
+    </div>
   </div>
 </div>
 <!-- end contact-info -->

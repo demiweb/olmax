@@ -51,17 +51,13 @@
           <div class="col-xl-9 col-lg-8">
             <div class="hero__breadcrumbs">
               {{ mixins.breadcrumbs(
-                links = [
-                { title: 'Головна'},
-                { title: 'Моделі' },
-                { title: 'BMW i3', active: true }
-                ]
+                links = hero.breadcrumbs
               ) }}
               </div>
 
               <div class="hero__title">
-                <h1 class="title title--white">Електризуйте натхнення</h1>
-                <div class="hero__subttl is-ttn">BMW i3 та i3s формують майбутнє електричної мобільності.</div>
+                <h1 class="title title--white">{{ hero.title }}</h1>
+                <div class="hero__subttl is-ttn">{{ hero.subttl }}</div>
               </div>
 
               <div class="hero__btn">
@@ -77,7 +73,7 @@
       </div>
 
       <div class="hero__bg">
-        <video class="js-lazy" src="" data-src="video/FIND-OUT-TESLA_720.mp4" muted="" autoplay="" playsinline="" loop="" poster="img/hero-video-poster.jpg"></video>
+        <video class="js-lazy" src="" data-src="{{ hero.video }}" muted="" autoplay="" playsinline="" loop="" poster="{{ hero.poster }}"></video>
       </div>
       
       {%set techInfo = hero.techInfo %}
