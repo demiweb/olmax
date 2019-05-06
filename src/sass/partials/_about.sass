@@ -36,6 +36,7 @@
   &__img
     +cover
     position: absolute
+    // overflow: hidden
     top: 0
     right: 0
     width: 55%
@@ -52,6 +53,12 @@
       width: calc(45% - 3px)
       +md
         width: auto
+  &__img-video
+    overflow: hidden
+    +coverdiv
+    video
+      +coverdiv
+      object-fit: cover
 
   &--lg
     height: 640px
