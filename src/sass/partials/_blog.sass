@@ -36,6 +36,7 @@
   padding: 20px 30px
   padding-top: 45%
   margin-bottom: 3px
+  width: 100%
   +hover
     #{$this}__block
       transform: translate(0, -20px)
@@ -160,7 +161,7 @@
     +hover
       background-color: $c-accent
 
-.blog-article  
+.blog-article
   figure
     position: relative
     margin-bottom: 30px
@@ -195,6 +196,22 @@
       background-color: $c-text
       bottom: 0
       left: 0
+  ul
+    margin-bottom: 30px
+    +light
+    font-size: 15px
+    list-style-type: disc
+    padding-left: 30px
+    text-align: justify
+  li
+    margin-bottom: 10px
+  table
+    margin-bottom: 30px
+    +light
+    font-size: 15px
+    td, th
+      border: 1px solid  $c-border
+      padding: 10px
   &__article
     > img
       margin-bottom: 3px
