@@ -217,7 +217,7 @@
 
 .section-spinner
   height: calc(100vh - 90px)
-  padding-bottom: 10%
+  padding-bottom: 5%
   position: relative
   +vertical
   +cover
@@ -225,7 +225,11 @@
     height: calc(100vh - 45px)
   +sm
     height: auto
-    padding-top: 0%
+    padding-top: 30%
+    padding-bottom: 12%
+  +xs
+    padding-top: 20%
+    padding-bottom: 8%
   &__icon-wrap
     position: absolute
     bottom: 0
@@ -235,15 +239,16 @@
   &__spinner
     display: inline-block
     vertical-align: bottom
-    padding-top: 35%
+    padding-top: 23%
     width: 50%
     position: relative
     +md
       width: 60%
-      padding-top: 40%
+      padding-top: 30%
     +sm
-      width: 70%
-      padding-top: 50%
+      width: 100%
+      padding-top: 40%
+
     .spritespin-instance
       +coverdiv
       height: 100% !important
@@ -258,6 +263,9 @@
     .icon
       fill: #fff
       font-size: 38px
+    +xs
+      .icon
+        font-size: 20px
 
 .section-comb-block
   position: relative
