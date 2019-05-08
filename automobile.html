@@ -370,7 +370,7 @@
       </header>
       <!-- end header -->
       <!-- begin hero -->
-      <section class="hero   hero--xs">
+      <section class="hero   hero--xs is-desctop">
         <div class="hero__block">
           <div class="container">
             <div class="row">
@@ -427,7 +427,7 @@
       <section class="model-gallery wow fadeIn">
         <div class="container">
           <div class="row">
-            <div class="col-xl-2 col-lg-2 col-md-2">
+            <div class="col-xl-2 col-lg-2 col-md-2 order-1 order-sm-0">
               <div class="model-gallery__dots">
                 <!-- begin thumbnail-slider -->
                 <div class="thumbnail-slider__wrap slider__wrap">
@@ -466,7 +466,7 @@
                 <!-- end thumbnail-slider -->
               </div>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-10">
+            <div class="col-xl-6 col-lg-6 col-md-10 order-0 order-sm-1">
               <div class="model-gallery__preview-wrap">
                 <div class="model-gallery__preview js-gallery">
                   <a href="img/model-gallery/car-1.jpg" class="model-gallery__img js-gallery-preview js-lazy is-active" data-background-image="img/model-gallery/car-1.jpg" data-index="0" data-exthumbimage="img/model-gallery/thumb-1.jpg"></a>
@@ -506,8 +506,11 @@
                   </svg> Відео</a>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-4">
+            <div class="col-xl-4 col-lg-4 order-2 order-sm-2">
               <div class="model-gallery__meta">
+                <div class="model-gallery__title-mob">
+                  <h4 class="h4">2017 BMW I3 Mega World 33KWh</h4>
+                </div>
                 <div class="model-gallery__title">
                   <div class="model-gallery__price price">
                     <div class="model-gallery__price-lg price__title">29,300 $</div>
@@ -1187,7 +1190,19 @@
                 <div class="item  ">
                   <div class="row">
                     <div class="col-md-5">
-                      <div class="item__img js-lazy" data-background-image="img/cars-items/car-1.jpg">
+                      <div class="item__img">
+                        <div class="item__img-bg js-gallery">
+                          <a href="img/model-gallery/car-1.jpg" class="item__img-bg-in js-lazy" data-background-image="img/cars-items/car-1.jpg" data-exthumbimage="img/model-gallery/thumb-2.jpg">
+                            <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-search2">
+                              <path d="M15.7 14.3l-3.105-3.105A6.966 6.966 0 0 0 14 7a7 7 0 1 0-7 7 6.96 6.96 0 0 0 4.194-1.405L14.3 15.7c.184.184.38.3.7.3a1 1 0 0 0 1-1 .926.926 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z" />
+                            </svg>
+                          </a>
+                          <a href="img/model-gallery/car-2.jpg" class="item__img-bg-in js-lazy" data-background-image="img/cars-items/car-1.jpg" data-exthumbimage="img/model-gallery/thumb-2.jpg">
+                            <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-search2">
+                              <path d="M15.7 14.3l-3.105-3.105A6.966 6.966 0 0 0 14 7a7 7 0 1 0-7 7 6.96 6.96 0 0 0 4.194-1.405L14.3 15.7c.184.184.38.3.7.3a1 1 0 0 0 1-1 .926.926 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z" />
+                            </svg>
+                          </a>
+                        </div>
                         <a href="#" class="item__btn">
                           <span class="item__btn-title">Детальніше про авто</span>
                           <span class="item__btn-arrow"></span>
@@ -1206,10 +1221,12 @@
                               </div>
                               <div class="item-label__title">В наявності</div>
                             </div>
-                            <a href="#" class="item__video-link">
-                              <svg class="icon icon-video-camera">
-                                <use xlink:href="img/sprite.svg#icon-video-camera"></use>
-                              </svg> Дивитися відео</a>
+                            <div class="js-gallery">
+                              <a href="https://www.youtube.com/embed/GxqttEVZV7U" class="item__video-link">
+                                <svg class="icon icon-video-camera">
+                                  <use xlink:href="img/sprite.svg#icon-video-camera"></use>
+                                </svg> Дивитися відео</a>
+                            </div>
                           </div>
                           <h4 class="h4">Chevrolet Bolt EV Premier</h4>
                         </div>
@@ -1427,7 +1444,19 @@
                 <div class="item  ">
                   <div class="row">
                     <div class="col-md-5">
-                      <div class="item__img js-lazy" data-background-image="img/cars-items/car-1.jpg">
+                      <div class="item__img">
+                        <div class="item__img-bg js-gallery">
+                          <a href="img/model-gallery/car-1.jpg" class="item__img-bg-in js-lazy" data-background-image="img/cars-items/car-1.jpg" data-exthumbimage="img/model-gallery/thumb-2.jpg">
+                            <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-search2">
+                              <path d="M15.7 14.3l-3.105-3.105A6.966 6.966 0 0 0 14 7a7 7 0 1 0-7 7 6.96 6.96 0 0 0 4.194-1.405L14.3 15.7c.184.184.38.3.7.3a1 1 0 0 0 1-1 .926.926 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z" />
+                            </svg>
+                          </a>
+                          <a href="img/model-gallery/car-2.jpg" class="item__img-bg-in js-lazy" data-background-image="img/cars-items/car-1.jpg" data-exthumbimage="img/model-gallery/thumb-2.jpg">
+                            <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-search2">
+                              <path d="M15.7 14.3l-3.105-3.105A6.966 6.966 0 0 0 14 7a7 7 0 1 0-7 7 6.96 6.96 0 0 0 4.194-1.405L14.3 15.7c.184.184.38.3.7.3a1 1 0 0 0 1-1 .926.926 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z" />
+                            </svg>
+                          </a>
+                        </div>
                         <a href="#" class="item__btn">
                           <span class="item__btn-title">Детальніше про авто</span>
                           <span class="item__btn-arrow"></span>
@@ -1446,10 +1475,12 @@
                               </div>
                               <div class="item-label__title">В дорозі</div>
                             </div>
-                            <a href="#" class="item__video-link">
-                              <svg class="icon icon-video-camera">
-                                <use xlink:href="img/sprite.svg#icon-video-camera"></use>
-                              </svg> Дивитися відео</a>
+                            <div class="js-gallery">
+                              <a href="https://www.youtube.com/embed/GxqttEVZV7U" class="item__video-link">
+                                <svg class="icon icon-video-camera">
+                                  <use xlink:href="img/sprite.svg#icon-video-camera"></use>
+                                </svg> Дивитися відео</a>
+                            </div>
                           </div>
                           <h4 class="h4">Chevrolet Bolt EV Premier</h4>
                         </div>
@@ -1667,7 +1698,19 @@
                 <div class="item  ">
                   <div class="row">
                     <div class="col-md-5">
-                      <div class="item__img js-lazy" data-background-image="img/cars-items/car-1.jpg">
+                      <div class="item__img">
+                        <div class="item__img-bg js-gallery">
+                          <a href="img/model-gallery/car-1.jpg" class="item__img-bg-in js-lazy" data-background-image="img/cars-items/car-1.jpg" data-exthumbimage="img/model-gallery/thumb-2.jpg">
+                            <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-search2">
+                              <path d="M15.7 14.3l-3.105-3.105A6.966 6.966 0 0 0 14 7a7 7 0 1 0-7 7 6.96 6.96 0 0 0 4.194-1.405L14.3 15.7c.184.184.38.3.7.3a1 1 0 0 0 1-1 .926.926 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z" />
+                            </svg>
+                          </a>
+                          <a href="img/model-gallery/car-2.jpg" class="item__img-bg-in js-lazy" data-background-image="img/cars-items/car-1.jpg" data-exthumbimage="img/model-gallery/thumb-2.jpg">
+                            <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-search2">
+                              <path d="M15.7 14.3l-3.105-3.105A6.966 6.966 0 0 0 14 7a7 7 0 1 0-7 7 6.96 6.96 0 0 0 4.194-1.405L14.3 15.7c.184.184.38.3.7.3a1 1 0 0 0 1-1 .926.926 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z" />
+                            </svg>
+                          </a>
+                        </div>
                         <a href="#" class="item__btn">
                           <span class="item__btn-title">Детальніше про авто</span>
                           <span class="item__btn-arrow"></span>
@@ -1686,10 +1729,12 @@
                               </div>
                               <div class="item-label__title">Резерв</div>
                             </div>
-                            <a href="#" class="item__video-link">
-                              <svg class="icon icon-video-camera">
-                                <use xlink:href="img/sprite.svg#icon-video-camera"></use>
-                              </svg> Дивитися відео</a>
+                            <div class="js-gallery">
+                              <a href="https://www.youtube.com/embed/GxqttEVZV7U" class="item__video-link">
+                                <svg class="icon icon-video-camera">
+                                  <use xlink:href="img/sprite.svg#icon-video-camera"></use>
+                                </svg> Дивитися відео</a>
+                            </div>
                           </div>
                           <h4 class="h4">Chevrolet Bolt EV Premier</h4>
                         </div>
@@ -1907,7 +1952,19 @@
                 <div class="item  ">
                   <div class="row">
                     <div class="col-md-5">
-                      <div class="item__img js-lazy" data-background-image="img/cars-items/car-1.jpg">
+                      <div class="item__img">
+                        <div class="item__img-bg js-gallery">
+                          <a href="img/model-gallery/car-1.jpg" class="item__img-bg-in js-lazy" data-background-image="img/cars-items/car-1.jpg" data-exthumbimage="img/model-gallery/thumb-2.jpg">
+                            <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-search2">
+                              <path d="M15.7 14.3l-3.105-3.105A6.966 6.966 0 0 0 14 7a7 7 0 1 0-7 7 6.96 6.96 0 0 0 4.194-1.405L14.3 15.7c.184.184.38.3.7.3a1 1 0 0 0 1-1 .926.926 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z" />
+                            </svg>
+                          </a>
+                          <a href="img/model-gallery/car-2.jpg" class="item__img-bg-in js-lazy" data-background-image="img/cars-items/car-1.jpg" data-exthumbimage="img/model-gallery/thumb-2.jpg">
+                            <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-search2">
+                              <path d="M15.7 14.3l-3.105-3.105A6.966 6.966 0 0 0 14 7a7 7 0 1 0-7 7 6.96 6.96 0 0 0 4.194-1.405L14.3 15.7c.184.184.38.3.7.3a1 1 0 0 0 1-1 .926.926 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z" />
+                            </svg>
+                          </a>
+                        </div>
                         <a href="#" class="item__btn">
                           <span class="item__btn-title">Детальніше про авто</span>
                           <span class="item__btn-arrow"></span>
@@ -1926,10 +1983,12 @@
                               </div>
                               <div class="item-label__title">В наявності</div>
                             </div>
-                            <a href="#" class="item__video-link">
-                              <svg class="icon icon-video-camera">
-                                <use xlink:href="img/sprite.svg#icon-video-camera"></use>
-                              </svg> Дивитися відео</a>
+                            <div class="js-gallery">
+                              <a href="https://www.youtube.com/embed/GxqttEVZV7U" class="item__video-link">
+                                <svg class="icon icon-video-camera">
+                                  <use xlink:href="img/sprite.svg#icon-video-camera"></use>
+                                </svg> Дивитися відео</a>
+                            </div>
                           </div>
                           <h4 class="h4">Chevrolet Bolt EV Premier</h4>
                         </div>
@@ -2147,7 +2206,19 @@
                 <div class="item  ">
                   <div class="row">
                     <div class="col-md-5">
-                      <div class="item__img js-lazy" data-background-image="img/cars-items/car-1.jpg">
+                      <div class="item__img">
+                        <div class="item__img-bg js-gallery">
+                          <a href="img/model-gallery/car-1.jpg" class="item__img-bg-in js-lazy" data-background-image="img/cars-items/car-1.jpg" data-exthumbimage="img/model-gallery/thumb-2.jpg">
+                            <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-search2">
+                              <path d="M15.7 14.3l-3.105-3.105A6.966 6.966 0 0 0 14 7a7 7 0 1 0-7 7 6.96 6.96 0 0 0 4.194-1.405L14.3 15.7c.184.184.38.3.7.3a1 1 0 0 0 1-1 .926.926 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z" />
+                            </svg>
+                          </a>
+                          <a href="img/model-gallery/car-2.jpg" class="item__img-bg-in js-lazy" data-background-image="img/cars-items/car-1.jpg" data-exthumbimage="img/model-gallery/thumb-2.jpg">
+                            <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-search2">
+                              <path d="M15.7 14.3l-3.105-3.105A6.966 6.966 0 0 0 14 7a7 7 0 1 0-7 7 6.96 6.96 0 0 0 4.194-1.405L14.3 15.7c.184.184.38.3.7.3a1 1 0 0 0 1-1 .926.926 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z" />
+                            </svg>
+                          </a>
+                        </div>
                         <a href="#" class="item__btn">
                           <span class="item__btn-title">Детальніше про авто</span>
                           <span class="item__btn-arrow"></span>
@@ -2166,10 +2237,12 @@
                               </div>
                               <div class="item-label__title">В наявності</div>
                             </div>
-                            <a href="#" class="item__video-link">
-                              <svg class="icon icon-video-camera">
-                                <use xlink:href="img/sprite.svg#icon-video-camera"></use>
-                              </svg> Дивитися відео</a>
+                            <div class="js-gallery">
+                              <a href="https://www.youtube.com/embed/GxqttEVZV7U" class="item__video-link">
+                                <svg class="icon icon-video-camera">
+                                  <use xlink:href="img/sprite.svg#icon-video-camera"></use>
+                                </svg> Дивитися відео</a>
+                            </div>
                           </div>
                           <h4 class="h4">Chevrolet Bolt EV Premier</h4>
                         </div>
@@ -2387,7 +2460,19 @@
                 <div class="item  ">
                   <div class="row">
                     <div class="col-md-5">
-                      <div class="item__img js-lazy" data-background-image="img/cars-items/car-1.jpg">
+                      <div class="item__img">
+                        <div class="item__img-bg js-gallery">
+                          <a href="img/model-gallery/car-1.jpg" class="item__img-bg-in js-lazy" data-background-image="img/cars-items/car-1.jpg" data-exthumbimage="img/model-gallery/thumb-2.jpg">
+                            <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-search2">
+                              <path d="M15.7 14.3l-3.105-3.105A6.966 6.966 0 0 0 14 7a7 7 0 1 0-7 7 6.96 6.96 0 0 0 4.194-1.405L14.3 15.7c.184.184.38.3.7.3a1 1 0 0 0 1-1 .926.926 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z" />
+                            </svg>
+                          </a>
+                          <a href="img/model-gallery/car-2.jpg" class="item__img-bg-in js-lazy" data-background-image="img/cars-items/car-1.jpg" data-exthumbimage="img/model-gallery/thumb-2.jpg">
+                            <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-search2">
+                              <path d="M15.7 14.3l-3.105-3.105A6.966 6.966 0 0 0 14 7a7 7 0 1 0-7 7 6.96 6.96 0 0 0 4.194-1.405L14.3 15.7c.184.184.38.3.7.3a1 1 0 0 0 1-1 .926.926 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z" />
+                            </svg>
+                          </a>
+                        </div>
                         <a href="#" class="item__btn">
                           <span class="item__btn-title">Детальніше про авто</span>
                           <span class="item__btn-arrow"></span>
@@ -2406,10 +2491,12 @@
                               </div>
                               <div class="item-label__title">В наявності</div>
                             </div>
-                            <a href="#" class="item__video-link">
-                              <svg class="icon icon-video-camera">
-                                <use xlink:href="img/sprite.svg#icon-video-camera"></use>
-                              </svg> Дивитися відео</a>
+                            <div class="js-gallery">
+                              <a href="https://www.youtube.com/embed/GxqttEVZV7U" class="item__video-link">
+                                <svg class="icon icon-video-camera">
+                                  <use xlink:href="img/sprite.svg#icon-video-camera"></use>
+                                </svg> Дивитися відео</a>
+                            </div>
                           </div>
                           <h4 class="h4">Chevrolet Bolt EV Premier</h4>
                         </div>
@@ -2627,7 +2714,19 @@
                 <div class="item  ">
                   <div class="row">
                     <div class="col-md-5">
-                      <div class="item__img js-lazy" data-background-image="img/cars-items/car-1.jpg">
+                      <div class="item__img">
+                        <div class="item__img-bg js-gallery">
+                          <a href="img/model-gallery/car-1.jpg" class="item__img-bg-in js-lazy" data-background-image="img/cars-items/car-1.jpg" data-exthumbimage="img/model-gallery/thumb-2.jpg">
+                            <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-search2">
+                              <path d="M15.7 14.3l-3.105-3.105A6.966 6.966 0 0 0 14 7a7 7 0 1 0-7 7 6.96 6.96 0 0 0 4.194-1.405L14.3 15.7c.184.184.38.3.7.3a1 1 0 0 0 1-1 .926.926 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z" />
+                            </svg>
+                          </a>
+                          <a href="img/model-gallery/car-2.jpg" class="item__img-bg-in js-lazy" data-background-image="img/cars-items/car-1.jpg" data-exthumbimage="img/model-gallery/thumb-2.jpg">
+                            <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-search2">
+                              <path d="M15.7 14.3l-3.105-3.105A6.966 6.966 0 0 0 14 7a7 7 0 1 0-7 7 6.96 6.96 0 0 0 4.194-1.405L14.3 15.7c.184.184.38.3.7.3a1 1 0 0 0 1-1 .926.926 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z" />
+                            </svg>
+                          </a>
+                        </div>
                         <a href="#" class="item__btn">
                           <span class="item__btn-title">Детальніше про авто</span>
                           <span class="item__btn-arrow"></span>
@@ -2646,10 +2745,12 @@
                               </div>
                               <div class="item-label__title">В наявності</div>
                             </div>
-                            <a href="#" class="item__video-link">
-                              <svg class="icon icon-video-camera">
-                                <use xlink:href="img/sprite.svg#icon-video-camera"></use>
-                              </svg> Дивитися відео</a>
+                            <div class="js-gallery">
+                              <a href="https://www.youtube.com/embed/GxqttEVZV7U" class="item__video-link">
+                                <svg class="icon icon-video-camera">
+                                  <use xlink:href="img/sprite.svg#icon-video-camera"></use>
+                                </svg> Дивитися відео</a>
+                            </div>
                           </div>
                           <h4 class="h4">Chevrolet Bolt EV Premier</h4>
                         </div>
@@ -3280,9 +3381,6 @@
         <div class="popup__icon">
           <!-- begin icon-check-circle -->
           <svg class="icon icon-check-circle" version="1.1" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <title />
-            <desc />
-            <defs />
             <g fill-rule="evenodd" stroke="none" stroke-width="1">
               <g transform="translate(-128.000000, -86.000000)">
                 <g transform="translate(128.000000, 86.000000)">
