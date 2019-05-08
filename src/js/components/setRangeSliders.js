@@ -9,7 +9,9 @@ export default function setRangeSliders() {
     const min = parseInt(slider.getAttribute('data-min'));
     const type = slider.getAttribute('data-type');
 
-    
+    if(!max || !min) {
+      console.warn('range slider element must have `data-max` and `data-min` attributes');
+    };
 
     const options = {
       'min_max': {
@@ -23,14 +25,21 @@ export default function setRangeSliders() {
       'one_value': {
         start: [min],
         connect: [true, false],
+        step: 500,
+        range: {
+          'min': min,
+          'max': max
+        }
+      },
+      date: {
+        start: [min],
+        connect: [true, false],
         range: {
           'min': min,
           'max': max
         }
       }
-    };
-
-    
+    };    
 
     noUiSlider.create(slider, options[type]);
 
@@ -49,6 +58,8 @@ export default function setRangeSliders() {
     };    
 
     const $valueInput = $wrap.find('.js-range-slider-value');
+    const inputs = [$valueInput[0]];
+    
 
     if ($valueInput.length) {
       const sighn = slider.getAttribute('data-sighn');
@@ -57,8 +68,17 @@ export default function setRangeSliders() {
         const value = Math.round(values[handle]) + ' ' + sighn;
         $valueInput.val(value);
       });
-    };
-    
+
+      // Listen to keydown events on the input field.
+      
+
+      inputs.forEach(function(input, handle) {
+        input.addEventListener('change', function() {
+          slider.noUiSlider.setHandle(handle, this.value);
+        });
+      
+      });
+    };   
 
   });  
 };

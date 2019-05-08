@@ -13,7 +13,7 @@ tableTimePercents = [
 calcSliders = [
   { title: 'Вартість авто', min: '9300', max: '115000', minText: '9,300$', maxText: '115 000$', sighn: '$' },
   { title: 'Ваш аванс', min: '9300', max: '115000', minText: '9,300$', maxText: '115 000$', sighn: '$' },
-  { title: 'Строк', min: '12', max: '84', minText: '12 міс.', maxText: '84 міс.', sighn: 'міс.' }
+  { type: 'date', title: 'Строк', min: '12', max: '84', minText: '12 міс.', maxText: '84 міс.', sighn: 'міс.' }
 ]
 %}
 
@@ -98,7 +98,7 @@ calcSliders = [
             <span>{{ i.title }}</span>
             <input class="range-slider__input js-range-slider-value" type="text">
           </div>
-           <div class="range-slider__slider js-range-slider" data-min="{{ i.min }}" data-max="{{ i.max }}" data-sighn="{{ i.sighn }}" data-type="one_value"></div>
+           <div class="range-slider__slider js-range-slider" data-min="{{ i.min }}" data-max="{{ i.max }}" data-sighn="{{ i.sighn }}" {% if i.type %}data-type="{{ i.type }}"{% else %}data-type="one_value"{% endif %} ></div>
            <div class="range-slider__bottom">
              <span>{{ i.minText }}</span>
              <span>{{ i.maxText }}</span>
