@@ -5,6 +5,7 @@ import 'lg-fullscreen';
 import 'lg-autoplay';
 import 'lg-share';
 import 'lg-thumbnail';
+import 'lg-video';
 
 export default function setGallery() {
   const $gallery = $('.js-gallery');

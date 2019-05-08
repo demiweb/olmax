@@ -2,7 +2,20 @@
 <div class="item {% if not itemBlock.cols %}item--row{% endif %} {{ i.mod }}">
   <div class="row">
     <div class="col-md-5">
-      <div class="item__img js-lazy" data-background-image="img/cars-items/car-1.jpg">
+      <div class="item__img">
+        <div class="item__img-bg js-gallery">
+          <a
+            href="img/model-gallery/car-1.jpg"
+            class="item__img-bg-in js-lazy"
+            data-background-image="img/cars-items/car-1.jpg"
+            data-exthumbimage="img/model-gallery/thumb-2.jpg">{{ mixins.iconSearch() }}</a>
+          <a
+            href="img/model-gallery/car-2.jpg"
+            class="item__img-bg-in js-lazy"
+            data-background-image="img/cars-items/car-1.jpg"
+            data-exthumbimage="img/model-gallery/thumb-2.jpg">{{ mixins.iconSearch() }}</a>
+        </div>
+        
         <a href="#" class="item__btn">
           <span class="item__btn-title">Детальніше про авто</span>
           <span class="item__btn-arrow"></span>
@@ -19,7 +32,13 @@
               <div class="item-label__title">{{ i.label }}</div>
             </div>
 
-            <a href="#" class="item__video-link">{{ mixins.icon('video-camera') }}Дивитися відео</a>
+            <div class="js-gallery">
+              <a
+                href="https://www.youtube.com/embed/GxqttEVZV7U"
+                class="item__video-link">{{ mixins.icon('video-camera') }}Дивитися відео</a>
+            </div>
+
+            
           </div>
 
           {% if i.title %}

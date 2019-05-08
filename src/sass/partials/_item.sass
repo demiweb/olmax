@@ -100,6 +100,31 @@
     +cover
     padding-top: 70%
     background-color: #ccc
+    +sm
+      padding-top: 50%
+    +xs
+      padding-top: 40%
+  &__img-bg
+    display: block
+    +cover
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    padding-top: 70%
+    +sm
+      padding-top: 50%
+    +xs
+      padding-top: 40%
+    .icon
+      position: absolute
+      top: 10px
+      right: 10px
+      fill: #fff
+      font-size: 24px
+  &__img-bg-in
+    +cover
+    +coverdiv
   &__content-top
     display: flex
     justify-content: space-between
@@ -109,10 +134,18 @@
       display: inline-flex
       .item-label
         margin-right: 20px
+    +sm
+      margin-top: -45px
+      margin-bottom: 15px
   &__video-link
     font-size: 13px
     color: #8d8d8d
     transition: color .3s
+    +sm
+      color: #fff
+      background-color: $c-accent
+      padding: 3px 5px
+      border-radius: 3px
     .icon
       fill: currentColor
       font-size: 14px
@@ -127,8 +160,14 @@
     margin-bottom: 8px  
     display: flex
     flex-direction: column
+    +sm
+      padding-bottom: 3px
+      margin-bottom: 4px
+      .h4, h4
+        font-size: 15px
+        line-height: 1.2
     .h4, h4
-      work-break: wrap
+      // work-break: wrap
     &::before
       content: ''
       position: absolute
@@ -144,6 +183,9 @@
     padding-left: 15px
     padding-right: 15px
     border-bottom: 1px solid #f9f9f9
+    +sm
+      .item-info-item
+        margin-bottom: 3px
     .item-info-item
       &:nth-child(3),
       &:nth-child(5),
@@ -161,6 +203,9 @@
   &__price
     padding-top: 10px
     padding-bottom: 10px
+    +sm
+      padding-top: 5px
+      padding-bottom: 5px
   &__text
     display: none
     font-size: 15px
@@ -234,7 +279,24 @@
           padding-top: 40%
           position: static
         +xs
-          padding-top: 50%
+          // padding-top: 50%
+      &__img-bg
+        height: 100%
+        +sm
+          padding-top: 40%
+        +xs
+          // padding-top: 50%
+      &__img-bg-in
+        +sm
+          height: auto
+          // padding-top: 50%
+          padding-top: 40%
+          // .icon
+          //   top: 10px
+        +xs
+          padding-top: 40%
+        .icon
+          top: 10px
       &__btn
         +sm
           position: absolute
@@ -249,10 +311,17 @@
         position: relative
         +sm
           padding: 20px
+        +xs
+          padding-left: 10px
+          padding-right: 10px
+          padding-bottom: 10px
       &__content-top
         display: inline-flex
         +sm
           max-width: 250px
+          margin-top: -50px
+          // margin-top: 0
+          // margin-bottom: 0
         .item-label
           margin-right: 20px
       &__title
@@ -268,10 +337,15 @@
             padding-right: 150px
         +sm
           padding-right: 150px
+          margin-bottom: 20px
           .h4, h4
             padding-right: 0
+            order: 1
+          .item__content-top
+            order: 0
         +xs
           padding-right: 0
+          margin-bottom: 5px
           
       &__price
         position: absolute
@@ -288,6 +362,9 @@
           padding-top: 5px
       &__text
         display: block
+        +xs
+          font-size: 14px
+          margin-bottom: 10px
         
       &__info
         border-bottom-width: 0

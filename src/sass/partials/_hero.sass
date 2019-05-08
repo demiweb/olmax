@@ -4,6 +4,9 @@
   position: relative
   overflow: hidden
   +cover
+  &.is-desctop
+    +xs
+      display: none
   &__slider    
     .slide
       height: calc(100vh - 90px) // header height

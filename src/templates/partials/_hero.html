@@ -1,6 +1,6 @@
 <!-- begin hero -->
 <section
- class="hero {% if hero.sm %}hero--sm js-lazy{% endif %} {% if hero.lg %}hero--lg js-lazy{% endif %} {% if hero.xs %}hero--xs{% endif %}"
+ class="hero {% if hero.sm %}hero--sm js-lazy{% endif %} {% if hero.lg %}hero--lg js-lazy{% endif %} {% if hero.xs %}hero--xs{% endif %}{% if hero.mod %} {{ hero.mod }}{% endif %}"
  {% if hero.sm %}data-background-image="{{ hero.bgimage }}"{% endif %}>
 
   {% if hero.slider %}

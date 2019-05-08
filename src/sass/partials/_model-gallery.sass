@@ -4,6 +4,9 @@
   +sm
     padding-bottom: 20px
     padding-top: 20px
+  +xs
+    padding-top: 10px
+    padding-bottom: 10px
   .container
     position: relative
   &__preview-wrap
@@ -52,8 +55,13 @@
         margin-bottom: 0
     +xs
       display: block
+      padding-bottom: 15px
       .model-gallery__price
         margin-bottom: 10px
+  &__title-mob
+    display: none
+    +xs
+      display: block
   &__img-label
     position: absolute
     top: 10px
@@ -163,12 +171,19 @@
   &__meta
     +md
       padding-top: 30px
+    +xs
+      padding-top: 0px
 
 
 .model-gallery-meta
   padding-top: 15px
   &__list
     +clr
+  &__title,
+  &__text
+    +xs
+      margin-bottom: 5px
+      padding-bottom: 5px
   &__title
     +bold
     font-size: 15px
