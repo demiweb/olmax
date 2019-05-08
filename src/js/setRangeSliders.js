@@ -1,6 +1,4 @@
-import noUiSlider from 'nouislider';
-
-export default function setRangeSliders() {
+function setRangeSliders() {
   var $sliders = $('.js-range-slider');
 
   $sliders.each(function(i, slider) {
@@ -82,3 +80,5 @@ export default function setRangeSliders() {
 
   });  
 };
+
+setRangeSliders();

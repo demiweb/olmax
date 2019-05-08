@@ -88,6 +88,17 @@
     margin-bottom: 30px
     +sm
       overflow: auto
+    table
+      +light
+      tr
+        &:first-child
+          background-color: #fafafa
+          td
+            +bold
+      td, th
+        border: 1px solid  $c-border
+        padding: 10px
+
   &__calc
     padding-left: 40px
     padding-right: 40px

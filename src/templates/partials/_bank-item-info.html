@@ -11,9 +11,9 @@ tableTimePercents = [
 
 {%set
 calcSliders = [
-  { title: 'Вартість авто', min: '9300', max: '115000', minText: '9,300$', maxText: '115 000$', sighn: '$' },
-  { title: 'Ваш аванс', min: '9300', max: '115000', minText: '9,300$', maxText: '115 000$', sighn: '$' },
-  { type: 'date', title: 'Строк', min: '12', max: '84', minText: '12 міс.', maxText: '84 міс.', sighn: 'міс.' }
+  { title: 'Введіть вартість авто (грн)', min: '0', max: '115000', minText: '0$', maxText: '115 000$', sighn: '$' },
+  { title: 'Введіть сумму авансу (грн)', min: '0', max: '115000', minText: '0$', maxText: '115 000$', sighn: '$' },
+  { type: 'date', title: 'Оберіть строк кредитування (міс)', min: '12', max: '84', minText: '12 міс.', maxText: '84 міс.', sighn: 'міс.' }
 ]
 %}
 
@@ -22,7 +22,7 @@ calcSliders = [
  <div class="bank-item-info__text text text--gray">Кредит надається на купівлю нового легкового автомобіля. Кредит надається в національній валюті. Термін кредиту до 72 місяців. Сума кредиту до 1 250 000 грн. Мінімальний авансовий платіж: від 20% для клієнтів ФОП - від 30%. Обов'язкове страхування - повне КАСКО.</div>
 
  <div class="bank-item-info__table">
-   <!-- begin table -->
+{#    <!-- begin table -->
    <table class="table table--credit">
      <tr class="table__tr">
        <th class="table__th">
@@ -70,7 +70,65 @@ calcSliders = [
        <td class="table__td">6.5 - 7.0%</td>
      </tr>
    </table>
-   <!-- end table -->
+   <!-- end table --> #}
+
+   <table>
+    <tbody>
+      <tr>
+        <td width="125">Аванс</td>
+        <td width="125">20% -39,99%</td>
+        <td width="125">40%-59,99%</td>
+        <td width="125">&gt;60%</td>
+      </tr>
+      <tr>
+        <td width="125">Термін</td>
+        <td colspan="3" width="374"></td>
+      </tr>
+      <tr>
+        <td width="125">12міс.</td>
+        <td width="125">4,49</td>
+        <td width="125">2,49</td>
+        <td width="125">0,001</td>
+      </tr>
+      <tr>
+        <td width="125">24міс.</td>
+        <td width="125">9,99</td>
+        <td width="125">8,99</td>
+        <td width="125">5,49</td>
+      </tr>
+      <tr>
+        <td width="125">36міс.</td>
+        <td width="125">10,99*</td>
+        <td width="125">10,49*</td>
+        <td width="125">9,49*</td>
+      </tr>
+      <tr>
+        <td width="125">48міс.</td>
+        <td width="125">12,49*</td>
+        <td width="125">11,49*</td>
+        <td width="125">10,99*</td>
+      </tr>
+      <tr>
+        <td width="125">60міс.</td>
+        <td width="125">11,99*</td>
+        <td width="125">11,99*</td>
+        <td width="125">10,99*</td>
+      </tr>
+      <tr>
+        <td width="125">72міс.</td>
+        <td width="125">12,49*</td>
+        <td width="125">11,99*</td>
+        <td width="125">11,49*</td>
+      </tr>
+      <tr>
+        <td width="125">84міс.</td>
+        <td width="125">12,99*</td>
+        <td width="125">11,99*</td>
+        <td width="125">11,99*</td>
+      </tr>
+    </tbody>
+  </table>
+
  </div>
 
  <div class="bank-item-info__calc">

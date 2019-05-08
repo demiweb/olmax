@@ -30,9 +30,16 @@ gulp.task('copy:video', function () {
         .pipe(gulp.dest(config.dest.video));
 });
 
+gulp.task('copy:js', function () {
+    return gulp
+        .src(config.src.js + '/setRangeSliders.js')
+        .pipe(gulp.dest(config.dest.js));
+});
+
 gulp.task('copy', [
     'copy:img',
     'copy:video',
+    'copy:js',
     // 'copy:rootfiles',
     'copy:fonts'
 ]);
