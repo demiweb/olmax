@@ -1,5 +1,6 @@
 import setRangeSliders from './components/setRangeSliders';
 import setSelects from './components/setSelects';
+import setScrollBar from './components/setScrollBar';
 import setGallery from './components/setGallery';
 
 /* eslint-disable */
@@ -237,6 +238,7 @@ function reload() {
   setRangeSliders();
   setSelects();
   setGallery();
+  setScrollBar();
 }
 
 
