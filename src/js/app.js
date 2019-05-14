@@ -11,7 +11,7 @@ import setModelsSliderHeight from './components/setModelsSliderHeight';
 import scrollHorisontal from './components/scrollHorisontal';
 import setScrollAnimations from './components/setScrollAnimations';
 import setSelects from './components/setSelects';
-// import setRangeSliders from './components/setRangeSliders';
+import setRangeSliders from './components/setRangeSliders';
 import setScrollBar from './components/setScrollBar';
 import toggleAside from './components/toggleAside';
 import setStickyColumn from './components/setStickyColumn';
@@ -27,7 +27,7 @@ import setTextareaAutoheight from './components/setTextareaAutoheight';
 import toggleBankItems from './components/toggleBankItems';
 import setAccordion from './components/setAccordion';
 
-// import './lib/jquery.reel.js';
+
 
 $(function() {
   const $preloader = $('.preloader');
@@ -44,7 +44,7 @@ $(function() {
   scrollHorisontal();
   setScrollAnimations();
   setSelects();
-  // setRangeSliders();
+  setRangeSliders();
   setScrollBar();
   toggleAside();
   setStickyColumn();
@@ -64,4 +64,6 @@ $(function() {
     $preloader.remove();
   }, 500);  
 });
+
+import './main.js';
 
