@@ -32,7 +32,7 @@ gulp.task('copy:video', function () {
 
 gulp.task('copy:js', function () {
     return gulp
-        .src(config.src.js + '/setRangeSliders.js')
+        .src(config.src.js + '/*.*')
         .pipe(gulp.dest(config.dest.js));
 });
 

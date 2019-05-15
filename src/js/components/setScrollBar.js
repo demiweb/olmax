@@ -1,9 +1,9 @@
 import PerfectScrollbar from 'perfect-scrollbar';
 
 export default function setScrollBar() {
-  const $containers = $('.js-scrollbar');
+  var $containers = $('.js-scrollbar');
 
-  $containers.each((i, container) => {
-    const ps = new PerfectScrollbar(container);
+  $containers.each(function(i, container) {
+    var ps = new PerfectScrollbar(container);
   });  
 };
