@@ -200,42 +200,42 @@ export function filter() {
 }
 export function credit(scroll, value,bank) {
   $('.error_calk').css('display','none');
-  var costauto=parseInt($('.bank'+bank).find('.costauto').val());
-  var avans=parseInt($('.bank'+bank).find('.avans').val());
-  var monat=parseInt($('.bank'+bank).find('.monat').val());
-  var minavans=parseInt($('.bank'+bank).find('.min_avans').val());
-  var percent=0;
-  if(avans>costauto*minavans/100 && costauto>avans) {
-    var avans_percent=parseInt(avans/costauto*100);
-    bank1.forEach(function(element) {
-      if(parseFloat(element['monath_from'])<monat && parseFloat(element['monath_to'])>=monat && parseFloat(element['avans_from'])<=avans_percent && parseFloat(element['avans_to'])>=avans_percent ) {
-        percent=parseFloat(element['percent']);
-      }
-    });
-    var i=percent/100/12;
-    var iplus=i+1;
-    var ex=Math.pow(iplus,monat);
-    var monath_pay=(costauto-avans)*(i+(i/(ex -1)));
+    var costauto=parseInt($('.bank'+bank).find('.costauto').val());
+    var avans=parseInt($('.bank'+bank).find('.avans').val());
+    var monat=parseInt($('.bank'+bank).find('.monat').val());
+    var minavans=parseInt($('.bank'+bank).find('.min_avans').val());
+    var percent=0;
+    if(avans>=costauto*minavans/100 && costauto>avans){
+        var avans_percent=parseInt(avans/costauto*100);
+        bank1.forEach(function(element){
+            if(parseFloat(element['monath_from'])<monat && parseFloat(element['monath_to'])>=monat && parseFloat(element['avans_from'])<=avans_percent && parseFloat(element['avans_to'])>=avans_percent ){
+                 percent=parseFloat(element['percent']);
+            }
+        });
+        var i=percent/100/12;
+        var iplus=i+1;
+        var ex=Math.pow(iplus,monat);
+        var monath_pay=(costauto-avans)*(i+(i/(ex -1)));
 
-    $('.bank'+bank).find('.monat_pay').text(parseInt(monath_pay));
-    if(costauto<316965) {
-      $('.cost_registration').html(costauto*0.03+' грн.');
-    }else if(costauto>316965 && costauto<557090) {
-      $('.cost_registration').html(costauto*0.04+' грн.');
+        $('.bank'+bank).find('.monat_pay').text(parseInt(monath_pay));
+        if(costauto<316965){
+            $('.cost_registration').html(costauto*0.03+' грн.');
+        }else if(costauto>316965 && costauto<557090){
+            $('.cost_registration').html(costauto*0.04+' грн.');
+        }else{
+            $('.cost_registration').html(costauto*0.05+' грн.');
+        }
     }else{
-      $('.cost_registration').html(costauto*0.05+' грн.');
+        if(avans<=costauto*minavans/100){
+            $('.error_avans').css('display','block');
+            $('.error_avans span').text(costauto*minavans/100);
+        }
+        if(costauto<avans){
+            $('.error_avansbig').css('display','block');
+        }
+        $('.bank'+bank).find('.monat_pay').text(parseInt(0));
+        $('.cost_registration').html('3-5%');
     }
-  }else{
-    if(avans<costauto*minavans/100) {
-      $('.error_avans').css('display','block');
-      $('.error_avans span').text(costauto*minavans/100);
-    }
-    if(costauto<avans) {
-      $('.error_avansbig').css('display','block');
-    }
-    $('.bank'+bank).find('.monat_pay').text(parseInt(0));
-    $('.cost_registration').html('3-5%');
-  }
 
 
 }
