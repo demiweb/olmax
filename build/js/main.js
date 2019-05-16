@@ -236,8 +236,6 @@ export function credit(scroll, value,bank) {
         $('.bank'+bank).find('.monat_pay').text(parseInt(0));
         $('.cost_registration').html('3-5%');
     }
-
-
 }
 
 
