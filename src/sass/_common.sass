@@ -35,6 +35,9 @@
   +rmin(992)
     @content
 
+img
+  max-width: 100%
+
 h1, h2, h3, h4, h5, h6
   font-weight: 400
 
@@ -52,6 +55,7 @@ body
   font-size: 15px
   overflow: visible
   position: static
+  overflow-x: hidden
   +roman
   color: $c-text
   +no-scroll
@@ -82,11 +86,17 @@ body
 
 .out
   padding-top: 90px
-  overflow-x: hidden
+  // overflow-x: hidden
   +lg
     padding-top: 45px
   +xs
     padding-bottom: 50px
+
+.js-sticky-column
+  position: sticky
+  top: 90px
+  +lg
+    top: 45px
 
 .btn
   color: #fff

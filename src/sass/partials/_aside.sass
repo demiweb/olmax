@@ -1,5 +1,11 @@
 .aside
   background-color: #fff
+  height: 100%
+  .row
+    height: 100%
+    display: block
+    +md
+      display: flex
   .aside-banner
     +sm
       display: none
@@ -15,6 +21,7 @@
     border: 1px solid  $c-border
     +hover
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.15)
+
 
 .aside-banner
   +cover

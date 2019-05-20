@@ -1,8 +1,4 @@
-// window.$ = $;
-// window.jQuery = jQuery;
-
 import 'intersection-observer';
-// import noUiSlider from 'nouislider';
 
 import { $WIN, $HTML } from './constants';
 
@@ -71,11 +67,4 @@ $(function() {
 });
 
 import './main.js';
-
-
-// window.noUiSlider = noUiSlider;
-// window.setRangeSliders = setRangeSliders;
-// window.setSelects = setSelects;
-// window.setGallery = setGallery;
-// window.setScrollBar = setScrollBar;
 

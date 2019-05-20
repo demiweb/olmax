@@ -3,6 +3,8 @@ import setRangeSliders from './components/setRangeSliders';
 import setGallery from './components/setGallery';
 import setScrollBar from './components/setScrollBar';
 import setLazy from './components/setLazy';
+import setStickyColumn from './components/setStickyColumn';
+
 
 /* eslint-disable */
 $(document).ready(function() {
@@ -102,6 +104,10 @@ $(document).ready(function() {
         $('#items_row').html($(data).find('#items_row > *'));
         $('.items__pagination').html($(data).find('.items__pagination > *'));
         $('#wrap-content').css('opacity','1');
+
+        setLazy();
+        setGallery();
+
         $(data).filter('script').each(function() {
           if ((this.text || this.textContent || this.innerHTML).indexOf('document.write') >= 0) {
             return;
@@ -245,6 +251,7 @@ function reload() {
   setGallery();
   setScrollBar();
   setLazy();
+  setStickyColumn();
 }
 
 

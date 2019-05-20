@@ -89,10 +89,12 @@
   +hover
     box-shadow: 0px 0px 12.92px 4.08px rgba(0, 0, 1, 0.15)
   &:not(.item--row)
+    .row
+      display: block
     .col-md-5, .col-md-7
       width: 100%
       max-width: none
-      flex-grow: 1
+      flex: 0 0 100%
       position: static
   &__content
     padding: 12px 15px 5px
@@ -259,6 +261,8 @@
   &--row
     position: relative
     padding-bottom: 0
+    .row
+      display: flex
     +sm
       padding-bottom: 45px
     .item-info-item

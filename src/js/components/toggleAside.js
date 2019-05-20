@@ -1,9 +1,9 @@
-import { ACTIVE } from '../constants';
+import { ACTIVE, $DOC } from '../constants';
 
 export default function toggleAside() {
-  const $btn = $('.js-aside-toggle');
+  const btn = ('js-aside-toggle');
 
-  $btn.on('click', (e) => {
+  $DOC.on('click', '.' + btn, (e) => {
     e.preventDefault();
 
     const $aside = $('.js-aside');
