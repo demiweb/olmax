@@ -57,15 +57,17 @@
 
 .complectation-list
   $this: &
+  // &__list
+  //   +md
+  //     margin-bottom: 20px
   &__list
-    +md
-      margin-bottom: 20px
+    font-size: 0
   &__item
     +thin
     font-size: 15px
     position: relative
     padding-left: 25px
-    text-align: justify
+    text-align: left
     .icon
       font-size: 15px
       margin-right: 12px
@@ -76,6 +78,17 @@
       margin-bottom: 25px
       +md
         margin-bottom: 20px
+
+  &--lg
+    #{$this}__item
+      display: inline-block
+      vertical-align: top
+      width: 33.33333%
+      padding-right: 10px
+      +md
+        width: 50%
+      +xs
+        width: 100%
 
 
 

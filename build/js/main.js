@@ -79,6 +79,7 @@ $(document).ready(function() {
 
         setLazy();
         setGallery();
+        setStickyColumn();
         
         $(data).filter('script').each(function() {
           if ((this.text || this.textContent || this.innerHTML).indexOf('document.write') >= 0) {
@@ -107,6 +108,7 @@ $(document).ready(function() {
 
         setLazy();
         setGallery();
+        setStickyColumn();
 
         $(data).filter('script').each(function() {
           if ((this.text || this.textContent || this.innerHTML).indexOf('document.write') >= 0) {

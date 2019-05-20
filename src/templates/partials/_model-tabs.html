@@ -1,7 +1,5 @@
 {%set
 complList = [
-  {
-    list: [
       { text: 'ABD' },
       { text: 'ABS' },
       { text: 'Bi-xenon' },
@@ -9,11 +7,7 @@ complList = [
       { text: 'Кабель зарядки в комплекте (220В)' },
       { text: 'Климат контроль' },
       { text: 'Кондиционер' },
-      { text: 'Круиз контроль' }
-    ]
-  },
-  {
-    list: [
+      { text: 'Круиз контроль' },
       { text: 'Мультимедиа: usb, aux, radio, CD' },
       { text: 'Мультируль' },
       { text: 'Подогрев сидений' },
@@ -21,11 +15,7 @@ complList = [
       { text: 'Безопасность: 8 подушек' },
       { text: 'Бортовой компьютер' },
       { text: 'Датчик давления шин' },
-      { text: 'Датчик дождя' }
-    ]
-  },
-  {
-    list: [
+      { text: 'Датчик дождя' },
       { text: 'Датчик света' },
       { text: 'Запуск кнопкой' },
       { text: 'Иммобилайзер' },
@@ -34,8 +24,6 @@ complList = [
       { text: 'Центральный замок' },
       { text: 'Электропривод боковых зеркал' },
       { text: 'Электро усилитель руля' }
-    ]
-  }
 ]
 %}
 {%set
@@ -87,18 +75,12 @@ techTable = [
         </div>
 
         <!-- begin complectation-list -->
-        <div class="complectation-list">
-          <div class="row">
-           {% for i in complList %}
-           <div class="col-lg-4 col-md-6">
-             <ul class="complectation-list__list">
-               {% for j in i.list %}
-               <li class="complectation-list__item">{{ mixins.icon('plus-filled') }} {{ j.text }}</li>
-               {% endfor %}
-             </ul>
-           </div>
-           {% endfor %}
-          </div>
+        <div class="complectation-list complectation-list--lg">
+          <ul class="complectation-list__list">
+            {% for i in complList %}
+            <li class="complectation-list__item">{{ mixins.icon('plus-filled') }} {{ i.text }}</li>
+            {% endfor %}
+          </ul>
         </div>
         <!-- end complectation-list -->
       </div>
