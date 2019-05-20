@@ -259,6 +259,19 @@
                 top: 0
 
   &--reccomend
+    // &.slick-initialized
+    //   .slick-track
+    //     display: flex
+    //   .slick-slide
+    //     display: flex
+    //     height: auto
+    //     float: none
+    // .slide
+    //   height: 100%
+
+
+  &--new-items,
+  &--reccomend
     &.slick-initialized
       .slick-track
         display: flex
@@ -268,10 +281,8 @@
         float: none
     .slide
       height: 100%
-
-
-  &--new-items,
-  &--reccomend
+      .new-item
+        height: 100%
     .slick-slide
       margin-left: 15px
       margin-right: 15px
