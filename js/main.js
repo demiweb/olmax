@@ -62,6 +62,9 @@ $(document).ready(function() {
   $('body').on('change','#status',function() {
     filter();
   });
+  $('body').on('change','#color',function(){
+        filter();
+    });
 
 
 
@@ -146,6 +149,8 @@ function get_url(href) {
   var stan=$('#stan').val();
   var status=$('#status').val();
 
+  var color=$('#color').val();
+
 
   var url=href+'?autocol='+autocol;
   url=url+'&sort='+sort;
@@ -179,6 +184,9 @@ function get_url(href) {
   if(status && status!=0) {
     url=url+'&status='+status;
   }
+    if(color && color!=0){
+        url=url+"&color="+color;
+    }
   if(autocol && sort ) {
     history.pushState(null, 'KNOWLEDGE BASE',url);
   }
