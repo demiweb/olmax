@@ -62,7 +62,7 @@ $(document).ready(function() {
   $('body').on('change','#status',function() {
     filter();
   });
-  $('body').on('change','#color',function(){
+  $('body').on('change','#colors',function(){
         filter();
     });
 

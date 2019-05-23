@@ -177,6 +177,21 @@ export default function setSliders() {
       $(slider).slick(options[name]);
     };
 
+    function addDots() {
+      if (name === 'models') {
+        const $slides = $(slider).find('.slide');
+        const $wrap = $(slider).closest('.slider__wrap');
+        const $dots = $wrap.find('.js-models-dots');
+
+        if ($slides.length === 1) {
+          const title = $slides.data('model');
+          $dots.append(`<ul class="slick-dots"><li class="slick-active"><button>${title}</button></li></ul>`);
+        };
+      };
+    };
+
+    addDots();
+
     const reinitDebounced = debounce(300, (e) => {
       if (name === 'brands') {
         // setTimeout(() => {
@@ -187,8 +202,10 @@ export default function setSliders() {
         $(slider).slick('unslick');
         $(slider).slick(options[name]);
       };
+
+      
     });
 
     $WIN.on('resize', reinitDebounced);
   });  
-}
+};

@@ -46,6 +46,9 @@
   +sm
     padding: 15px
     padding-top: 35%
+    &::before
+      visibility: visible
+      opacity: 1
   &::before
     content: ''
     +coverdiv
@@ -162,6 +165,9 @@
       background-color: $c-accent
 
 .blog-article
+  img, iframe
+    width: auto
+    height: auto
   figure
     position: relative
     margin-bottom: 30px
