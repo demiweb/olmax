@@ -7,6 +7,13 @@ import setStickyColumn from './components/setStickyColumn';
 
 
 /* eslint-disable */
+$('.pagecurent').val(window.location.href );
+
+    $('.slider--consultation__wrap .btn--ttn').click(function(){
+        $('.consult').val($(this).attr('data-email'));
+        $('.consultname').val($(this).closest('.slide__name').find('.title--white').text());
+    });
+
 $(document).ready(function() {
   $('body').on('click','.items-top__btns a',function(e) {
     e.preventDefault();
@@ -62,7 +69,7 @@ $(document).ready(function() {
   $('body').on('change','#status',function() {
     filter();
   });
-  $('body').on('change','#colors',function(){
+  $('body').on('change','#color',function(){
         filter();
     });
 
@@ -149,7 +156,7 @@ function get_url(href) {
   var stan=$('#stan').val();
   var status=$('#status').val();
 
-  var colors=$('#colors').val();
+  var color=$('#color').val();
 
 
   var url=href+'?autocol='+autocol;
@@ -184,8 +191,8 @@ function get_url(href) {
   if(status && status!=0) {
     url=url+'&status='+status;
   }
-    if(colors && colors!=0){
-        url=url+"&colors="+colors;
+    if(color && color!=0){
+        url=url+"&color="+color;
     }
   if(autocol && sort ) {
     history.pushState(null, 'KNOWLEDGE BASE',url);
@@ -223,6 +230,16 @@ export function credit(scroll, value,bank) {
     var percent=0;
     if(avans>=costauto*minavans/100 && costauto>avans){
         var avans_percent=parseInt(avans/costauto*100);
+        if(bank==1){
+            bank=bank1;
+        }
+        if(bank==2){
+            bank=bank2;
+        }
+        if(bank==3){
+            bank=bank3;
+        }
+        
         bank1.forEach(function(element){
             if(parseFloat(element['monath_from'])<monat && parseFloat(element['monath_to'])>=monat && parseFloat(element['avans_from'])<=avans_percent && parseFloat(element['avans_to'])>=avans_percent ){
                  percent=parseFloat(element['percent']);
