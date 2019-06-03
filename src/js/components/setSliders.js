@@ -1,6 +1,7 @@
 import slick from 'slick-carousel';
 import { $WIN } from '../constants';
 import { debounce } from 'throttle-debounce';
+import inView from 'in-view';
 
 export default function setSliders() {
   const $sliders = $('.js-slider');
@@ -135,7 +136,8 @@ export default function setSliders() {
             breakpoint: 768,
             settings: {
               vertical: false,
-              slidesToShow: 3
+              slidesToShow: 3,
+              slidesToScroll: 3
             }
           }
         ]
@@ -192,6 +194,31 @@ export default function setSliders() {
 
     addDots();
 
+    function slideModels() {
+      if (name === 'models') {
+        $(slider).on('init reInit afterChange', (e, slick, currentSlide, nextSlide) => {
+          const $dotsUl = slick.$dots;
+          const $dotsLi = $dotsUl.find('li');
+          const elLeft = $dotsLi[currentSlide].offsetLeft - 15;
+
+          inView.threshold(1);
+          
+          function slideDots() {
+            if (!inView.is($dotsLi[currentSlide])) {
+            
+              $dotsUl.animate({
+                scrollLeft : elLeft
+              });
+            };
+          };
+
+          slideDots();
+        });
+      };
+    };
+
+    slideModels();
+
     const reinitDebounced = debounce(300, (e) => {
       if (name === 'brands') {
         // setTimeout(() => {
@@ -206,6 +233,6 @@ export default function setSliders() {
       
     });
 
-    $WIN.on('resize', reinitDebounced);
+    $WIN.on('orientationchange', reinitDebounced);
   });  
 };

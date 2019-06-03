@@ -19,6 +19,37 @@
     +sm
       height: auto
       padding-top: 60%
+  &__preview-next,
+  &__preview-prev
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    font-size: 16px
+    display: inline-block
+    background-color: rgba(#000, .5)
+    width: 40px
+    height: 40px
+  &__preview-next
+    right: 10px
+    &:before
+      content: ''
+      display: inline-block
+      
+      +vcenter
+      +icon-arrow(18, 18, 1, #fff, -135)
+      transform: translate(0, -50%) rotate(-135deg)
+      right: 16px
+      left: auto
+  &__preview-prev
+    left: 10px
+    &:before
+      content: ''
+      display: inline-block
+      
+      +vcenter
+      +icon-arrow(18, 18, 1, #fff, 45)
+      transform: translate(0, -50%) rotate(45deg)
+      left: 16px
   &__img
     +cover
     // background-size: contain
@@ -43,8 +74,8 @@
     display: flex
     justify-content: space-between
     align-items: center
-    padding-bottom: 20px
-    border-bottom: 1px solid  $c-border
+    // padding-bottom: 20px
+    // border-bottom: 1px solid  $c-border
     +lg
       display: block
       .model-gallery__price
@@ -58,6 +89,21 @@
       padding-bottom: 15px
       .model-gallery__price
         margin-bottom: 10px
+  &__more
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border: 3px solid  $c-border
+    margin-top: 5px
+    margin-bottom: 15px
+    padding: 10px
+    +xs
+      flex-direction: column
+      align-items: flex-start
+      .text
+        margin-bottom: 10px
+  &__more-btn
+    // font-size: 0
   &__title-mob
     display: none
     +xs
@@ -121,6 +167,8 @@
       display: none
     img
       position: absolute
+      width: auto
+      height: auto
       top: 50%
       display: none
       +r(1850)
@@ -169,6 +217,8 @@
       right: 0
       +icon-arrow(15, 15, 1, currentColor, -135)
   &__meta
+    .model-gallery-meta
+      border-top: 1px solid  $c-border
     +md
       padding-top: 30px
     +xs

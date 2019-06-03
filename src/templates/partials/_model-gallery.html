@@ -60,7 +60,7 @@ metaList = [
               data-background-image="img/model-gallery/{{ i.img }}"
               data-index="{{ i.index }}"
               data-exthumbimage="img/model-gallery/{{ i.thumb }}"></a>
-            {% endfor %}
+            {% endfor %}            
           </div>         
           
 
@@ -78,6 +78,9 @@ metaList = [
 
           <a href="#" class="model-gallery__img-info model-gallery__img-angle js-tabs-unic-tab" data-target-tab="angle">{{ mixins.icon('reload') }} <span>360<sup>o</sup></span></a>
           <a href="#" class="model-gallery__img-info model-gallery__img-video js-tabs-unic-tab" data-target-tab="video">{{ mixins.icon('play-button') }}Відео</a>
+
+          <a href="#" class="model-gallery__preview-prev js-gallery-prev"></a>
+          <a href="#" class="model-gallery__preview-next js-gallery-next"></a>
         </div>
         
       </div>
@@ -91,7 +94,7 @@ metaList = [
             <div class="model-gallery__price price">
               <div class="model-gallery__price-lg price__title">29,300 $</div>
               <div class="model-gallery__price-sm price__subttl">790,807 грн. (Без НДС)</div>
-            </div>
+            </div>            
 
             <a href="#" class="btn btn--sm btn--hauto">
               <span class="btn__title">{{ carModel.btn.title }}</span>
@@ -99,6 +102,14 @@ metaList = [
               <span class="btn__icon">{{ mixins.icon('hatchback') }}</span>
               {% endif %}
             </a>
+          </div>
+
+          <div class="model-gallery__more">
+            <div class="model-gallery__more-price">
+              <div class="price price--sm">от <strong>3250</strong> грн /мес</div>
+              <div class="text text--sm text--medium">в кредит на 3 года </div>
+            </div>
+              <a href="#" class="model-galley__more-btn btn btn--xs"><span class="btn__title">подробнее</span></a>
           </div>
 
           {% include "partials/_model-gallery-meta.html" %}

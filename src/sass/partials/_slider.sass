@@ -150,14 +150,24 @@
       &__inner
         +cover
     &__wrap
-      margin-top: 73px
+      margin-top: 93px
+      .slider__dots-wrap
+        margin-bottom: 30px
+        top: -75px
+        position: absolute
+        width: 100%
+        left: 0
+        z-index: 1
       .slider__dots
-        top: -55px
+        
         bottom: auto
+        position: relative
+        // padding-bottom: 30px
         // height: 90px
         display: flex
         justify-content: center
         align-items: center
+        flex-wrap: wrap
         overflow: hidden
         ul
           width: 1140px
@@ -202,6 +212,19 @@
           &::before
             visibility: hidden
             opacity: 0
+    &__scroll-icon
+      position: relative
+      // left: 50%
+      // bottom: 0
+      // top: 100%
+      // transform: translate(0, 100%)
+      width: 100%
+      .icon
+        font-size: 30px
+        fill: $c-text
+    &__scroll-icon-white
+      .icon
+        fill: #fff
   
   &--models
     .slide
@@ -235,16 +258,26 @@
     &__wrap
       padding-top: 45px
 
+      .slider__dots-wrap
+        margin-bottom: 30px
+        top: auto
+        position: relative
+
       .slider__dots
         position: static
         height: auto
-        margin-bottom: 30px
+        // margin-bottom: 30px
+        padding-bottom: 0
         +xl
           margin-bottom: 10px
         ul
           width: 1140px
+          margin-left: auto
+          margin-right: auto
           white-space: nowrap
           overflow: auto
+          // padding-bottom: 17px
+          // margin-bottom: -17px
         button
           color: #fff          
         li
@@ -257,6 +290,13 @@
               padding-top: 5px
               &::before
                 top: 0
+    // &__dots-wrap
+    //   overflow: auto
+    //   position: relative
+    //   width: 100%
+    //   // display: flex
+    //   // justify-content: center
+    //   padding-bottom: 10px
 
 
 

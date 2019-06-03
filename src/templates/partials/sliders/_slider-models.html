@@ -10,6 +10,62 @@ slider = [
         distance: '415 <span>км</span>',
         power: '75 <span>кВт/ч</span>',
         speed: '224 <span>км/ч</span>'
+      },
+      {
+        model: 'Model S 85 2014',
+        title: 'Tesla Model S 70D AWD в швидкісних якостях залишає позаду таких іменитих «жеребців» як Porshe 911 і BMW M',
+        time: '4,2 <span>сек</span>',
+        distance: '415 <span>км</span>',
+        power: '75 <span>кВт/ч</span>',
+        speed: '224 <span>км/ч</span>'
+      },
+      {
+        model: 'Model S 85 2014',
+        title: 'Tesla Model S 70D AWD в швидкісних якостях залишає позаду таких іменитих «жеребців» як Porshe 911 і BMW M',
+        time: '4,2 <span>сек</span>',
+        distance: '415 <span>км</span>',
+        power: '75 <span>кВт/ч</span>',
+        speed: '224 <span>км/ч</span>'
+      },
+      {
+        model: 'Model S 85 2014',
+        title: 'Tesla Model S 70D AWD в швидкісних якостях залишає позаду таких іменитих «жеребців» як Porshe 911 і BMW M',
+        time: '4,2 <span>сек</span>',
+        distance: '415 <span>км</span>',
+        power: '75 <span>кВт/ч</span>',
+        speed: '224 <span>км/ч</span>'
+      },
+      {
+        model: 'Model S 85 2014',
+        title: 'Tesla Model S 70D AWD в швидкісних якостях залишає позаду таких іменитих «жеребців» як Porshe 911 і BMW M',
+        time: '4,2 <span>сек</span>',
+        distance: '415 <span>км</span>',
+        power: '75 <span>кВт/ч</span>',
+        speed: '224 <span>км/ч</span>'
+      },
+      {
+        model: 'Model S 85 2014',
+        title: 'Tesla Model S 70D AWD в швидкісних якостях залишає позаду таких іменитих «жеребців» як Porshe 911 і BMW M',
+        time: '4,2 <span>сек</span>',
+        distance: '415 <span>км</span>',
+        power: '75 <span>кВт/ч</span>',
+        speed: '224 <span>км/ч</span>'
+      },
+      {
+        model: 'Model S 85 2014',
+        title: 'Tesla Model S 70D AWD в швидкісних якостях залишає позаду таких іменитих «жеребців» як Porshe 911 і BMW M',
+        time: '4,2 <span>сек</span>',
+        distance: '415 <span>км</span>',
+        power: '75 <span>кВт/ч</span>',
+        speed: '224 <span>км/ч</span>'
+      },
+      {
+        model: 'Model S 85 2014',
+        title: 'Tesla Model S 70D AWD в швидкісних якостях залишає позаду таких іменитих «жеребців» як Porshe 911 і BMW M',
+        time: '4,2 <span>сек</span>',
+        distance: '415 <span>км</span>',
+        power: '75 <span>кВт/ч</span>',
+        speed: '224 <span>км/ч</span>'
       }
     ]
   },
@@ -202,9 +258,12 @@ slider = [
 
 <!-- begin slider -->
 <div class="slider__wrap slider--brands__wrap" >
-  <div class="slider__dots js-scrolled-el js-brands-dots wow fadeInUp" data-wow-delay=".5s">
-    
-  </div>
+  <div class="slider__dots-wrap">
+    <div class="slider__dots js-scrolled-el js-brands-dots wow fadeInUp" data-wow-delay=".5s">
+      
+    </div>
+    <div class="slider--brands__scroll-icon">{{ mixins.icon('swipe') }}</div>
+  </div>  
 
   <div class="slider slider--brands js-slider" data-slider="brands">
     {% for i in slider %}
@@ -212,7 +271,12 @@ slider = [
       <div class="slide__inner js-lazy" data-background-image="img/models/bg-models.jpg">
         <!-- begin slider -->
         <div class="slider__wrap slider--models__wrap">
-          <div class="slider__dots js-scrolled-el js-models-dots wow fadeInUp" data-wow-delay="1s"></div>
+          <div class="slider__dots-wrap">
+            <div class="slider__dots js-scrolled-el js-models-dots wow fadeInUp" data-wow-delay="1s">
+              
+            </div>
+            <div class="slider--brands__scroll-icon slider--brands__scroll-icon-white">{{ mixins.icon('swipe') }}</div>
+          </div>
 
           <div class="slider slider--models js-slider" data-slider="models">
             {% for j in i.sliderModels  %}
@@ -229,7 +293,8 @@ slider = [
                 {% if j.img %}
                 <img class="js-lazy" src="" data-src="img/models/{{ j.img }}" alt="">
                 {% else %}
-                <img src="img/models/bmw-1.png" alt="">
+                {# <img src="img/models/bmw-1.png" alt=""> #}
+                <img class="js-lazy" data-src="img/models/bmw-1.png" src="" alt="">
                 {% endif %}
               </div>
 

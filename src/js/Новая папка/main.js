@@ -1,4 +1,12 @@
 $(document).ready(function() {
+
+    $('.pagecurent').val(window.location.href );
+
+    $('.slider--consultation__wrap .btn--ttn').click(function(){
+        $('.consult').val($(this).attr('data-email'));
+        $('.consultname').val($(this).closest('.slide__name').find('.title--white').text());
+    });
+
     $('body').on('click','.items-top__btns a',function(e){
         e.preventDefault();
         $('body').find('.items-top__btns a').removeClass('is-active')
@@ -193,6 +201,7 @@ function filter(){
 
 }
 function credit(scroll, value,bank){
+
     $('.error_calk').css('display','none');
     var costauto=parseInt($('.bank'+bank).find('.costauto').val());
     var avans=parseInt($('.bank'+bank).find('.avans').val());
@@ -201,6 +210,15 @@ function credit(scroll, value,bank){
     var percent=0;
     if(avans>=costauto*minavans/100 && costauto>avans){
         var avans_percent=parseInt(avans/costauto*100);
+        if(bank==1){
+            bank=bank1;
+        }
+        if(bank==2){
+            bank=bank2;
+        }
+        if(bank==3){
+            bank=bank3;
+        }
         bank1.forEach(function(element){
             if(parseFloat(element['monath_from'])<monat && parseFloat(element['monath_to'])>=monat && parseFloat(element['avans_from'])<=avans_percent && parseFloat(element['avans_to'])>=avans_percent ){
                  percent=parseFloat(element['percent']);
