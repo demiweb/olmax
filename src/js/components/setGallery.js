@@ -32,14 +32,15 @@ export default function setGallery() {
 
     $thumbs.on('click', (e) => {
       e.preventDefault();
-      const index = parseInt(e.currentTarget.getAttribute('data-index')) - 1;
+      const index = parseInt(e.currentTarget.getAttribute('data-index'));
       const $targetImg = $('.js-gallery-preview[data-index="' + index + '"]');
+
 
       $thumbs.removeClass(ACTIVE);
       $(e.currentTarget).addClass(ACTIVE);
       $imgs.removeClass(ACTIVE);
       $targetImg.addClass(ACTIVE);
-      $counter.text(index + 1 + ' / ' + imgAmount);
+      $counter.text(index + ' / ' + imgAmount);
     });
   };
 
@@ -60,7 +61,7 @@ export default function setGallery() {
       const $imgActive = $wrap.find(`.js-gallery-preview.${ACTIVE}`);   
       let $imgNext;
 
-      let index = parseInt($imgActive.data('index')) - 1;
+      let index = parseInt($imgActive.data('index'));
       const imgAmount = $imgs.length;
 
       
@@ -79,7 +80,7 @@ export default function setGallery() {
 
       index = $imgNext.data('index');
 
-      $slider.slick('slickGoTo', index);
+      $slider.slick('slickGoTo', index - 1);
       const $thumbTarget = $(`.js-gallery-thumb[data-index="${index}"]`);
 
       $imgs.removeClass(ACTIVE);
@@ -87,7 +88,7 @@ export default function setGallery() {
 
       $thumbs.removeClass(ACTIVE);
       $thumbTarget.addClass(ACTIVE);
-      $counter.text(index + 1 + ' / ' + imgAmount);
+      $counter.text(index + ' / ' + imgAmount);
     };
 
     $DOC.on('click', `.${next}`, slideImg);

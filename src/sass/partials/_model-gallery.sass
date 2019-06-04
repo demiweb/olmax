@@ -97,6 +97,10 @@
     margin-top: 5px
     margin-bottom: 15px
     padding: 10px
+    +lg
+      flex-direction: column
+    +md
+      flex-direction: row
     +xs
       flex-direction: column
       align-items: flex-start
@@ -104,6 +108,21 @@
         margin-bottom: 10px
   &__more-btn
     // font-size: 0
+  &__more-price
+    +sm
+      display: flex
+      align-items: flex-end
+      margin-bottom: 5px
+      .text
+        padding-left: 10px
+        text-align: left
+        position: relative
+        top: 6px
+    +r(360)
+      display: block
+      .text
+        top: auto
+        padding-left: 0
   &__title-mob
     display: none
     +xs

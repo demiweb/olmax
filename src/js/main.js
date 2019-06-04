@@ -232,7 +232,9 @@ export function credit(scroll, value,bank) {
   if(avans>=costauto*minavans/100 && costauto>avans) {
     var avans_percent=parseInt(avans/costauto*100);
     var bankarr;
-        
+
+
+
     if(bank===1) {
       bankarr=bank1;
     }
@@ -241,7 +243,7 @@ export function credit(scroll, value,bank) {
     }
     if(bankarr===3) {
       bank=bank3;
-    }
+    };
         
     bankarr.forEach(function(element) {
       if(parseFloat(element['monath_from'])<monat && parseFloat(element['monath_to'])>=monat && parseFloat(element['avans_from'])<=avans_percent && parseFloat(element['avans_to'])>=avans_percent ) {
