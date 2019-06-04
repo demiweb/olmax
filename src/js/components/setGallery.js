@@ -32,7 +32,7 @@ export default function setGallery() {
 
     $thumbs.on('click', (e) => {
       e.preventDefault();
-      const index = parseInt(e.currentTarget.getAttribute('data-index'));
+      const index = parseInt(e.currentTarget.getAttribute('data-index')) - 1;
       const $targetImg = $('.js-gallery-preview[data-index="' + index + '"]');
 
       $thumbs.removeClass(ACTIVE);
@@ -60,7 +60,7 @@ export default function setGallery() {
       const $imgActive = $wrap.find(`.js-gallery-preview.${ACTIVE}`);   
       let $imgNext;
 
-      let index = parseInt($imgActive.data('index'));
+      let index = parseInt($imgActive.data('index')) - 1;
       const imgAmount = $imgs.length;
 
       
