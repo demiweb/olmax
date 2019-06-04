@@ -70,7 +70,7 @@ $(document).ready(function() {
   $('body').on('change','#status',function() {
     filter();
   });
-  $('body').on('change','#color',function() {
+  $('body').on('change','#colors',function() {
     filter();
   });
 
@@ -157,7 +157,7 @@ function get_url(href) {
   var stan=$('#stan').val();
   var status=$('#status').val();
 
-  var color=$('#color').val();
+  var color=$('#colors').val();
 
 
   var url=href+'?autocol='+autocol;
@@ -193,7 +193,7 @@ function get_url(href) {
     url=url+'&status='+status;
   }
   if(color && color!==0) {
-    url=url+'&color='+color;
+    url=url+'&colors='+color;
   }
   if(autocol && sort ) {
     history.pushState(null, 'KNOWLEDGE BASE',url);
@@ -232,7 +232,9 @@ export function credit(scroll, value,bank) {
   if(avans>=costauto*minavans/100 && costauto>avans) {
     var avans_percent=parseInt(avans/costauto*100);
     var bankarr;
-        
+
+
+
     if(bank===1) {
       bankarr=bank1;
     }
@@ -241,7 +243,7 @@ export function credit(scroll, value,bank) {
     }
     if(bankarr===3) {
       bank=bank3;
-    }
+    };
         
     bankarr.forEach(function(element) {
       if(parseFloat(element['monath_from'])<monat && parseFloat(element['monath_to'])>=monat && parseFloat(element['avans_from'])<=avans_percent && parseFloat(element['avans_to'])>=avans_percent ) {
