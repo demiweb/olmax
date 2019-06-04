@@ -68,3 +68,4 @@ $(function() {
 
 import './main.js';
 
+// window.$ = $;

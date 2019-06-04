@@ -506,6 +506,8 @@
     height: calc(100vh - 90px) // header height
     +lg
       height: calc(100vh - 45px)
+    +sm
+      height: 50vh
     
     .home &::after
       content: ''
@@ -516,6 +518,9 @@
       left: 0
       z-index: 0
       background-color: rgba(#000, .3)
+      height: calc(100vh - 90px) // header height
+      +lg
+        height: calc(100vh - 45px)
 
   &--simple
     &::before

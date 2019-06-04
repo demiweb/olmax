@@ -130,6 +130,7 @@ export default function setSliders() {
         prevArrow: $prev,
         nextArrow: $next,
         slidesToShow: 5,
+        loop: false,
         vertical: true,
         responsive: [
           {

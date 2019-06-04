@@ -4,22 +4,23 @@ import setGallery from './components/setGallery';
 import setScrollBar from './components/setScrollBar';
 import setLazy from './components/setLazy';
 import setStickyColumn from './components/setStickyColumn';
+import $ from 'jquery';
 
 
-/* eslint-disable */
+
 $('.pagecurent').val(window.location.href );
 
-    $('.slider--consultation__wrap .btn--ttn').click(function(){
-        $('.consult').val($(this).attr('data-email'));
-        $('.consultname').val($(this).closest('.slide__name').find('.title--white').text());
-    });
+$('.slider--consultation__wrap .btn--ttn').click(function() {
+  $('.consult').val($(this).attr('data-email'));
+  $('.consultname').val($(this).closest('.slide__name').find('.title--white').text());
+});
 
 $(document).ready(function() {
   $('body').on('click','.items-top__btns a',function(e) {
     e.preventDefault();
     $('body').find('.items-top__btns a').removeClass('is-active');
     $(this).addClass('is-active');
-    if($(this).attr('data-state')=='list') {
+    if($(this).attr('data-state')==='list') {
         	$('body').find('#items_row .items__item').addClass('is-full');
         	$('body').find('#items_row .items__item .item').addClass('item--row');
     }else{
@@ -69,9 +70,9 @@ $(document).ready(function() {
   $('body').on('change','#status',function() {
     filter();
   });
-  $('body').on('change','#color',function(){
-        filter();
-    });
+  $('body').on('change','#colors',function() {
+    filter();
+  });
 
 
 
@@ -140,10 +141,10 @@ function get_url(href) {
   var sort=$('#sort').val();
   var minprice=$('.js-range-slider-min').text();
   var maxprice=$('.js-range-slider-max').text();
-  if(!minprice || minprice=='NaN') {
+  if(!minprice || minprice==='NaN') {
     var minprice=$('.car-search__slider .range-slider__slider').attr('data-min');
   }
-  if(!maxprice || maxprice=='NaN') {
+  if(!maxprice || maxprice==='NaN') {
     var maxprice=$('.car-search__slider .range-slider__slider').attr('data-max');
   }
 
@@ -156,44 +157,44 @@ function get_url(href) {
   var stan=$('#stan').val();
   var status=$('#status').val();
 
-  var color=$('#color').val();
+  var color=$('#colors').val();
 
 
   var url=href+'?autocol='+autocol;
   url=url+'&sort='+sort;
-  if(minprice && minprice!=0) {
+  if(minprice && minprice!==0) {
     url = url + '&minprice=' + minprice;
   }
-  if(maxprice && maxprice!=0) {
+  if(maxprice && maxprice!==0) {
     url = url + '&maxprice=' + maxprice;
   }
-  if(mark && mark!=0) {
+  if(mark && mark!==0) {
     url=url+'&mark='+mark;
   }
-  if(model && model!=0) {
+  if(model && model!==0) {
     url=url+'&model='+model;
   }
-  if(yahr && yahr!=0) {
+  if(yahr && yahr!==0) {
     url=url+'&yahr='+yahr;
   }
-  if(body && body!=0) {
+  if(body && body!==0) {
     url=url+'&body='+body;
   }
-  if(run && run!=0) {
+  if(run && run!==0) {
     url=url+'&run='+run;
   }
-  if(trans && trans!=0) {
+  if(trans && trans!==0) {
     url=url+'&trans='+trans;
   }
-  if(stan && stan!=0) {
+  if(stan && stan!==0) {
     url=url+'&stan='+stan;
   }
-  if(status && status!=0) {
+  if(status && status!==0) {
     url=url+'&status='+status;
   }
-    if(color && color!=0){
-        url=url+"&color="+color;
-    }
+  if(color && color!==0) {
+    url=url+'&colors='+color;
+  }
   if(autocol && sort ) {
     history.pushState(null, 'KNOWLEDGE BASE',url);
   }
@@ -223,52 +224,54 @@ export function filter() {
 }
 export function credit(scroll, value,bank) {
   $('.error_calk').css('display','none');
-    var costauto=parseInt($('.bank'+bank).find('.costauto').val());
-    var avans=parseInt($('.bank'+bank).find('.avans').val());
-    var monat=parseInt($('.bank'+bank).find('.monat').val());
-    var minavans=parseInt($('.bank'+bank).find('.min_avans').val());
-    var percent=0;
-    if(avans>=costauto*minavans/100 && costauto>avans){
-        var avans_percent=parseInt(avans/costauto*100);
-        if(bank==1){
-            bank=bank1;
-        }
-        if(bank==2){
-            bank=bank2;
-        }
-        if(bank==3){
-            bank=bank3;
-        }
+  var costauto=parseInt($('.bank'+bank).find('.costauto').val());
+  var avans=parseInt($('.bank'+bank).find('.avans').val());
+  var monat=parseInt($('.bank'+bank).find('.monat').val());
+  var minavans=parseInt($('.bank'+bank).find('.min_avans').val());
+  var percent=0;
+  if(avans>=costauto*minavans/100 && costauto>avans) {
+    var avans_percent=parseInt(avans/costauto*100);
+    var bankarr;
         
-        bank1.forEach(function(element){
-            if(parseFloat(element['monath_from'])<monat && parseFloat(element['monath_to'])>=monat && parseFloat(element['avans_from'])<=avans_percent && parseFloat(element['avans_to'])>=avans_percent ){
-                 percent=parseFloat(element['percent']);
-            }
-        });
-        var i=percent/100/12;
-        var iplus=i+1;
-        var ex=Math.pow(iplus,monat);
-        var monath_pay=(costauto-avans)*(i+(i/(ex -1)));
-
-        $('.bank'+bank).find('.monat_pay').text(parseInt(monath_pay));
-        if(costauto<316965){
-            $('.cost_registration').html(costauto*0.03+' грн.');
-        }else if(costauto>316965 && costauto<557090){
-            $('.cost_registration').html(costauto*0.04+' грн.');
-        }else{
-            $('.cost_registration').html(costauto*0.05+' грн.');
-        }
-    }else{
-        if(avans<=costauto*minavans/100){
-            $('.error_avans').css('display','block');
-            $('.error_avans span').text(costauto*minavans/100);
-        }
-        if(costauto<avans){
-            $('.error_avansbig').css('display','block');
-        }
-        $('.bank'+bank).find('.monat_pay').text(parseInt(0));
-        $('.cost_registration').html('3-5%');
+    if(bank===1) {
+      bankarr=bank1;
     }
+    if(bank===2) {
+      bankarr=bank2;
+    }
+    if(bankarr===3) {
+      bank=bank3;
+    }
+        
+    bankarr.forEach(function(element) {
+      if(parseFloat(element['monath_from'])<monat && parseFloat(element['monath_to'])>=monat && parseFloat(element['avans_from'])<=avans_percent && parseFloat(element['avans_to'])>=avans_percent ) {
+        percent=parseFloat(element['percent']);
+      }
+    });
+    var i=percent/100/12;
+    var iplus=i+1;
+    var ex=Math.pow(iplus,monat);
+    var monath_pay=(costauto-avans)*(i+(i/(ex -1)));
+
+    $('.bank'+bank).find('.monat_pay').text(parseInt(monath_pay));
+    if(costauto<316965) {
+      $('.cost_registration').html(costauto*0.03+' грн.');
+    }else if(costauto>316965 && costauto<557090) {
+      $('.cost_registration').html(costauto*0.04+' грн.');
+    }else{
+      $('.cost_registration').html(costauto*0.05+' грн.');
+    }
+  }else{
+    if(avans<=costauto*minavans/100) {
+      $('.error_avans').css('display','block');
+      $('.error_avans span').text(costauto*minavans/100);
+    }
+    if(costauto<avans) {
+      $('.error_avansbig').css('display','block');
+    }
+    $('.bank'+bank).find('.monat_pay').text(parseInt(0));
+    $('.cost_registration').html('3-5%');
+  }
 }
 
 
@@ -282,4 +285,3 @@ function reload() {
 }
 
 
-/* eslint-enable */

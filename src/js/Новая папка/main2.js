@@ -61,7 +61,7 @@ $(document).ready(function() {
 	$('body').on('change','#status',function(){
 		filter();
 	});
-	$('body').on('change','#color',function(){
+	$('body').on('change','#colors',function(){
 		filter();
 	});
 
@@ -171,7 +171,7 @@ function get_url(href){
         url=url+"&status="+status;
     }
     if(color && color!=0){
-        url=url+"&color="+color;
+        url=url+"&colors="+color;
     }
     if(autocol && sort ){
         history.pushState(null, 'KNOWLEDGE BASE',url);
@@ -210,9 +210,7 @@ function credit(scroll, value,bank){
     var percent=0;
     if(avans>=costauto*minavans/100 && costauto>avans){
         var avans_percent=parseInt(avans/costauto*100);
-        var bankarr;
-        
-         if(bank==1){
+        if(bank==1){
             bankarr=bank1;
         }
         if(bank==2){
@@ -226,6 +224,10 @@ function credit(scroll, value,bank){
                  percent=parseFloat(element['percent']);
             }
         });
+
+
+
+
         var i=percent/100/12;
         var iplus=i+1;
         var ex=Math.pow(iplus,monat);

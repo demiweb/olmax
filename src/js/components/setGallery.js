@@ -9,6 +9,8 @@ import 'lg-share';
 import 'lg-thumbnail';
 import 'lg-video';
 
+import slick from 'slick-carousel';
+
 export default function setGallery() {
   const $gallery = $('.js-gallery');
 
@@ -46,6 +48,8 @@ export default function setGallery() {
   function setPreviewImgSlider() {
     const prev = 'js-gallery-prev';
     const next = 'js-gallery-next';
+    const $thumbs = $('.js-gallery-thumb');
+    const $slider = $thumbs.closest('.js-slider');
 
     function slideImg(e) {
       e.preventDefault();
@@ -58,6 +62,8 @@ export default function setGallery() {
 
       let index = parseInt($imgActive.data('index'));
       const imgAmount = $imgs.length;
+
+      
 
       if (e.type === 'click' && $(e.currentTarget).hasClass(prev)) {
         $imgNext = $imgActive.prev();
@@ -73,8 +79,14 @@ export default function setGallery() {
 
       index = $imgNext.data('index');
 
+      $slider.slick('slickGoTo', index);
+      const $thumbTarget = $(`.js-gallery-thumb[data-index="${index}"]`);
+
       $imgs.removeClass(ACTIVE);
       $imgNext.addClass(ACTIVE);
+
+      $thumbs.removeClass(ACTIVE);
+      $thumbTarget.addClass(ACTIVE);
       $counter.text(index + 1 + ' / ' + imgAmount);
     };
 
