@@ -241,8 +241,8 @@ export function credit(scroll, value,bank) {
     if(bank===2) {
       bankarr=bank2;
     }
-    if(bankarr===3) {
-      bank=bank3;
+    if(bank===3) {
+      bankarr=bank3;
     };
         
     bankarr.forEach(function(element) {
