@@ -19,3 +19,4 @@ PageList:
 - file: about.html
 - file: contacts.html
 - file: 404.html
+- file: popup-rating.html

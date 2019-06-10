@@ -47,3 +47,74 @@
   popupIcon = true,
   title = 'Дякую за заявку!'
 ) }}
+
+{% if popupRating %}
+<div class="popup popup--md popup--rating js-popup" data-popup="rating">
+  <div class="popup__inner popup--rating__inner">
+    <a href="#" class="popup__close popup--rating__close js-popup-close"></a>
+
+    <div class="popup--rating__img js-lazy" data-background-image="img/form-rating.jpg"></div>
+
+    <div class="popup--rating__content">
+      <div class="popup--rating__top">
+        <h2 class="h2 h2--white">Оцініть наш новий сайт</h2>
+      </div>
+
+      <div class="popup--rating__form form form--rating">
+        <form>
+          <div class="form__field">
+            <!-- begin rating -->
+          <div class="rating-wrap">
+            <label>Ваша оцінка:</label>
+
+            <fieldset class="rating">
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label class="full" for="star1">
+                {{ mixins.icon('star') }}
+              </label>
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label class="full" for="star2">
+                {{ mixins.icon('star') }}
+              </label>
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label class="full" for="star3">
+                {{ mixins.icon('star') }}
+              </label>
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label class="full" for="star4">
+                {{ mixins.icon('star') }}
+              </label>
+              <input type="radio" id="star5" name="rating" value="5" />
+              <label class="full" for="star5">
+                {{ mixins.icon('star') }}
+              </label>
+            </fieldset>
+          </div>
+          <!-- end rating -->
+          </div>
+
+          <div class="form__field">
+            <div class="input input--md input--full input--gray">
+              <input type="text" placeholder="Введіть ім’я *">
+            </div>
+          </div>
+
+          <div class="form__field">
+            <div class="textarea textarea--gray textarea--lg">
+              <textarea class="js-textarea" placeholder="Побажання або комментарії"></textarea>
+            </div>
+          </div>
+
+          <div class="form__btn">
+            <button class="btn btn--full-width">
+              <span class="btn__title">Відправити оцінку</span>
+              <span class="btn__icon is-arrow"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endif %}

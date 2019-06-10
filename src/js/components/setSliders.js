@@ -122,6 +122,7 @@ export default function setSliders() {
       consultation: {
         prevArrow: $prev,
         nextArrow: $next,
+        autoplay: true,
         fade: true,
         speed: 1000,
         cssEase: 'linear'
