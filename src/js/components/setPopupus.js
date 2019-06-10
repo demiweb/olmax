@@ -7,6 +7,8 @@ export default function setPopup() {
 
   function openRatingPopup() {
     const $ratingPopup = $('.js-popup[data-popup="rating"]');
+    if (!$ratingPopup.length) return;
+    
     const DELAY = 40000;
 
     setTimeout(() => {
