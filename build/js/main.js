@@ -5,6 +5,7 @@ import setScrollBar from './components/setScrollBar';
 import setLazy from './components/setLazy';
 import setStickyColumn from './components/setStickyColumn';
 import $ from 'jquery';
+import { $DOC } from './constants';
 
 
 
@@ -275,6 +276,20 @@ export function credit(scroll, value,bank) {
     $('.cost_registration').html('3-5%');
   }
 }
+
+function addRatingValue() {
+  const rating = 'rating';
+
+  $DOC.on('change', `input[name="${rating}"]`, (e) => {
+    const $wrap = $(e.currentTarget).closest('.form');
+    const value = +e.currentTarget.value;
+    const $input = $wrap.find('.wpcf7-form').find('input[name="star"]');
+
+    $input.val(value);
+  });
+};
+
+addRatingValue();
 
 
 function reload() {
