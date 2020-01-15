@@ -1,0 +1,73 @@
+{%set
+services = [
+  {
+    title: 'Ремонт ходової будь-якої 
+складності
+'
+  },
+  {
+    title: 'Ремонт та заміна 
+високовольтної батареї
+',
+    mod: 'is-active'
+  },
+  {
+    title: 'Обслуговуючий ремонт 
+та заміна електродвигуна
+'
+  },
+  {
+    title: 'Обслуговуючий ремонт 
+та заміна радіатора
+'
+  },
+  {
+    title: 'Ремонт та заміна електропічки
+
+'
+  },
+  {
+    title: 'Програмування автомобілів
+
+'
+  },
+  {
+    title: 'Заправка та обслуговування 
+системи кондиціонування
+'
+  },
+  {
+    title: 'Ремонт та відновлення 
+електро-блоків, плат авто
+
+'
+  },
+  {
+    title: 'Ремонт та адаптація зарядних 
+пристроїв'
+  },
+  {
+    title: 'Підготовка автомобіля 
+до сертифікації'
+  },
+  {
+    title: 'Планове ТО всіх видів 
+електромобілів'
+  },
+  {
+    title: 'Комплексна діагностика авто'
+  }
+]
+%}
+
+<!-- begin aside -->
+<aside class="aside-services content-table">
+  <div class="aside-services__title content-table__title h2 h2--sm">Інші послуги </div>
+
+  <div class="aside-services__content">
+    {% for i in services %}
+    <a href="#" class="aside-services__service{% if i.mod %} {{ i.mod }}{% endif %}">{{ i.title | safe }}</a>
+    {% endfor %}
+  </div>  
+</aside>
+<!-- end aside -->

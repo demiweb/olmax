@@ -1,0 +1,127 @@
+{%set
+table = [
+  {
+    cols: [
+      { text: 'Комп’ютерна діагностика батареї та повний аналіз 
+можливостей її використання' },
+      { text: '<div class="price-sm">1 200 грн</div>' },
+      { btn: true }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Комп’ютерна діагностика коробки передач' },
+      { text: '<div class="price-sm">25 200 грн</div>' },
+      { btn: true }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Комп’ютерна діагностика усіх запобіжних систем
+та налаштування їх роботи' },
+      { text: '<div class="price-sm">1 200 грн</div>' },
+      { btn: true }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Комп’ютерна діагностика батареї та повний аналіз 
+можливостей її використання' },
+      { text: '<div class="price-sm">1 200 грн</div>' },
+      { btn: true }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Загальна комп’ютерна діагностика' },
+      { text: '<div class="price-sm">25 200 грн</div>' },
+      { btn: true }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Комп’ютерна діагностика коробки передач' },
+      { text: '<div class="price-sm">1 200 грн</div>' },
+      { btn: true }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Комп’ютерна діагностика батареї та повний аналіз 
+можливостей її використання' },
+      { text: '<div class="price-sm">25 200 грн</div>' },
+      { btn: true }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Комп’ютерна діагностика батареї та повний аналіз 
+можливостей її використання' },
+      { text: '<div class="price-sm">1 200 грн</div>' },
+      { btn: true }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Комп’ютерна діагностика батареї та повний аналіз 
+можливостей її використання' },
+      { text: '<div class="price-sm">800 грн</div>' },
+      { btn: true }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Комп’ютерна діагностика батареї та повний аналіз 
+можливостей її використання' },
+      { text: '<div class="price-sm">200 грн</div>' },
+      { btn: true }
+    ]
+  },
+  {
+    cols: [
+      { text: 'Комп’ютерна діагностика батареї та повний аналіз 
+можливостей її використання' },
+      { text: '<div class="price-sm">1 200 грн</div>' },
+      { btn: true }
+    ]
+  }
+]
+%}
+
+<!-- begin section-block -->
+<div class="section-block">
+  <div class="section__title">
+    <h2 class="h2 h2--ttu">ціни на наші послуги</h2>
+  </div>
+
+  <!-- begin content-table -->
+  <div class="content-table prices-table">
+    <div class="content-table__title prices-table__title">
+      <div class="prices-table__th prices-table__th--title">Назва послуги</div>
+      <div class="prices-table__th prices-table__th--price">Вартість</div>
+      <div class="prices-table__th prices-table__th--btn"></div>
+    </div>
+
+    <div class="prices-table__body">
+      {% for i in table %}
+      <div class="prices-table__tr">
+        {% for j in i.cols %}
+
+        <div class="prices-table__td">
+          {% if j.btn %}
+          <a href="#" class="btn btn--ttn">
+            <span class="btn__title">Записатись на сервіс</span>
+            <span class="btn__icon">{{ mixins.icon('repair-service') }}</span>
+          </a>
+          {% else %}
+            {{ j.text | safe }}          
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- end content-table -->
+</div>
+<!-- end section-block -->

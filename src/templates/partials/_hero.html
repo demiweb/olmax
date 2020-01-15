@@ -62,8 +62,18 @@
 
               <div class="hero__btn">
                 <a href="#" class="btn btn--ttn">
-                  <span class="btn__title">Замовити консультацію</span>
-                  <span class="btn__icon is-arrow"></span>
+                  <span class="btn__title">
+                    {% if hero.btn %}
+                    {{ hero.btn.title | safe }}
+                    {% else %}
+                    Замовити консультацію
+                    {% endif %}
+                  </span>
+                  <span class="btn__icon{% if not hero.btn.icon %} is-arrow{% endif %}">
+                    {% if hero.btn.icon %}
+                      {{ mixins.icon(hero.btn.icon) }}
+                    {% endif %}
+                  </span>
                 </a>
               </div> 
 

@@ -2,7 +2,7 @@
 <html class="has-preloader">
   <head>
     <meta charset="utf-8" />
-    <title>map</title>
+    <title>one-service</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
@@ -370,7 +370,7 @@
       </header>
       <!-- end header -->
       <!-- begin hero -->
-      <section class="hero  hero--lg js-lazy ">
+      <section class="hero  hero--lg js-lazy  hero--center">
         <div class="hero__block">
           <div class="container">
             <div class="row">
@@ -382,20 +382,25 @@
                       <li class="breadcrumbs__item">
                         <a href="#" class="breadcrumbs__link">Головна</a> / </li>
                       <li class="breadcrumbs__item">
-                        <a href="#" class="breadcrumbs__link is-active">Карта заправок</a>
+                        <a href="#" class="breadcrumbs__link">Сервіс електромобілей</a> / </li>
+                      <li class="breadcrumbs__item">
+                        <a href="#" class="breadcrumbs__link is-active">Комп’ютерна діагностика</a>
                       </li>
                     </ul>
                   </div>
                   <!-- end breadcrumbs -->
                 </div>
                 <div class="hero__title">
-                  <h1 class="title title--white">карта заправок</h1>
-                  <div class="hero__subttl is-ttn">Обирайте найзручнішу для вас електрозаправку</div>
+                  <h1 class="title title--white">Комп’ютерна діагностика</h1>
+                  <div class="hero__subttl is-ttn">Пройдіть повний спектр діагностики за допомогою наших комп’ютерів</div>
                 </div>
                 <div class="hero__btn">
                   <a href="#" class="btn btn--ttn">
-                    <span class="btn__title"> Замовити консультацію </span>
-                    <span class="btn__icon is-arrow">
+                    <span class="btn__title"> Записатись на сервіс </span>
+                    <span class="btn__icon">
+                      <svg class="icon icon-repair-service">
+                        <use xlink:href="img/sprite.svg#icon-repair-service"></use>
+                      </svg>
                     </span>
                   </a>
                 </div>
@@ -404,7 +409,7 @@
           </div>
         </div>
         <div class="hero__bg">
-          <video class="js-lazy" src="" data-src="video/charging_overview_hero.mp4" muted="" autoplay="" playsinline="" loop="" poster="img/hero-video-poster.jpg"></video>
+          <video class="js-lazy" src="" data-src="video/FIND-OUT-TESLA_720.mp4" muted="" autoplay="" playsinline="" loop="" poster="img/hero-video-poster.jpg"></video>
         </div>
         <!-- begin tech-info -->
         <div class="tech-info  ">
@@ -417,174 +422,334 @@
       </section>
       <!-- end hero -->
       <!-- begin section -->
-      <section class="section section--md">
-        <!-- begin map-block -->
-        <div class="map-block">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <h4 class="h4">Важливо!</h4>
-                <div class="text text--gray">Клікайте на конкретну заправку і читайте умови використання. Зверніть увагу на рейтинг заправки. Є як платні, так і безкоштовні електрозаправки</div>
-              </div>
-              <div class="col-md-6">
-                <!-- begin map-block-list -->
-                <div class="map-block-list">
-                  <ul class="map-block-list__list">
-                    <li class="map-block-list__item">
-                      <div class="map-block-list__icon"><i class="ic ic-map-green"></i></div>
-                      <strong>Charge de move -</strong> (зарядка на ходу) - прискорена електрозаправка
-                    </li>
-                    <li class="map-block-list__item">
-                      <div class="map-block-list__icon"><i class="ic ic-map-orange"></i></div>
-                      <strong>Звичайна електрозаправка -</strong> як правило, потрібно завантажити додаток або попросити надати доступ до зарядки на місці.
-                    </li>
-                  </ul>
-                </div>
-                <!-- end map-block-list -->
-              </div>
-              <div class="col-12">
-                <div class="map-block__map">
-                  <iframe src='https://www.plugshare.com/widget2.html?latitude=50.4501&longitude=30.5234&spanLat=0.28913&spanLng=0.28913outlets=[{"connector":1},{"connector":2},{"connector":3},{"connector":4},{"connector":5},{"connector":6,"power":0},{"connector":6,"power":1},{"connector":13},{"connector":7},{"connector":8},{"connector":9},{"connector":10},{"connector":11},{"connector":12},{"connector":14},{"connector":15},{"connector":16},{"connector":17}]' frameborder="0"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end map-block -->
-      </section>
-      <!-- end section -->
-      <!-- begin charge-info -->
-      <section class="charge-info">
-        <!-- begin charge-info-block -->
-        <div class="charge-info-block">
-          <div class="charge-info-block__left">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="charge-info-block__title title-underlined">
-                    <h2 class="h2">Де і як заряджати електромобіль</h2>
-                  </div>
-                  <div class="charge-info-block__text text text--gray">
-                    <p>Побутує така думка, що для зарядки електромобіля або підключається гібрида потрібні особливі і дорогі зарядні пристрої, сучасна електромережу з великим запасом потужності або інші речі, які «у нас в Україні ще немає». Все це - омана.</p>
-                    <p>Головною перевагою електричних авто є можливість заряджати їх практично в будь-якому місці, де є звичайна побутова електромережу. Більшість електромобілів пристосовані для зарядки двома способами: від розетки і від електро зарядної станції. Третій спосіб призначений для підключення до станцій швидкої зарядки на кшталт CHAdeMO.</p>
-                    <p>Наповнення тягової батареї змінним струмом вимагає наявності зарядного пристрою, вмонтованого в кожен електромобіль. Більшість електричних авто заряджаються пристроєм потужністю 3,3 кВт. Це не так вже й багато. Наприклад, потужність хорошого електрочайника може становити 2,2-2,4 кВт.</p>
-                  </div>
-                  <div class="charge-info-block__btn">
-                    <a href="#" class="btn">
-                      <span class="btn__title">замовити TEST-DRIVE</span>
-                      <span class="btn__icon">
-                        <!-- begin icon-car -->
-                        <svg version="1.1" class="icon icon-car" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48.997px" height="48.998px" viewBox="0 0 48.997 48.998" style="enable-background:new 0 0 48.997 48.998;" xml:space="preserve">
-                          <g>
-                            <path d="M45.961,18.702c-0.033-0.038-0.061-0.075-0.1-0.112l-1.717-1.657c1.424-0.323,2.957-1.516,2.957-2.74
-    c0-1.426-1.979-1.932-3.668-1.932c-1.766,0-1.971,1.21-1.992,2.065l-4.43-4.271c-0.9-0.891-2.607-1.592-3.883-1.592H24.5h-0.002
-    h-8.63c-1.275,0-2.981,0.701-3.882,1.592l-4.429,4.271c-0.023-0.855-0.228-2.065-1.992-2.065c-1.691,0-3.669,0.506-3.669,1.932
-    c0,1.224,1.534,2.417,2.958,2.74l-1.717,1.657c-0.039,0.037-0.066,0.074-0.1,0.112C1.2,20.272,0,23.184,0,25.297v6.279
-    c0,1.524,0.601,2.907,1.572,3.938v2.435c0,1.424,1.192,2.585,2.658,2.585h3.214c1.466,0,2.657-1.159,2.657-2.585v-0.623h14.397
-    H24.5h14.396v0.623c0,1.426,1.19,2.585,2.658,2.585h3.213c1.467,0,2.657-1.161,2.657-2.585v-2.435
-    c0.972-1.031,1.572-2.414,1.572-3.938v-6.279C48.998,23.184,47.798,20.272,45.961,18.702z M13.613,11.953
-    c0.623-0.519,1.712-0.913,2.255-0.913h8.63H24.5h8.63c0.543,0,1.632,0.394,2.255,0.913l5.809,5.63H24.5h-0.002H7.805L13.613,11.953
-    z M1.993,24.347c0-1.546,1.21-2.801,2.704-2.801c1.493,0,6.372,2.864,6.372,4.41s-4.879,1.188-6.372,1.188
-    C3.203,27.144,1.993,25.894,1.993,24.347z M10.102,34.573H9.587H9.072l-3.055,0.005c-0.848-0.264-1.446-0.572-1.869-0.903
-    c-0.214-0.167-0.378-0.341-0.506-0.514c-0.129-0.175-0.223-0.347-0.284-0.519c-0.38-1.074,0.405-2.061,0.405-2.061h5.214
-    l3.476,3.99L10.102,34.573L10.102,34.573z M31.996,34.575H24.5h-0.002h-7.496c-1.563,0-2.832-1.269-2.832-2.831h10.328H24.5h10.328
-    C34.828,33.308,33.559,34.575,31.996,34.575z M32.654,29.812H24.5h-0.002h-8.154c-1.7,0-3.08-2.096-3.08-4.681h11.234H24.5h11.234
-    C35.734,27.717,34.354,29.812,32.654,29.812z M45.641,32.644c-0.062,0.172-0.156,0.344-0.285,0.518
-    c-0.127,0.173-0.291,0.347-0.506,0.514c-0.422,0.331-1.021,0.641-1.869,0.903l-3.055-0.005h-0.515h-0.515h-2.353l3.478-3.99h5.213
-    C45.234,30.583,46.02,31.568,45.641,32.644z M44.301,27.144c-1.492,0-6.371,0.356-6.371-1.188s4.879-4.41,6.371-4.41
-    c1.494,0,2.704,1.255,2.704,2.801C47.005,25.892,45.795,27.144,44.301,27.144z" />
-                          </g>
-                        </svg>
-                        <!-- end icon-car -->
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="charge-info-block__right js-lazy" data-background-image="img/charge-info/2015_nissan_LEAF_11.jpg"></div>
-        </div>
-        <!-- end charge-info-block -->
+      <section class="section section--inherit">
         <div class="container">
           <div class="row">
-            <div class="col-12">
-              <div class="charge-info__title title-underlined title-underlined--green title-underlined--center">
-                <h2 class="h2 h2--sm h2--green">Зарядити будь-який електрокар можна трьома способами:</h2>
-              </div>
+            <div class="col-3">
+              <!-- begin aside -->
+              <aside class="aside-services content-table">
+                <div class="aside-services__title content-table__title h2 h2--sm">Інші послуги </div>
+                <div class="aside-services__content">
+                  <a href="#" class="aside-services__service">Ремонт ходової будь-якої складності </a>
+                  <a href="#" class="aside-services__service is-active">Ремонт та заміна високовольтної батареї </a>
+                  <a href="#" class="aside-services__service">Обслуговуючий ремонт та заміна електродвигуна </a>
+                  <a href="#" class="aside-services__service">Обслуговуючий ремонт та заміна радіатора </a>
+                  <a href="#" class="aside-services__service">Ремонт та заміна електропічки </a>
+                  <a href="#" class="aside-services__service">Програмування автомобілів </a>
+                  <a href="#" class="aside-services__service">Заправка та обслуговування системи кондиціонування </a>
+                  <a href="#" class="aside-services__service">Ремонт та відновлення електро-блоків, плат авто </a>
+                  <a href="#" class="aside-services__service">Ремонт та адаптація зарядних пристроїв</a>
+                  <a href="#" class="aside-services__service">Підготовка автомобіля до сертифікації</a>
+                  <a href="#" class="aside-services__service">Планове ТО всіх видів електромобілів</a>
+                  <a href="#" class="aside-services__service">Комплексна діагностика авто</a>
+                </div>
+              </aside>
+              <!-- end aside -->
             </div>
-          </div>
-        </div>
-        <!-- begin charge-info-block -->
-        <div class="charge-info-block">
-          <div class="charge-info-block__left">
-            <div class="container">
+            <div class="col-9">
+              <div class="section__title">
+                <h2 class="h2 h2--ttu">що включає у себе <br> комп’ютерна дігностика </h2>
+              </div>
               <div class="row">
-                <div class="col-lg-6">
-                  <div class="charge-info-block__title ">
-                    <h2 class="h2">Стандартна розетка 220В (із заземленням)</h2>
-                    <div class="text text--medium">3-4 години для повної зарядки</div>
+                <div class="col-4">
+                  <!-- begin feature -->
+                  <div class="feature-simple">
+                    <div class="feature-simple__icon"></div>
+                    <div class="feature-simple__text text--gray">Аналіз авто на наявність порушень у роботі двигуна та батареї</div>
                   </div>
-                  <div class="charge-info-block__text text text--gray">
-                    <p>Самый простой и наиболее распространенный способ зарядки электрического авто — от обычной розетки.</p>
-                    <p>Стандартная розетка бытовой электросети выдает 220/230 Вольт, 16 Ампер. Соответственно, она позволяет безопасно подключать приборы мощностью до 3,5 кВт. Электромобили вплотную вписываются в этот лимит.</p>
-                    <p>У некоторых людей возникнет вопрос: а что делать, если я живу за городом, где электросети не модернизировались со времен прокладки? Старые советские стандарты 1960-х ограничивали мощность бытовой сети отдельного помещения на уровне 5 кВт. В современных квартирах и частных домах эта планка поднята до 15 кВт. Итак, электромобиль можно заряжать даже на даче с доисторической электросетью. Время зарядки стандартного электрокара с батареей в 20-25 кВт * ч составляет 6-8 часов.</p>
-                    <p>Используется специальный кабель с защитой. Он следит за тем, чтобы не было короткого замыкания или перегрева кабеля, с помощью простых световых индикаторов информирует о процессе заряда.</p>
-                    <p>В отличие от зарядных устройств, скажем, ноутбуков, способных работать в диапазоне напряжений 100-240 Вольт, автомобильные зарядки рассчитаны или на Европу (220/230 Вольт), или на США (120 Вольт). Если вы самостоятельно приобрели электромобиль с американской зарядкой, то придется поменять ее на европейскую.</p>
+                  <!-- end feature -->
+                </div>
+                <div class="col-4">
+                  <!-- begin feature -->
+                  <div class="feature-simple">
+                    <div class="feature-simple__icon"></div>
+                    <div class="feature-simple__text text--gray">Аналіз авто на наявність порушень у роботі двигуна та батареї</div>
+                  </div>
+                  <!-- end feature -->
+                </div>
+                <div class="col-4">
+                  <!-- begin feature -->
+                  <div class="feature-simple">
+                    <div class="feature-simple__icon"></div>
+                    <div class="feature-simple__text text--gray">Аналіз авто на наявність порушень у роботі двигуна та батареї</div>
+                  </div>
+                  <!-- end feature -->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <img class="js-lazy" alt="" src="" data-src="./img/one-service/auto.png" />
+                </div>
+                <div class="col-6">
+                  <div class="text-block">
+                    <div class="text-block__title">
+                      <h3 class="h2 h2--sm">Комп’ютерна діагностика зробить вас спокійним </h3>
+                    </div>
+                    <div class="text-block__text text text--gray">Наш спеціалізований авто центр «Olmaks» пропонує Вам комплексне обслуговування електро двигуна і електроапаратури. Наші фахівці вже більше 15-ти років надають повний спектр послуг з сервісного обслуговування і ремонту електроавтомобілів і паливних систем в Києві. Продуманий системний підхід до справи дозволяє в найкоротші терміни кваліфіковано визначити несправність і якісно її усунути за прийнятною ціною.</div>
+                    <div class="text-block__btn">
+                      <a href="#" class="btn btn--ttn">
+                        <span class="btn__title">Записатись на сервіс</span>
+                        <span class="btn__icon">
+                          <svg class="icon icon-repair-service">
+                            <use xlink:href="img/sprite.svg#icon-repair-service"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="charge-info-block__right js-lazy" data-background-image="img/charge-info/MX_Destination_Home.jpg"></div>
-        </div>
-        <!-- end charge-info-block -->
-        <!-- begin charge-info-block -->
-        <div class="charge-info-block">
-          <div class="charge-info-block__left">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="charge-info-block__title ">
-                    <h2 class="h2">Домашняя или общественная зарядная станция 380В</h2>
-                    <div class="text text--medium">3-4 години для повної зарядки</div>
+              <!-- begin section-block -->
+              <div class="section-block">
+                <div class="section__title">
+                  <h2 class="h2 h2--ttu">ціни на наші послуги</h2>
+                </div>
+                <!-- begin content-table -->
+                <div class="content-table prices-table">
+                  <div class="content-table__title prices-table__title">
+                    <div class="prices-table__th prices-table__th--title">Назва послуги</div>
+                    <div class="prices-table__th prices-table__th--price">Вартість</div>
+                    <div class="prices-table__th prices-table__th--btn"></div>
                   </div>
-                  <div class="charge-info-block__text text text--gray">
-                    <p>Зарядка переменным током повышенной мощности с использованием специальной зарядной станцией. Она имеет необходимую защиту, следит за процессом заряда, а подключение машины осуществляется через встроенный в нее кабель с соответствующим конкретному электромобилю разъемом. Розетка типа Type 2 и Type 3 может быть установлена в любом месте – в доме, офисе или на улице. В зависимости от типа использованного кабеля и мощности электросети, зарядка может выдавать от 6,6 до 50 кВт. Соответственно, время «заправки» стандартного современного электрокара составит от 4 часов до нескольких минут.</p>
-                    <p>На данный момент в Украине уже установлено около 1000 публичных зарядных станций и большинство из них являются бесплатными.</p>
+                  <div class="prices-table__body">
+                    <div class="prices-table__tr">
+                      <div class="prices-table__td"> Комп’ютерна діагностика батареї та повний аналіз можливостей її використання </div>
+                      <div class="prices-table__td">
+                        <div class="price-sm">1 200 грн</div>
+                      </div>
+                      <div class="prices-table__td">
+                        <a href="#" class="btn btn--ttn">
+                          <span class="btn__title">Записатись на сервіс</span>
+                          <span class="btn__icon">
+                            <svg class="icon icon-repair-service">
+                              <use xlink:href="img/sprite.svg#icon-repair-service"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prices-table__tr">
+                      <div class="prices-table__td"> Комп’ютерна діагностика коробки передач </div>
+                      <div class="prices-table__td">
+                        <div class="price-sm">25 200 грн</div>
+                      </div>
+                      <div class="prices-table__td">
+                        <a href="#" class="btn btn--ttn">
+                          <span class="btn__title">Записатись на сервіс</span>
+                          <span class="btn__icon">
+                            <svg class="icon icon-repair-service">
+                              <use xlink:href="img/sprite.svg#icon-repair-service"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prices-table__tr">
+                      <div class="prices-table__td"> Комп’ютерна діагностика усіх запобіжних систем та налаштування їх роботи </div>
+                      <div class="prices-table__td">
+                        <div class="price-sm">1 200 грн</div>
+                      </div>
+                      <div class="prices-table__td">
+                        <a href="#" class="btn btn--ttn">
+                          <span class="btn__title">Записатись на сервіс</span>
+                          <span class="btn__icon">
+                            <svg class="icon icon-repair-service">
+                              <use xlink:href="img/sprite.svg#icon-repair-service"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prices-table__tr">
+                      <div class="prices-table__td"> Комп’ютерна діагностика батареї та повний аналіз можливостей її використання </div>
+                      <div class="prices-table__td">
+                        <div class="price-sm">1 200 грн</div>
+                      </div>
+                      <div class="prices-table__td">
+                        <a href="#" class="btn btn--ttn">
+                          <span class="btn__title">Записатись на сервіс</span>
+                          <span class="btn__icon">
+                            <svg class="icon icon-repair-service">
+                              <use xlink:href="img/sprite.svg#icon-repair-service"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prices-table__tr">
+                      <div class="prices-table__td"> Загальна комп’ютерна діагностика </div>
+                      <div class="prices-table__td">
+                        <div class="price-sm">25 200 грн</div>
+                      </div>
+                      <div class="prices-table__td">
+                        <a href="#" class="btn btn--ttn">
+                          <span class="btn__title">Записатись на сервіс</span>
+                          <span class="btn__icon">
+                            <svg class="icon icon-repair-service">
+                              <use xlink:href="img/sprite.svg#icon-repair-service"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prices-table__tr">
+                      <div class="prices-table__td"> Комп’ютерна діагностика коробки передач </div>
+                      <div class="prices-table__td">
+                        <div class="price-sm">1 200 грн</div>
+                      </div>
+                      <div class="prices-table__td">
+                        <a href="#" class="btn btn--ttn">
+                          <span class="btn__title">Записатись на сервіс</span>
+                          <span class="btn__icon">
+                            <svg class="icon icon-repair-service">
+                              <use xlink:href="img/sprite.svg#icon-repair-service"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prices-table__tr">
+                      <div class="prices-table__td"> Комп’ютерна діагностика батареї та повний аналіз можливостей її використання </div>
+                      <div class="prices-table__td">
+                        <div class="price-sm">25 200 грн</div>
+                      </div>
+                      <div class="prices-table__td">
+                        <a href="#" class="btn btn--ttn">
+                          <span class="btn__title">Записатись на сервіс</span>
+                          <span class="btn__icon">
+                            <svg class="icon icon-repair-service">
+                              <use xlink:href="img/sprite.svg#icon-repair-service"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prices-table__tr">
+                      <div class="prices-table__td"> Комп’ютерна діагностика батареї та повний аналіз можливостей її використання </div>
+                      <div class="prices-table__td">
+                        <div class="price-sm">1 200 грн</div>
+                      </div>
+                      <div class="prices-table__td">
+                        <a href="#" class="btn btn--ttn">
+                          <span class="btn__title">Записатись на сервіс</span>
+                          <span class="btn__icon">
+                            <svg class="icon icon-repair-service">
+                              <use xlink:href="img/sprite.svg#icon-repair-service"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prices-table__tr">
+                      <div class="prices-table__td"> Комп’ютерна діагностика батареї та повний аналіз можливостей її використання </div>
+                      <div class="prices-table__td">
+                        <div class="price-sm">800 грн</div>
+                      </div>
+                      <div class="prices-table__td">
+                        <a href="#" class="btn btn--ttn">
+                          <span class="btn__title">Записатись на сервіс</span>
+                          <span class="btn__icon">
+                            <svg class="icon icon-repair-service">
+                              <use xlink:href="img/sprite.svg#icon-repair-service"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prices-table__tr">
+                      <div class="prices-table__td"> Комп’ютерна діагностика батареї та повний аналіз можливостей її використання </div>
+                      <div class="prices-table__td">
+                        <div class="price-sm">200 грн</div>
+                      </div>
+                      <div class="prices-table__td">
+                        <a href="#" class="btn btn--ttn">
+                          <span class="btn__title">Записатись на сервіс</span>
+                          <span class="btn__icon">
+                            <svg class="icon icon-repair-service">
+                              <use xlink:href="img/sprite.svg#icon-repair-service"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="prices-table__tr">
+                      <div class="prices-table__td"> Комп’ютерна діагностика батареї та повний аналіз можливостей її використання </div>
+                      <div class="prices-table__td">
+                        <div class="price-sm">1 200 грн</div>
+                      </div>
+                      <div class="prices-table__td">
+                        <a href="#" class="btn btn--ttn">
+                          <span class="btn__title">Записатись на сервіс</span>
+                          <span class="btn__icon">
+                            <svg class="icon icon-repair-service">
+                              <use xlink:href="img/sprite.svg#icon-repair-service"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end content-table -->
+              </div>
+              <!-- end section-block -->
+              <div class="section-block">
+                <div class="section__title">
+                  <h2 class="h2 h2--ttu">Етапи сервісу</h2>
+                </div>
+                <div class="section__subttl">Передня підвіска з парними важелями доповнена підвіскою ззаду. Також автомобіль має адаптивну підвіску Adaptive Dynamics, підлаштовуватися жорсткість під дорожні умови.</div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="feature-simple feature-simple--lg">
+                      <div class="feature-simple__icon"></div>
+                      <div class="feature-simple__title h2 h2--sm">Замовте консультацію</div>
+                      <div class="feature-simple__text text--gray">Але не одним лише фірмовим електромотором і новаторською конструкцією LifeDrive може похвалитися «Еко-трійка». Конструкція авто. містить відмінну систему відшкодування енергії під час руху,</div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="feature-simple feature-simple--lg">
+                      <div class="feature-simple__icon"></div>
+                      <div class="feature-simple__title h2 h2--sm">Оберіть послугу</div>
+                      <div class="feature-simple__text text--gray">Але не одним лише фірмовим електромотором і новаторською конструкцією LifeDrive може похвалитися «Еко-трійка». Конструкція авто. містить відмінну систему відшкодування енергії під час руху,</div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="feature-simple feature-simple--lg">
+                      <div class="feature-simple__icon"></div>
+                      <div class="feature-simple__title h2 h2--sm">Завітайте до нас </div>
+                      <div class="feature-simple__text text--gray">Але не одним лише фірмовим електромотором і новаторською конструкцією LifeDrive може похвалитися «Еко-трійка». Конструкція авто. містить відмінну систему відшкодування енергії під час руху,</div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="feature-simple feature-simple--lg">
+                      <div class="feature-simple__icon"></div>
+                      <div class="feature-simple__title h2 h2--sm">Чекайте на вдалий результат!</div>
+                      <div class="feature-simple__text text--gray">Але не одним лише фірмовим електромотором і новаторською конструкцією LifeDrive може похвалитися «Еко-трійка». Конструкція авто. містить відмінну систему відшкодування енергії під час руху,</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="charge-info-block__right js-lazy" data-background-image="img/charge-info/car-3.jpg"></div>
-        </div>
-        <!-- end charge-info-block -->
-        <!-- begin charge-info-block -->
-        <div class="charge-info-block">
-          <div class="charge-info-block__left">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="charge-info-block__title ">
-                    <h2 class="h2">Ускоренные зарядки CHADeMo или Supercharger</h2>
-                    <div class="text text--medium">30-60 минут 80% зарядки</div>
+              <!-- begin faq -->
+              <div class="faq-block">
+                <div class="faq-block__title">
+                  <h2 class="h2">часто запитують</h2>
+                </div>
+                <div class="faq-block__subttl">Передня підвіска з парними важелями доповнена підвіскою ззаду. Також автомобіль має адаптивну підвіску Adaptive Dynamics, підлаштовуватися жорсткість під дорожні умови.</div>
+                <div class="faq-block__questions">
+                  <!-- begin faq -->
+                  <div class="faq">
                   </div>
-                  <div class="charge-info-block__text text text--gray">
-                    <p>Cамый быстрый на данный момент способ зарядки электромобиля. В отличие от предыдущих вариантов, здесь используется постоянный ток. Популярный японский стандарт зарядной станции CHAdeMO выдает до 62,5 кВт энергии, что позволяет зарядить аккумулятор стандартного электрокара за 20-30 мин. Tesla Motors оснащает свои автомобили большими по емкости батареями (до 100 кВт * ч) и использует свой способ быстрой зарядки. Фирменные станции Tesla Supercharger выдают 135 кВт электроэнергии.</p>
-                    <p>Такое зарядное устройство для электромобиля имеет свою особенность: по факту аккумулятор быстро наполняется лишь на 80%, остальные 20% емкости «заливаются» очень медленно. Это сделано для того, чтобы увеличить срок службы тяговой батареи.</p>
-                  </div>
+                  <!-- end faq -->
                 </div>
               </div>
+              <!-- end faq -->
             </div>
           </div>
-          <div class="charge-info-block__right js-lazy" data-background-image="img/charge-info/electric-car-fast-charging-station-at-bp-in-metrolina-area-of-charlotte-nc_100567160_h.jpg"></div>
         </div>
-        <!-- end charge-info-block -->
       </section>
-      <!-- end charge-info -->
+      <!-- end section -->
       <!-- begin brand-nav -->
-      <div class="brand-nav ">
+      <div class="brand-nav wow fadeIn">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -620,10 +785,10 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-3">
-              <div class="footer__title ">
+              <div class="footer__title wow fadeInUp">
                 <h3 class="h3">Інформація для покупців</h3>
               </div>
-              <div class="footer__nav ">
+              <div class="footer__nav wow fadeInUp" data-wow-delay="1s">
                 <!-- begin nav -->
                 <div class="nav nav--footer">
                   <ul class="nav__list nav--footer__list">
@@ -639,12 +804,12 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <div class="footer__title ">
+              <div class="footer__title wow fadeInUp">
                 <h3 class="h3">б/у електромобілі в наявності</h3>
               </div>
               <div class="row">
                 <div class="col-lg-4 col-4">
-                  <div class="footer__nav ">
+                  <div class="footer__nav wow fadeInUp" data-wow-delay="1s">
                     <!-- begin nav -->
                     <div class="nav nav--footer">
                       <ul class="nav__list nav--footer__list">
@@ -660,7 +825,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-4">
-                  <div class="footer__nav ">
+                  <div class="footer__nav wow fadeInUp" data-wow-delay="1s">
                     <!-- begin nav -->
                     <div class="nav nav--footer">
                       <ul class="nav__list nav--footer__list">
@@ -676,7 +841,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-4">
-                  <div class="footer__nav ">
+                  <div class="footer__nav wow fadeInUp" data-wow-delay="1s">
                     <!-- begin nav -->
                     <div class="nav nav--footer">
                       <ul class="nav__list nav--footer__list">
@@ -694,10 +859,10 @@
               </div>
             </div>
             <div class="col-lg-3">
-              <div class="footer__title ">
+              <div class="footer__title wow fadeInUp">
                 <h3 class="h3">завжди на зв’язку</h3>
               </div>
-              <div class="footer__contacts ">
+              <div class="footer__contacts wow fadeInUp" data-wow-delay="1s">
                 <!-- begin footer-contacts -->
                 <div class="footer-contacts">
                   <div class="footer-contacts__phone"><a href="tel:+380687767700">(068) 776-77-00</a></div>

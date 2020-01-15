@@ -1,0 +1,131 @@
+{%set
+descr = [
+  {
+    icon: '',
+    text: 'Аналіз авто на наявність порушень 
+у роботі двигуна та батареї'
+  },
+  {
+    icon: '',
+    text: 'Аналіз авто на наявність порушень 
+у роботі двигуна та батареї'
+  },
+  {
+    icon: '',
+    text: 'Аналіз авто на наявність порушень 
+у роботі двигуна та батареї'
+  }
+]
+%}
+
+{%set
+steps = [
+  {
+    icon: '',
+    title: 'Замовте консультацію',
+    text: 'Але не одним лише фірмовим електромотором 
+і новаторською конструкцією LifeDrive може похвалитися «Еко-трійка». Конструкція авто. містить відмінну систему відшкодування енергії під час руху,'
+  },
+  {
+    icon: '',
+    title: 'Оберіть послугу',
+    text: 'Але не одним лише фірмовим електромотором 
+і новаторською конструкцією LifeDrive може похвалитися «Еко-трійка». Конструкція авто. містить відмінну систему відшкодування енергії під час руху,'
+  },
+  {
+    icon: '',
+    title: 'Завітайте до нас ',
+    text: 'Але не одним лише фірмовим електромотором 
+і новаторською конструкцією LifeDrive може похвалитися «Еко-трійка». Конструкція авто. містить відмінну систему відшкодування енергії під час руху,'
+  },
+  {
+    icon: '',
+    title: 'Чекайте на вдалий результат!',
+    text: 'Але не одним лише фірмовим електромотором 
+і новаторською конструкцією LifeDrive може похвалитися «Еко-трійка». Конструкція авто. містить відмінну систему відшкодування енергії під час руху,'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--inherit">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        {% include "partials/_services-aside.html" %}
+      </div>
+
+      <div class="col-9">
+        <div class="section__title">
+          <h2 class="h2 h2--ttu">що включає у себе <br> комп’ютерна дігностика </h2>
+        </div>
+
+        <div class="row">
+          {% for i in descr %}
+          <div class="col-4">
+            <!-- begin feature -->
+            <div class="feature-simple">
+              <div class="feature-simple__icon"></div>
+              <div class="feature-simple__text text--gray">{{ i.text | safe }}</div>
+            </div>
+            <!-- end feature -->
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <img class="js-lazy" alt="" src="" data-src="./img/one-service/auto.png"/>
+          </div>
+
+          <div class="col-6">
+            <div class="text-block">
+              <div class="text-block__title">
+                <h3 class="h2 h2--sm">Комп’ютерна діагностика зробить вас спокійним </h3>
+              </div>
+
+              <div class="text-block__text text text--gray">Наш спеціалізований авто центр «Olmaks» пропонує Вам комплексне обслуговування електро двигуна і електроапаратури. Наші фахівці вже більше 15-ти років надають повний спектр послуг з сервісного обслуговування і ремонту електроавтомобілів і паливних систем в Києві. Продуманий системний підхід до справи дозволяє в найкоротші терміни кваліфіковано визначити несправність і якісно її усунути за прийнятною ціною.</div>
+
+              <div class="text-block__btn">
+                <a href="#" class="btn btn--ttn">
+                  <span class="btn__title">Записатись на сервіс</span>
+                  <span class="btn__icon">{{ mixins.icon('repair-service') }}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div> 
+
+        {% include "partials/_service-prices.html" %}
+
+        <div class="section-block">
+          <div class="section__title">
+            <h2 class="h2 h2--ttu">Етапи сервісу</h2>
+          </div>
+
+          <div class="section__subttl">Передня підвіска з парними важелями доповнена підвіскою ззаду. 
+Також автомобіль має адаптивну підвіску Adaptive Dynamics, підлаштовуватися жорсткість під дорожні умови.</div>
+
+          <div class="row">
+            {% for i in steps %}
+            <div class="col-6">
+              <div class="feature-simple feature-simple--lg">
+                <div class="feature-simple__icon"></div>
+
+                <div class="feature-simple__title h2 h2--sm">{{ i.title | safe }}</div>
+
+                <div class="feature-simple__text text--gray">{{ i.text | safe }}</div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        {% include "partials/_faq.html" %}
+      </div>
+    </div>
+
+
+  </div>
+</section>
+<!-- end section -->

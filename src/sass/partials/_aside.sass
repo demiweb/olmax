@@ -64,3 +64,32 @@
   display: none
   +md
     display: block
+
+.aside-services
+  $this: &
+  
+  &__title
+    text-align: center
+  &__service
+    display: flex
+    align-items: center
+    position: relative
+    min-height: 65px
+    padding: 12px 15px
+    padding-right: 30px
+    border-bottom: 1px solid $c-border
+    transition: color .3s, background-color .3s
+    +hover
+      @extend #{$this}__service.is-active
+    
+    &::before
+      content: ''
+      +icon-arrow(14, 14, 1, currentColor, 45)
+      display: block
+      position: absolute
+      top: 50%
+      right: 15px
+      transform: translate(0, -50%) rotate(225deg)
+    &.is-active
+      color: #fff
+      background-color: $c-accent
