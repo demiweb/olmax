@@ -1,5 +1,4 @@
 .features
-
   &__top
     background-color: #f7f7f7
     padding-top: 40px
@@ -60,3 +59,44 @@
   &__text
     padding-left: 35px
     padding-right: 35px
+
+.feature-simple
+  $this: &
+  text-align: center
+  height: calc(100% - 30px)
+  margin-bottom: 30px
+  &__icon
+    color: $c-accent    
+    width: 60px
+    height: 60px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 10px
+    border-bottom: 1px solid $c-accent
+    display: flex
+    align-items: center
+    justify-content: center
+    .icon
+      fill: currentColor
+      font-size: 40px
+  &__title
+    margin-bottom: 10px
+
+  &--lg
+    #{$this}__icon
+      border-radius: 50%
+      border: 1px solid  $c-border
+      width: 94px
+      height: 94px
+  &--hor
+    display: flex
+    text-align: left
+    align-items: center
+    margin-bottom: 15px
+    height: auto
+    #{$this}__icon
+      margin-left: 0
+      margin-right: 20px
+      +md
+        margin-right: 10px
+

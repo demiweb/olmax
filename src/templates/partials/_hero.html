@@ -81,9 +81,14 @@
           </div>
         </div>
       </div>
-
-      <div class="hero__bg">
-        <video class="js-lazy" src="" data-src="{{ hero.video }}" muted="" autoplay="" playsinline="" loop="" poster="{{ hero.poster }}"></video>
+  
+      <div
+        class="hero__bg{% if hero.bg %} js-lazy{% endif %}"
+        {% if hero.bg %}data-background-image="./img/hero/{{ hero.bg }}"{% endif %}
+      >
+        {% if hero.video %}
+          <video class="js-lazy" src="" data-src="{{ hero.video }}" muted="" autoplay="" playsinline="" loop="" poster="{{ hero.poster }}"></video>
+        {% endif %}
       </div>
       
       {%set techInfo = hero.techInfo %}

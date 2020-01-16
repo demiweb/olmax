@@ -1,0 +1,138 @@
+{%set
+services = [
+  {
+    img: '0_03.jpg',
+    title: 'Комп’ютерна діагностика
+',
+    text: ''
+  },
+  {
+    img: '0_05.jpg',
+    title: 'Обслуговуючий ремонт та заміна електродвигуна
+',
+    text: ''
+  },
+  {
+    img: '0_09.jpg',
+    title: 'Ремонт ходової будь-якої складності
+',
+    text: ''
+  },
+  {
+    img: '0_10.jpg',
+    title: 'Ремонт та заміна високовольтної батареї
+
+',
+    text: ''
+  },
+  {
+    img: '0_13.jpg',
+    title: 'Обслуговуючий ремонт та заміна радіатора
+
+',
+    text: ''
+  },
+  {
+    img: '0_14.jpg',
+    title: 'Ремонт та заміна електропічки
+
+',
+    text: ''
+  },
+  {
+    img: '0_17.jpg',
+    title: 'Програмування автомобілів:
+
+',
+    text: ''
+  },
+  {
+    img: '0_18.jpg',
+    title: 'Заправка та обслуговування системи кондиціонування
+
+
+',
+    text: ''
+  },
+  {
+    img: '0_21.jpg',
+    title: 'Ремонт та відновлення електро-блоків, плат автомобіля
+
+
+',
+    text: ''
+  },
+  {
+    img: '0_22.jpg',
+    title: 'Ремонт та адаптація зарядних пристроїв
+
+
+',
+    text: ''
+  },
+  {
+    img: '0_25.jpg',
+    title: 'Підготовка авто до сертифікації
+
+
+
+',
+    text: ''
+  },
+  {
+    img: '0_26.jpg',
+    title: 'Планове ТО всіх видів електромобілів
+
+
+',
+    text: ''
+  },
+  {
+    img: '0_30.jpg',
+    title: 'Комплексна діагностика авто:
+
+
+
+',
+    text: ''
+  }
+]
+%}  
+
+<!-- begin section -->
+<section class="section section--inherit">
+  <div class="container">
+    <h2 class="section__title title">послуги нашого сервісу</h2>
+
+    <div class="row justify-content-center">
+      {% for i in services %}
+      <div class="col-md-6">
+        <!-- begin service-card -->
+        <div class="service-card">
+          <div class="service-card__img js-lazy" data-background-image="./img/service-2/services/{{ i.img }}"></div>
+
+          <div class="service-card__content">
+            <h3 class="service-card__title h2 h2--ttn title-underlined">{{ i.title | safe }}</h3>
+
+            <div class="service-card__text text text--gray">Але не одним лише фірмовим електромотором і новаторською конструкцією LifeDrive може похвалитися «Еко-трійка». Конструкція авто містить відмінну систему відшкодування енергії під час руху,</div>
+
+            <div class="service-card__btns">
+              <a href="#" class="service-card__btn btn btn--ttn">
+                <span class="btn__title">Записатись на сервіс</span>
+                <span class="btn__icon">{{ mixins.icon('repair-service') }}</span>
+              </a>
+
+              <a href="#" class="service-card__btn btn-arrow">
+                <span class="btn-arrow__title">Детальніше про послугу</span>
+                <span class="btn-arrow__arrow"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- end service-card -->
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- end section -->

@@ -1,3 +1,5 @@
+
+
 .slider
   &__wrap
     position: relative
@@ -363,6 +365,41 @@
         +icon-arrow(15, 15, 2, #fff, 225)
         left: 16px
 
+  &--testimonials
+    .slick-track
+      display: flex
+    .slick-slide
+      float: none
+      height: auto
+      > div, .slide, .row
+        height: 100%
+    &__wrap
+      &::before
+        content: ''
+        width: 50vw
+        right: 100%
+        top: 0
+        bottom: 0
+        position: absolute
+        background-color: #f7f7f7
+    &__controls
+      position: absolute
+      bottom: 40px
+      left: 40%
+      z-index: 2
+      +lg
+        left: 40%
+        bottom: 20px
+      +md
+        left: 0
+        bottom: 10px
+
+    &__prev, &__next
+      transform: rotate(0)
+      +lg
+        display: inline-block !important
+
+
   &--partners
     .slide
       &__img
@@ -372,6 +409,11 @@
         display: inline-block
         vertical-align: middle
         max-width: 100%
+    &__wrap
+      .prev-md, .next-md
+        transform: rotate(0deg) translate(0, -50%)
+        position: absolute
+        top: 50%
     &__prev,
     &__next
       background-color: transparent      
@@ -387,6 +429,29 @@
     &__next
       right: -90px
       +icon-arrow(15, 15, 2, $c-text, 225)
+      +xl
+        right: 0
+
+  &--spec
+    &__wrap
+      .slide
+        padding-left: 15px
+        padding-right: 15px
+    &__prev,
+    &__next
+      background-color: transparent 
+      position: absolute
+      top: 50%
+      +lg
+        display: inline-block !important   
+    &__prev
+      left: -90px
+      +icon-arrow(15, 15, 2, #fff, 45)
+      +xl
+        left: 0
+    &__next
+      right: -90px
+      +icon-arrow(15, 15, 2, #fff, 225)
       +xl
         right: 0
 
@@ -591,3 +656,28 @@
       padding-top: 75%
     +sm
       padding-top: 50%
+
+.prev-md, .next-md
+  width: 38px
+  height: 38px
+  background-color: rgba(#000, .5)
+  border: none
+  
+  
+  &::before
+    content: ''
+    display: inline-block
+    position: absolute
+    top: 11px
+
+.prev-md
+  right: 0
+  // transform: translate(-100%, 0) rotate(0)
+  &::before
+    +icon-arrow(15, 15, 2, #fff, 45)
+    left: 14px
+.next-md
+  right: 0
+  &::before
+    +icon-arrow(15, 15, 2, #fff, 225)        
+    left: 8px

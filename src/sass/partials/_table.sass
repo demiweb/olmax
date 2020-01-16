@@ -90,3 +90,67 @@
         width: 34%
     &__th-forth
     &__th-fifth
+
+.content-table
+  background-color: #fff
+  box-shadow: 0px 0px 6px 0px rgba(0, 1, 1, 0.19)
+  &__title
+    background-color: #f6f6f6
+    padding: 12px 15px
+    border-bottom: 1px solid  $c-border
+
+.prices-table
+  $this: &
+  text-align: left
+  
+  &__title
+    display: flex
+    align-items: center
+    padding-left: 25px
+    +lg
+      padding-left: 15px
+  &__th
+    +bold
+    text-transform: uppercase
+    padding-right: 15px
+    &--title
+      width: percentage(430/830)
+      +lg
+        width: 80%
+      +xs
+        width: 70%
+    &--price
+      width: percentage(140/830)
+      +lg
+        width: 20%
+      +xs
+        width: 30%
+    &--btn
+      width: percentage((830 - 430 - 140)/830)
+      padding-right: 0
+      +lg
+        display: none
+  &__tr
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    padding: 12px 15px
+    padding-left: 25px
+    border-bottom: 1px solid  $c-border
+    +lg
+      padding-left: 15px
+  &__td
+    padding-right: 15px
+    &:nth-child(1)
+      @extend #{$this}__th--title
+      padding-right: 10%
+      +lg
+        padding-right: 15px
+    &:nth-child(2)
+      @extend #{$this}__th--price
+    &:nth-child(3)
+      @extend #{$this}__th--btn
+      +lg
+        display: block
+        width: 100%
+        padding-top: 15px

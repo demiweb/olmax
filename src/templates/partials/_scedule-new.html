@@ -1,0 +1,65 @@
+{%set
+  scedule = [
+    { title: 'Понеділок:', text: '09 - 18:00' },
+    { title: 'Вівторок:', text: '09 - 18:00' },
+    { title: 'Середа:', text: '09 - 18:00' },
+    { title: 'Четвер:', text: '09 - 18:00' },
+    { title: 'Пятниця:', text: '09 - 18:00' },
+    { title: 'Суббота, Неділя:', text: 'Вихідний' }
+  ]
+%}
+
+<!-- begin s-scedule -->
+<section class="section section--inherit s-scedule js-lazy" data-background-image="./img/service-2/bg-scedule.jpg">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-7">
+        <h2 class="section__title has-mb-sm is-left title-underlined title">завітайте до нас на СТО</h2>
+
+        <div class="section__subttl is-left has-mb-md text">Передня підвіска з парними важелями доповнена підвіскою ззаду. Також автомобіль має адаптивну підвіску Adaptive Dynamics, підлаштовуватися жорсткість під дорожні умови. Звуконепроникність забезпечують.</div>
+
+        <!-- begin scedule -->
+        <div class="scedule scedule--hor">         
+
+          <div class="scedule__scedule">
+            <div class="scedule__title">
+              <h4 class="h4 h4--medium">Графік роботи СТО:</h4>
+            </div>
+
+            <!-- begin scedule-list -->
+            <div class="scedule-list">
+              <dl class="scedule-list__list">
+                {% for i in scedule %}
+                <dt class="scedule-list__title">{{ i.title }}</dt>
+                <dd class="scedule-list__text">{{ i.text }}</dd>
+                {% endfor %}                
+              </dl>
+            </div>
+            <!-- end scedule-list -->
+          </div>
+
+          <div class="scedule__contacts">        
+            <div class="scedule__btn">
+              <a href="#" class="btn btn--ttn">
+                <span class="btn__title">Записатись на сервіс</span>
+                <span class="btn__icon">{{ mixins.icon('repair-service') }}</span>
+              </a>
+            </div>
+
+            <a href="tel:+380687767700" class="scedule__phone">{{ mixins.icon('telephone') }} +38 (068) 776-77-00</a>
+          </div>
+
+
+        </div>
+        <!-- end scedule -->
+      </div>
+
+      <div class="col-md-5">
+        <img class="section__img js-lazy" alt="" src="" data-src="./img/service-2/25.png"/>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<!-- end s-scedule -->

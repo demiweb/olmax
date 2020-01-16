@@ -1,0 +1,42 @@
+{%set
+slider = [
+  { img: 'BMW.png' },
+  { img: 'Chevrolet.png' },
+  { img: 'Ford.png' },
+  { img: 'Tesla.png' },
+  { img: 'BMW.png' },
+  { img: 'Chevrolet.png' },
+  { img: 'Ford.png' },
+  { img: 'Tesla.png' }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--xl section--gray{% if animation %} wow fadeIn{% endif %}">
+  <div class="container">
+    <h2 class="section__title title">Які марки авто ми обслуговуємо</h2>
+
+    <!-- begin partners-slider -->
+    <div class="partners-slider">
+      <!-- begin slider -->
+      <div class="slider__wrap slider--partners__wrap">
+        <div class="slider slider--partners js-slider" data-slider="brands_logos">
+          {% for i in slider %}
+          <div class="slide">
+            <div class="slide__img">
+              <img class="js-lazy" src="" data-src="img/brands-logos/{{ i.img }}" alt="">
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <button class="slider__prev slider--partners__prev prev-md js-prev"></button>
+        <button class="slider__next slider--partners__next next-md js-next"></button>
+      </div>
+      <!-- end slider -->
+    </div>
+    <!-- end partners-slider -->
+
+  </div>  
+</section>
+<!-- end section -->

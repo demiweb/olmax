@@ -9,7 +9,7 @@ services = [
     title: 'Ремонт та заміна 
 високовольтної батареї
 ',
-    mod: 'is-active'
+    mod: ''
   },
   {
     title: 'Обслуговуючий ремонт 
@@ -60,8 +60,15 @@ services = [
 ]
 %}
 
+<div class="aside-show-btn">
+  <a href="#" class="btn btn--ttn btn--icon-full js-aside-toggle">
+    <span class="btn__title">Інші послуги</span>
+    <span class="btn__icon is-arrow is-arrow-down"></span>
+  </a>
+</div>
+
 <!-- begin aside -->
-<aside class="aside-services content-table">
+<aside class="aside-services content-table js-aside">
   <div class="aside-services__title content-table__title h2 h2--sm">Інші послуги </div>
 
   <div class="aside-services__content">

@@ -51,56 +51,58 @@ steps = [
 <section class="section section--inherit">
   <div class="container">
     <div class="row">
-      <div class="col-3">
+      <div class="col-xl-3 col-lg-4">
         {% include "partials/_services-aside.html" %}
       </div>
 
-      <div class="col-9">
-        <div class="section__title">
-          <h2 class="h2 h2--ttu">що включає у себе <br> комп’ютерна дігностика </h2>
-        </div>
-
-        <div class="row">
-          {% for i in descr %}
-          <div class="col-4">
-            <!-- begin feature -->
-            <div class="feature-simple">
-              <div class="feature-simple__icon"></div>
-              <div class="feature-simple__text text--gray">{{ i.text | safe }}</div>
-            </div>
-            <!-- end feature -->
-          </div>
-          {% endfor %}
-        </div>
-
-        <div class="row">
-          <div class="col-6">
-            <img class="js-lazy" alt="" src="" data-src="./img/one-service/auto.png"/>
+      <div class="col-xl-9 col-lg-8">
+        <div class="section__block">
+          <div class="section__title">
+            <h2 class="h2 h2--ttu">що включає у себе <br> комп’ютерна дігностика </h2>
           </div>
 
-          <div class="col-6">
-            <div class="text-block">
-              <div class="text-block__title">
-                <h3 class="h2 h2--sm">Комп’ютерна діагностика зробить вас спокійним </h3>
+          <div class="row">
+            {% for i in descr %}
+            <div class="col-sm-4">
+              <!-- begin feature -->
+              <div class="feature-simple">
+                <div class="feature-simple__icon">{{ mixins.icon('research') }}</div>
+                <div class="feature-simple__text text--gray">{{ i.text | safe }}</div>
               </div>
+              <!-- end feature -->
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        
+        <div class="section__block">
+          <div class="row align-items-center">
+            <div class="col-sm-6">
+              <img class="section__img js-lazy" alt="" src="" data-src="./img/one-service/auto.png"/>
+            </div>
 
-              <div class="text-block__text text text--gray">Наш спеціалізований авто центр «Olmaks» пропонує Вам комплексне обслуговування електро двигуна і електроапаратури. Наші фахівці вже більше 15-ти років надають повний спектр послуг з сервісного обслуговування і ремонту електроавтомобілів і паливних систем в Києві. Продуманий системний підхід до справи дозволяє в найкоротші терміни кваліфіковано визначити несправність і якісно її усунути за прийнятною ціною.</div>
+            <div class="col-sm-6">
+              <div class="text-block">
+                <h3 class="text-block__title title-underlined h2 h2--sm h2--ttn">Комп’ютерна діагностика зробить вас спокійним </h3>
 
-              <div class="text-block__btn">
-                <a href="#" class="btn btn--ttn">
-                  <span class="btn__title">Записатись на сервіс</span>
-                  <span class="btn__icon">{{ mixins.icon('repair-service') }}</span>
-                </a>
+                <div class="text-block__text text text--gray">Наш спеціалізований авто центр «Olmaks» пропонує Вам комплексне обслуговування електро двигуна і електроапаратури. Наші фахівці вже більше 15-ти років надають повний спектр послуг з сервісного обслуговування і ремонту електроавтомобілів і паливних систем в Києві. Продуманий системний підхід до справи дозволяє в найкоротші терміни кваліфіковано визначити несправність і якісно її усунути за прийнятною ціною.</div>
+
+                <div class="text-block__btn">
+                  <a href="#" class="btn btn--ttn">
+                    <span class="btn__title">Записатись на сервіс</span>
+                    <span class="btn__icon">{{ mixins.icon('repair-service') }}</span>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        </div> 
+          </div> 
+        </div>
 
         {% include "partials/_service-prices.html" %}
 
-        <div class="section-block">
-          <div class="section__title">
-            <h2 class="h2 h2--ttu">Етапи сервісу</h2>
+        <div class="section__block">
+          <div class="section__title has-mb-sm">
+            <h2 class="h2 h2--ttu title-underlined title-underlined--center">Етапи сервісу</h2>
           </div>
 
           <div class="section__subttl">Передня підвіска з парними важелями доповнена підвіскою ззаду. 
@@ -108,11 +110,11 @@ steps = [
 
           <div class="row">
             {% for i in steps %}
-            <div class="col-6">
+            <div class="col-sm-6">
               <div class="feature-simple feature-simple--lg">
-                <div class="feature-simple__icon"></div>
+                <div class="feature-simple__icon">{{ mixins.icon('research') }}</div>
 
-                <div class="feature-simple__title h2 h2--sm">{{ i.title | safe }}</div>
+                <div class="feature-simple__title h2 h2--sm title-underlined title-underlined--center">{{ i.title | safe }}</div>
 
                 <div class="feature-simple__text text--gray">{{ i.text | safe }}</div>
               </div>

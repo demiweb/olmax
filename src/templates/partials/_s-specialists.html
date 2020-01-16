@@ -1,0 +1,39 @@
+<!-- begin s-specialists -->
+<section class="s-specialists section--xl js-lazy" data-background-image="./img/service-2/587.jpg">
+  <div class="container">
+    <h2 class="s-specialists__title section__title title has-mb-sm title-underlined title-underlined--center title--white">Наші спеціалісти</h2>
+
+    <div class="s-specialists__subttl section__subttl">Варто тільки завести безшумний електродвигун, щоб відчути комфорт
+      і сучасність такої машини, яка абсолютно нічим не поступається 
+    своїм бензиновим аналогам. </div>
+
+    <!-- begin slider -->
+    <div class="slider__wrap slider--spec__wrap">
+      <div class="slider slider--spec js-slider" data-slider="specialists">
+        {% for i in range(0, 6) %}
+        <div class="slide">
+          <!-- begin specialist -->
+          <div class="specialist">
+            <div class="specialist__img js-lazy" data-background-image="./img/service-2/31.jpg"></div>
+
+            <div class="specialist__top">
+              <div class="specialist__title h4 h4--lg h4--ttn h4--white">Максим Машталір</div>
+
+              <div class="specialist__subttl">Власник сервісу</div>
+            </div>
+
+            <div class="specialist__exper">Досвід: 15 років</div>
+            
+          </div>
+          <!-- end specialist -->
+        </div>
+        {% endfor %}
+      </div>
+
+      <button class="slider__prev slider--spec__prev js-prev"></button>
+      <button class="slider__next slider--spec__next js-next"></button>
+    </div>
+    <!-- end slider -->
+  </div>
+</section>
+<!-- end s-specialists -->

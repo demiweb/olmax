@@ -425,13 +425,19 @@
       <section class="section section--inherit">
         <div class="container">
           <div class="row">
-            <div class="col-3">
+            <div class="col-xl-3 col-lg-4">
+              <div class="aside-show-btn">
+                <a href="#" class="btn btn--ttn btn--icon-full js-aside-toggle">
+                  <span class="btn__title">Інші послуги</span>
+                  <span class="btn__icon is-arrow is-arrow-down"></span>
+                </a>
+              </div>
               <!-- begin aside -->
-              <aside class="aside-services content-table">
+              <aside class="aside-services content-table js-aside">
                 <div class="aside-services__title content-table__title h2 h2--sm">Інші послуги </div>
                 <div class="aside-services__content">
                   <a href="#" class="aside-services__service">Ремонт ходової будь-якої складності </a>
-                  <a href="#" class="aside-services__service is-active">Ремонт та заміна високовольтної батареї </a>
+                  <a href="#" class="aside-services__service">Ремонт та заміна високовольтної батареї </a>
                   <a href="#" class="aside-services__service">Обслуговуючий ремонт та заміна електродвигуна </a>
                   <a href="#" class="aside-services__service">Обслуговуючий ремонт та заміна радіатора </a>
                   <a href="#" class="aside-services__service">Ремонт та заміна електропічки </a>
@@ -446,61 +452,75 @@
               </aside>
               <!-- end aside -->
             </div>
-            <div class="col-9">
-              <div class="section__title">
-                <h2 class="h2 h2--ttu">що включає у себе <br> комп’ютерна дігностика </h2>
-              </div>
-              <div class="row">
-                <div class="col-4">
-                  <!-- begin feature -->
-                  <div class="feature-simple">
-                    <div class="feature-simple__icon"></div>
-                    <div class="feature-simple__text text--gray">Аналіз авто на наявність порушень у роботі двигуна та батареї</div>
-                  </div>
-                  <!-- end feature -->
+            <div class="col-xl-9 col-lg-8">
+              <div class="section__block">
+                <div class="section__title">
+                  <h2 class="h2 h2--ttu">що включає у себе <br> комп’ютерна дігностика </h2>
                 </div>
-                <div class="col-4">
-                  <!-- begin feature -->
-                  <div class="feature-simple">
-                    <div class="feature-simple__icon"></div>
-                    <div class="feature-simple__text text--gray">Аналіз авто на наявність порушень у роботі двигуна та батареї</div>
-                  </div>
-                  <!-- end feature -->
-                </div>
-                <div class="col-4">
-                  <!-- begin feature -->
-                  <div class="feature-simple">
-                    <div class="feature-simple__icon"></div>
-                    <div class="feature-simple__text text--gray">Аналіз авто на наявність порушень у роботі двигуна та батареї</div>
-                  </div>
-                  <!-- end feature -->
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <img class="js-lazy" alt="" src="" data-src="./img/one-service/auto.png" />
-                </div>
-                <div class="col-6">
-                  <div class="text-block">
-                    <div class="text-block__title">
-                      <h3 class="h2 h2--sm">Комп’ютерна діагностика зробить вас спокійним </h3>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <!-- begin feature -->
+                    <div class="feature-simple">
+                      <div class="feature-simple__icon">
+                        <svg class="icon icon-research">
+                          <use xlink:href="img/sprite.svg#icon-research"></use>
+                        </svg>
+                      </div>
+                      <div class="feature-simple__text text--gray">Аналіз авто на наявність порушень у роботі двигуна та батареї</div>
                     </div>
-                    <div class="text-block__text text text--gray">Наш спеціалізований авто центр «Olmaks» пропонує Вам комплексне обслуговування електро двигуна і електроапаратури. Наші фахівці вже більше 15-ти років надають повний спектр послуг з сервісного обслуговування і ремонту електроавтомобілів і паливних систем в Києві. Продуманий системний підхід до справи дозволяє в найкоротші терміни кваліфіковано визначити несправність і якісно її усунути за прийнятною ціною.</div>
-                    <div class="text-block__btn">
-                      <a href="#" class="btn btn--ttn">
-                        <span class="btn__title">Записатись на сервіс</span>
-                        <span class="btn__icon">
-                          <svg class="icon icon-repair-service">
-                            <use xlink:href="img/sprite.svg#icon-repair-service"></use>
-                          </svg>
-                        </span>
-                      </a>
+                    <!-- end feature -->
+                  </div>
+                  <div class="col-sm-4">
+                    <!-- begin feature -->
+                    <div class="feature-simple">
+                      <div class="feature-simple__icon">
+                        <svg class="icon icon-research">
+                          <use xlink:href="img/sprite.svg#icon-research"></use>
+                        </svg>
+                      </div>
+                      <div class="feature-simple__text text--gray">Аналіз авто на наявність порушень у роботі двигуна та батареї</div>
+                    </div>
+                    <!-- end feature -->
+                  </div>
+                  <div class="col-sm-4">
+                    <!-- begin feature -->
+                    <div class="feature-simple">
+                      <div class="feature-simple__icon">
+                        <svg class="icon icon-research">
+                          <use xlink:href="img/sprite.svg#icon-research"></use>
+                        </svg>
+                      </div>
+                      <div class="feature-simple__text text--gray">Аналіз авто на наявність порушень у роботі двигуна та батареї</div>
+                    </div>
+                    <!-- end feature -->
+                  </div>
+                </div>
+              </div>
+              <div class="section__block">
+                <div class="row align-items-center">
+                  <div class="col-sm-6">
+                    <img class="section__img js-lazy" alt="" src="" data-src="./img/one-service/auto.png" />
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="text-block">
+                      <h3 class="text-block__title title-underlined h2 h2--sm h2--ttn">Комп’ютерна діагностика зробить вас спокійним </h3>
+                      <div class="text-block__text text text--gray">Наш спеціалізований авто центр «Olmaks» пропонує Вам комплексне обслуговування електро двигуна і електроапаратури. Наші фахівці вже більше 15-ти років надають повний спектр послуг з сервісного обслуговування і ремонту електроавтомобілів і паливних систем в Києві. Продуманий системний підхід до справи дозволяє в найкоротші терміни кваліфіковано визначити несправність і якісно її усунути за прийнятною ціною.</div>
+                      <div class="text-block__btn">
+                        <a href="#" class="btn btn--ttn">
+                          <span class="btn__title">Записатись на сервіс</span>
+                          <span class="btn__icon">
+                            <svg class="icon icon-repair-service">
+                              <use xlink:href="img/sprite.svg#icon-repair-service"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- begin section-block -->
-              <div class="section-block">
+              <!-- begin section__block -->
+              <div class="section__block">
                 <div class="section__title">
                   <h2 class="h2 h2--ttu">ціни на наші послуги</h2>
                 </div>
@@ -692,38 +712,54 @@
                 </div>
                 <!-- end content-table -->
               </div>
-              <!-- end section-block -->
-              <div class="section-block">
-                <div class="section__title">
-                  <h2 class="h2 h2--ttu">Етапи сервісу</h2>
+              <!-- end section__block -->
+              <div class="section__block">
+                <div class="section__title has-mb-sm">
+                  <h2 class="h2 h2--ttu title-underlined title-underlined--center">Етапи сервісу</h2>
                 </div>
                 <div class="section__subttl">Передня підвіска з парними важелями доповнена підвіскою ззаду. Також автомобіль має адаптивну підвіску Adaptive Dynamics, підлаштовуватися жорсткість під дорожні умови.</div>
                 <div class="row">
-                  <div class="col-6">
+                  <div class="col-sm-6">
                     <div class="feature-simple feature-simple--lg">
-                      <div class="feature-simple__icon"></div>
-                      <div class="feature-simple__title h2 h2--sm">Замовте консультацію</div>
+                      <div class="feature-simple__icon">
+                        <svg class="icon icon-research">
+                          <use xlink:href="img/sprite.svg#icon-research"></use>
+                        </svg>
+                      </div>
+                      <div class="feature-simple__title h2 h2--sm title-underlined title-underlined--center">Замовте консультацію</div>
                       <div class="feature-simple__text text--gray">Але не одним лише фірмовим електромотором і новаторською конструкцією LifeDrive може похвалитися «Еко-трійка». Конструкція авто. містить відмінну систему відшкодування енергії під час руху,</div>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-sm-6">
                     <div class="feature-simple feature-simple--lg">
-                      <div class="feature-simple__icon"></div>
-                      <div class="feature-simple__title h2 h2--sm">Оберіть послугу</div>
+                      <div class="feature-simple__icon">
+                        <svg class="icon icon-research">
+                          <use xlink:href="img/sprite.svg#icon-research"></use>
+                        </svg>
+                      </div>
+                      <div class="feature-simple__title h2 h2--sm title-underlined title-underlined--center">Оберіть послугу</div>
                       <div class="feature-simple__text text--gray">Але не одним лише фірмовим електромотором і новаторською конструкцією LifeDrive може похвалитися «Еко-трійка». Конструкція авто. містить відмінну систему відшкодування енергії під час руху,</div>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-sm-6">
                     <div class="feature-simple feature-simple--lg">
-                      <div class="feature-simple__icon"></div>
-                      <div class="feature-simple__title h2 h2--sm">Завітайте до нас </div>
+                      <div class="feature-simple__icon">
+                        <svg class="icon icon-research">
+                          <use xlink:href="img/sprite.svg#icon-research"></use>
+                        </svg>
+                      </div>
+                      <div class="feature-simple__title h2 h2--sm title-underlined title-underlined--center">Завітайте до нас </div>
                       <div class="feature-simple__text text--gray">Але не одним лише фірмовим електромотором і новаторською конструкцією LifeDrive може похвалитися «Еко-трійка». Конструкція авто. містить відмінну систему відшкодування енергії під час руху,</div>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-sm-6">
                     <div class="feature-simple feature-simple--lg">
-                      <div class="feature-simple__icon"></div>
-                      <div class="feature-simple__title h2 h2--sm">Чекайте на вдалий результат!</div>
+                      <div class="feature-simple__icon">
+                        <svg class="icon icon-research">
+                          <use xlink:href="img/sprite.svg#icon-research"></use>
+                        </svg>
+                      </div>
+                      <div class="feature-simple__title h2 h2--sm title-underlined title-underlined--center">Чекайте на вдалий результат!</div>
                       <div class="feature-simple__text text--gray">Але не одним лише фірмовим електромотором і новаторською конструкцією LifeDrive може похвалитися «Еко-трійка». Конструкція авто. містить відмінну систему відшкодування енергії під час руху,</div>
                     </div>
                   </div>
@@ -731,13 +767,41 @@
               </div>
               <!-- begin faq -->
               <div class="faq-block">
-                <div class="faq-block__title">
-                  <h2 class="h2">часто запитують</h2>
-                </div>
-                <div class="faq-block__subttl">Передня підвіска з парними важелями доповнена підвіскою ззаду. Також автомобіль має адаптивну підвіску Adaptive Dynamics, підлаштовуватися жорсткість під дорожні умови.</div>
+                <h2 class="faq-block__title section__title has-mb-sm h2 h2--ttu title-underlined title-underlined--center">часто запитують</h2>
+                <div class="faq-block__subttl section__subttl">Передня підвіска з парними важелями доповнена підвіскою ззаду. Також автомобіль має адаптивну підвіску Adaptive Dynamics, підлаштовуватися жорсткість під дорожні умови.</div>
                 <div class="faq-block__questions">
                   <!-- begin faq -->
-                  <div class="faq">
+                  <div class="faq js-accordion">
+                    <div class="faq__item">
+                      <button class="faq__title js-accordion-title">Де ви знаходитеся?</button>
+                      <div class="faq__content text text--gray js-accordion-content">
+                        <strong>Готівкова оплата</strong> (У гривні). <strong>Безготівкова оплата</strong> - оплата по наданому рахунку в будь-якому відділені банку, пункті прийому платежів чи платіжному терміналі. За умови вибору безготівкового методу оплати надання послуг можливе лише після поступлення коштів на наш розрахунковий рахунок. <strong>Переказ грошей на картку Приватбанку</strong> - оплата здійснюється шляхом переказу грошей на картку Приватбанку. Враховуючи низькі тарифи та розгалуженість філій Приватбанку, можна із впевненістю сказати, що цей метод оплати дійсно є одним із найдешевших та вигідніших. </div>
+                    </div>
+                    <div class="faq__item">
+                      <button class="faq__title js-accordion-title">Які способи оплати ви приймаєте? </button>
+                      <div class="faq__content text text--gray js-accordion-content">
+                        <strong>Готівкова оплата</strong> (У гривні). <strong>Безготівкова оплата</strong> - оплата по наданому рахунку в будь-якому відділені банку, пункті прийому платежів чи платіжному терміналі. За умови вибору безготівкового методу оплати надання послуг можливе лише після поступлення коштів на наш розрахунковий рахунок. <strong>Переказ грошей на картку Приватбанку</strong> - оплата здійснюється шляхом переказу грошей на картку Приватбанку. Враховуючи низькі тарифи та розгалуженість філій Приватбанку, можна із впевненістю сказати, що цей метод оплати дійсно є одним із найдешевших та вигідніших. </div>
+                    </div>
+                    <div class="faq__item">
+                      <button class="faq__title js-accordion-title">Які марки електромобілів ви обслуговуєте?</button>
+                      <div class="faq__content text text--gray js-accordion-content">
+                        <strong>Готівкова оплата</strong> (У гривні). <strong>Безготівкова оплата</strong> - оплата по наданому рахунку в будь-якому відділені банку, пункті прийому платежів чи платіжному терміналі. За умови вибору безготівкового методу оплати надання послуг можливе лише після поступлення коштів на наш розрахунковий рахунок. <strong>Переказ грошей на картку Приватбанку</strong> - оплата здійснюється шляхом переказу грошей на картку Приватбанку. Враховуючи низькі тарифи та розгалуженість філій Приватбанку, можна із впевненістю сказати, що цей метод оплати дійсно є одним із найдешевших та вигідніших. </div>
+                    </div>
+                    <div class="faq__item">
+                      <button class="faq__title js-accordion-title">Я не можу самостійно визначити несправність. Що робити?</button>
+                      <div class="faq__content text text--gray js-accordion-content">
+                        <strong>Готівкова оплата</strong> (У гривні). <strong>Безготівкова оплата</strong> - оплата по наданому рахунку в будь-якому відділені банку, пункті прийому платежів чи платіжному терміналі. За умови вибору безготівкового методу оплати надання послуг можливе лише після поступлення коштів на наш розрахунковий рахунок. <strong>Переказ грошей на картку Приватбанку</strong> - оплата здійснюється шляхом переказу грошей на картку Приватбанку. Враховуючи низькі тарифи та розгалуженість філій Приватбанку, можна із впевненістю сказати, що цей метод оплати дійсно є одним із найдешевших та вигідніших. </div>
+                    </div>
+                    <div class="faq__item">
+                      <button class="faq__title js-accordion-title">Моєї марки електромобіля немає у переліку на вашому сайті. Як дізнатися, чи доступна вона для ремонту та діагностики у вашому сервісі?</button>
+                      <div class="faq__content text text--gray js-accordion-content">
+                        <strong>Готівкова оплата</strong> (У гривні). <strong>Безготівкова оплата</strong> - оплата по наданому рахунку в будь-якому відділені банку, пункті прийому платежів чи платіжному терміналі. За умови вибору безготівкового методу оплати надання послуг можливе лише після поступлення коштів на наш розрахунковий рахунок. <strong>Переказ грошей на картку Приватбанку</strong> - оплата здійснюється шляхом переказу грошей на картку Приватбанку. Враховуючи низькі тарифи та розгалуженість філій Приватбанку, можна із впевненістю сказати, що цей метод оплати дійсно є одним із найдешевших та вигідніших. </div>
+                    </div>
+                    <div class="faq__item">
+                      <button class="faq__title js-accordion-title">Мій електромобіль не заводиться. Як доставити його на сервіс?</button>
+                      <div class="faq__content text text--gray js-accordion-content">
+                        <strong>Готівкова оплата</strong> (У гривні). <strong>Безготівкова оплата</strong> - оплата по наданому рахунку в будь-якому відділені банку, пункті прийому платежів чи платіжному терміналі. За умови вибору безготівкового методу оплати надання послуг можливе лише після поступлення коштів на наш розрахунковий рахунок. <strong>Переказ грошей на картку Приватбанку</strong> - оплата здійснюється шляхом переказу грошей на картку Приватбанку. Враховуючи низькі тарифи та розгалуженість філій Приватбанку, можна із впевненістю сказати, що цей метод оплати дійсно є одним із найдешевших та вигідніших. </div>
+                    </div>
                   </div>
                   <!-- end faq -->
                 </div>

@@ -1,0 +1,31 @@
+.s-service-numbers
+  +cover
+  background-color: #000
+  color: #fff
+  background-position: 0 50%
+
+.service-number
+  margin-bottom: 30px
+  &__nmb
+    color: $c-accent
+    +bold
+    font-size: 52px
+    position: relative
+    margin-bottom: 10px
+    +lg
+      font-size: 45px
+    +md
+      font-size: 38px
+    +sm
+      font-size: 32px
+    +xs
+      font-size: 26px
+    &::before
+      content: ''
+      border-bottom: 1px solid  #747474
+      width: 80px
+      bottom: 0
+      left: 0
+      position: absolute
+  &__text
+

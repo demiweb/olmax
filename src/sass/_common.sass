@@ -251,6 +251,47 @@ body
     .btn__icon
       height: 45px
 
+.btn-arrow
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  border: 1px solid $c-accent
+  color: $c-accent
+  position: relative
+  height: 45px
+  padding: 10px
+  transition: color .3s, background-color .3s, border-color .3s
+  +hover
+    color: #fff
+    background-color: $c-accent
+
+  &__title
+    display: block
+    margin-right: 7px
+  &__arrow
+    display: block
+    width: 30px
+    position: relative
+    height: 1px
+    &::before
+      content: ''
+      height: 1px
+      width: 100%
+      background-color: currentColor
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translate(0, -50%)
+    &::after
+      content: ''
+      +icon-arrow(10, 10, 1, currentColor, -135)
+      position: absolute
+      top: 50%
+      right: 0
+      transform: translate(0, -50%) rotate(-135deg)
+
+
 .link
   font-size: 15px
   color: #fff
@@ -466,6 +507,10 @@ body
       font-size: 24px
       +bold
 
+.price-sm
+  color: $c-accent
+  +bold
+
 .s-contacts
   &__top
     background-color: #f8f8f8
@@ -563,13 +608,14 @@ body
     color: #025db9
   &__item
     &:not(:last-child)
-      margin-bottom: 8px
+      margin-bottom: 8px  
 
-.content-table
-  background-color: #fff
-  box-shadow: 0px 0px 6px 0px rgba(0, 1, 1, 0.19)
+.text-block
   &__title
-    background-color: #f6f6f6
-    padding: 12px 15px
-    border-bottom: 1px solid  $c-border    
+    text-align: left 
+    margin-bottom: 15px
+  &__text
+    margin-bottom: 25px
+    +md
+      margin-bottom: 15px
       

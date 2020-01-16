@@ -1,0 +1,24 @@
+<!-- begin section -->
+<section class="section section--inherit section--xl">
+  <div class="container">
+    <h2 class="section__title title title-underlined title-underlined--center has-mb-sm">фотогалерея</h2>
+
+    <div class="section__subttl">Передня підвіска з парними важелями доповнена підвіскою ззаду. 
+    Також автомобіль має адаптивну підвіску Adaptive Dynamics, підлаштовуватися жорсткість під дорожні умови.</div>
+
+    <!-- begin service-gallery -->
+    <div class="service-gallery js-gallery">
+      {% for i in range(0, 6) %}
+      <a
+        href="img/model-gallery/car-2.jpg"
+        class="service-gallery-item js-lazy"
+        data-background-image="./img/service-2/570.jpg"
+        data-exthumbimage="img/model-gallery/thumb-2.jpg">
+          <span class="service-gallery-item__cover">{{ mixins.icon('loupe') }}</span>
+        </a>
+      {% endfor %}
+    </div>
+    <!-- end service-gallery -->
+  </div>
+</section>
+<!-- end section -->

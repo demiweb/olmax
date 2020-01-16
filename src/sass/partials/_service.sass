@@ -1,5 +1,6 @@
 .s-scedule
   padding-bottom: 40px
+  +cover
   &__right
     height: 100%
     display: flex
@@ -9,7 +10,8 @@
     img
       max-width: 100%
 
-.scedule  
+.scedule
+  $this: &
   display: flex
   flex-direction: column
   justify-content: space-between
@@ -44,6 +46,27 @@
       font-size: 21px
       +xs
         font-size: 18px
+  &__contacts
+    display: flex
+    align-items: center
+    +lg
+      display: block
+
+  &--hor
+    #{$this}__scedule
+      box-shadow: 0px 0px 9.9px 1.1px rgba(0, 0, 1, 0.14)
+      margin-bottom: 30px
+      max-width: 385px
+      +md
+        margin-bottom: 15px
+    #{$this}__btn
+      margin-right: 20px
+      +lg
+        margin-right: 0
+        margin-bottom: 15px
+    #{$this}__phone
+      margin-bottom: 0
+
 
 .scedule-list
   &__list
@@ -55,11 +78,13 @@
     float: left
     margin-bottom: 10px
     width: 50%
+    border-bottom: 1px solid $c-border
   &__text
     float: right
     margin-bottom: 10px
     width: 50%
     text-align: right
+    border-bottom: 1px solid $c-border
 
 .services
   &__title
@@ -161,4 +186,45 @@
     padding-top: 5px
     padding-bottom: 5px
 
-
+.service-card
+  display: flex
+  flex-direction: column
+  background-color: #fff
+  box-shadow: 0px 0px 7.52px 0.48px rgba(0, 0, 1, 0.1)
+  margin-bottom: 30px
+  height: calc(100% - 30px)
+  &__img
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    margin-bottom: 15px
+    padding-top: 40%
+  &__content
+    padding: 25px
+    padding-top: 0
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+    +md
+      padding: 15px
+      padding-top: 0
+  &__title
+    margin-bottom: 10px
+  &__text
+    margin-bottom: 15px
+    flex-grow: 1
+  &__btns
+    display: flex
+    align-items: center
+    +lg
+      display: block
+  &__btn
+    width: 100%
+    &:not(:last-child)
+      margin-right: 15px
+      +lg
+        margin-right: 0
+        margin-bottom: 15px
+    &.btn
+      .btn__title
+        width: calc(100% - 50px)

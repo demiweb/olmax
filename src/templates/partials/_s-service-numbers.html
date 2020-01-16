@@ -1,0 +1,54 @@
+{%set
+numbers = [
+  {
+    nmb: '1000+',
+    text: 'Щасливих власників авто,
+які задоволені нашим сервісом'
+  },
+  {
+    nmb: '30+',
+    text: 'Новітніх технологій, які
+ми використовуємо у роботі'
+  },
+  {
+    nmb: '50+',
+    text: 'Марок електромобілей,
+які ми здатні обслуговувати'
+  },
+  {
+    nmb: '20+',
+    text: 'Співробітників, які працюють
+заради вашого спокою'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--inherit section--xl s-service-numbers js-lazy" data-background-image="./img/service-2/logo.jpg">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-sm-6">
+        <img class="section__img js-lazy" alt="" src="" data-src="./img/service-2/5ad5f4e3970150a93968dcde_leaf gray.png"/>
+      </div>
+
+      <div class="col-sm-6">
+        <h2 class="section__title is-left title title--white"><p>ми не просто сервіс.</p> <p>і доводимо це цифрами</p></h2>
+
+        <div class="row">
+          {% for i in numbers %}
+          <div class="col-md-6">
+            <!-- begin service-number -->
+            <div class="service-number">
+              <div class="service-number__nmb">{{ i.nmb | safe }}</div>
+
+              <div class="service-number__text">{{ i.text | safe }}</div>
+            </div>
+            <!-- end service-number -->
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

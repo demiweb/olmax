@@ -1,0 +1,49 @@
+<!-- begin section -->
+<section class="section section--inherit s-testimonials">
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div class="section__title has-quote is-left">
+          {{ mixins.icon('quote') }}
+          <h2 class="title">Нам довіряють свої електрокари більше 1000 автовласників</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- begin slider -->
+    <div class="slider__wrap slider--testimonials__wrap">
+      <div class="slider slider--testimonials js-slider" data-slider="testimonials">
+        {% for i in range(0, 3) %}
+        <div class="slide ">
+          <div class="row">
+            <div class="col-md-6 order-1 order-md-0">
+              <div class="testimonial__content">
+                <div class="testimonial__text text">«Побувавши в п'ятницю на сервісі Olmaks, отримав нові позитивні враження, так як за кермом власного ж автомобіля, відчув себе по новому. Було зроблено багато змін та нововведень у моєму авто. Хлопці зробили мені підвіску, перевірили амортизатори, замінили батарею. Також несподіванкою стало те, що мені почистили салон безкоштовно. Механіки дуже професійні та ввічливі спеціалісти. Коли заходиш на сервіс, одразу розумієш, що потрапив у правильні руки.  Дякуємо колективу Olmaksза позитивну екскурсію, і відповіді на питання!»</div>
+
+                <div class="testimonial__person">
+                  <div class="testimonial__person-title">Артеменко Владислав</div>
+                  <div class="testimonial__person-subttl">Власник Nissan Leaf</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 order-0 order-md-1">
+              <div class="testimonial__img js-lazy" data-background-image="./img/service-2/33.jpg"></div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      
+
+      <div class="slider__controls slider--testimonials__controls">
+        <button class="slider__prev slider--testimonials__prev prev-md js-prev"></button>
+        <button class="slider__next slider--testimonials__next next-md js-next"></button>
+      </div>
+      
+    </div>
+    <!-- end slider -->
+    
+  </div>
+</section>
+<!-- end section -->

@@ -1,0 +1,32 @@
+.service-gallery
+  font-size: 0
+
+.service-gallery-item
+  $this: &
+  display: inline-block
+  vertical-align: top
+  width: 33.33333%
+  +cover
+  padding-top: 20%
+  position: relative
+  +hover
+    #{$this}__cover
+      visibility: visible
+      opacity: 1
+  +md
+    width: 50%
+    padding-top: 25%
+  &__cover
+    +coverdiv
+    display: flex
+    align-items: center
+    justify-content: center
+    color: $c-accent
+    background-color: rgba(#000, .7)
+    transition: opacity .3s, visibility .3s
+    visibility: hidden
+    opacity: 0
+    .icon
+      fill: currentColor
+      font-size: 38px
+

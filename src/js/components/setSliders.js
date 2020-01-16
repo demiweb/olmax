@@ -15,6 +15,30 @@ export default function setSliders() {
     const $dotsModels = $wrap.find('.js-models-dots');
 
     const options = {
+      testimonials: {
+        slidesToShow: 1,
+        prevArrow: $prev,
+        nextArrow: $next,
+      },
+      specialists: {
+        prevArrow: $prev,
+        nextArrow: $next,
+        slidesToShow: 3,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+            }
+          },
+        ]
+      },
       full: {
         dots: true,
         prevArrow: $prev,
@@ -52,6 +76,39 @@ export default function setSliders() {
 
           return '<button>'+title+'</button>';
         },
+      },
+      brands_logos: {
+        slidesToShow: 5,
+        prevArrow: $prev,
+        nextArrow: $next,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 4,
+            }
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 3,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+            }
+          }
+        ]
       },
       models: {
         draggable: false,
