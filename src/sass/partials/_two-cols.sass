@@ -1,0 +1,22 @@
+.two-cols
+  position: relative
+  &__side
+    +cover
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    width: 50%
+    +md
+      width: 100%
+      padding-top: 50%
+      position: static
+  &__container
+    padding-top: 120px
+    padding-bottom: 120px
+    +lg
+      padding-top: 90px
+      padding-bottom: 90px
+    +md
+      padding-top: 45px
+      padding-bottom: 45px

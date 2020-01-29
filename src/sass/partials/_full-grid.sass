@@ -1,0 +1,63 @@
+.full-grid
+  overflow: hidden
+  &__inner
+    display: flex
+    flex-wrap: wrap
+    margin-left: -2px
+    margin-right: -2px
+    margin-bottom: -4px
+    +lg
+      margin-left: 0
+      margin-right: 0
+  &__block
+    margin-left: 2px
+    margin-right: 2px
+    margin-bottom: 4px
+    +cover
+    padding-top: 30%
+    position: relative
+    width: calc(50% - 4px)
+    +xl
+      padding-top: 40%
+    +lg
+      width: 100%
+      margin-left: 0
+      margin-right: 0
+    +md
+      padding-top: 30%
+    +sm
+      padding-top: 40%
+    +xs
+      padding-top: 300px
+    &--full
+      width: 100%
+
+ 
+.full-grid-block
+  $this: &
+  &__content
+    position: absolute
+    bottom: 0
+    right: 0
+    z-index: 1
+    background-color: #fff
+    padding: 30px
+    max-width: 575px
+    +md
+      padding: 15px
+      max-width: none
+      width: 100%
+      position: static
+  &__title
+    margin-bottom: 15px
+  &__text
+    p
+      &:not(:last-child)
+        margin-bottom: 15px
+
+  &--full
+    #{$this}__content
+      right: auto
+      left: 50%
+
+
