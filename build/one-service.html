@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
-    <style> html.has-preloader {
+    <style>
+      html.has-preloader {
         overflow: hidden;
         position: fixed
       }
+
       .preloader {
         position: fixed;
         width: 100%;
@@ -18,6 +20,7 @@
         z-index: 100;
         background-color: #000;
       }
+
       .preloader__spinner {
         position: relative;
         position: absolute;
@@ -35,6 +38,7 @@
         transform: translate(-50%, 0) perspective(200px) rotateX(66deg);
         animation: spinner-wiggle 1.2s infinite;
       }
+
       .preloader__spinner:before,
       .preloader__spinner:after {
         content: "";
@@ -79,26 +83,31 @@
           transform: rotate(360deg);
         }
       }
+
       @keyframes spinner-fade {
         20% {
           opacity: .1;
         }
+
         40% {
           opacity: 1;
         }
+
         60% {
           opacity: .1;
         }
       }
+
       @keyframes load {
-        0%{
-            opacity: 0.08;
-            /*filter: blur(5px);*/
-            letter-spacing: 3px;
-            }
-        100%{
-            }
-    }
+        0% {
+          opacity: 0.08;
+          /*filter: blur(5px);*/
+          letter-spacing: 3px;
+        }
+
+        100% {}
+      }
+
     </style>
     <link rel="stylesheet" media="all" href="css/app.css" />
   </head>
@@ -408,8 +417,7 @@
             </div>
           </div>
         </div>
-        <div class="hero__bg">
-          <video class="js-lazy" src="" data-src="video/FIND-OUT-TESLA_720.mp4" muted="" autoplay="" playsinline="" loop="" poster="img/hero-video-poster.jpg"></video>
+        <div class="hero__bg js-lazy" data-background-image="./img/hero/YU_R3620.jpg">
         </div>
         <!-- begin tech-info -->
         <div class="tech-info  ">
@@ -518,6 +526,22 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="section__block">
+                <!-- begin full-grid -->
+                <div class="full-grid">
+                  <div class="full-grid__inner">
+                    <div class="full-grid__block full-grid-block full-grid__block--high full-grid__block--full full-grid-block--high js-lazy" data-background-image="./img/one-service/YU_R3841.jpg">
+                      <div class="full-grid-block__content">
+                        <h2 class="full-grid-block__title h2 title-underlined">Які гарантії ми надаємо?</h2>
+                        <div class="full-grid-block__text text text--gray"> Досить хороша новина також в тому, що інженери BMW оснастили i3 з бортовою зарядної системою, яка може утримувати напругу потужністю 7,7 кВт. Цей високоякісний рівень Level 2 важко поставити в машину через домашнє напруга, але навіть якщо воно буде в районі 6,6 кВт, це буде означати, що при одночасовой зарядці буде додаватися близько 32-40 кілометрів їзди. </div>
+                      </div>
+                    </div>
+                    <div class="full-grid__block full-grid-block full-grid__block--high full-grid__block--full full-grid-block--high js-lazy" data-background-image="./img/one-service/YU_R3754.jpg">
+                    </div>
+                  </div>
+                </div>
+                <!-- end full-grid -->
               </div>
               <!-- begin section__block -->
               <div class="section__block">
@@ -713,6 +737,24 @@
                 <!-- end content-table -->
               </div>
               <!-- end section__block -->
+              <div class="section__block">
+                <!-- begin full-grid -->
+                <div class="full-grid">
+                  <div class="full-grid__inner">
+                    <div class="full-grid__block full-grid-block full-grid__block--high full-grid__block--full full-grid-block--high js-lazy" data-background-image="./img/one-service/YU_R3854.jpg">
+                      <div class="full-grid-block__content">
+                        <h2 class="full-grid-block__title h2 title-underlined">Як ми виконуємо діагностику?</h2>
+                        <div class="full-grid-block__text text text--gray"> Досить хороша новина також в тому, що інженери BMW оснастили i3 з бортовою зарядної системою, яка може утримувати напругу потужністю 7,7 кВт. Цей високоякісний рівень Level 2 важко поставити в машину через домашнє напруга, але навіть якщо воно буде в районі 6,6 кВт, це буде означати, що при одночасовой зарядці буде додаватися близько 32-40 кілометрів їзди. </div>
+                      </div>
+                    </div>
+                    <div class="full-grid__block full-grid-block full-grid__block--high full-grid__block--full full-grid-block--high js-lazy" data-background-image="./img/one-service/YU_R3617.jpg">
+                    </div>
+                    <div class="full-grid__block full-grid-block full-grid__block--high full-grid__block--full full-grid-block--high js-lazy" data-background-image="./img/one-service/YU_R3710.jpg">
+                    </div>
+                  </div>
+                </div>
+                <!-- end full-grid -->
+              </div>
               <div class="section__block">
                 <div class="section__title has-mb-sm">
                   <h2 class="h2 h2--ttu title-underlined title-underlined--center">Етапи сервісу</h2>
