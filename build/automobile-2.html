@@ -7,12 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
-    <style>
-      html.has-preloader {
+    <style> html.has-preloader {
         overflow: hidden;
         position: fixed
       }
-
       .preloader {
         position: fixed;
         width: 100%;
@@ -20,7 +18,6 @@
         z-index: 100;
         background-color: #000;
       }
-
       .preloader__spinner {
         position: relative;
         position: absolute;
@@ -38,7 +35,6 @@
         transform: translate(-50%, 0) perspective(200px) rotateX(66deg);
         animation: spinner-wiggle 1.2s infinite;
       }
-
       .preloader__spinner:before,
       .preloader__spinner:after {
         content: "";
@@ -83,31 +79,26 @@
           transform: rotate(360deg);
         }
       }
-
       @keyframes spinner-fade {
         20% {
           opacity: .1;
         }
-
         40% {
           opacity: 1;
         }
-
         60% {
           opacity: .1;
         }
       }
-
       @keyframes load {
-        0% {
-          opacity: 0.08;
-          /*filter: blur(5px);*/
-          letter-spacing: 3px;
-        }
-
-        100% {}
-      }
-
+        0%{
+            opacity: 0.08;
+            /*filter: blur(5px);*/
+            letter-spacing: 3px;
+            }
+        100%{
+            }
+    }
     </style>
     <link rel="stylesheet" media="all" href="css/app.css" />
   </head>
